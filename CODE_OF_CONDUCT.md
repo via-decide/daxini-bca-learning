@@ -22,7 +22,7 @@ We are committed to providing a welcoming and inspiring community for all.
 
 ## Reporting
 
-Email: dharam@daxini.space
+Email: dharam@viadecide.com
 
 ## Enforcement
 
