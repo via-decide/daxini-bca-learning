@@ -975,6 +975,34 @@ The general process:
 
 ---
 
+## ⚖️ Legal & Compliance Checklist (India & Global)
+
+Before taking any software to production, especially if you plan to monetize it, you must ensure it complies with local regulations.
+
+### 1. Data Privacy & User Tracking
+When you track IP addresses, geolocations, or user devices for your link analytics, you are collecting data.
+- **Privacy Policy Requirement:** You **MUST** have a clear Privacy Policy stating what data you collect, why you collect it, and how long you store it.
+- **DPDP Act 2023 (India):** India's Digital Personal Data Protection Act requires you to get clear consent before processing personal data. If you collect IPs or user emails, you must provide a way for users to request deletion of their data.
+- **Cookie Consent:** If your frontend uses tracking cookies, you need a cookie consent banner (crucial if users from the EU use your tool under GDPR).
+
+### 2. Terms of Service & Abuse Prevention
+URL shorteners are heavily abused by hackers for phishing and spam.
+- **Terms & Conditions:** You need a strict T&C page that explicitly bans the use of your service for malicious links, phishing, or malware.
+- **Takedown Policy:** You must have an email (e.g., `abuse@yourdomain.com`) where users can report malicious links, and you must act on them quickly to avoid liability under the **IT Act 2000 (Section 79 - Safe Harbour protection for intermediaries)**.
+
+### 3. Payments (If building a Premium Tier)
+If you charge users for custom domains or advanced analytics:
+- **Payment Gateways:** Use compliant aggregators like Razorpay, Stripe India, or Cashfree. They handle PCI-DSS compliance for you.
+- **Recurring Payments (Subscriptions):** The RBI (Reserve Bank of India) has strict e-mandate guidelines for auto-debiting credit/debit cards. Your payment gateway will handle the technical flow (Additional Factor of Authentication / AFA for the first transaction), but your UI must clearly explain the recurring charges.
+- **GST:** If you cross the revenue threshold, you must collect and file GST for software services (SAC code 9983).
+
+**Where to track compliance updates:**
+- **Payments:** RBI Official Website ([rbi.org.in](https://rbi.org.in/)) - Check "Notifications" for Payment and Settlement Systems.
+- **Data Privacy:** MeitY ([meity.gov.in](https://www.meity.gov.in/)) for updates on the DPDP Act.
+- **Cybersecurity:** CERT-In ([cert-in.org.in](https://www.cert-in.org.in/)) for vulnerability and reporting guidelines.
+
+---
+
 ## 📚 Resources: Learn From These
 
 **Express.js:**

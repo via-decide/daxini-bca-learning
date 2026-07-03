@@ -727,6 +727,31 @@ app.get('/api/members/:id', (req, res) => {
 
 ---
 
+## ⚖️ Legal & Compliance Checklist (India & Global)
+
+Gym management systems handle highly sensitive data and recurring financial transactions. If you ever deploy this for a real gym, you **MUST** ensure the following compliance measures:
+
+### 1. Data Privacy & PII (Personally Identifiable Information)
+You are storing names, phone numbers, ages, and potentially health data (weight, height, workout routines).
+- **DPDP Act 2023 (India):** Health data is considered sensitive personal data. You must get explicit, informed consent from members before storing this.
+- **Data Deletion:** If a member cancels their membership and requests data deletion, your system must have a "hard delete" or anonymization feature to comply with the right to be forgotten.
+- **Privacy Policy:** Must be visibly linked in the app, detailing exactly who has access to member data (e.g., "Only administrators can view weight logs").
+
+### 2. Payments & RBI Compliance
+Gyms rely on recurring subscription models.
+- **Payment Gateway KYC:** To integrate Razorpay, PayU, or Cashfree, the gym owner must complete strict KYC (Know Your Customer) as a registered business.
+- **RBI e-Mandate Framework:** For automated monthly deductions (e.g., auto-renewing memberships), the RBI requires an Additional Factor of Authentication (AFA) for the very first setup. Your system cannot simply store credit card numbers and charge them; you must use tokenized e-mandates provided by the payment gateway.
+- **Invoicing & GST:** Every successful payment must automatically generate a GST-compliant invoice (if the gym's revenue requires GST registration). 
+
+### 3. Terms of Service & Liability
+- **Physical Injury Waiver:** A gym software's registration flow often includes a digital waiver. Your "Terms & Conditions" check-box during sign-up must legally protect the gym from liability if a member is injured while logging a workout through your app.
+
+**Where to track compliance updates:**
+- **Payments (e-Mandates):** RBI Official Website ([rbi.org.in](https://rbi.org.in/)) - specifically the Payment and Settlement Systems notifications.
+- **Data Privacy:** MeitY ([meity.gov.in](https://www.meity.gov.in/)) for implementation rules of the DPDP Act.
+
+---
+
 ## 📚 Resources
 
 **Authentication & Security:**
