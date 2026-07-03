@@ -8,6 +8,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Markdown Parsers and Syntax Highlighting -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
     <style>
         :root {
             --bg-color: #0d1117;
@@ -36,6 +42,10 @@
                 radial-gradient(circle at 15% 50%, rgba(88, 166, 255, 0.05) 0%, transparent 50%),
                 radial-gradient(circle at 85% 30%, rgba(210, 168, 255, 0.05) 0%, transparent 50%);
         }
+        
+        body.reading {
+            overflow: hidden;
+        }
 
         header {
             position: sticky;
@@ -60,6 +70,7 @@
             display: flex;
             align-items: center;
             gap: 10px;
+            cursor: pointer;
         }
 
         .logo-accent {
@@ -84,6 +95,7 @@
             padding: 5rem 2rem 3rem;
             max-width: 800px;
             margin: 0 auto;
+            transition: opacity 0.3s ease;
         }
 
         .hero h1 {
@@ -135,6 +147,7 @@
             padding: 0 2rem 5rem;
             max-width: 1200px;
             margin: 0 auto;
+            transition: opacity 0.3s ease;
         }
 
         .card {
@@ -200,6 +213,7 @@
             align-items: center;
             gap: 8px;
             transition: color 0.2s;
+            cursor: pointer;
         }
 
         .file-list a::before {
@@ -222,6 +236,181 @@
             font-weight: 600;
         }
 
+        /* Reader Overlay UI */
+        #reader-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: var(--bg-color);
+            z-index: 200;
+            overflow-y: auto;
+            animation: slideIn 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
+        }
+
+        #reader-overlay.active {
+            display: block;
+        }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .reader-header {
+            position: sticky;
+            top: 0;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            background: rgba(13, 17, 23, 0.9);
+            border-bottom: 1px solid var(--card-border);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 210;
+        }
+        
+        .back-btn {
+            background: transparent;
+            border: 1px solid var(--card-border);
+            color: var(--text-primary);
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-family: inherit;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.2s;
+        }
+
+        .back-btn:hover {
+            background: var(--card-bg);
+            border-color: var(--accent-color);
+            color: #fff;
+        }
+
+        .reader-content {
+            max-width: 840px;
+            margin: 0 auto;
+            padding: 4rem 2rem 6rem;
+        }
+
+        /* Markdown Styles */
+        .markdown-body {
+            color: var(--text-primary);
+            line-height: 1.7;
+            font-size: 1.1rem;
+        }
+
+        .markdown-body h1, .markdown-body h2, .markdown-body h3, .markdown-body h4 {
+            color: #fff;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            line-height: 1.3;
+        }
+
+        .markdown-body h1 {
+            font-size: 2.5rem;
+            border-bottom: 1px solid var(--card-border);
+            padding-bottom: 0.5rem;
+            margin-bottom: 2rem;
+            margin-top: 0;
+        }
+        
+        .markdown-body h2 { font-size: 1.8rem; border-bottom: 1px solid var(--card-border); padding-bottom: 0.3rem;}
+        .markdown-body h3 { font-size: 1.4rem; }
+
+        .markdown-body p, .markdown-body ul, .markdown-body ol {
+            margin-bottom: 1.25rem;
+        }
+
+        .markdown-body a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+
+        .markdown-body a:hover {
+            text-decoration: underline;
+        }
+        
+        .markdown-body img {
+            max-width: 100%;
+            border-radius: 8px;
+            border: 1px solid var(--card-border);
+            margin: 1.5rem 0;
+        }
+
+        .markdown-body blockquote {
+            border-left: 4px solid var(--accent-color);
+            padding-left: 1rem;
+            color: var(--text-secondary);
+            margin: 1.5rem 0;
+            background: rgba(88, 166, 255, 0.05);
+            padding: 1rem;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .markdown-body code {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.9em;
+            background: rgba(110, 118, 129, 0.15);
+            padding: 0.2em 0.4em;
+            border-radius: 6px;
+        }
+
+        .markdown-body pre {
+            background: #161b22;
+            border: 1px solid var(--card-border);
+            border-radius: 8px;
+            padding: 1rem;
+            overflow-x: auto;
+            margin: 1.5rem 0;
+        }
+
+        .markdown-body pre code {
+            background: transparent;
+            padding: 0;
+            font-size: 0.9em;
+            color: #c9d1d9;
+        }
+
+        .markdown-body table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 2rem 0;
+        }
+
+        .markdown-body th, .markdown-body td {
+            border: 1px solid var(--card-border);
+            padding: 0.75rem 1rem;
+            text-align: left;
+        }
+
+        .markdown-body th {
+            background: rgba(22, 27, 34, 0.8);
+            color: #fff;
+        }
+        
+        /* Loading Spinner */
+        .loader {
+            border: 3px solid var(--card-border);
+            border-top: 3px solid var(--accent-color);
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            animation: spin 1s linear infinite;
+            margin: 5rem auto;
+            display: none;
+        }
+        
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+
         footer {
             text-align: center;
             padding: 3rem 2rem;
@@ -234,118 +423,147 @@
             .hero h1 { font-size: 2.5rem; }
             .grid { grid-template-columns: 1fr; }
             .nav-links { display: none; }
+            .reader-content { padding: 2rem 1.5rem; }
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <a href="#" class="logo">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-            DAXINI <span class="logo-accent">LEARNING</span>
-        </a>
-        <nav class="nav-links">
-            <a href="https://github.com/via-decide/daxini-bca-learning">GitHub Repo</a>
-            <a href="LEADERBOARD.md">Leaderboard</a>
-            <a href="CONTRIBUTING.md">Contribute</a>
-        </nav>
-    </header>
+    <!-- Main Hub UI -->
+    <div id="main-ui">
+        <header>
+            <a href="#" class="logo" onclick="closeReader(event)">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                DAXINI <span class="logo-accent">LEARNING</span>
+            </a>
+            <nav class="nav-links">
+                <a href="https://github.com/via-decide/daxini-bca-learning">GitHub Repo</a>
+                <a href="LEADERBOARD.md" class="md-link">Leaderboard</a>
+                <a href="CONTRIBUTING.md" class="md-link">Contribute</a>
+            </nav>
+        </header>
 
-    <section class="hero">
-        <h1>Learn to build.<br>Not copy-paste.</h1>
-        <p>The ultimate curriculum architecture for students. Systems design, robust infrastructure, and sovereign engineering mapped out for 115 projects.</p>
-        
-        <div class="search-container">
-            <input type="text" id="searchInput" placeholder="Search guides, projects, or architecture..." onkeyup="filterCards()">
+        <section class="hero">
+            <h1>Learn to build.<br>Not copy-paste.</h1>
+            <p>The ultimate curriculum architecture for students. Systems design, robust infrastructure, and sovereign engineering mapped out for 115 projects.</p>
+            
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search guides, projects, or architecture..." onkeyup="filterCards()">
+            </div>
+        </section>
+
+        <main class="grid" id="mainGrid">
+            <!-- Foundation Guides -->
+            <div class="card" data-tags="docs guide setup github ide ai">
+                <div class="card-tag">Foundation</div>
+                <h3>Developer Setup Guides</h3>
+                <p>Master your environment before writing code. Learn to use the tools professionals use.</p>
+                <ul class="file-list">
+                    <li><a href="docs/01_HOW_TO_SAVE_YOUR_WORK_ON_GITHUB.md" class="md-link">Git & GitHub Workflow</a></li>
+                    <li><a href="docs/04_HOW_TO_CHOOSE_AND_USE_AN_IDE.md" class="md-link">IDE Mastery (VS Code/Cursor)</a></li>
+                    <li><a href="docs/05_CHROME_EXTENSIONS_FOR_DEVELOPERS.md" class="md-link">Chrome DevTools & Extensions</a></li>
+                    <li><a href="docs/06_KEYBOARD_ONLY_DEVELOPMENT.md" class="md-link">Keyboard-Only Workflow</a></li>
+                    <li><a href="docs/07_HOW_TO_CHOOSE_AN_AI_MODEL.md" class="md-link">Choosing the Right Cloud AI</a></li>
+                </ul>
+            </div>
+
+            <!-- Architecture & Methodology -->
+            <div class="card" data-tags="docs research deploy architecture via-decide">
+                <div class="card-tag">Engineering Methodology</div>
+                <h3>Deep Research & Deployment</h3>
+                <p>How to architect systems, understand business logic, and deploy code to the world.</p>
+                <ul class="file-list">
+                    <li><a href="docs/08_HOW_TO_DO_DEEP_RESEARCH.md" class="md-link">Deep Research (VIA-Decide Method)</a></li>
+                    <li><a href="docs/02_WHERE_TO_HOST_YOUR_PROJECTS.md" class="md-link">Hosting & Deployment Guide</a></li>
+                    <li><a href="docs/03_WHAT_NEXT_AFTER_BUILDING.md" class="md-link">What's Next After Building</a></li>
+                    <li><a href="resources/LEARNING_GRAPH.md" class="md-link">3-Layer Learning Neural Graph</a></li>
+                    <li><a href="resources/TECH_STACKS.md" class="md-link">Tech Stacks Directory</a></li>
+                </ul>
+            </div>
+
+            <!-- Tier 1 Projects -->
+            <div class="card" data-tags="projects php frontend backend basics url-shortener">
+                <div class="card-tag">Tier 1: The Basics</div>
+                <h3>Core Web Concepts</h3>
+                <p>Start here to understand how the web actually works beneath frameworks.</p>
+                <ul class="file-list">
+                    <li><a href="projects/01-url-shortener/LEARNING_GUIDE.md" class="md-link">URL Shortener (Vanilla) <span class="badge">Docs</span></a></li>
+                    <li><a href="projects/01-url-shortener/index.php">URL Shortener Interface</a></li>
+                    <li><a href="projects/01-url-shortener/shorten.php">Routing Logic</a></li>
+                </ul>
+            </div>
+
+            <!-- Tier 2 Projects -->
+            <div class="card" data-tags="projects dashboard admin auth gym-management">
+                <div class="card-tag">Tier 2: Dashboards</div>
+                <h3>Data Management & Auth</h3>
+                <p>Complex state, user authentication, and admin dashboards with multiple roles.</p>
+                <ul class="file-list">
+                    <li><a href="projects/02-gym-management/LEARNING_GUIDE.md" class="md-link">Gym Management System <span class="badge">Docs</span></a></li>
+                    <li><a href="projects/02-gym-management/admin/dashboard.php">Admin Dashboard Core</a></li>
+                    <li><a href="projects/02-gym-management/includes/auth.php">Authentication Logic</a></li>
+                </ul>
+            </div>
+
+            <!-- 115 Curriculum -->
+            <div class="card" data-tags="projects curriculum 115 all index">
+                <div class="card-tag">The Masterplan</div>
+                <h3>115 Project Curriculum</h3>
+                <p>The complete roadmap mapped out for mastering software engineering via deliberate practice.</p>
+                <ul class="file-list">
+                    <li><a href="resources/ALL_PROJECTS_INDEX.md" class="md-link">View All 115 Projects</a></li>
+                    <li><a href="resources/LEARNING_PATHS.md" class="md-link">Custom Learning Paths</a></li>
+                    <li><a href="resources/BEST_PRACTICES.md" class="md-link">Best Practices Standard</a></li>
+                </ul>
+            </div>
+
+            <!-- Zayvora / Community -->
+            <div class="card" data-tags="philosophy leaderboard community sovereign">
+                <div class="card-tag">Community & Vision</div>
+                <h3>Zayvora Stack & Philosophy</h3>
+                <p>The core ethos behind this repository. Why we build local-first and sovereign.</p>
+                <ul class="file-list">
+                    <li><a href="README.md" class="md-link">Main Repository README</a></li>
+                    <li><a href="LEADERBOARD.md" class="md-link">Community Leaderboard</a></li>
+                    <li><a href="CODE_OF_CONDUCT.md" class="md-link">Code of Conduct</a></li>
+                    <li><a href="docs/08_HOW_TO_DO_DEEP_RESEARCH.md#appendix-the-deep-research-library-126-articles" class="md-link">126 Deep Research Articles</a></li>
+                </ul>
+            </div>
+        </main>
+
+        <footer>
+            <p>Built with purpose by Dharam Daxini & the VIA-Decide Open Source Community.</p>
+        </footer>
+    </div>
+
+    <!-- Reader Overlay UI -->
+    <div id="reader-overlay">
+        <div class="reader-header">
+            <button class="back-btn" onclick="closeReader(event)">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                Back to Hub
+            </button>
+            <div style="font-weight: 600; color: var(--text-secondary);" id="reader-filename"></div>
         </div>
-    </section>
-
-    <main class="grid" id="mainGrid">
-
-        <!-- Foundation Guides -->
-        <div class="card" data-tags="docs guide setup github ide ai">
-            <div class="card-tag">Foundation</div>
-            <h3>Developer Setup Guides</h3>
-            <p>Master your environment before writing code. Learn to use the tools professionals use.</p>
-            <ul class="file-list">
-                <li><a href="docs/01_HOW_TO_SAVE_YOUR_WORK_ON_GITHUB.md">Git & GitHub Workflow</a></li>
-                <li><a href="docs/04_HOW_TO_CHOOSE_AND_USE_AN_IDE.md">IDE Mastery (VS Code/Cursor)</a></li>
-                <li><a href="docs/05_CHROME_EXTENSIONS_FOR_DEVELOPERS.md">Chrome DevTools & Extensions</a></li>
-                <li><a href="docs/06_KEYBOARD_ONLY_DEVELOPMENT.md">Keyboard-Only Workflow</a></li>
-                <li><a href="docs/07_HOW_TO_CHOOSE_AN_AI_MODEL.md">Choosing the Right Cloud AI</a></li>
-            </ul>
+        <div class="loader" id="loader"></div>
+        <div class="reader-content markdown-body" id="reader-content">
+            <!-- Rendered Markdown goes here -->
         </div>
+    </div>
 
-        <!-- Architecture & Methodology -->
-        <div class="card" data-tags="docs research deploy architecture via-decide">
-            <div class="card-tag">Engineering Methodology</div>
-            <h3>Deep Research & Deployment</h3>
-            <p>How to architect systems, understand business logic, and deploy code to the world.</p>
-            <ul class="file-list">
-                <li><a href="docs/08_HOW_TO_DO_DEEP_RESEARCH.md">Deep Research (VIA-Decide Method)</a></li>
-                <li><a href="docs/02_WHERE_TO_HOST_YOUR_PROJECTS.md">Hosting & Deployment Guide</a></li>
-                <li><a href="docs/03_WHAT_NEXT_AFTER_BUILDING.md">What's Next After Building</a></li>
-                <li><a href="resources/LEARNING_GRAPH.md">3-Layer Learning Neural Graph</a></li>
-                <li><a href="resources/TECH_STACKS.md">Tech Stacks Directory</a></li>
-            </ul>
-        </div>
-
-        <!-- Tier 1 Projects -->
-        <div class="card" data-tags="projects php frontend backend basics url-shortener">
-            <div class="card-tag">Tier 1: The Basics</div>
-            <h3>Core Web Concepts</h3>
-            <p>Start here to understand how the web actually works beneath frameworks.</p>
-            <ul class="file-list">
-                <li><a href="projects/01-url-shortener/LEARNING_GUIDE.md">URL Shortener (Vanilla) <span class="badge">Docs</span></a></li>
-                <li><a href="projects/01-url-shortener/index.php">URL Shortener Interface</a></li>
-                <li><a href="projects/01-url-shortener/shorten.php">Routing Logic</a></li>
-            </ul>
-        </div>
-
-        <!-- Tier 2 Projects -->
-        <div class="card" data-tags="projects dashboard admin auth gym-management">
-            <div class="card-tag">Tier 2: Dashboards</div>
-            <h3>Data Management & Auth</h3>
-            <p>Complex state, user authentication, and admin dashboards with multiple roles.</p>
-            <ul class="file-list">
-                <li><a href="projects/02-gym-management/LEARNING_GUIDE.md">Gym Management System <span class="badge">Docs</span></a></li>
-                <li><a href="projects/02-gym-management/admin/dashboard.php">Admin Dashboard Core</a></li>
-                <li><a href="projects/02-gym-management/includes/auth.php">Authentication Logic</a></li>
-            </ul>
-        </div>
-
-        <!-- 115 Curriculum -->
-        <div class="card" data-tags="projects curriculum 115 all index">
-            <div class="card-tag">The Masterplan</div>
-            <h3>115 Project Curriculum</h3>
-            <p>The complete roadmap mapped out for mastering software engineering via deliberate practice.</p>
-            <ul class="file-list">
-                <li><a href="resources/ALL_PROJECTS_INDEX.md">View All 115 Projects</a></li>
-                <li><a href="resources/LEARNING_PATHS.md">Custom Learning Paths</a></li>
-                <li><a href="resources/BEST_PRACTICES.md">Best Practices Standard</a></li>
-            </ul>
-        </div>
-
-        <!-- Zayvora / Community -->
-        <div class="card" data-tags="philosophy leaderboard community sovereign">
-            <div class="card-tag">Community & Vision</div>
-            <h3>Zayvora Stack & Philosophy</h3>
-            <p>The core ethos behind this repository. Why we build local-first and sovereign.</p>
-            <ul class="file-list">
-                <li><a href="README.md">Main Repository README</a></li>
-                <li><a href="LEADERBOARD.md">Community Leaderboard</a></li>
-                <li><a href="CODE_OF_CONDUCT.md">Code of Conduct</a></li>
-                <li><a href="docs/08_HOW_TO_DO_DEEP_RESEARCH.md#appendix-the-deep-research-library-126-articles">126 Deep Research Articles</a></li>
-            </ul>
-        </div>
-
-    </main>
-
-    <footer>
-        <p>Built with purpose by Dharam Daxini & the VIA-Decide Open Source Community.</p>
-    </footer>
-
+    <!-- Application Logic -->
     <script>
+        // Configure marked.js to use highlight.js for code blocks
+        marked.setOptions({
+            highlight: function(code, lang) {
+                const language = hljs.getLanguage(lang) ? lang : 'plaintext';
+                return hljs.highlight(code, { language }).value;
+            },
+            gfm: true,
+            breaks: true
+        });
+
+        // Search Filter
         function filterCards() {
             const input = document.getElementById('searchInput');
             const filter = input.value.toLowerCase();
@@ -362,6 +580,118 @@
                 }
             }
         }
+
+        // Reader Logic
+        const readerOverlay = document.getElementById('reader-overlay');
+        const readerContent = document.getElementById('reader-content');
+        const loader = document.getElementById('loader');
+        const readerFilename = document.getElementById('reader-filename');
+
+        async function openReader(filePath) {
+            // Strip any hash anchor for fetching, but keep it for scrolling later
+            const pathParts = filePath.split('#');
+            const cleanPath = pathParts[0];
+            const anchor = pathParts[1];
+
+            // Update UI
+            document.body.classList.add('reading');
+            readerOverlay.classList.add('active');
+            readerContent.innerHTML = '';
+            loader.style.display = 'block';
+            readerFilename.textContent = cleanPath.split('/').pop();
+            
+            // Update URL hash without breaking history heavily
+            window.location.hash = filePath;
+
+            try {
+                const response = await fetch(cleanPath);
+                if (!response.ok) throw new Error('Failed to fetch ' + cleanPath);
+                
+                const markdown = await response.text();
+                
+                // Add base URL for images and internal links relative to the markdown file
+                const basePath = cleanPath.substring(0, cleanPath.lastIndexOf('/') + 1);
+                
+                // Simple regex to fix relative image paths if needed (Optional, depending on repo structure)
+                // Let marked.js handle it normally, GitHub pages usually resolves correctly relative to root.
+                
+                const htmlContent = marked.parse(markdown);
+                readerContent.innerHTML = htmlContent;
+                
+                // Intercept internal markdown links rendered by marked
+                const internalLinks = readerContent.querySelectorAll('a[href$=".md"], a[href*=".md#"]');
+                internalLinks.forEach(link => {
+                    link.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        const href = link.getAttribute('href');
+                        
+                        // If it's a relative path starting from current file, resolve it
+                        let nextPath = href;
+                        if (!href.startsWith('http') && !href.startsWith('/')) {
+                             // Very basic resolution, assuming all from root in this UI for simplicity
+                             // In a complex app you'd resolve against basePath
+                        }
+                        
+                        openReader(href);
+                    });
+                });
+
+                // Scroll to anchor if provided
+                if (anchor) {
+                    setTimeout(() => {
+                        const target = document.getElementById(anchor);
+                        if (target) {
+                            target.scrollIntoView({ behavior: 'smooth' });
+                        }
+                    }, 100);
+                } else {
+                    readerOverlay.scrollTop = 0;
+                }
+
+            } catch (err) {
+                readerContent.innerHTML = `
+                    <div style="text-align:center; padding: 4rem;">
+                        <h2>⚠️ Error Loading File</h2>
+                        <p style="color: var(--text-secondary)">${err.message}</p>
+                        <button class="back-btn" style="margin: 2rem auto" onclick="closeReader(event)">Go Back</button>
+                    </div>`;
+            } finally {
+                loader.style.display = 'none';
+            }
+        }
+
+        function closeReader(e) {
+            if(e) e.preventDefault();
+            document.body.classList.remove('reading');
+            readerOverlay.classList.remove('active');
+            window.history.pushState('', document.title, window.location.pathname + window.location.search);
+        }
+
+        // Intercept designated MD links
+        document.querySelectorAll('.md-link').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const filePath = link.getAttribute('href');
+                openReader(filePath);
+            });
+        });
+
+        // Handle direct URL loads (e.g. index.html#docs/01_GUIDE.md)
+        window.addEventListener('DOMContentLoaded', () => {
+            if (window.location.hash && window.location.hash.includes('.md')) {
+                const filePath = window.location.hash.substring(1); // remove '#'
+                openReader(filePath);
+            }
+        });
+
+        // Handle browser back/forward buttons inside SPA routing
+        window.addEventListener('hashchange', () => {
+            if (window.location.hash && window.location.hash.includes('.md')) {
+                openReader(window.location.hash.substring(1));
+            } else {
+                closeReader();
+            }
+        });
     </script>
 </body>
 </html>
