@@ -76,7 +76,7 @@ As you progress through the BCA curriculum, you will hit a wall where standard t
 
 Below is the **VIA-Decide Master Archive of 126 Articles** (all deployed at `https://daxini.xyz/articles/`). 
 
-### 🎯 Recommended Reading (Mapped to this Repo)
+### 🎯 Recommended Reading 
 
 If you are just starting, do not read all 126. Read these specifically curated articles based on what you are learning:
 
