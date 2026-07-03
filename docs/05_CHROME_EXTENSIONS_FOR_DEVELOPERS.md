@@ -1,6 +1,6 @@
 # 🌐 Chrome Extensions for Developers (Your Browser is an IDE)
 
-As a web developer, your browser is just as important as your code editor. While Chrome's built-in DevTools (F12) are extremely powerful, you can supercharge your browser by installing extensions specifically designed for coding, debugging, and design.
+As a web developer, your browser is just as important as your code editor. While Chrome's built-in DevTools (`F12` / `Ctrl+Shift+I` on Windows/Linux, `Cmd+Option+I` on macOS) are extremely powerful, you can supercharge your browser by installing extensions specifically designed for coding, debugging, and design.
 
 Here is a guide on how to manage extensions and a list of the absolute must-haves for BCA students building web projects.
 
@@ -50,7 +50,7 @@ Understanding how other websites are built and how fast your own websites are.
 
 ## 🔧 How to Use Chrome DevTools (Without Extensions)
 
-Even without extensions, you must learn to use **Chrome DevTools (`F12` or `Ctrl+Shift+I`)**:
+Even without extensions, you must learn to use **Chrome DevTools** (Press `F12` or `Ctrl+Shift+I` on Windows/Linux, or `Cmd+Option+I` on macOS):
 1. **Elements Tab:** Click the selector tool (top left) to hover over elements and see their HTML/CSS. You can edit CSS here live!
 2. **Console Tab:** This is where your `console.log()` outputs go. Crucial for debugging JavaScript.
 3. **Network Tab:** The most important tab for full-stack developers. It shows every API call your frontend makes to your backend, exactly what payload was sent, and what error code (e.g., 404, 500) came back.

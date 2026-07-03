@@ -20,10 +20,10 @@ Here is a breakdown of the top tools in the industry and how to use them.
   - `Live Server`: Launches a local development server with a live reload feature for static HTML/CSS pages.
   - `GitLens`: Supercharges the built-in Git capabilities (shows who wrote which line of code).
   - `Error Lens`: Highlights syntax errors inline so you spot them before running the code.
-- **Learn Shortcuts:**
-  - `Ctrl/Cmd + P`: Quick open any file in your project.
-  - `Ctrl/Cmd + Shift + F`: Search for a specific word across your entire project.
-  - `Ctrl/Cmd + \``: Open the integrated terminal at the bottom of the screen.
+- **Learn Shortcuts (Windows/Linux vs macOS):**
+  - **Quick Open:** `Ctrl + P` (Win/Lin) | `Cmd + P` (Mac) -> Open any file instantly.
+  - **Global Search:** `Ctrl + Shift + F` (Win/Lin) | `Cmd + Shift + F` (Mac) -> Search for a word across the entire project.
+  - **Integrated Terminal:** `Ctrl + \`` (Win/Lin) | `Cmd + \`` (Mac) -> Open the terminal at the bottom of the screen.
 
 ---
 
@@ -33,10 +33,10 @@ Here is a breakdown of the top tools in the industry and how to use them.
 **Best For:** Fast prototyping, learning new frameworks quickly, and AI-assisted coding.
 **Cost:** Free tier available (Premium for advanced models like Claude 3.5 Sonnet / GPT-4o).
 
-### How to use Cursor:
-- **Command K (`Ctrl/Cmd + K`):** Highlight some code and press `Cmd+K`. You can type instructions like *"Refactor this to use async/await"* and the AI will rewrite it for you.
-- **Chat (`Ctrl/Cmd + L`):** A sidebar chat that has full context of your entire codebase. You can ask it questions like *"Where is the bug in my login flow?"*
-- **Tab Autocomplete:** It predicts your next lines of code based on what you are trying to build.
+### How to use Cursor (Windows/Linux vs macOS):
+- **Command K (`Ctrl+K` | `Cmd+K`):** Highlight some code and press `Cmd+K` (Mac) or `Ctrl+K` (Win/Lin). You can type instructions like *"Refactor this to use async/await"* and the AI will rewrite it for you.
+- **Chat (`Ctrl+L` | `Cmd+L`):** A sidebar chat that has full context of your entire codebase. You can ask it questions like *"Where is the bug in my login flow?"*
+- **Tab Autocomplete:** It predicts your next lines of code based on what you are trying to build. Simply press `Tab` to accept the suggestion.
 
 *(Note: While AI is great, as a learner, make sure you **read and understand** the code it generates. Don't just blindly copy-paste!)*
 
