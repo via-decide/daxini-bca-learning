@@ -8,6 +8,7 @@
 
 ## 🧭 Navigation
 - 📖 **[The "Learning First" Philosophy](./philosophy/LEARNING_FIRST.md)** - Why we don't spoon-feed code.
+- 🧠 **[The Neural Network Learning Graph](./resources/LEARNING_GRAPH.md)** - What to learn and build first.
 - 🏗️ **[Project Directory](./resources/ALL_PROJECTS_INDEX.md)** - Browse all 115+ projects sorted by difficulty.
 - 🏆 **[Student Leaderboard](./LEADERBOARD.md)** - See live projects built by the community.
 - 🎓 **[Academic Integrity](./philosophy/ACADEMIC_INTEGRITY.md)** - Guidelines for using this repo in college.
