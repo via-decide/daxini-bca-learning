@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daxini BCA Learning Hub</title>
+    <meta name="description" content="The ultimate learning architecture for BCA students. Learn to build, not copy-paste.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0d1117;
+            --text-primary: #c9d1d9;
+            --text-secondary: #8b949e;
+            --accent-color: #58a6ff;
+            --card-bg: rgba(22, 27, 34, 0.6);
+            --card-border: rgba(48, 54, 61, 0.8);
+            --hover-border: #58a6ff;
+            --glass-bg: rgba(13, 17, 23, 0.8);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            line-height: 1.6;
+            min-height: 100vh;
+            background-image: 
+                radial-gradient(circle at 15% 50%, rgba(88, 166, 255, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 85% 30%, rgba(210, 168, 255, 0.05) 0%, transparent 50%);
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            background: var(--glass-bg);
+            border-bottom: 1px solid var(--card-border);
+            padding: 1.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+        }
+
+        .logo {
+            font-weight: 800;
+            font-size: 1.5rem;
+            color: #fff;
+            text-decoration: none;
+            letter-spacing: -0.5px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-accent {
+            color: var(--accent-color);
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            margin-left: 1.5rem;
+            font-size: 0.95rem;
+            font-weight: 600;
+            transition: color 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            color: #fff;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 5rem 2rem 3rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 1rem;
+            color: #fff;
+            letter-spacing: -1px;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .search-container {
+            max-width: 500px;
+            margin: 0 auto 3rem;
+            position: relative;
+        }
+
+        .search-container input {
+            width: 100%;
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            border: 1px solid var(--card-border);
+            background: var(--card-bg);
+            color: var(--text-primary);
+            font-family: inherit;
+            font-size: 1rem;
+            outline: none;
+            transition: all 0.2s ease;
+        }
+
+        .search-container input:focus {
+            border-color: var(--accent-color);
+            box-shadow: 0 0 0 3px rgba(88, 166, 255, 0.1);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 1.5rem;
+            padding: 0 2rem 5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            display: flex;
+            flex-direction: column;
+            backdrop-filter: blur(4px);
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            border-color: var(--hover-border);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+            background: rgba(33, 38, 45, 0.8);
+        }
+
+        .card-tag {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            color: var(--accent-color);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .card h3 {
+            color: #fff;
+            margin-bottom: 0.5rem;
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+
+        .card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+
+        .file-list {
+            list-style: none;
+            margin-top: auto;
+            border-top: 1px solid var(--card-border);
+            padding-top: 1rem;
+        }
+
+        .file-list li {
+            margin-bottom: 0.5rem;
+        }
+
+        .file-list a {
+            color: var(--text-primary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: color 0.2s;
+        }
+
+        .file-list a::before {
+            content: "📄";
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+
+        .file-list a:hover {
+            color: var(--accent-color);
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            background: rgba(88, 166, 255, 0.1);
+            color: var(--accent-color);
+            font-weight: 600;
+        }
+
+        footer {
+            text-align: center;
+            padding: 3rem 2rem;
+            border-top: 1px solid var(--card-border);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .grid { grid-template-columns: 1fr; }
+            .nav-links { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="#" class="logo">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+            DAXINI <span class="logo-accent">LEARNING</span>
+        </a>
+        <nav class="nav-links">
+            <a href="https://github.com/via-decide/daxini-bca-learning">GitHub Repo</a>
+            <a href="LEADERBOARD.md">Leaderboard</a>
+            <a href="CONTRIBUTING.md">Contribute</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Learn to build.<br>Not copy-paste.</h1>
+        <p>The ultimate curriculum architecture for students. Systems design, robust infrastructure, and sovereign engineering mapped out for 115 projects.</p>
+        
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search guides, projects, or architecture..." onkeyup="filterCards()">
+        </div>
+    </section>
+
+    <main class="grid" id="mainGrid">
+
+        <!-- Foundation Guides -->
+        <div class="card" data-tags="docs guide setup github ide ai">
+            <div class="card-tag">Foundation</div>
+            <h3>Developer Setup Guides</h3>
+            <p>Master your environment before writing code. Learn to use the tools professionals use.</p>
+            <ul class="file-list">
+                <li><a href="docs/01_HOW_TO_SAVE_YOUR_WORK_ON_GITHUB.md">Git & GitHub Workflow</a></li>
+                <li><a href="docs/04_HOW_TO_CHOOSE_AND_USE_AN_IDE.md">IDE Mastery (VS Code/Cursor)</a></li>
+                <li><a href="docs/05_CHROME_EXTENSIONS_FOR_DEVELOPERS.md">Chrome DevTools & Extensions</a></li>
+                <li><a href="docs/06_KEYBOARD_ONLY_DEVELOPMENT.md">Keyboard-Only Workflow</a></li>
+                <li><a href="docs/07_HOW_TO_CHOOSE_AN_AI_MODEL.md">Choosing the Right Cloud AI</a></li>
+            </ul>
+        </div>
+
+        <!-- Architecture & Methodology -->
+        <div class="card" data-tags="docs research deploy architecture via-decide">
+            <div class="card-tag">Engineering Methodology</div>
+            <h3>Deep Research & Deployment</h3>
+            <p>How to architect systems, understand business logic, and deploy code to the world.</p>
+            <ul class="file-list">
+                <li><a href="docs/08_HOW_TO_DO_DEEP_RESEARCH.md">Deep Research (VIA-Decide Method)</a></li>
+                <li><a href="docs/02_WHERE_TO_HOST_YOUR_PROJECTS.md">Hosting & Deployment Guide</a></li>
+                <li><a href="docs/03_WHAT_NEXT_AFTER_BUILDING.md">What's Next After Building</a></li>
+                <li><a href="resources/LEARNING_GRAPH.md">3-Layer Learning Neural Graph</a></li>
+                <li><a href="resources/TECH_STACKS.md">Tech Stacks Directory</a></li>
+            </ul>
+        </div>
+
+        <!-- Tier 1 Projects -->
+        <div class="card" data-tags="projects php frontend backend basics url-shortener">
+            <div class="card-tag">Tier 1: The Basics</div>
+            <h3>Core Web Concepts</h3>
+            <p>Start here to understand how the web actually works beneath frameworks.</p>
+            <ul class="file-list">
+                <li><a href="projects/01-url-shortener/LEARNING_GUIDE.md">URL Shortener (Vanilla) <span class="badge">Docs</span></a></li>
+                <li><a href="projects/01-url-shortener/index.php">URL Shortener Interface</a></li>
+                <li><a href="projects/01-url-shortener/shorten.php">Routing Logic</a></li>
+            </ul>
+        </div>
+
+        <!-- Tier 2 Projects -->
+        <div class="card" data-tags="projects dashboard admin auth gym-management">
+            <div class="card-tag">Tier 2: Dashboards</div>
+            <h3>Data Management & Auth</h3>
+            <p>Complex state, user authentication, and admin dashboards with multiple roles.</p>
+            <ul class="file-list">
+                <li><a href="projects/02-gym-management/LEARNING_GUIDE.md">Gym Management System <span class="badge">Docs</span></a></li>
+                <li><a href="projects/02-gym-management/admin/dashboard.php">Admin Dashboard Core</a></li>
+                <li><a href="projects/02-gym-management/includes/auth.php">Authentication Logic</a></li>
+            </ul>
+        </div>
+
+        <!-- 115 Curriculum -->
+        <div class="card" data-tags="projects curriculum 115 all index">
+            <div class="card-tag">The Masterplan</div>
+            <h3>115 Project Curriculum</h3>
+            <p>The complete roadmap mapped out for mastering software engineering via deliberate practice.</p>
+            <ul class="file-list">
+                <li><a href="resources/ALL_PROJECTS_INDEX.md">View All 115 Projects</a></li>
+                <li><a href="resources/LEARNING_PATHS.md">Custom Learning Paths</a></li>
+                <li><a href="resources/BEST_PRACTICES.md">Best Practices Standard</a></li>
+            </ul>
+        </div>
+
+        <!-- Zayvora / Community -->
+        <div class="card" data-tags="philosophy leaderboard community sovereign">
+            <div class="card-tag">Community & Vision</div>
+            <h3>Zayvora Stack & Philosophy</h3>
+            <p>The core ethos behind this repository. Why we build local-first and sovereign.</p>
+            <ul class="file-list">
+                <li><a href="README.md">Main Repository README</a></li>
+                <li><a href="LEADERBOARD.md">Community Leaderboard</a></li>
+                <li><a href="CODE_OF_CONDUCT.md">Code of Conduct</a></li>
+                <li><a href="docs/08_HOW_TO_DO_DEEP_RESEARCH.md#appendix-the-deep-research-library-126-articles">126 Deep Research Articles</a></li>
+            </ul>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>Built with purpose by Dharam Daxini & the VIA-Decide Open Source Community.</p>
+    </footer>
+
+    <script>
+        function filterCards() {
+            const input = document.getElementById('searchInput');
+            const filter = input.value.toLowerCase();
+            const cards = document.getElementsByClassName('card');
+
+            for (let i = 0; i < cards.length; i++) {
+                const tags = cards[i].getAttribute('data-tags').toLowerCase();
+                const title = cards[i].querySelector('h3').textContent.toLowerCase();
+                
+                if (tags.includes(filter) || title.includes(filter)) {
+                    cards[i].style.display = "";
+                } else {
+                    cards[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+</body>
+</html>
