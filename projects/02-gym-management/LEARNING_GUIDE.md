@@ -127,82 +127,102 @@ Workouts (exercise logs)
 
 ### Step 2: Database Architecture
 
-```
-┌──────────────────────────────────────────┐
-│              Database                    │
-├──────────────────────────────────────────┤
-│                                          │
-│  users ─────────┐                        │
-│                 │                        │
-│                 ├──► members             │
-│                 │       │                │
-│                 │       ├──► memberships │
-│                 │       │                │
-│                 │       ├──► attendance  │
-│                 │       │                │
-│                 │       └──► workouts    │
-│                 │                        │
-│  packages ──────┘                        │
-│                                          │
-└──────────────────────────────────────────┘
+```mermaid
+erDiagram
+    USERS ||--o{ MEMBERS : "has profile"
+    PACKAGES ||--o{ MEMBERSHIPS : "defines"
+    MEMBERS ||--o{ MEMBERSHIPS : "purchases"
+    MEMBERS ||--o{ ATTENDANCE : "logs"
+    MEMBERS ||--o{ WORKOUTS : "performs"
 
-Relationships:
-- users.id → members.user_id (one user, one member)
-- members.id → memberships.member_id (one member, many memberships)
-- packages.id → memberships.package_id (many members use one package)
-- members.id → attendance.member_id (one member, many attendance records)
-- members.id → workouts.member_id (one member, many workouts)
+    USERS {
+        int id PK
+        string email UK
+        string password
+        string name
+        string role "admin/member"
+    }
+
+    MEMBERS {
+        int id PK
+        int user_id FK
+        string phone
+        int age
+        float weight
+        float height
+        date join_date
+        string status
+    }
+
+    PACKAGES {
+        int id PK
+        string name
+        int duration_months
+        float price
+    }
+
+    MEMBERSHIPS {
+        int id PK
+        int member_id FK
+        int package_id FK
+        date start_date
+        date end_date
+        float amount_paid
+        string status
+    }
+
+    ATTENDANCE {
+        int id PK
+        int member_id FK
+        date date
+        time check_in_time
+        time check_out_time
+    }
+
+    WORKOUTS {
+        int id PK
+        int member_id FK
+        date date
+        string exercise_name
+        int sets
+        int reps
+        float weight
+    }
 ```
 
 ---
 
 ### Step 3: System Architecture
 
-```
-┌────────────────────────────────────────────┐
-│          Frontend (React/HTML)             │
-│  ┌──────────────────────────────────────┐  │
-│  │ Login Screen                         │  │
-│  │ Admin Dashboard                      │  │
-│  │ Member Management                    │  │
-│  │ Attendance Tracking                  │  │
-│  │ Workout Logging                      │  │
-│  └──────────────────────────────────────┘  │
-└────────────────────────────────────────────┘
-              │
-        HTTP Requests
-              │
-              ▼
-┌────────────────────────────────────────────┐
-│       Backend (Node.js Express)            │
-│  ┌──────────────────────────────────────┐  │
-│  │ Authentication Layer                 │  │
-│  │  - Login (password check)            │  │
-│  │  - JWT token generation              │  │
-│  │  - Token verification                │  │
-│  ├──────────────────────────────────────┤  │
-│  │ Authorization Layer                  │  │
-│  │  - Check user role (admin/member)    │  │
-│  │  - Verify permissions                │  │
-│  ├──────────────────────────────────────┤  │
-│  │ API Endpoints                        │  │
-│  │  - Members CRUD                      │  │
-│  │  - Memberships CRUD                  │  │
-│  │  - Attendance tracking               │  │
-│  │  - Workouts CRUD                     │  │
-│  │  - Dashboard stats                   │  │
-│  └──────────────────────────────────────┘  │
-└────────────────────────────────────────────┘
-              │
-        SQL Queries
-              │
-              ▼
-┌────────────────────────────────────────────┐
-│        Database (SQLite/PostgreSQL)        │
-│  - Persistent data storage                 │
-│  - Relationships and constraints           │
-│  - Indexing for fast queries               │
-└────────────────────────────────────────────┘
+```mermaid
+flowchart TD
+    subgraph Frontend["Frontend (React/HTML)"]
+        direction TB
+        UI1["Login Screen"]
+        UI2["Admin Dashboard"]
+        UI3["Member Management"]
+        UI4["Attendance Tracking"]
+        UI5["Workout Logging"]
+    end
+
+    Frontend -- "HTTP Requests (JWT Auth)" --> Backend
+
+    subgraph Backend["Backend (Node.js Express)"]
+        direction TB
+        Auth["Authentication Layer\n- Login check\n- JWT generation"]
+        AuthZ["Authorization Layer\n- Role check\n- Permissions"]
+        API["API Endpoints\n- CRUD Members\n- Memberships\n- Attendance"]
+        
+        Auth --> AuthZ
+        AuthZ --> API
+    end
+
+    Backend -- "SQL Queries" --> DB
+
+    subgraph DB["Database (SQLite/PostgreSQL)"]
+        direction TB
+        Storage[("Persistent Data Storage\n- Relationships\n- Indexing for speed")]
+    end
 ```
 
 ---
@@ -211,24 +231,41 @@ Relationships:
 
 ### Authentication Flow
 
-```
-User enters email & password
-  ↓
-Server checks database
-  ↓
-Password matches (bcrypt compare)?
-  ├─ No → Return error 401
-  └─ Yes → Generate JWT token
-              ↓
-          Return token to frontend
-              ↓
-          Frontend stores token (localStorage)
-              ↓
-          Future requests include token in header
-              ↓
-          Server verifies token
-              ├─ Invalid → Return error 401
-              └─ Valid → Process request
+```mermaid
+sequenceDiagram
+    actor User
+    participant Frontend
+    participant Server
+    participant DB as Database
+
+    User->>Frontend: Enter email & password
+    Frontend->>Server: POST /api/login
+    Server->>DB: Check email
+    DB-->>Server: Return User Record
+    
+    Server->>Server: bcrypt.compare(password)
+    
+    alt Password Mismatch
+        Server-->>Frontend: 401 Unauthorized
+        Frontend-->>User: Show "Invalid credentials"
+    else Password Matches
+        Server->>Server: Generate JWT Token
+        Server-->>Frontend: Return { token, user }
+        Frontend->>Frontend: Store token in localStorage
+    end
+
+    note over Frontend,Server: --- Future Requests ---
+
+    Frontend->>Server: GET /api/members (with Auth Header)
+    Server->>Server: Verify JWT Signature
+    
+    alt Invalid Token
+        Server-->>Frontend: 401 Unauthorized
+    else Valid Token
+        Server->>DB: Fetch Members
+        DB-->>Server: Members Data
+        Server-->>Frontend: 200 OK + Data
+    end
 ```
 
 ### JWT Token Structure

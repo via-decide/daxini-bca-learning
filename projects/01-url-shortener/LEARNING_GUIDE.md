@@ -39,25 +39,25 @@ When someone visits the short URL, they get redirected to the original.
 
 ### The Big Picture
 
-```
-┌─────────────┐
-│   Browser   │  User types short URL
-└─────────────┘
-       │
-       ▼
-┌─────────────────┐
-│  Your Server    │  Lookup short code
-└─────────────────┘
-       │
-       ▼
-┌─────────────┐
-│  Database   │  Find original URL
-└─────────────┘
-       │
-       ▼
-┌─────────────┐
-│   Browser   │  Redirect to original
-└─────────────┘
+```mermaid
+flowchart TD
+    User([User types short URL]) --> Browser
+    
+    subgraph Frontend
+        Browser["🌐 Web Browser"]
+    end
+    
+    Browser -- "HTTP GET /abc123" --> Server
+    
+    subgraph Backend
+        Server["🖥️ Node.js Server\n(Lookup short code)"]
+        DB[(🗄️ SQLite Database\nFind original URL)]
+        
+        Server <--> DB
+    end
+    
+    Server -- "HTTP 302 Redirect" --> Browser
+    Browser -- "Navigate to original" --> Target([Original Website])
 ```
 
 **Your job:** Build the server and database.
@@ -90,89 +90,70 @@ Think about this before reading below:
 
 Draw this yourself first, then compare:
 
-```
-┌────────────────────────────────────────────┐
-│            Frontend (Browser)              │
-│  ┌──────────────────────────────────────┐  │
-│  │   Form: Enter Long URL               │  │
-│  │   Button: Shorten                    │  │
-│  │   Display: Short URL + Copy          │  │
-│  │   Stats: View analytics              │  │
-│  └──────────────────────────────────────┘  │
-└────────────────────────────────────────────┘
-                    │
-         HTTP POST /api/shorten
-         HTTP GET /:shortCode
-                    │
-                    ▼
-┌────────────────────────────────────────────┐
-│          Backend (Node.js Server)          │
-│  ┌──────────────────────────────────────┐  │
-│  │ POST /api/shorten                    │  │
-│  │   → Validate URL                     │  │
-│  │   → Generate short code              │  │
-│  │   → Save to database                 │  │
-│  │   → Return short URL                 │  │
-│  └──────────────────────────────────────┘  │
-│  ┌──────────────────────────────────────┐  │
-│  │ GET /:shortCode                      │  │
-│  │   → Lookup in database               │  │
-│  │   → Increment clicks                 │  │
-│  │   → Redirect (HTTP 302)              │  │
-│  └──────────────────────────────────────┘  │
-│  ┌──────────────────────────────────────┐  │
-│  │ GET /api/stats/:shortCode            │  │
-│  │   → Return analytics                 │  │
-│  └──────────────────────────────────────┘  │
-└────────────────────────────────────────────┘
-                    │
-                    ▼
-┌────────────────────────────────────────────┐
-│           Database (SQLite)                │
-│  ┌──────────────────────────────────────┐  │
-│  │  urls table:                         │  │
-│  │  - id (primary key)                  │  │
-│  │  - shortCode (unique)                │  │
-│  │  - longUrl (text)                    │  │
-│  │  - clicks (count)                    │  │
-│  │  - createdAt (timestamp)             │  │
-│  └──────────────────────────────────────┘  │
-└────────────────────────────────────────────┘
+```mermaid
+flowchart TB
+    subgraph Frontend["Frontend (Browser)"]
+        direction TB
+        F1["Form: Enter Long URL"]
+        F2["Button: Shorten"]
+        F3["Display: Short URL + Copy"]
+        F4["Stats: View analytics"]
+    end
+
+    subgraph Backend["Backend (Node.js Server)"]
+        direction TB
+        API1["POST /api/shorten\n→ Validate URL\n→ Generate code\n→ Save to DB"]
+        API2["GET /:shortCode\n→ Lookup in DB\n→ Increment clicks\n→ Redirect 302"]
+        API3["GET /api/stats/:shortCode\n→ Return analytics"]
+    end
+
+    subgraph Database["Database (SQLite)"]
+        direction TB
+        DB1[/"urls table:\n- id (PK)\n- shortCode (UNIQUE)\n- longUrl (TEXT)\n- clicks (INT)\n- createdAt (DATETIME)"/]
+    end
+
+    Frontend -- "HTTP POST /api/shorten" --> API1
+    Frontend -- "HTTP GET /:shortCode" --> API2
+    Frontend -- "HTTP GET /api/stats" --> API3
+
+    API1 --> Database
+    API2 --> Database
+    API3 --> Database
 ```
 
 ### Step 3: Data Flow
 
 Trace what happens when user enters a URL:
 
-```
-User Input: "https://wikipedia.org/wiki/AI"
-     │
-     ▼
-Frontend validates (is it a URL?)
-     │
-     ▼ YES
-Submit to server
-     │
-     ▼
-Server receives request
-     │
-     ▼
-Server validates (is it really a URL?)
-     │
-     ▼ YES
-Generate unique short code (how?)
-     │
-     ▼
-Check if code already exists (UNIQUE constraint)
-     │
-     ▼ NO
-Insert into database
-     │
-     ▼
-Return short URL to frontend
-     │
-     ▼
-Display to user + copy button
+```mermaid
+sequenceDiagram
+    actor User
+    participant Frontend
+    participant Server
+    participant Database
+
+    User->>Frontend: Enter "https://wikipedia.org/wiki/AI"
+    Frontend->>Frontend: Validate (is it a URL?)
+    
+    alt Invalid URL
+        Frontend-->>User: Show Error "Invalid URL"
+    else Valid URL
+        Frontend->>Server: POST /api/shorten
+        Server->>Server: Validate (is it really a URL?)
+        Server->>Server: Generate unique short code (e.g. abc123)
+        Server->>Database: Check if code exists
+        
+        alt Code exists (Collision)
+            Database-->>Server: Exists
+            Server->>Server: Generate new code
+        else Code is unique
+            Database-->>Server: Available
+            Server->>Database: Insert (code, longUrl)
+            Database-->>Server: Success
+            Server-->>Frontend: Return shortUrl (http://short.url/abc123)
+            Frontend-->>User: Display to user + copy button
+        end
+    end
 ```
 
 **Questions to answer:**
@@ -207,6 +188,19 @@ CREATE TABLE urls (
   expiresAt DATETIME
 );
 ```
+
+```mermaid
+erDiagram
+    URLS {
+        int id PK "Primary Key, Auto-increment"
+        string shortCode "UK, Not Null (e.g. abc123)"
+        string longUrl "Not Null (e.g. https://...)"
+        int clicks "Default 0"
+        datetime createdAt "Default CURRENT_TIMESTAMP"
+        datetime expiresAt "Optional"
+    }
+```
+
 
 **Why each field?**
 
