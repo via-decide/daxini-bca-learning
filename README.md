@@ -6,6 +6,15 @@
 
 ---
 
+## 🧭 Navigation
+- 📖 **[The "Learning First" Philosophy](./philosophy/LEARNING_FIRST.md)** - Why we don't spoon-feed code.
+- 🏗️ **[Project Directory](./resources/ALL_PROJECTS_INDEX.md)** - Browse all 115+ projects sorted by difficulty.
+- 🏆 **[Student Leaderboard](./LEADERBOARD.md)** - See live projects built by the community.
+- 🎓 **[Academic Integrity](./philosophy/ACADEMIC_INTEGRITY.md)** - Guidelines for using this repo in college.
+- 🚀 **[What Next After Building?](./docs/03_WHAT_NEXT_AFTER_BUILDING.md)** - How to host your project and put it on your resume.
+
+---
+
 ## 📖 What This Is
 
 A collection of **115 BCA Semester 6 projects** structured around **understanding**, not code-copying.
@@ -233,7 +242,6 @@ Result: Understands every line
         Interview: Passes confidently
 ```
 
----
 
 ## 🚀 For Students: How to Use This
 
