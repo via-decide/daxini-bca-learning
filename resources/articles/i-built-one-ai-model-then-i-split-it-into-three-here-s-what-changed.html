@@ -1,0 +1,277 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>i-built-one-ai-model-then-i-split-it-into-three-here-s-what-changed.md</title>
+    
+    <!-- CSS Dependencies -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+    
+    <!-- Shared Styles (copied from index.html) -->
+    <style>
+        :root {
+            --bg-primary: #0a0a0a;
+            --bg-secondary: #121212;
+            --bg-tertiary: #1e1e1e;
+            --text-primary: #f3f4f6;
+            --text-secondary: #9ca3af;
+            --accent: #3b82f6;
+            --accent-hover: #60a5fa;
+            --border: #27272a;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Reader Header */
+        .reader-header {
+            position: sticky;
+            top: 0;
+            background: rgba(10, 10, 10, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            padding: 1rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid var(--border);
+            z-index: 100;
+        }
+
+        .back-btn {
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border);
+            color: var(--text-primary);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.2s ease;
+            text-decoration: none;
+        }
+
+        .back-btn:hover {
+            background: #2a2a2a;
+            transform: translateX(-2px);
+        }
+
+        /* Markdown Body */
+        .markdown-body {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 3rem 2rem 5rem 2rem;
+            font-size: 1.1rem;
+            color: #d1d5db;
+        }
+
+        .markdown-body h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            color: #ffffff;
+            line-height: 1.2;
+        }
+
+        .markdown-body h2 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-top: 3rem;
+            margin-bottom: 1rem;
+            color: #f3f4f6;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 0.5rem;
+        }
+
+        .markdown-body h3 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-top: 2rem;
+            margin-bottom: 0.75rem;
+            color: #e5e7eb;
+        }
+
+        .markdown-body p {
+            margin-bottom: 1.5rem;
+        }
+
+        .markdown-body ul, .markdown-body ol {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+        }
+
+        .markdown-body li {
+            margin-bottom: 0.5rem;
+        }
+
+        .markdown-body a {
+            color: var(--accent);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s;
+        }
+
+        .markdown-body a:hover {
+            border-bottom-color: var(--accent);
+        }
+
+        .markdown-body code {
+            font-family: 'JetBrains Mono', monospace;
+            background: var(--bg-tertiary);
+            padding: 0.2em 0.4em;
+            border-radius: 4px;
+            font-size: 0.9em;
+            color: #fca5a5;
+        }
+
+        .markdown-body pre {
+            background: #0d1117;
+            padding: 1.5rem;
+            border-radius: 12px;
+            overflow-x: auto;
+            margin-bottom: 1.5rem;
+            border: 1px solid var(--border);
+        }
+
+        .markdown-body pre code {
+            background: none;
+            padding: 0;
+            color: inherit;
+            font-size: 0.95em;
+        }
+
+        .markdown-body blockquote {
+            border-left: 4px solid var(--accent);
+            padding-left: 1rem;
+            margin-left: 0;
+            color: var(--text-secondary);
+            background: rgba(59, 130, 246, 0.05);
+            padding: 1rem;
+            border-radius: 0 8px 8px 0;
+            margin-bottom: 1.5rem;
+        }
+        
+        .markdown-body img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+        }
+        
+        .markdown-body hr {
+            border: 0;
+            height: 1px;
+            background: var(--border);
+            margin: 2rem 0;
+        }
+        
+        @media (max-width: 768px) {
+            .markdown-body {
+                padding: 2rem 1.5rem;
+            }
+            .markdown-body h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="reader-header">
+        <a href="../../index.html" class="back-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+            Back to Hub
+        </a>
+        <div style="font-weight: 600; color: var(--text-secondary);">i-built-one-ai-model-then-i-split-it-into-three-here-s-what-changed.md</div>
+    </div>
+    
+    <div class="markdown-body">
+        <h1>I built one AI model. Then I split it into three. Here&#39;s what changed.</h1>
+<p>I built one AI model. Then I split it into three. Here&#39;s what changed.</p>
+<p>Six weeks ago, I shipped Zayvora — a local reasoning engine for engineers who think in systems.</p>
+<p>◆</p>
+<p>Engineering</p>
+<p>◆</p>
+<p>Systems</p>
+<p>By</p>
+<p>Dharam Daxini</p>
+<p>· April 13, 2026</p>
+<p>Read more at →</p>
+<p>◆ daxini.xyz</p>
+<p>Six weeks ago, I shipped Zayvora — a local reasoning engine for engineers who think in systems.</p>
+<p>One model. One purpose. One command:</p>
+<p>\</p>
+<p>Zayvora&#39;s core is a 6-stage reasoning loop:</p>
+<p>\</p>
+<p>I didn&#39;t retrain anything. I didn&#39;t add parameters. I didn&#39;t increase the model size by a single byte.</p>
+<p>I split the system prompt into three distinct operational modes — each one built for a different kind of thinking:</p>
+<p>Zayvora:Axiom</p>
+<p>— for decisions under uncertainty.</p>
+<p>When you need to reason slowly, not confidently. When the wrong answer is worse than no answer.</p>
+<p>Zayvora:Praxis</p>
+<p>— for builders who need to ship.</p>
+<p>WHAT → WHY → HOW → WATCH OUT. Four lines. Then you move.</p>
+<p>Zayvora:Nexar</p>
+<p>— for research and synthesis.</p>
+<p>SIGNAL → EVIDENCE → GAPS → VECTOR. Surface what&#39;s true, not what sounds true.</p>
+<p>I asked all three the same thing:</p>
+<blockquote>
+<p>&quot;Should I use BM25 or dense embeddings for my RAG system?&quot;</p>
+</blockquote>
+<p>Axiom</p>
+<p>decomposed it into five sub-problems, flagged three assumptions I hadn&#39;t stated, worked through the math, and delivered a reasoned recommendation with caveats.</p>
+<p>Praxis</p>
+<p>said: use BM25 first. It&#39;s faster to debug. Add dense when you know your failure modes. Here&#39;s how to set it up in 4 steps. Watch out for stale indexes.</p>
+<p>Nexar</p>
+<p>surfaced what the literature actually says about hybrid retrieval, what BM25 misses at semantic scale, where the evidence is thin, and what question I should ask next.</p>
+<p>Three different tools. Same 6-stage reasoning core underneath.</p>
+<p>Most people think model quality = parameter count.</p>
+<p>It doesn&#39;t.</p>
+<p>A 4.7GB model with the right operational frame outperforms a 70B model with the wrong one. Every time.</p>
+<p>The system prompt is the architecture. The model is the hardware.</p>
+<p>Zayvora:Praxis doesn&#39;t know more than Zayvora:Axiom. It just knows what kind of output you need, and it stops before it over-builds.</p>
+<p>That&#39;s the entire insight.</p>
+<p>₹0.</p>
+<p>No retraining. No fine-tuning. No GPU time. No cloud bill.</p>
+<p>I spent time — which is the only thing I have to spend as a solo builder — thinking clearly about what each mode of reasoning actually requires.</p>
+<p>Three Modelfiles. Three system prompts. One bash script to build them all.</p>
+<p>That&#39;s the whole engineering delta.</p>
+<p>\</p>
+<p>One model family. Purpose-built modes. Zero framework debt.</p>
+<p>Not every problem needs a new model.</p>
+<p>Most problems need a clearer frame.</p>
+<p>Zayvora:Axiom, Praxis, and Nexar are the same engine — running in the mode the problem actually requires.</p>
+<p>That&#39;s the Daxini Stack philosophy: local-first, sovereign, and built for solo builders who don&#39;t have time for tools that think for themselves.</p>
+<p>Dharam Daxini</p>
+<p>Solo founder, ViaDecide · Gandhidham, Kutch</p>
+<p>[</p>
+<p>daxini.xyz</p>
+<p>](</p>
+<p><a href="https://daxini.xyz">https://daxini.xyz</a></p>
+<p>) · [@daxini2404](</p>
+<p><a href="https://x.com/daxini2404">https://x.com/daxini2404</a></p>
+<p>)</p>
+<p>Zayvora Engine · Daxini Stack v0.9.1</p>
+<p>Try it: ollama pull daxini2404/zayvora</p>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,431 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>i-spent-8-hours-today-doing-what-most-developers-avoid-not-building-new-features.md</title>
+    
+    <!-- CSS Dependencies -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+    
+    <!-- Shared Styles (copied from index.html) -->
+    <style>
+        :root {
+            --bg-primary: #0a0a0a;
+            --bg-secondary: #121212;
+            --bg-tertiary: #1e1e1e;
+            --text-primary: #f3f4f6;
+            --text-secondary: #9ca3af;
+            --accent: #3b82f6;
+            --accent-hover: #60a5fa;
+            --border: #27272a;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Reader Header */
+        .reader-header {
+            position: sticky;
+            top: 0;
+            background: rgba(10, 10, 10, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            padding: 1rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid var(--border);
+            z-index: 100;
+        }
+
+        .back-btn {
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border);
+            color: var(--text-primary);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.2s ease;
+            text-decoration: none;
+        }
+
+        .back-btn:hover {
+            background: #2a2a2a;
+            transform: translateX(-2px);
+        }
+
+        /* Markdown Body */
+        .markdown-body {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 3rem 2rem 5rem 2rem;
+            font-size: 1.1rem;
+            color: #d1d5db;
+        }
+
+        .markdown-body h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            color: #ffffff;
+            line-height: 1.2;
+        }
+
+        .markdown-body h2 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-top: 3rem;
+            margin-bottom: 1rem;
+            color: #f3f4f6;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 0.5rem;
+        }
+
+        .markdown-body h3 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-top: 2rem;
+            margin-bottom: 0.75rem;
+            color: #e5e7eb;
+        }
+
+        .markdown-body p {
+            margin-bottom: 1.5rem;
+        }
+
+        .markdown-body ul, .markdown-body ol {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+        }
+
+        .markdown-body li {
+            margin-bottom: 0.5rem;
+        }
+
+        .markdown-body a {
+            color: var(--accent);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s;
+        }
+
+        .markdown-body a:hover {
+            border-bottom-color: var(--accent);
+        }
+
+        .markdown-body code {
+            font-family: 'JetBrains Mono', monospace;
+            background: var(--bg-tertiary);
+            padding: 0.2em 0.4em;
+            border-radius: 4px;
+            font-size: 0.9em;
+            color: #fca5a5;
+        }
+
+        .markdown-body pre {
+            background: #0d1117;
+            padding: 1.5rem;
+            border-radius: 12px;
+            overflow-x: auto;
+            margin-bottom: 1.5rem;
+            border: 1px solid var(--border);
+        }
+
+        .markdown-body pre code {
+            background: none;
+            padding: 0;
+            color: inherit;
+            font-size: 0.95em;
+        }
+
+        .markdown-body blockquote {
+            border-left: 4px solid var(--accent);
+            padding-left: 1rem;
+            margin-left: 0;
+            color: var(--text-secondary);
+            background: rgba(59, 130, 246, 0.05);
+            padding: 1rem;
+            border-radius: 0 8px 8px 0;
+            margin-bottom: 1.5rem;
+        }
+        
+        .markdown-body img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+        }
+        
+        .markdown-body hr {
+            border: 0;
+            height: 1px;
+            background: var(--border);
+            margin: 2rem 0;
+        }
+        
+        @media (max-width: 768px) {
+            .markdown-body {
+                padding: 2rem 1.5rem;
+            }
+            .markdown-body h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="reader-header">
+        <a href="../../index.html" class="back-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+            Back to Hub
+        </a>
+        <div style="font-weight: 600; color: var(--text-secondary);">i-spent-8-hours-today-doing-what-most-developers-avoid-not-building-new-features.md</div>
+    </div>
+    
+    <div class="markdown-body">
+        <h1>I spent 8 hours today doing what most developers avoid. Not building new features.</h1>
+<p>I spent 8 hours today doing what most developers avoid. Not building new features.</p>
+<p>Here</p>
+<p>◆</p>
+<p>Engineering</p>
+<p>◆</p>
+<p>Systems</p>
+<p>By</p>
+<p>Dharam Daxini</p>
+<p>· March 16, 2026</p>
+<p>Read more at →</p>
+<p>◆ daxini.xyz</p>
+<p>Here&#39;s everything I found, fixed, and shipped today on the ViaDecide OS project</p>
+<p>👇</p>
+<p>━━━━━━━━━━━━━━━━━━━━━━━━</p>
+<p>ViaDecide is a free, browser-first AI tools platform.</p>
+<p>No install. No account required for most tools.</p>
+<p>The stack: Vanilla JS + HTML + CSS + Supabase via CDN.</p>
+<p>No frameworks. No build step. Just the web.</p>
+<p>Today&#39;s focus: the Eco-Hack Engine — a game economy layer</p>
+<p>with login, a plant you grow by studying, and credits earned</p>
+<p>by answering quiz questions across 4 games.</p>
+<p>━━━━━━━━━━━━━━━━━━━━━━━━</p>
+<ol>
+<li>SUPABASE_URL = &#39;</li>
+</ol>
+<p><a href="https://example.supabase.co">https://example.supabase.co</a></p>
+<p>&#39;</p>
+<p>The login page had a placeholder URL.</p>
+<p>Every auth call was hitting a 404.</p>
+<p>Login was broken for everyone.</p>
+<p>It had been deployed like this.</p>
+<ol start="2">
+<li>validatePassword() ran on LOGIN too</li>
+</ol>
+<p>I built password complexity checks for registration:</p>
+<p>8+ chars, must contain a number.</p>
+<p>Then accidentally applied that same check to LOGIN.</p>
+<p>Anyone whose password didn&#39;t have a number?</p>
+<p>Permanently locked out.</p>
+<p>The error message said nothing helpful.</p>
+<ol start="3">
+<li>showDashboard() called 3 times simultaneously</li>
+</ol>
+<p>On every page load with a cached session:</p>
+<p>→ restoreFromLocalFastPath() called it</p>
+<p>→ checkSession() called it</p>
+<p>→ onAuthStateChange() called it</p>
+<p>Three wallet fetches. Three plant loads.</p>
+<p>Action log filled with duplicate entries.</p>
+<p>Race conditions on every login.</p>
+<ol start="4">
+<li>WalletManager showed &#39;125 🌿&#39; always</li>
+</ol>
+<p>The wallet display was a stub.</p>
+<p>It never made a single database call.</p>
+<p>Every user saw 125 drops regardless of their real balance.</p>
+<ol start="5">
+<li>PlantManager showed &#39;🌿 Level 3&#39; always</li>
+</ol>
+<p>Same problem. Hardcoded mock.</p>
+<p>No real data. Just a lie rendered on screen.</p>
+<ol start="6">
+<li>No users table row on register</li>
+</ol>
+<p>New users signed up but had no row in the database.</p>
+<p>All subsequent DB reads returned null.</p>
+<p>The fallback silently showed defaults.</p>
+<p>Nobody knew.</p>
+<ol start="7">
+<li>router.js had duplicate const declarations</li>
+</ol>
+<p>const canonicalRoute declared twice.</p>
+<p>const navLinks declared twice.</p>
+<p>const sections declared twice.</p>
+<p>SyntaxError at parse time.</p>
+<p>The ENTIRE homepage navigation never initialised.</p>
+<p>Tool cards didn&#39;t render.</p>
+<p>Nav links did nothing.</p>
+<ol start="8">
+<li>tool-registry.js had orphaned object literals</li>
+</ol>
+<p>Two tool objects floating outside any array.</p>
+<p>Another SyntaxError.</p>
+<p>The registry failed silently.</p>
+<p>All dynamic tool cards on the homepage: invisible.</p>
+<p>━━━━━━━━━━━━━━━━━━━━━━━━</p>
+<p>Every game in the repo was an island.</p>
+<p>HexWars — only loads vd-nav-fix.js</p>
+<p>SkillHex — loads nothing shared</p>
+<p>Snake Game — loads nothing shared</p>
+<p>Growth Milestone Engine — loads nothing shared</p>
+<p>Meanwhile the shared/ folder had:</p>
+<p>→ EngineBalance.js — balance analysis for game economies</p>
+<p>→ EngineModels.js — player scoring models</p>
+<p>→ SimulationUtils.js — synthetic player simulation</p>
+<p>→ ToolBridge.js — cross-page messaging</p>
+<p>→ ToolIntelligenceEngine.js — tool relationship analysis</p>
+<p>→ AgentRuntime.js — sequential workflow execution</p>
+<p>→ WorkflowEngine.js — agent step management</p>
+<p>All of it. Sitting there. Not wired to anything.</p>
+<p>Tokens earned in HexWars?</p>
+<p>Evaporated on restart.</p>
+<p>Score in SkillHex?</p>
+<p>Saved to its own isolated localStorage key nobody read.</p>
+<p>Snake high score?</p>
+<p>In a key called &#39;snake-best&#39;. Disconnected from everything.</p>
+<p>━━━━━━━━━━━━━━━━━━━━━━━━</p>
+<p>→ Real Supabase URL and credentials</p>
+<p>→ Login validation no longer checks password complexity</p>
+<p>→ _dashboardShown flag prevents triple-trigger race condition</p>
+<p>→ WalletManager now reads from Supabase with localStorage fallback</p>
+<p>→ PlantManager now reads real plant level and hydration</p>
+<p>→ ensureUserRow() upserts DB row on first login so nobody is orphaned</p>
+<p>→ Welcome bonus: +25 Focus Drops and +5 Lumina on registration</p>
+<p>ROUTER + REGISTRY:</p>
+<p>→ Removed duplicate const declarations from router.js</p>
+<p>→ Moved orphaned objects back inside BUILTIN_TOOLS array</p>
+<p>→ Homepage nav now works</p>
+<p>→ Tool cards now render</p>
+<p>→ Created shared/vd-wallet.js — one localStorage contract all games write to</p>
+<p>→ HexWars now saves tokens and score on game end via VDWallet</p>
+<p>→ SkillHex syncs delta XP to shared wallet on every decision</p>
+<p>→ Snake coins increment per food eaten</p>
+<p>→ Wings of Fire Quiz awards stars and drops per correct answer</p>
+<p>→ All games send session data to eco-engine via ToolBridge</p>
+<p>→ Eco-engine listens for incoming credits and adds them to Supabase</p>
+<p>→ Wrote the full Supabase schema from scratch</p>
+<p>→ public.users with focus_drops, lumina, plant_level, plant_hydration</p>
+<p>→</p>
+<p>public.game</p>
+<p>_scores — every session of every game logged</p>
+<p>→ handle_new_user() trigger — auto-creates user row on signup</p>
+<p>→ increment_wallet() RPC — atomic credit updates, no race conditions</p>
+<p>→ save_game_score() RPC — saves score AND updates wallet in one transaction</p>
+<p>→ personal_bests view, leaderboard view, indexes</p>
+<p>━━━━━━━━━━━━━━━━━━━━━━━━</p>
+<p>ToolBridge is a localStorage-based event bus.</p>
+<p>When you finish a HexWars game, it does this:</p>
+<p>ToolBridge.sendContext(&#39;hex-wars&#39;, &#39;eco-engine-test&#39;, {</p>
+<p>game: &#39;hexwars&#39;,</p>
+<p>score: 450,</p>
+<p>tokens: 75,</p>
+<p>dropsEarned: 45,</p>
+<p>luminaEarned: 2</p>
+<p>That writes to localStorage key:</p>
+<p>viadecide.toolbridge.incoming.eco</p>
+<p>-engine-test</p>
+<p>When the user opens the eco-engine login page,</p>
+<p>it reads that key on load.</p>
+<p>No server. No WebSocket. No push notifications.</p>
+<p>Just localStorage as a message queue between pages.</p>
+<p>It&#39;s not perfect. But it works.</p>
+<p>And it&#39;s entirely offline-capable.</p>
+<p>━━━━━━━━━━━━━━━━━━━━━━━━</p>
+<p>This is the part I&#39;m most excited about.</p>
+<p>It&#39;s a physics-based quiz card engine.</p>
+<p>Cards render in a 3D stack.</p>
+<p>You answer by swiping — UP, LEFT, RIGHT, DOWN.</p>
+<p>The cards respond to device gyroscope on mobile.</p>
+<p>Tilt your phone to steer the card.</p>
+<p>Every question bank is now tied to your subject selection.</p>
+<p>Select Science → Chemistry → you get electrochemistry questions.</p>
+<p>Select Programming → Frontend → you get CSS and JavaScript questions.</p>
+<p>Select UPSC → Prelims → you get constitutional law questions.</p>
+<p>120 questions across 24 subject combinations.</p>
+<p>All written by hand.</p>
+<p>All wired to the same swipe mechanic.</p>
+<p>The cards earn you Focus Drops.</p>
+<p>Focus Drops water your plant.</p>
+<p>Your plant evolves through 10 stages.</p>
+<p>Stage evolution earns Lumina.</p>
+<p>Lumina unlocks Circle tier in the clan system.</p>
+<p>One mechanic. Five layers deep.</p>
+<p>━━━━━━━━━━━━━━━━━━━━━━━━</p>
+<p>The plant is not a gimmick.</p>
+<p>It&#39;s a forcing function for daily habits.</p>
+<p>Every question you answer today waters your plant.</p>
+<p>Miss a day and it loses 1% hydration per hour.</p>
+<p>Let it die and you restart at Level 1.</p>
+<p>It&#39;s designed to cost you something if you stop.</p>
+<p>Not money. Just the progress you built.</p>
+<p>The best habit apps don&#39;t reward you for doing the thing.</p>
+<p>They make it feel like loss when you don&#39;t.</p>
+<p>━━━━━━━━━━━━━━━━━━━━━━━━</p>
+<p>Files audited: 47</p>
+<p>Bugs found: 9 critical, 6 high, 4 medium</p>
+<p>Shared modules wired: 8</p>
+<p>Games connected to shared economy: 4</p>
+<p>SQL tables created: 2</p>
+<p>SQL functions written: 3</p>
+<p>Lines of code changed: ~800</p>
+<p>Cups of chai: too many</p>
+<p>━━━━━━━━━━━━━━━━━━━━━━━━</p>
+<p>I shipped broken code to production.</p>
+<p>The login page showed a placeholder URL.</p>
+<p>The wallet showed fake numbers.</p>
+<p>The router crashed on load.</p>
+<p>And I didn&#39;t know.</p>
+<p>Because I was building fast and testing locally</p>
+<p>with data already in localStorage.</p>
+<p>The lesson: test on a fresh browser profile.</p>
+<p>Every deploy. No exceptions.</p>
+<p>Your</p>
+<p>localhost</p>
+<p>is lying to you.</p>
+<p>━━━━━━━━━━━━━━━━━━━━━━━━</p>
+<p><a href="https://via-decide.github.io/decide.engine-tools/">https://via-decide.github.io/decide.engine-tools/</a></p>
+<p>All tools are free.</p>
+<p>No login required for 44 tools.</p>
+<p>Login only for the game economy layer.</p>
+<p>If you want to try the Kinetic Simulator,</p>
+<p>pick any subject in the StudyOS setup</p>
+<p>and go to the Alchemist Engine tab.</p>
+<p>━━━━━━━━━━━━━━━━━━━━━━━━</p>
+<p>What&#39;s the most embarrassing bug you&#39;ve ever shipped to production?</p>
+<p>I&#39;ll start: mine had a hardcoded &#39;125 🌿&#39; as a wallet balance for three weeks before anyone noticed.</p>
+<p>━━━━━━━━━━━━━━━━━━━━━━━━</p>
+<p>#BuildInPublic #GameDev #JavaScript #WebDevelopment #Supabase</p>
+<p>#VanillaJS #IndieHacker #OpenSource #StudyOS #ViaDecide</p>
+<p>#NoCode #LowCode #HabitBuilding #EdTech #SoloFounder</p>
+
+    </div>
+</body>
+</html>

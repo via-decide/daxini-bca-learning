@@ -1,0 +1,303 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>building-viadecide-what-i-ve-learned-so-far.md</title>
+    
+    <!-- CSS Dependencies -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+    
+    <!-- Shared Styles (copied from index.html) -->
+    <style>
+        :root {
+            --bg-primary: #0a0a0a;
+            --bg-secondary: #121212;
+            --bg-tertiary: #1e1e1e;
+            --text-primary: #f3f4f6;
+            --text-secondary: #9ca3af;
+            --accent: #3b82f6;
+            --accent-hover: #60a5fa;
+            --border: #27272a;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Reader Header */
+        .reader-header {
+            position: sticky;
+            top: 0;
+            background: rgba(10, 10, 10, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            padding: 1rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid var(--border);
+            z-index: 100;
+        }
+
+        .back-btn {
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border);
+            color: var(--text-primary);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.2s ease;
+            text-decoration: none;
+        }
+
+        .back-btn:hover {
+            background: #2a2a2a;
+            transform: translateX(-2px);
+        }
+
+        /* Markdown Body */
+        .markdown-body {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 3rem 2rem 5rem 2rem;
+            font-size: 1.1rem;
+            color: #d1d5db;
+        }
+
+        .markdown-body h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            color: #ffffff;
+            line-height: 1.2;
+        }
+
+        .markdown-body h2 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-top: 3rem;
+            margin-bottom: 1rem;
+            color: #f3f4f6;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 0.5rem;
+        }
+
+        .markdown-body h3 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-top: 2rem;
+            margin-bottom: 0.75rem;
+            color: #e5e7eb;
+        }
+
+        .markdown-body p {
+            margin-bottom: 1.5rem;
+        }
+
+        .markdown-body ul, .markdown-body ol {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+        }
+
+        .markdown-body li {
+            margin-bottom: 0.5rem;
+        }
+
+        .markdown-body a {
+            color: var(--accent);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s;
+        }
+
+        .markdown-body a:hover {
+            border-bottom-color: var(--accent);
+        }
+
+        .markdown-body code {
+            font-family: 'JetBrains Mono', monospace;
+            background: var(--bg-tertiary);
+            padding: 0.2em 0.4em;
+            border-radius: 4px;
+            font-size: 0.9em;
+            color: #fca5a5;
+        }
+
+        .markdown-body pre {
+            background: #0d1117;
+            padding: 1.5rem;
+            border-radius: 12px;
+            overflow-x: auto;
+            margin-bottom: 1.5rem;
+            border: 1px solid var(--border);
+        }
+
+        .markdown-body pre code {
+            background: none;
+            padding: 0;
+            color: inherit;
+            font-size: 0.95em;
+        }
+
+        .markdown-body blockquote {
+            border-left: 4px solid var(--accent);
+            padding-left: 1rem;
+            margin-left: 0;
+            color: var(--text-secondary);
+            background: rgba(59, 130, 246, 0.05);
+            padding: 1rem;
+            border-radius: 0 8px 8px 0;
+            margin-bottom: 1.5rem;
+        }
+        
+        .markdown-body img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+        }
+        
+        .markdown-body hr {
+            border: 0;
+            height: 1px;
+            background: var(--border);
+            margin: 2rem 0;
+        }
+        
+        @media (max-width: 768px) {
+            .markdown-body {
+                padding: 2rem 1.5rem;
+            }
+            .markdown-body h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="reader-header">
+        <a href="../../index.html" class="back-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+            Back to Hub
+        </a>
+        <div style="font-weight: 600; color: var(--text-secondary);">building-viadecide-what-i-ve-learned-so-far.md</div>
+    </div>
+    
+    <div class="markdown-body">
+        <h1>Building ViaDecide: What I’ve Learned So Far</h1>
+<p>Building ViaDecide: What I’ve Learned So</p>
+<p>Far</p>
+<p>When I started building ViaDecide, I wasn’t trying to create another SaaS product.</p>
+<p>◆</p>
+<p>Engineering</p>
+<p>◆</p>
+<p>Systems</p>
+<p>By</p>
+<p>Dharam Daxini</p>
+<p>· March 11, 2026</p>
+<p>Read more at →</p>
+<p>◆ daxini.xyz</p>
+<p>When I started building ViaDecide, I wasn’t trying to create another SaaS product.</p>
+<p>I was trying to solve a problem I kept seeing in</p>
+<p>small commerce and D2C businesses</p>
+<p>.</p>
+<p>Most businesses don’t lack tools.</p>
+<p>They lack</p>
+<p>structure.</p>
+<p>Every small business today runs on a</p>
+<p>fragmented stack</p>
+<p>.</p>
+<p>Something like this:</p>
+<p>Each tool solves a</p>
+<p>small operational problem</p>
+<p>.</p>
+<p>But none of them help founders answer the most important question:</p>
+<p>What decision should I make next?</p>
+<p>Over time this creates:</p>
+<p>This is the problem that pushed me to start exploring a different idea.</p>
+<p>Instead of building another tool, I started thinking about</p>
+<p>Decision Infrastructure</p>
+<p>.</p>
+<p>A system that converts</p>
+<p>signals into decisions.</p>
+<p>The simple loop I’ve been experimenting with looks like this:</p>
+<p>Customer Signals ↓ Intent Mapping ↓ State Awareness ↓ Structured Decisions</p>
+<p>If businesses had this structure, they wouldn’t need dozens of disconnected tools.</p>
+<p>They would have a</p>
+<p>system for clarity.</p>
+<p>Over the past months, ViaDecide has been evolving from an idea into an early system.</p>
+<p>Some of the experiments so far:</p>
+<p>Instead of dashboards that just show data, I started experimenting with a</p>
+<p>decision loop model</p>
+<p>.</p>
+<p>The goal is simple:</p>
+<p>Turn messy information into</p>
+<p>clear actions</p>
+<p>.</p>
+<p>Most product pages are designed like</p>
+<p>catalogs</p>
+<p>.</p>
+<p>But buyers don’t make decisions through catalogs.</p>
+<p>They need a</p>
+<p>structured narrative</p>
+<p>.</p>
+<p>So I started testing</p>
+<p>scroll-based product pages</p>
+<p>where:</p>
+<p>The idea is simple:</p>
+<p>One product → One narrative.</p>
+<p>Trust is one of the biggest problems in ecommerce.</p>
+<p>Especially for independent sellers.</p>
+<p>So I experimented with</p>
+<p>3D product inspection</p>
+<p>, allowing buyers to explore products more transparently before buying.</p>
+<p>The goal:</p>
+<p>Recently I started publishing</p>
+<p>audio logs and podcasts</p>
+<p>explaining the thinking behind ViaDecide.</p>
+<p>Instead of just shipping code, I’m sharing:</p>
+<p>You can explore them here:</p>
+<p><a href="https://viadecide.com/audio.log">https://viadecide.com/audio.log</a></p>
+<p>India’s ecommerce ecosystem is changing.</p>
+<p>Instead, commerce could become</p>
+<p>open and decentralized</p>
+<p>.</p>
+<p>But for that future to work, sellers need more than storefronts.</p>
+<p>They need</p>
+<p>decision infrastructure.</p>
+<p>Otherwise, they remain dependent on platforms.</p>
+<p>ViaDecide is still an experiment.</p>
+<p>I’m exploring questions like:</p>
+<p>There are many unknowns.</p>
+<p>But the direction is becoming clearer.</p>
+<p>My goal with ViaDecide is simple:</p>
+<p>Because the future of commerce won’t be about:</p>
+<p>More SaaS.</p>
+<p>It will be about</p>
+<p>better systems.</p>
+<p>If you run a business today:</p>
+<p>I’m curious to hear how others are thinking about this.</p>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,401 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>from-prompts-to-pipelines-the-evolution-of-ai-systems.md</title>
+    
+    <!-- CSS Dependencies -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+    
+    <!-- Shared Styles (copied from index.html) -->
+    <style>
+        :root {
+            --bg-primary: #0a0a0a;
+            --bg-secondary: #121212;
+            --bg-tertiary: #1e1e1e;
+            --text-primary: #f3f4f6;
+            --text-secondary: #9ca3af;
+            --accent: #3b82f6;
+            --accent-hover: #60a5fa;
+            --border: #27272a;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Reader Header */
+        .reader-header {
+            position: sticky;
+            top: 0;
+            background: rgba(10, 10, 10, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            padding: 1rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid var(--border);
+            z-index: 100;
+        }
+
+        .back-btn {
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border);
+            color: var(--text-primary);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.2s ease;
+            text-decoration: none;
+        }
+
+        .back-btn:hover {
+            background: #2a2a2a;
+            transform: translateX(-2px);
+        }
+
+        /* Markdown Body */
+        .markdown-body {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 3rem 2rem 5rem 2rem;
+            font-size: 1.1rem;
+            color: #d1d5db;
+        }
+
+        .markdown-body h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            color: #ffffff;
+            line-height: 1.2;
+        }
+
+        .markdown-body h2 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-top: 3rem;
+            margin-bottom: 1rem;
+            color: #f3f4f6;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 0.5rem;
+        }
+
+        .markdown-body h3 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-top: 2rem;
+            margin-bottom: 0.75rem;
+            color: #e5e7eb;
+        }
+
+        .markdown-body p {
+            margin-bottom: 1.5rem;
+        }
+
+        .markdown-body ul, .markdown-body ol {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+        }
+
+        .markdown-body li {
+            margin-bottom: 0.5rem;
+        }
+
+        .markdown-body a {
+            color: var(--accent);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s;
+        }
+
+        .markdown-body a:hover {
+            border-bottom-color: var(--accent);
+        }
+
+        .markdown-body code {
+            font-family: 'JetBrains Mono', monospace;
+            background: var(--bg-tertiary);
+            padding: 0.2em 0.4em;
+            border-radius: 4px;
+            font-size: 0.9em;
+            color: #fca5a5;
+        }
+
+        .markdown-body pre {
+            background: #0d1117;
+            padding: 1.5rem;
+            border-radius: 12px;
+            overflow-x: auto;
+            margin-bottom: 1.5rem;
+            border: 1px solid var(--border);
+        }
+
+        .markdown-body pre code {
+            background: none;
+            padding: 0;
+            color: inherit;
+            font-size: 0.95em;
+        }
+
+        .markdown-body blockquote {
+            border-left: 4px solid var(--accent);
+            padding-left: 1rem;
+            margin-left: 0;
+            color: var(--text-secondary);
+            background: rgba(59, 130, 246, 0.05);
+            padding: 1rem;
+            border-radius: 0 8px 8px 0;
+            margin-bottom: 1.5rem;
+        }
+        
+        .markdown-body img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+        }
+        
+        .markdown-body hr {
+            border: 0;
+            height: 1px;
+            background: var(--border);
+            margin: 2rem 0;
+        }
+        
+        @media (max-width: 768px) {
+            .markdown-body {
+                padding: 2rem 1.5rem;
+            }
+            .markdown-body h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="reader-header">
+        <a href="../../index.html" class="back-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+            Back to Hub
+        </a>
+        <div style="font-weight: 600; color: var(--text-secondary);">from-prompts-to-pipelines-the-evolution-of-ai-systems.md</div>
+    </div>
+    
+    <div class="markdown-body">
+        <h1>From Prompts to Pipelines: The Evolution of AI Systems</h1>
+<p>From Prompts to Pipelines: The Evolution of AI</p>
+<p>Systems</p>
+<p>There was a time when I thought AI products were just… prompts.</p>
+<p>◆</p>
+<p>Engineering</p>
+<p>◆</p>
+<p>Systems</p>
+<p>By</p>
+<p>Dharam Daxini</p>
+<p>· May 4, 2026</p>
+<p>Read more at →</p>
+<p>◆ daxini.xyz</p>
+<p>There was a time when I thought AI products were just… prompts.</p>
+<p>Not systems. Not infrastructure.</p>
+<p>Just input → output.</p>
+<p>When I was building my Alchemist app, I used to create these tiny tools.</p>
+<p>Literally:</p>
+<blockquote>
+<p>one HTML file</p>
+</blockquote>
+<blockquote>
+<p>one function</p>
+</blockquote>
+<blockquote>
+<p>one purpose</p>
+</blockquote>
+<p>You type something → it gives you a result.</p>
+<p>That was it.</p>
+<p>And honestly?</p>
+<p>It felt powerful.</p>
+<p>Because for the first time, you could wrap intelligence into something usable.</p>
+<p>Every tool I built did one thing.</p>
+<blockquote>
+<p>summarize text</p>
+</blockquote>
+<blockquote>
+<p>rewrite content</p>
+</blockquote>
+<blockquote>
+<p>generate something</p>
+</blockquote>
+<p>But they didn&#39;t connect.</p>
+<p>They didn&#39;t remember.</p>
+<p>They didn&#39;t evolve.</p>
+<p>Each tool was like a single neuron.</p>
+<blockquote>
+<p>No system. No flow.</p>
+</blockquote>
+<p>Then came the idea:</p>
+<blockquote>
+<p>What if I chain prompts?</p>
+</blockquote>
+<p>Now we had:</p>
+<blockquote>
+<p>Prompt A → output</p>
+</blockquote>
+<blockquote>
+<p>feed into Prompt B</p>
+</blockquote>
+<blockquote>
+<p>then into Prompt C</p>
+</blockquote>
+<p>And suddenly it looked like a system.</p>
+<p>But it wasn&#39;t.</p>
+<p>It was still fragile.</p>
+<blockquote>
+<p>break one step → everything collapses</p>
+</blockquote>
+<blockquote>
+<p>no real state</p>
+</blockquote>
+<blockquote>
+<p>no reliability</p>
+</blockquote>
+<blockquote>
+<p>no ownership of execution</p>
+</blockquote>
+<p>It was still just… prompts pretending to be architecture.</p>
+<p>The shift happened when I stopped thinking:</p>
+<blockquote>
+<p>What prompt should I write?</p>
+</blockquote>
+<p>and started asking:</p>
+<blockquote>
+<p>How does this actually run?</p>
+</blockquote>
+<p>That&#39;s when everything changed.</p>
+<p>Because real systems need:</p>
+<blockquote>
+<p>state</p>
+</blockquote>
+<blockquote>
+<p>retries</p>
+</blockquote>
+<blockquote>
+<p>storage</p>
+</blockquote>
+<blockquote>
+<p>timing</p>
+</blockquote>
+<blockquote>
+<p>coordination</p>
+</blockquote>
+<blockquote>
+<p>failure handling</p>
+</blockquote>
+<p>Not just intelligence.</p>
+<p>This is where things got serious.</p>
+<p>Instead of:</p>
+<blockquote>
+<p>input → prompt → output</p>
+</blockquote>
+<p>It became:</p>
+<blockquote>
+<p>input → validation → processing → inference → storage → response</p>
+</blockquote>
+<p>Now you&#39;re not building a tool.</p>
+<blockquote>
+<p>You&#39;re building a pipeline.</p>
+</blockquote>
+<p>And pipelines introduce:</p>
+<blockquote>
+<p>reliability</p>
+</blockquote>
+<blockquote>
+<p>composability</p>
+</blockquote>
+<blockquote>
+<p>control</p>
+</blockquote>
+<blockquote>
+<p>scalability</p>
+</blockquote>
+<p>Looking back, Alchemist is still my top-tier project.</p>
+<p>Not because it was perfect.</p>
+<p>But because it exposed something important:</p>
+<blockquote>
+<p>Prompts are just the surface. Systems are the real product.</p>
+</blockquote>
+<p>We didn&#39;t move from:</p>
+<blockquote>
+<p>bad prompts → good prompts</p>
+</blockquote>
+<p>We moved from:</p>
+<blockquote>
+<p>prompts → pipelines → systems</p>
+</blockquote>
+<p>Right now, most &quot;AI apps&quot; are still here:</p>
+<blockquote>
+<p>wrapper UI</p>
+</blockquote>
+<blockquote>
+<p>one API call</p>
+</blockquote>
+<blockquote>
+<p>fake streaming</p>
+</blockquote>
+<blockquote>
+<p>no real backend logic</p>
+</blockquote>
+<p>They look impressive.</p>
+<p>But they don&#39;t hold.</p>
+<p>The next generation of AI products won&#39;t be:</p>
+<blockquote>
+<p>better prompts</p>
+</blockquote>
+<p>They&#39;ll be:</p>
+<blockquote>
+<p>execution layers</p>
+</blockquote>
+<blockquote>
+<p>orchestrated pipelines</p>
+</blockquote>
+<blockquote>
+<p>local-first systems</p>
+</blockquote>
+<blockquote>
+<p>owned inference</p>
+</blockquote>
+<p>If you&#39;re still building:</p>
+<blockquote>
+<p>one tool = one prompt</p>
+</blockquote>
+<p>That&#39;s fine.</p>
+<p>I was there too.</p>
+<p>But the real jump happens when you start thinking:</p>
+<blockquote>
+<p>What system does this belong to?</p>
+</blockquote>
+<p>#sovereignengineer #daxinios #hanumansolutions #systemsthinking #AlchemistApp</p>
+
+    </div>
+</body>
+</html>

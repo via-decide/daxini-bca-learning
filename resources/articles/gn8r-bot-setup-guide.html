@@ -1,0 +1,276 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gn8r-bot-setup-guide.md</title>
+    
+    <!-- CSS Dependencies -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+    
+    <!-- Shared Styles (copied from index.html) -->
+    <style>
+        :root {
+            --bg-primary: #0a0a0a;
+            --bg-secondary: #121212;
+            --bg-tertiary: #1e1e1e;
+            --text-primary: #f3f4f6;
+            --text-secondary: #9ca3af;
+            --accent: #3b82f6;
+            --accent-hover: #60a5fa;
+            --border: #27272a;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Reader Header */
+        .reader-header {
+            position: sticky;
+            top: 0;
+            background: rgba(10, 10, 10, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            padding: 1rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid var(--border);
+            z-index: 100;
+        }
+
+        .back-btn {
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border);
+            color: var(--text-primary);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.2s ease;
+            text-decoration: none;
+        }
+
+        .back-btn:hover {
+            background: #2a2a2a;
+            transform: translateX(-2px);
+        }
+
+        /* Markdown Body */
+        .markdown-body {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 3rem 2rem 5rem 2rem;
+            font-size: 1.1rem;
+            color: #d1d5db;
+        }
+
+        .markdown-body h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            color: #ffffff;
+            line-height: 1.2;
+        }
+
+        .markdown-body h2 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-top: 3rem;
+            margin-bottom: 1rem;
+            color: #f3f4f6;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 0.5rem;
+        }
+
+        .markdown-body h3 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-top: 2rem;
+            margin-bottom: 0.75rem;
+            color: #e5e7eb;
+        }
+
+        .markdown-body p {
+            margin-bottom: 1.5rem;
+        }
+
+        .markdown-body ul, .markdown-body ol {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+        }
+
+        .markdown-body li {
+            margin-bottom: 0.5rem;
+        }
+
+        .markdown-body a {
+            color: var(--accent);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s;
+        }
+
+        .markdown-body a:hover {
+            border-bottom-color: var(--accent);
+        }
+
+        .markdown-body code {
+            font-family: 'JetBrains Mono', monospace;
+            background: var(--bg-tertiary);
+            padding: 0.2em 0.4em;
+            border-radius: 4px;
+            font-size: 0.9em;
+            color: #fca5a5;
+        }
+
+        .markdown-body pre {
+            background: #0d1117;
+            padding: 1.5rem;
+            border-radius: 12px;
+            overflow-x: auto;
+            margin-bottom: 1.5rem;
+            border: 1px solid var(--border);
+        }
+
+        .markdown-body pre code {
+            background: none;
+            padding: 0;
+            color: inherit;
+            font-size: 0.95em;
+        }
+
+        .markdown-body blockquote {
+            border-left: 4px solid var(--accent);
+            padding-left: 1rem;
+            margin-left: 0;
+            color: var(--text-secondary);
+            background: rgba(59, 130, 246, 0.05);
+            padding: 1rem;
+            border-radius: 0 8px 8px 0;
+            margin-bottom: 1.5rem;
+        }
+        
+        .markdown-body img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+        }
+        
+        .markdown-body hr {
+            border: 0;
+            height: 1px;
+            background: var(--border);
+            margin: 2rem 0;
+        }
+        
+        @media (max-width: 768px) {
+            .markdown-body {
+                padding: 2rem 1.5rem;
+            }
+            .markdown-body h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="reader-header">
+        <a href="../../index.html" class="back-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+            Back to Hub
+        </a>
+        <div style="font-weight: 600; color: var(--text-secondary);">gn8r-bot-setup-guide.md</div>
+    </div>
+    
+    <div class="markdown-body">
+        <h1>Building the GN8R Bot: A Guide to the Antigravity Apex Engine</h1>
+<p>The <strong>GN8R Bot</strong> (often referred to as the Antigravity Apex Engine or Synthesis Orchestrator) is a Telegram-based GitHub orchestration and file generation agent. It&#39;s designed to automate tedious engineering tasks, synthesize traces, and manage codebase architecture strictly via Telegram commands, all while adhering to ironclad Standard Operating Procedures (SOPs).</p>
+<p>If you want to set up a <code>gn8r</code>-style orchestration bot, this guide breaks down the core architecture, process management, and strict compliance rules required.</p>
+<hr>
+<h2>1. Core Tech Stack &amp; Requirements</h2>
+<p>The bot is built on modern JavaScript, specifically designed to run on a stable server (or a Raspberry Pi/local Linux box) with high uptime.</p>
+<ul>
+<li><strong>Environment</strong>: Node.js v20 or higher.</li>
+<li><strong>Paradigm</strong>: ES Modules (Ensure <code>&quot;type&quot;: &quot;module&quot;</code> is set in your <code>package.json</code>).</li>
+<li><strong>Core Dependencies</strong>:<ul>
+<li><code>node-fetch</code>: For API calls to Telegram and GitHub.</li>
+<li><code>dotenv</code>: For managing API keys securely.</li>
+<li><code>formdata-node</code>: For handling complex payload structures if file uploading is required.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2>2. Directory &amp; Architecture Structure</h2>
+<p>A robust orchestration bot requires clean separation of concerns. The <code>gn8r</code> bot relies on the following structural foundation:</p>
+<pre><code class="language-text">gn8r-bot/
+├── .env                  # Secret keys (Telegram Bot Token, GitHub PAT)
+├── package.json          # Dependencies and scripts (type: module)
+├── SOP.md                # The Codex: Pre-Modification Protocol
+├── src/
+│   ├── index.js          # Main entry point (initializes services)
+│   ├── telegram-bot.js   # Handles the Telegram long-polling / webhook logic
+│   └── config.js         # Configuration and constant values
+├── scripts/
+│   └── test-flow.js      # Utility for running simulated end-to-end tests
+└── templates/
+    └── task-template.md  # Standardized templates for agent output
+</code></pre>
+<h3>Essential NPM Scripts</h3>
+<p>Your <code>package.json</code> should include standard hooks for development and production:</p>
+<pre><code class="language-json">&quot;scripts&quot;: {
+  &quot;start&quot;: &quot;node src/index.js&quot;,
+  &quot;dev&quot;: &quot;node --watch src/index.js&quot;,
+  &quot;check&quot;: &quot;node --check src/index.js src/telegram-bot.js src/config.js&quot;,
+  &quot;test:flow&quot;: &quot;node scripts/test-flow.js&quot;
+}
+</code></pre>
+<hr>
+<h2>3. Process Management with PM2</h2>
+<p>Because this bot is expected to listen for commands 24/7, you cannot rely on a simple terminal session. <strong>PM2</strong> (Process Manager 2) is the industry standard for keeping Node.js applications alive indefinitely.</p>
+<p><em>Requirement: PM2 version 6.0.14+</em></p>
+<p><strong>Key PM2 Commands for the GN8R Bot:</strong></p>
+<ul>
+<li><strong>Start the bot:</strong> <code>pm2 start src/index.js --name &quot;gn8r&quot;</code></li>
+<li><strong>Check Status:</strong> <code>pm2 list</code> or <code>pm2 status</code> (Ensure the status says <code>online</code>).</li>
+<li><strong>Restart (after config changes):</strong> <code>pm2 restart gn8r</code></li>
+<li><strong>View Live Logs:</strong> <code>pm2 logs gn8r</code></li>
+<li><strong>Diagnostics:</strong> If PM2 seems frozen, run <code>pm2 ping</code> to wake the daemon.</li>
+</ul>
+<p><em>Fallback Verification:</em> If PM2 lists are unresponsive, you can verify the node process manually in Linux via:<br><code>ps aux | grep &quot;src/index.js&quot; | grep -v grep</code></p>
+<hr>
+<h2>4. The Codex: SOP &amp; Compliance Rules</h2>
+<p>What separates the <code>gn8r</code> bot from a standard ChatGPT script is its strict adherence to the <strong>Pre-Modification Protocol (SOP)</strong>. The bot is bound by a <code>SOP.md</code> file that it must read into context before executing orchestration tasks.</p>
+<h3>Core Principles of the GN8R Codex:</h3>
+<ol>
+<li><strong>Strict Adherence:</strong> The bot must strictly adhere to the explicit instructions provided by the user via Telegram. No optimizations or &quot;clever&quot; changes are permitted without user authorization.</li>
+<li><strong>Mandatory Clarification:</strong> If a Telegram command is ambiguous, the bot must pause execution, paraphrase its understanding, and ask the user for confirmation.</li>
+<li><strong>Proposals, Not Actions:</strong> If the bot detects a better architectural approach, it must present it as a <em>proposal</em> with a clear &quot;Why&quot; and impact analysis. It cannot write the code until the user says &quot;Yes&quot;.</li>
+<li><strong>Security First:</strong> The bot must immediately flag security vulnerabilities (e.g., hardcoded keys, unsafe command execution) in the codebase.</li>
+</ol>
+<h2>Summary</h2>
+<p>Setting up a <code>gn8r</code> type bot isn&#39;t just about hooking up a Telegram API to OpenAI. It&#39;s about building a robust, PM2-managed ES Module infrastructure that obeys strict operational protocols (<code>SOP.md</code>). When properly configured, this bot becomes the Apex Engine of your continuous learning and development workflow.</p>
+
+    </div>
+</body>
+</html>

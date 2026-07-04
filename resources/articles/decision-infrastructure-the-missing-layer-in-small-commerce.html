@@ -1,0 +1,308 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>decision-infrastructure-the-missing-layer-in-small-commerce.md</title>
+    
+    <!-- CSS Dependencies -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+    
+    <!-- Shared Styles (copied from index.html) -->
+    <style>
+        :root {
+            --bg-primary: #0a0a0a;
+            --bg-secondary: #121212;
+            --bg-tertiary: #1e1e1e;
+            --text-primary: #f3f4f6;
+            --text-secondary: #9ca3af;
+            --accent: #3b82f6;
+            --accent-hover: #60a5fa;
+            --border: #27272a;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Reader Header */
+        .reader-header {
+            position: sticky;
+            top: 0;
+            background: rgba(10, 10, 10, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            padding: 1rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid var(--border);
+            z-index: 100;
+        }
+
+        .back-btn {
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border);
+            color: var(--text-primary);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.2s ease;
+            text-decoration: none;
+        }
+
+        .back-btn:hover {
+            background: #2a2a2a;
+            transform: translateX(-2px);
+        }
+
+        /* Markdown Body */
+        .markdown-body {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 3rem 2rem 5rem 2rem;
+            font-size: 1.1rem;
+            color: #d1d5db;
+        }
+
+        .markdown-body h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            color: #ffffff;
+            line-height: 1.2;
+        }
+
+        .markdown-body h2 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-top: 3rem;
+            margin-bottom: 1rem;
+            color: #f3f4f6;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 0.5rem;
+        }
+
+        .markdown-body h3 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-top: 2rem;
+            margin-bottom: 0.75rem;
+            color: #e5e7eb;
+        }
+
+        .markdown-body p {
+            margin-bottom: 1.5rem;
+        }
+
+        .markdown-body ul, .markdown-body ol {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+        }
+
+        .markdown-body li {
+            margin-bottom: 0.5rem;
+        }
+
+        .markdown-body a {
+            color: var(--accent);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s;
+        }
+
+        .markdown-body a:hover {
+            border-bottom-color: var(--accent);
+        }
+
+        .markdown-body code {
+            font-family: 'JetBrains Mono', monospace;
+            background: var(--bg-tertiary);
+            padding: 0.2em 0.4em;
+            border-radius: 4px;
+            font-size: 0.9em;
+            color: #fca5a5;
+        }
+
+        .markdown-body pre {
+            background: #0d1117;
+            padding: 1.5rem;
+            border-radius: 12px;
+            overflow-x: auto;
+            margin-bottom: 1.5rem;
+            border: 1px solid var(--border);
+        }
+
+        .markdown-body pre code {
+            background: none;
+            padding: 0;
+            color: inherit;
+            font-size: 0.95em;
+        }
+
+        .markdown-body blockquote {
+            border-left: 4px solid var(--accent);
+            padding-left: 1rem;
+            margin-left: 0;
+            color: var(--text-secondary);
+            background: rgba(59, 130, 246, 0.05);
+            padding: 1rem;
+            border-radius: 0 8px 8px 0;
+            margin-bottom: 1.5rem;
+        }
+        
+        .markdown-body img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+        }
+        
+        .markdown-body hr {
+            border: 0;
+            height: 1px;
+            background: var(--border);
+            margin: 2rem 0;
+        }
+        
+        @media (max-width: 768px) {
+            .markdown-body {
+                padding: 2rem 1.5rem;
+            }
+            .markdown-body h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="reader-header">
+        <a href="../../index.html" class="back-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+            Back to Hub
+        </a>
+        <div style="font-weight: 600; color: var(--text-secondary);">decision-infrastructure-the-missing-layer-in-small-commerce.md</div>
+    </div>
+    
+    <div class="markdown-body">
+        <h1>Decision Infrastructure: The Missing Layer in Small Commerce</h1>
+<p>Decision Infrastructure: The Missing Layer in Small</p>
+<p>Commerce</p>
+<p>Right now the average seller stack looks like this:</p>
+<p>◆</p>
+<p>Engineering</p>
+<p>◆</p>
+<p>Systems</p>
+<p>By</p>
+<p>Dharam Daxini</p>
+<p>· March 10, 2026</p>
+<p>Read more at →</p>
+<p>◆ daxini.xyz</p>
+<p>Right now the average seller stack looks like this:</p>
+<p>• Shopify • WhatsApp • Google Sheets • Marketplace dashboards • Random analytics tools</p>
+<p>Tools everywhere. Decisions nowhere.</p>
+<p>This is why most small brands stay trapped in</p>
+<p>low margins, platform dependency, and chaotic growth.</p>
+<p>The problem isn’t technology.</p>
+<p>The problem is</p>
+<p>decision infrastructure.</p>
+<p>Decision infrastructure is the system that converts</p>
+<p>messy information into clear actions.</p>
+<p>A simple model:</p>
+<p>Input</p>
+<p>Data, signals, prices, inventory, user behavior.</p>
+<p>Intent</p>
+<p>What decision actually matters right now?</p>
+<p>Examples:</p>
+<p>Should I change pricing?</p>
+<p>Should I list on ONDC?</p>
+<p>Should I promote this product?</p>
+<p>State</p>
+<p>Current context.</p>
+<p>Examples:</p>
+<p>inventory level</p>
+<p>margin</p>
+<p>customer demand</p>
+<p>logistics cost</p>
+<p>Output</p>
+<p>Clear decision.</p>
+<p>Examples:</p>
+<p>increase price by ₹50</p>
+<p>run offer for 48 hours</p>
+<p>stop marketplace dependency</p>
+<p>Without this loop, businesses operate on</p>
+<p>guessing.</p>
+<p>SaaS tools optimize</p>
+<p>tasks.</p>
+<p>But commerce success depends on</p>
+<p>decisions.</p>
+<p>Example:</p>
+<p>A dashboard can show:</p>
+<p>traffic</p>
+<p>conversions</p>
+<p>revenue</p>
+<p>But it rarely answers the real question:</p>
+<p>“What should I do next?”</p>
+<p>That’s where decision infrastructure matters.</p>
+<p>Small Indian brands face three structural constraints:</p>
+<p>So most sellers surrender control to marketplaces.</p>
+<p>But platforms optimize for</p>
+<p>their growth</p>
+<p>, not yours.</p>
+<p>Decision infrastructure gives sellers the</p>
+<p>ability to think independently.</p>
+<p>I’m building</p>
+<p>ViaDecide</p>
+<p>to solve this.</p>
+<p>A system designed for</p>
+<p>structured commerce.</p>
+<p>Key principles:</p>
+<p>One Product → One Narrative</p>
+<p>Instead of cluttered product pages, every product becomes a</p>
+<p>decision story.</p>
+<p>Scroll-based product UX</p>
+<p>The page guides the buyer through the decision.</p>
+<p>Live inspection</p>
+<p>Buyers can examine the product before purchasing.</p>
+<p>Zero marketplace dependency</p>
+<p>Designed for</p>
+<p>ONDC sellers and independent brands.</p>
+<p>Commerce is moving from:</p>
+<p>Platform control →</p>
+<p>Seller infrastructure</p>
+<p>Marketplaces →</p>
+<p>Open commerce (ONDC)</p>
+<p>Listing products →</p>
+<p>Structuring decisions</p>
+<p>The brands that build</p>
+<p>decision infrastructure</p>
+<p>early will control their margins.</p>
+<p>Everyone else will stay dependent.</p>
+<p>What is the</p>
+<p>most important decision</p>
+<p>your business struggles with right now?</p>
+<p>Reply in comments.</p>
+<p>I’ll break it down in the next edition.</p>
+
+    </div>
+</body>
+</html>

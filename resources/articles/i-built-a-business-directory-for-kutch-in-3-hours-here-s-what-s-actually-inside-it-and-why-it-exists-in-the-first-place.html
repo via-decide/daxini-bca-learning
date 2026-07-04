@@ -1,0 +1,273 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>i-built-a-business-directory-for-kutch-in-3-hours-here-s-what-s-actually-inside-it-and-why-it-exists-in-the-first-place.md</title>
+    
+    <!-- CSS Dependencies -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+    
+    <!-- Shared Styles (copied from index.html) -->
+    <style>
+        :root {
+            --bg-primary: #0a0a0a;
+            --bg-secondary: #121212;
+            --bg-tertiary: #1e1e1e;
+            --text-primary: #f3f4f6;
+            --text-secondary: #9ca3af;
+            --accent: #3b82f6;
+            --accent-hover: #60a5fa;
+            --border: #27272a;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Reader Header */
+        .reader-header {
+            position: sticky;
+            top: 0;
+            background: rgba(10, 10, 10, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            padding: 1rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid var(--border);
+            z-index: 100;
+        }
+
+        .back-btn {
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border);
+            color: var(--text-primary);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.2s ease;
+            text-decoration: none;
+        }
+
+        .back-btn:hover {
+            background: #2a2a2a;
+            transform: translateX(-2px);
+        }
+
+        /* Markdown Body */
+        .markdown-body {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 3rem 2rem 5rem 2rem;
+            font-size: 1.1rem;
+            color: #d1d5db;
+        }
+
+        .markdown-body h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            color: #ffffff;
+            line-height: 1.2;
+        }
+
+        .markdown-body h2 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-top: 3rem;
+            margin-bottom: 1rem;
+            color: #f3f4f6;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 0.5rem;
+        }
+
+        .markdown-body h3 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-top: 2rem;
+            margin-bottom: 0.75rem;
+            color: #e5e7eb;
+        }
+
+        .markdown-body p {
+            margin-bottom: 1.5rem;
+        }
+
+        .markdown-body ul, .markdown-body ol {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+        }
+
+        .markdown-body li {
+            margin-bottom: 0.5rem;
+        }
+
+        .markdown-body a {
+            color: var(--accent);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s;
+        }
+
+        .markdown-body a:hover {
+            border-bottom-color: var(--accent);
+        }
+
+        .markdown-body code {
+            font-family: 'JetBrains Mono', monospace;
+            background: var(--bg-tertiary);
+            padding: 0.2em 0.4em;
+            border-radius: 4px;
+            font-size: 0.9em;
+            color: #fca5a5;
+        }
+
+        .markdown-body pre {
+            background: #0d1117;
+            padding: 1.5rem;
+            border-radius: 12px;
+            overflow-x: auto;
+            margin-bottom: 1.5rem;
+            border: 1px solid var(--border);
+        }
+
+        .markdown-body pre code {
+            background: none;
+            padding: 0;
+            color: inherit;
+            font-size: 0.95em;
+        }
+
+        .markdown-body blockquote {
+            border-left: 4px solid var(--accent);
+            padding-left: 1rem;
+            margin-left: 0;
+            color: var(--text-secondary);
+            background: rgba(59, 130, 246, 0.05);
+            padding: 1rem;
+            border-radius: 0 8px 8px 0;
+            margin-bottom: 1.5rem;
+        }
+        
+        .markdown-body img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+        }
+        
+        .markdown-body hr {
+            border: 0;
+            height: 1px;
+            background: var(--border);
+            margin: 2rem 0;
+        }
+        
+        @media (max-width: 768px) {
+            .markdown-body {
+                padding: 2rem 1.5rem;
+            }
+            .markdown-body h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="reader-header">
+        <a href="../../index.html" class="back-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+            Back to Hub
+        </a>
+        <div style="font-weight: 600; color: var(--text-secondary);">i-built-a-business-directory-for-kutch-in-3-hours-here-s-what-s-actually-inside-it-and-why-it-exists-in-the-first-place.md</div>
+    </div>
+    
+    <div class="markdown-body">
+        <h1>I Built a Business Directory for Kutch in 3 Hours. Here&#39;s What&#39;s Actually Inside It. And why it exists in the first place.</h1>
+<p>I Built a Business Directory for Kutch in 3 Hours. Here&#39;s What&#39;s Actually Inside It. And why it exists in the first place.</p>
+<p>Three hours. One sitting. No frameworks, no team, no pitch deck.</p>
+<p>◆</p>
+<p>Engineering</p>
+<p>◆</p>
+<p>Systems</p>
+<p>By</p>
+<p>Dharam Daxini</p>
+<p>· March 24, 2026</p>
+<p>Read more at →</p>
+<p>◆ daxini.xyz</p>
+<p>Three hours. One sitting. No frameworks, no team, no pitch deck.</p>
+<p>That&#39;s how Kutch Digital Map came together — not because the problem was simple, but because years of building things on the internet compound in ways that are hard to explain until you&#39;ve lived it. What used to take three weeks now takes three hours. That&#39;s the real return on learning to build.</p>
+<p>But this isn&#39;t a post about speed. It&#39;s about what was built, why it works, and what it&#39;s for.</p>
+<p>Kutch Digital Map is a local business discovery engine — version 1.0 — built specifically for businesses in the Kutch region of Gujarat. It&#39;s a community-driven directory that lives at [</p>
+<p>via-decide.github.io/Business-Directory](<a href="https://via-decide.github.io/Business-Directory">https://via-decide.github.io/Business-Directory</a>)</p>
+<p>.</p>
+<p>The premise is straightforward: a business being listed on Google Maps tells you it exists. It doesn&#39;t tell you what it does, what it offers, or whether it&#39;s the right fit for what you need. Kutch Digital Map is built to close that gap — for businesses in Kutch, by someone who is from Kutch.</p>
+<p>The directory currently lists 130+ local businesses, organized into five categories:</p>
+<p>Salons &amp; Boutique</p>
+<p>— local salons, beauty services, boutiques.</p>
+<p>CAs &amp; Accounts</p>
+<p>— chartered accountants, accounting firms, and financial consultants who serve individuals and businesses in the region.</p>
+<p>Photography &amp; Events</p>
+<p>— photographers, event planners, and studios covering everything from weddings to corporate shoots.</p>
+<p>IT &amp; Tech</p>
+<p>— local technology service providers, computer repair, and digital service businesses.</p>
+<p>PG &amp; Hostel</p>
+<p>— paying guest accommodations and hostels, which are consistently hard to find with reliable information online.</p>
+<p>Each listed business includes real photos — many sourced from Google Maps, including photos that the businesses themselves had never uploaded or actively managed. There are also service catalogs, so visitors understand what a business actually offers rather than just seeing a name and a phone number.</p>
+<p>There&#39;s also a Saved tab — so if you&#39;re browsing and want to come back to a listing, you can.</p>
+<p>This is one of the more deliberate design decisions in the directory.</p>
+<p>Any business owner can claim their listing — but the system requires a 12-digit UTR (Unique Transaction Reference) code to verify ownership. This means the claim is tied to a real financial transaction trace, not just an email address or a phone number. Ownership is verified, not assumed.</p>
+<p>It&#39;s a simple mechanism that solves a real problem: directories that allow open claiming without verification end up with contested ownership, fake updates, and listings that no longer reflect reality. UTR verification keeps things grounded.</p>
+<p>The directory also includes three website templates designed specifically for the kinds of businesses that appear in it:</p>
+<p>The Boutique</p>
+<p>— clean and elegant, built for salons, spas, and boutique retail stores.</p>
+<p>The Firm</p>
+<p>— professional layout designed for CAs, lawyers, and consultants who need to communicate trust and expertise.</p>
+<p>The Studio</p>
+<p>— portfolio-first design for photographers, event planners, and creative professionals where the work needs to speak for itself.</p>
+<p>These aren&#39;t generic themes. They&#39;re built with the actual business types in Kutch in mind — the constraints, the clientele, the context.</p>
+<p>JustDial charges businesses between ₹6,000 and ₹12,000 per year for a listing. What you get is a generic entry in a national database that has no understanding of local context — no service catalogs, no curated photos, no sense of what makes a Kutch business different from one in Pune or Hyderabad.</p>
+<p>Google Maps shows that you exist. It doesn&#39;t show what you do.</p>
+<p>Kutch Digital Map does both — and it&#39;s built by someone who actually lives in this region. That context isn&#39;t a marketing line. It&#39;s the reason the categories are what they are, the reason the templates match the actual business landscape, and the reason the photos feel real rather than stock.</p>
+<p>This is the part of the story that&#39;s useful to anyone learning to build on the internet.</p>
+<p>Kutch Digital Map is a single-sitting project. Not because the idea was small, but because the fundamentals compound. Every hour you&#39;ve spent understanding how data is structured, how a UI should filter and display information, how a verification flow should work — none of that disappears between projects. It accumulates.</p>
+<p>The next time someone asks what you can do with web development skills, the answer isn&#39;t a tutorial or a portfolio template. It&#39;s this: find a real business on your street that has no digital presence. Build it in a weekend. That&#39;s your portfolio. That&#39;s your proof.</p>
+<p>Kutch has 200 businesses within walking distance of each other that have no idea what a digital catalog is. That gap isn&#39;t a problem to be solved by a startup in Bangalore. It&#39;s an opportunity for someone who already knows the street.</p>
+<p>There&#39;s a pattern worth naming here.</p>
+<p>Most product advice assumes you&#39;re building for scale from day one — Mumbai, Bangalore, Delhi, the metros. The framing is always: find the biggest market, move fast, grow.</p>
+<p>But the 200 businesses on one street in Kutch who have no digital presence — that&#39;s also a real market. One with less competition, more trust as a local builder, and a clearer feedback loop. You know the owners. You walk past their shops. You understand what they actually need.</p>
+<p>You don&#39;t need to solve for Mumbai. Solve for the city you&#39;re already in. The gap between &quot;no digital presence&quot; and &quot;a real listing with photos and a service catalog&quot; is enormous. And right now, almost nobody is filling it.</p>
+<p>Kutch Digital Map is v1.0. It&#39;s live, it&#39;s real, and 130+ businesses are already listed.</p>
+<p>If you run a business in Kutch — a salon, a CA firm, a photography studio, a hostel, an IT service — your listing is probably already there. With photos. With your services listed. Waiting for you to claim it.</p>
+<p>All it needs is you.</p>
+<p>Kutch Digital Map is built by [ViaDecide](</p>
+<p><a href="https://www.viadecide.com">https://www.viadecide.com</a></p>
+<p>) — a product ecosystem built for Bharat.</p>
+<p>Live at: (</p>
+<p><a href="https://via-decide.github.io/Business-Directory/">https://via-decide.github.io/Business-Directory/</a></p>
+<p>)</p>
+
+    </div>
+</body>
+</html>

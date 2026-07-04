@@ -1,0 +1,28 @@
+{
+  "name": "daxini-bca-learning",
+  "version": "1.0.0",
+  "description": "**A learning-first repository for 115 production-quality BCA projects across all levels.**",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/via-decide/daxini-bca-learning.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/via-decide/daxini-bca-learning/issues"
+  },
+  "homepage": "https://github.com/via-decide/daxini-bca-learning#readme",
+  "dependencies": {
+    "highlight.js": "^11.11.1",
+    "marked": "^18.0.5"
+  }
+}

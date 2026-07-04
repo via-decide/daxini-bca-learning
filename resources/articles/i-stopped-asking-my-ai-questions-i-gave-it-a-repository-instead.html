@@ -1,0 +1,301 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>i-stopped-asking-my-ai-questions-i-gave-it-a-repository-instead.md</title>
+    
+    <!-- CSS Dependencies -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+    
+    <!-- Shared Styles (copied from index.html) -->
+    <style>
+        :root {
+            --bg-primary: #0a0a0a;
+            --bg-secondary: #121212;
+            --bg-tertiary: #1e1e1e;
+            --text-primary: #f3f4f6;
+            --text-secondary: #9ca3af;
+            --accent: #3b82f6;
+            --accent-hover: #60a5fa;
+            --border: #27272a;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Reader Header */
+        .reader-header {
+            position: sticky;
+            top: 0;
+            background: rgba(10, 10, 10, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            padding: 1rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid var(--border);
+            z-index: 100;
+        }
+
+        .back-btn {
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border);
+            color: var(--text-primary);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.2s ease;
+            text-decoration: none;
+        }
+
+        .back-btn:hover {
+            background: #2a2a2a;
+            transform: translateX(-2px);
+        }
+
+        /* Markdown Body */
+        .markdown-body {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 3rem 2rem 5rem 2rem;
+            font-size: 1.1rem;
+            color: #d1d5db;
+        }
+
+        .markdown-body h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            color: #ffffff;
+            line-height: 1.2;
+        }
+
+        .markdown-body h2 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-top: 3rem;
+            margin-bottom: 1rem;
+            color: #f3f4f6;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 0.5rem;
+        }
+
+        .markdown-body h3 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-top: 2rem;
+            margin-bottom: 0.75rem;
+            color: #e5e7eb;
+        }
+
+        .markdown-body p {
+            margin-bottom: 1.5rem;
+        }
+
+        .markdown-body ul, .markdown-body ol {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+        }
+
+        .markdown-body li {
+            margin-bottom: 0.5rem;
+        }
+
+        .markdown-body a {
+            color: var(--accent);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s;
+        }
+
+        .markdown-body a:hover {
+            border-bottom-color: var(--accent);
+        }
+
+        .markdown-body code {
+            font-family: 'JetBrains Mono', monospace;
+            background: var(--bg-tertiary);
+            padding: 0.2em 0.4em;
+            border-radius: 4px;
+            font-size: 0.9em;
+            color: #fca5a5;
+        }
+
+        .markdown-body pre {
+            background: #0d1117;
+            padding: 1.5rem;
+            border-radius: 12px;
+            overflow-x: auto;
+            margin-bottom: 1.5rem;
+            border: 1px solid var(--border);
+        }
+
+        .markdown-body pre code {
+            background: none;
+            padding: 0;
+            color: inherit;
+            font-size: 0.95em;
+        }
+
+        .markdown-body blockquote {
+            border-left: 4px solid var(--accent);
+            padding-left: 1rem;
+            margin-left: 0;
+            color: var(--text-secondary);
+            background: rgba(59, 130, 246, 0.05);
+            padding: 1rem;
+            border-radius: 0 8px 8px 0;
+            margin-bottom: 1.5rem;
+        }
+        
+        .markdown-body img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+        }
+        
+        .markdown-body hr {
+            border: 0;
+            height: 1px;
+            background: var(--border);
+            margin: 2rem 0;
+        }
+        
+        @media (max-width: 768px) {
+            .markdown-body {
+                padding: 2rem 1.5rem;
+            }
+            .markdown-body h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="reader-header">
+        <a href="../../index.html" class="back-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+            Back to Hub
+        </a>
+        <div style="font-weight: 600; color: var(--text-secondary);">i-stopped-asking-my-ai-questions-i-gave-it-a-repository-instead.md</div>
+    </div>
+    
+    <div class="markdown-body">
+        <h1>I stopped asking my AI questions. I gave it a repository instead.</h1>
+<p>I stopped asking my AI questions. I gave it a repository instead.</p>
+<p>Most AI tools expect you to bring them a problem.</p>
+<p>◆</p>
+<p>Engineering</p>
+<p>◆</p>
+<p>Systems</p>
+<p>By</p>
+<p>Dharam Daxini</p>
+<p>· April 11, 2026</p>
+<p>Read more at →</p>
+<p>◆ daxini.xyz</p>
+<p>Most AI tools expect you to bring them a problem.</p>
+<p>Wait for an answer.</p>
+<p>You become the implementation layer.</p>
+<p>The AI becomes the suggestion layer.</p>
+<p>Zayvora flips that model.</p>
+<p>You point it at a repository.</p>
+<p>It reads the codebase.</p>
+<p>And opens a pull request.</p>
+<p>You review the PR.</p>
+<p>You decide whether to merge it.</p>
+<p>You stay in control.</p>
+<p>What Zayvora Actually Does</p>
+<p>Zayvora v1.2 currently ships with six capabilities.</p>
+<p>Here is what they mean in plain language.</p>
+<p>analyze_repository</p>
+<p>Before doing anything else, Zayvora reads the whole codebase.</p>
+<p>What connects to what.</p>
+<p>Think of it as the 20 minutes a senior engineer spends understanding a repo before touching a file.</p>
+<p>Zayvora does this automatically.</p>
+<p>You describe the problem — or just point it at failing tests.</p>
+<p>Zayvora traces the issue, generates a fix, and opens a pull request.</p>
+<p>It never touches main directly.</p>
+<p>create_feature</p>
+<p>Describe the feature in plain English.</p>
+<blockquote>
+<p>Add a dark mode toggle that persists across sessions.</p>
+</blockquote>
+<p>Zayvora generates an implementation and opens a PR.</p>
+<p>It might not be perfect every time — but it produces a working draft you can refine instead of starting from zero.</p>
+<p>security_audit</p>
+<p>Zayvora scans the repository for common vulnerability patterns.</p>
+<p>Instead of just flags, it suggests practical fixes.</p>
+<p>It&#39;s not a replacement for a security team.</p>
+<p>But for a solo builder shipping fast, having a second pair of eyes matters.</p>
+<p>Point Zayvora at a PR or branch.</p>
+<p>It analyzes the diff and flags:</p>
+<p>• maintainability issues</p>
+<p>• patterns that may break later</p>
+<p>Useful when you&#39;re your own reviewer after four hours of coding.</p>
+<p>Zayvora can merge pull requests — but only after safety checks.</p>
+<p>• maximum 20 files per PR</p>
+<p>• clean repository state</p>
+<p>• no downstream breakage</p>
+<p>It never merges blindly.</p>
+<p>The One Rule It Never Breaks</p>
+<p>Zayvora never commits directly to main.</p>
+<p>Everything goes through a pull request.</p>
+<p>Every change requires your review.</p>
+<p>The AI generates code.</p>
+<p>You approve the merge.</p>
+<p>That’s not a limitation.</p>
+<p>That’s what trust in automation looks like.</p>
+<p>Why Local AI Matters for Code</p>
+<p>Cloud AI tools require sending your code to remote servers.</p>
+<p>Your repository leaves your machine.</p>
+<p>It goes through an API.</p>
+<p>Then returns with suggestions.</p>
+<p>Zayvora runs locally.</p>
+<p>Your repository never leaves your computer.</p>
+<p>Analysis happens on your machine.</p>
+<p>Pull requests are opened using your GitHub credentials.</p>
+<p>No cloud dependency.</p>
+<p>Minimum requirements:</p>
+<p>ollama run daxini2404/zayvora</p>
+<p>Who This Is For</p>
+<p>Zayvora isn&#39;t trying to replace enterprise tooling.</p>
+<p>It&#39;s built for the developer who is the team.</p>
+<p>Developers maintaining projects alone.</p>
+<p>• a review before shipping</p>
+<p>Without pasting their code into a cloud chat window.</p>
+<p>ollama run daxini2404/zayvora</p>
+<p>Point it at your repo.</p>
+<p>Ask it to analyze.</p>
+<p>See what it finds.</p>
+<p>→</p>
+<p><a href="https://ollama.com/daxini2404/zayvora">https://ollama.com/daxini2404/zayvora</a></p>
+<p>📘</p>
+<p>The Daxini Stack — architecture behind Zayvora</p>
+<p>#LocalAI #Ollama #AIEngineering #BuildInPublic #SovereignTech #DeveloperTools #LLM #IndieDev</p>
+
+    </div>
+</body>
+</html>

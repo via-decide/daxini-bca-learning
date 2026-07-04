@@ -1,0 +1,260 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>i-train-my-ai-on-my-own-mistakes-here-s-why-that-matters.md</title>
+    
+    <!-- CSS Dependencies -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+    
+    <!-- Shared Styles (copied from index.html) -->
+    <style>
+        :root {
+            --bg-primary: #0a0a0a;
+            --bg-secondary: #121212;
+            --bg-tertiary: #1e1e1e;
+            --text-primary: #f3f4f6;
+            --text-secondary: #9ca3af;
+            --accent: #3b82f6;
+            --accent-hover: #60a5fa;
+            --border: #27272a;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Reader Header */
+        .reader-header {
+            position: sticky;
+            top: 0;
+            background: rgba(10, 10, 10, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            padding: 1rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid var(--border);
+            z-index: 100;
+        }
+
+        .back-btn {
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border);
+            color: var(--text-primary);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.2s ease;
+            text-decoration: none;
+        }
+
+        .back-btn:hover {
+            background: #2a2a2a;
+            transform: translateX(-2px);
+        }
+
+        /* Markdown Body */
+        .markdown-body {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 3rem 2rem 5rem 2rem;
+            font-size: 1.1rem;
+            color: #d1d5db;
+        }
+
+        .markdown-body h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            color: #ffffff;
+            line-height: 1.2;
+        }
+
+        .markdown-body h2 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-top: 3rem;
+            margin-bottom: 1rem;
+            color: #f3f4f6;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 0.5rem;
+        }
+
+        .markdown-body h3 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-top: 2rem;
+            margin-bottom: 0.75rem;
+            color: #e5e7eb;
+        }
+
+        .markdown-body p {
+            margin-bottom: 1.5rem;
+        }
+
+        .markdown-body ul, .markdown-body ol {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+        }
+
+        .markdown-body li {
+            margin-bottom: 0.5rem;
+        }
+
+        .markdown-body a {
+            color: var(--accent);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s;
+        }
+
+        .markdown-body a:hover {
+            border-bottom-color: var(--accent);
+        }
+
+        .markdown-body code {
+            font-family: 'JetBrains Mono', monospace;
+            background: var(--bg-tertiary);
+            padding: 0.2em 0.4em;
+            border-radius: 4px;
+            font-size: 0.9em;
+            color: #fca5a5;
+        }
+
+        .markdown-body pre {
+            background: #0d1117;
+            padding: 1.5rem;
+            border-radius: 12px;
+            overflow-x: auto;
+            margin-bottom: 1.5rem;
+            border: 1px solid var(--border);
+        }
+
+        .markdown-body pre code {
+            background: none;
+            padding: 0;
+            color: inherit;
+            font-size: 0.95em;
+        }
+
+        .markdown-body blockquote {
+            border-left: 4px solid var(--accent);
+            padding-left: 1rem;
+            margin-left: 0;
+            color: var(--text-secondary);
+            background: rgba(59, 130, 246, 0.05);
+            padding: 1rem;
+            border-radius: 0 8px 8px 0;
+            margin-bottom: 1.5rem;
+        }
+        
+        .markdown-body img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+        }
+        
+        .markdown-body hr {
+            border: 0;
+            height: 1px;
+            background: var(--border);
+            margin: 2rem 0;
+        }
+        
+        @media (max-width: 768px) {
+            .markdown-body {
+                padding: 2rem 1.5rem;
+            }
+            .markdown-body h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="reader-header">
+        <a href="../../index.html" class="back-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+            Back to Hub
+        </a>
+        <div style="font-weight: 600; color: var(--text-secondary);">i-train-my-ai-on-my-own-mistakes-here-s-why-that-matters.md</div>
+    </div>
+    
+    <div class="markdown-body">
+        <h1>I train my AI on my own mistakes. Here&#39;s why that matters.</h1>
+<p>I train my AI on my own mistakes. Here&#39;s why that matters.</p>
+<p>Last night at 2 AM, I ran a script that pulled 917 commits and 322 pull requests from our 72 repositories.</p>
+<p>◆</p>
+<p>Engineering</p>
+<p>◆</p>
+<p>Systems</p>
+<p>By</p>
+<p>Dharam Daxini</p>
+<p>· April 22, 2026</p>
+<p>Read more at →</p>
+<p>◆ daxini.xyz</p>
+<p>Last night at 2 AM, I ran a script that pulled 917 commits and 322 pull requests from our 72 repositories.</p>
+<p>Not someone else&#39;s data. Not scraped from the internet. Not a dataset I downloaded from Hugging Face.</p>
+<p>My code. My team&#39;s code. Our bugs, our fixes, our 3 AM decisions.</p>
+<p>That&#39;s how I train Zayvora.</p>
+<p>I&#39;m building Zayvora — an AI reasoning engine that runs entirely on your machine.</p>
+<p>No cloud. No API calls. No data leaving your laptop.</p>
+<p>Most AI companies train on the internet. They scrape Reddit, Stack Overflow, Wikipedia, your blog posts. Then they charge you $20/month to search through it.</p>
+<p>I took the opposite approach.</p>
+<p>Zayvora learns from the code I actually ship. Every commit message. Every architecture decision. Every time I chose PostgreSQL over MongoDB and wrote down why.</p>
+<p>Last night&#39;s extraction covered one week of work across 16 active repositories. 917 commits. Each one is a lesson Zayvora will remember.</p>
+<p>Why does this matter?</p>
+<p>Because when my teammate asks &quot;how do we handle authentication?&quot; — Zayvora doesn&#39;t give a generic Stack Overflow answer.</p>
+<p>It says: &quot;Here&#39;s exactly how we did it in</p>
+<p>daxini.xyz</p>
+<p>. Line 234. Here&#39;s why we chose this approach. Here&#39;s the bug we hit last time.&quot;</p>
+<p>That&#39;s not search. That&#39;s institutional memory.</p>
+<p>ChatGPT knows everything about everyone. Zayvora knows everything about us. And for a team of 5 people building fast — that&#39;s infinitely more valuable.</p>
+<p>The numbers from last night:</p>
+<p>→ 72 repositories scanned → 16 repos had activity in the last 7 days → 917 commits extracted → 322 pull requests captured → Every diff, every file change, every decision — indexed</p>
+<p>Total time: 12 minutes. Total cost: ₹0. Total data sent to any cloud: 0 bytes.</p>
+<p>Some perspective.</p>
+<p>Companies like Perplexity have raised $1.7 billion and built incredible search products that serve 100 million users. That&#39;s genuinely impressive work.</p>
+<p>But they&#39;re solving a different problem.</p>
+<p>They&#39;re building for the open internet. I&#39;m building for teams and institutions that need their data to stay exactly where they put it.</p>
+<p>I run my entire stack on a ₹37,000/month server. My team is 5 people. And I can deploy Zayvora inside an air-gapped room with no internet connection.</p>
+<p>That&#39;s not better or worse. It&#39;s a different game with different rules.</p>
+<p>What I learned building this way:</p>
+<p>Your own data is your best training data. Generic models give generic answers. Models trained on your mistakes give specific answers.</p>
+<p>Sovereignty isn&#39;t a feature — it&#39;s a philosophy. Every computation should be auditable. Every byte should stay where you put it.</p>
+<p>You don&#39;t need billions to build AI. You need clarity about what problem you&#39;re solving and for whom.</p>
+<p>The best moat is context. Once Zayvora knows your codebase, switching to ChatGPT feels like asking a stranger for directions in your own house.</p>
+<p>I built my first hardware project in 2017 — an air mouse, before AI was a buzzword.</p>
+<p>I&#39;ve been building since then. Not because it&#39;s trendy. Because I believe Indians should have AI infrastructure they own, they audit, and they control.</p>
+<p>That&#39;s what Zayvora is.</p>
+<p>917 commits at a time.</p>
+<p>Building Zayvora — India&#39;s sovereign AI reasoning engine.</p>
+<p>Founder, Daxini Systems</p>
+<p>#AI #Sovereignty #BuildInPublic #IndianStartups #LocalAI #Zayvora</p>
+
+    </div>
+</body>
+</html>

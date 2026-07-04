@@ -1,0 +1,278 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>terminal-centric-workflow-guide.md</title>
+    
+    <!-- CSS Dependencies -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+    
+    <!-- Shared Styles (copied from index.html) -->
+    <style>
+        :root {
+            --bg-primary: #0a0a0a;
+            --bg-secondary: #121212;
+            --bg-tertiary: #1e1e1e;
+            --text-primary: #f3f4f6;
+            --text-secondary: #9ca3af;
+            --accent: #3b82f6;
+            --accent-hover: #60a5fa;
+            --border: #27272a;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Reader Header */
+        .reader-header {
+            position: sticky;
+            top: 0;
+            background: rgba(10, 10, 10, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            padding: 1rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid var(--border);
+            z-index: 100;
+        }
+
+        .back-btn {
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border);
+            color: var(--text-primary);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.2s ease;
+            text-decoration: none;
+        }
+
+        .back-btn:hover {
+            background: #2a2a2a;
+            transform: translateX(-2px);
+        }
+
+        /* Markdown Body */
+        .markdown-body {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 3rem 2rem 5rem 2rem;
+            font-size: 1.1rem;
+            color: #d1d5db;
+        }
+
+        .markdown-body h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            color: #ffffff;
+            line-height: 1.2;
+        }
+
+        .markdown-body h2 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-top: 3rem;
+            margin-bottom: 1rem;
+            color: #f3f4f6;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 0.5rem;
+        }
+
+        .markdown-body h3 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-top: 2rem;
+            margin-bottom: 0.75rem;
+            color: #e5e7eb;
+        }
+
+        .markdown-body p {
+            margin-bottom: 1.5rem;
+        }
+
+        .markdown-body ul, .markdown-body ol {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+        }
+
+        .markdown-body li {
+            margin-bottom: 0.5rem;
+        }
+
+        .markdown-body a {
+            color: var(--accent);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s;
+        }
+
+        .markdown-body a:hover {
+            border-bottom-color: var(--accent);
+        }
+
+        .markdown-body code {
+            font-family: 'JetBrains Mono', monospace;
+            background: var(--bg-tertiary);
+            padding: 0.2em 0.4em;
+            border-radius: 4px;
+            font-size: 0.9em;
+            color: #fca5a5;
+        }
+
+        .markdown-body pre {
+            background: #0d1117;
+            padding: 1.5rem;
+            border-radius: 12px;
+            overflow-x: auto;
+            margin-bottom: 1.5rem;
+            border: 1px solid var(--border);
+        }
+
+        .markdown-body pre code {
+            background: none;
+            padding: 0;
+            color: inherit;
+            font-size: 0.95em;
+        }
+
+        .markdown-body blockquote {
+            border-left: 4px solid var(--accent);
+            padding-left: 1rem;
+            margin-left: 0;
+            color: var(--text-secondary);
+            background: rgba(59, 130, 246, 0.05);
+            padding: 1rem;
+            border-radius: 0 8px 8px 0;
+            margin-bottom: 1.5rem;
+        }
+        
+        .markdown-body img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+        }
+        
+        .markdown-body hr {
+            border: 0;
+            height: 1px;
+            background: var(--border);
+            margin: 2rem 0;
+        }
+        
+        @media (max-width: 768px) {
+            .markdown-body {
+                padding: 2rem 1.5rem;
+            }
+            .markdown-body h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="reader-header">
+        <a href="../../index.html" class="back-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+            Back to Hub
+        </a>
+        <div style="font-weight: 600; color: var(--text-secondary);">terminal-centric-workflow-guide.md</div>
+    </div>
+    
+    <div class="markdown-body">
+        <h1>The Terminal-Centric Workflow: Never Leave the Command Line</h1>
+<p>Traditional IDEs (like VS Code or IntelliJ) are incredibly powerful, but they share a common flaw: they require you to constantly switch contexts between writing code, managing files in the explorer, running commands in the terminal, and interacting with Git menus.</p>
+<p>A <strong>Terminal-Centric Workflow</strong> solves this by unifying everything into a single, keyboard-driven interface. By combining modular Unix tools, you create an environment that is lightning-fast, uses almost no RAM, and operates identically whether you are on your local laptop or SSH&#39;d into a remote server halfway across the world.</p>
+<p>Here is the modern tech stack for the ultimate terminal workflow.</p>
+<hr>
+<h2>1. The Foundation: Terminal &amp; Shell</h2>
+<p>Before configuring development tools, you need a fast and modern foundation.</p>
+<ul>
+<li><strong>Terminal Emulator:</strong> <ul>
+<li><strong>Ghostty</strong> or <strong>WezTerm</strong>: Modern, GPU-accelerated terminal emulators configured entirely via code (Lua/Toml). They render text instantly and handle ligatures beautifully.</li>
+<li><strong>Kitty</strong>: A highly customizable, keyboard-driven terminal emulator favored by power users.</li>
+</ul>
+</li>
+<li><strong>The Shell:</strong> <ul>
+<li><strong>Zsh</strong> (with Oh My Zsh) or <strong>Fish</strong>. Fish provides incredible out-of-the-box auto-suggestions, while Zsh is the industry standard for POSIX compatibility.</li>
+</ul>
+</li>
+<li><strong>The Prompt:</strong> <ul>
+<li><strong>Starship</strong>: A blazing fast, rust-based, cross-shell prompt that instantly shows your Git status, active Node/Python versions, and execution time without any complex configuration.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2>2. The Window Manager: Tmux</h2>
+<p>When you work entirely in the terminal, you need a way to manage multiple &quot;windows&quot; and &quot;tabs.&quot; <strong>Tmux</strong> (Terminal Multiplexer) is the industry standard.</p>
+<ul>
+<li><strong>Session Persistence:</strong> If you accidentally close your terminal, or your SSH connection drops, your Tmux session stays alive in the background. You simply run <code>tmux attach</code> and everything is exactly as you left it.</li>
+<li><strong>Window Splitting:</strong> Tmux allows you to split your terminal vertically and horizontally. You can have your code editor on the left, a running server on the top right, and a database shell on the bottom right.</li>
+<li><strong>Keyboard Navigation:</strong> You never use a mouse to switch between these panes; everything is driven by a &quot;Prefix Key&quot; (usually <code>Ctrl+B</code> or <code>Ctrl+A</code>) followed by a command key.</li>
+</ul>
+<hr>
+<h2>3. The Editor: Neovim</h2>
+<p>At the heart of the terminal workflow is <strong>Neovim</strong>, a hyper-extensible evolution of Vim. It allows you to edit code at the speed of thought without ever touching a mouse.</p>
+<ul>
+<li><strong>Modal Editing:</strong> Instead of using the mouse to highlight or navigate, Neovim uses &quot;Modes&quot; (Normal, Insert, Visual). In Normal mode, every key on your keyboard is a command. For example, typing <code>ciw</code> (Change Inner Word) deletes the word your cursor is on and puts you in Insert mode instantly.</li>
+<li><strong>LSP Integration:</strong> Neovim supports the exact same Language Server Protocol (LSP) as VS Code. This means you get the same world-class autocomplete, error checking, and code formatting directly in the terminal.</li>
+<li><strong>Getting Started:</strong> Configuring Neovim from scratch takes weeks. Instead, start with a pre-configured distribution like <strong><a href="https://www.lazyvim.org/">LazyVim</a></strong>. It gives you a beautiful, modern IDE experience directly in your terminal on day one.</li>
+</ul>
+<hr>
+<h2>4. The Glue: FZF &amp; Zoxide</h2>
+<p>Navigating a massive codebase purely via the command line can be slow using standard <code>cd</code> and <code>ls</code>. Enter the modern replacements:</p>
+<ul>
+<li><strong>fzf (Fuzzy Finder):</strong> <code>fzf</code> is a command-line fuzzy finder. Instead of typing exact file paths, you type <code>fzf</code> (or press <code>Ctrl+T</code>), type a few letters of the file you want, and it instantly filters the list. It integrates deeply with Neovim and Zsh history (<code>Ctrl+R</code>).</li>
+<li><strong>zoxide:</strong> A smarter <code>cd</code> command. It remembers which directories you use most frequently. Instead of typing <code>cd ~/projects/daxini-bca-learning/docs/articles</code>, you can just type <code>z articles</code> and it instantly jumps there.</li>
+</ul>
+<hr>
+<h2>5. Version Control: Lazygit</h2>
+<p>Running git commands in the terminal (<code>git add</code>, <code>git commit</code>, <code>git rebase -i</code>) is powerful but can be tedious for complex operations like partial staging.</p>
+<p><strong><a href="https://github.com/jesseduffield/lazygit">Lazygit</a></strong> is a Terminal UI (TUI) for Git. </p>
+<ul>
+<li>It opens inside your terminal (often configured as a floating popup over Neovim or Tmux).</li>
+<li>You can stage individual lines of code by pressing <code>Space</code>.</li>
+<li>You can resolve merge conflicts visually.</li>
+<li>You can amend commits and rebase interactively using simple keyboard arrows.</li>
+<li>It brings the visual ease of a Git GUI into the terminal without the electron-bloat of external apps.</li>
+</ul>
+<hr>
+<h2>Summary: The Flow State</h2>
+<p>When properly configured, a terminal-centric workflow looks like this:</p>
+<ol>
+<li>You open your terminal and type <code>z project</code> to jump to your code.</li>
+<li>You type <code>tmux</code> to start a persistent session.</li>
+<li>You type <code>nvim .</code> to open your editor.</li>
+<li>You use <code>fzf</code> (via <code>&lt;leader&gt;ff</code> in Neovim) to instantly open a file.</li>
+<li>You split your Tmux pane horizontally (<code>prefix + %</code>) to start your local dev server.</li>
+<li>You trigger a Lazygit popup (<code>&lt;leader&gt;gg</code>) to stage and commit your changes.</li>
+</ol>
+<p><strong>Zero mouse movement. Zero context switching. Pure flow.</strong></p>
+
+    </div>
+</body>
+</html>

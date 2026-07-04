@@ -1,0 +1,368 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>retries-create-parallel-truth-and-that-s-why-your-system-lies-to-you.md</title>
+    
+    <!-- CSS Dependencies -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+    
+    <!-- Shared Styles (copied from index.html) -->
+    <style>
+        :root {
+            --bg-primary: #0a0a0a;
+            --bg-secondary: #121212;
+            --bg-tertiary: #1e1e1e;
+            --text-primary: #f3f4f6;
+            --text-secondary: #9ca3af;
+            --accent: #3b82f6;
+            --accent-hover: #60a5fa;
+            --border: #27272a;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Reader Header */
+        .reader-header {
+            position: sticky;
+            top: 0;
+            background: rgba(10, 10, 10, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            padding: 1rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid var(--border);
+            z-index: 100;
+        }
+
+        .back-btn {
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border);
+            color: var(--text-primary);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.2s ease;
+            text-decoration: none;
+        }
+
+        .back-btn:hover {
+            background: #2a2a2a;
+            transform: translateX(-2px);
+        }
+
+        /* Markdown Body */
+        .markdown-body {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 3rem 2rem 5rem 2rem;
+            font-size: 1.1rem;
+            color: #d1d5db;
+        }
+
+        .markdown-body h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            color: #ffffff;
+            line-height: 1.2;
+        }
+
+        .markdown-body h2 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-top: 3rem;
+            margin-bottom: 1rem;
+            color: #f3f4f6;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 0.5rem;
+        }
+
+        .markdown-body h3 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-top: 2rem;
+            margin-bottom: 0.75rem;
+            color: #e5e7eb;
+        }
+
+        .markdown-body p {
+            margin-bottom: 1.5rem;
+        }
+
+        .markdown-body ul, .markdown-body ol {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+        }
+
+        .markdown-body li {
+            margin-bottom: 0.5rem;
+        }
+
+        .markdown-body a {
+            color: var(--accent);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s;
+        }
+
+        .markdown-body a:hover {
+            border-bottom-color: var(--accent);
+        }
+
+        .markdown-body code {
+            font-family: 'JetBrains Mono', monospace;
+            background: var(--bg-tertiary);
+            padding: 0.2em 0.4em;
+            border-radius: 4px;
+            font-size: 0.9em;
+            color: #fca5a5;
+        }
+
+        .markdown-body pre {
+            background: #0d1117;
+            padding: 1.5rem;
+            border-radius: 12px;
+            overflow-x: auto;
+            margin-bottom: 1.5rem;
+            border: 1px solid var(--border);
+        }
+
+        .markdown-body pre code {
+            background: none;
+            padding: 0;
+            color: inherit;
+            font-size: 0.95em;
+        }
+
+        .markdown-body blockquote {
+            border-left: 4px solid var(--accent);
+            padding-left: 1rem;
+            margin-left: 0;
+            color: var(--text-secondary);
+            background: rgba(59, 130, 246, 0.05);
+            padding: 1rem;
+            border-radius: 0 8px 8px 0;
+            margin-bottom: 1.5rem;
+        }
+        
+        .markdown-body img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+        }
+        
+        .markdown-body hr {
+            border: 0;
+            height: 1px;
+            background: var(--border);
+            margin: 2rem 0;
+        }
+        
+        @media (max-width: 768px) {
+            .markdown-body {
+                padding: 2rem 1.5rem;
+            }
+            .markdown-body h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="reader-header">
+        <a href="../../index.html" class="back-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+            Back to Hub
+        </a>
+        <div style="font-weight: 600; color: var(--text-secondary);">retries-create-parallel-truth-and-that-s-why-your-system-lies-to-you.md</div>
+    </div>
+    
+    <div class="markdown-body">
+        <h1>Retries Create Parallel Truth (And That’s Why Your System Lies to You)</h1>
+<p>Retries Create Parallel Truth (And That’s Why Your System Lies to You)</p>
+<p>Most engineers learn retries as a reliability feature.</p>
+<p>◆</p>
+<p>Engineering</p>
+<p>◆</p>
+<p>Systems</p>
+<p>By</p>
+<p>Dharam Daxini</p>
+<p>· May 11, 2026</p>
+<p>Read more at →</p>
+<p>◆ daxini.xyz</p>
+<p>Most engineers learn retries as a reliability feature.</p>
+<p>In production, retries are a</p>
+<p>truth factory</p>
+<p>.</p>
+<p>Not because retries are “bad”.</p>
+<p>Because retries multiply</p>
+<p>attempts, and most systems don’t have a clean rule for</p>
+<p><em>which attempt becomes real</em>.</p>
+<p>If you’ve ever seen:</p>
+<p>•  a user charged twice,</p>
+<p>•  a webhook applied twice,</p>
+<p>•  an email delivered twice,</p>
+<p>•  a job executed twice,</p>
+<p>•  or an “all green” workflow that still produced wrong state…</p>
+<p>You’ve met parallel truth.</p>
+<p>This isn’t an “edge case”. It’s the default behaviour of distributed systems:</p>
+<p>•  networks partition,</p>
+<p>•  workers crash,</p>
+<p>•  queues redeliver,</p>
+<p>•  callbacks arrive late,</p>
+<p>•  and time is not stable.</p>
+<p>Retries don’t cause chaos.</p>
+<p>Undefined commit rules cause chaos.</p>
+<p>The wrong mental model is:</p>
+<p>That hides the core issue: “the same operation” doesn’t exist in production.</p>
+<p>Each attempt has a unique runtime context:</p>
+<p>•  different worker</p>
+<p>•  different memory</p>
+<p>•  different cache state</p>
+<p>•  different DB transaction boundary</p>
+<p>•  different upstream availability</p>
+<p>•  sometimes different code (deploy drift)</p>
+<p>So a retry isn’t “the same thing again”.</p>
+<p>It’s a new attempt operating on a moving system.</p>
+<p>If the system allows multiple attempts to write final state, you get multiple “truths”.</p>
+<p>Parallel truth comes from one structural mistake:</p>
+<p>Execution is allowed to directly mint reality.</p>
+<p>In a stable single-machine program, “completion” implies “correctness”.</p>
+<p>In distributed systems, completion just means “some code ran to the end”.</p>
+<p>The core production failure mode is:</p>
+<p>•  A side-effect happens twice</p>
+<p>•  Or the ledger records multiple final outcomes</p>
+<p>•  Or the state machine accepts two terminal states</p>
+<p>And once two truths exist, every downstream system becomes a liar:</p>
+<p>•  analytics will double-count</p>
+<p>•  reconciliation will be manual</p>
+<p>•  fraud logic will misfire</p>
+<p>•  support will be forced into narrative repair</p>
+<p>Example 1: Payment APIs and idempotency keys</p>
+<p>Payment providers encourage idempotency keys for a reason: clients retry requests on timeouts, and without a stable key, the provider can’t tell whether it’s a retry or a new request.</p>
+<p>The payment can be processed twice even though the client “only clicked once”.</p>
+<p>The lesson: the system needs a stable “intent identity” that survives retries.</p>
+<p>Example 2: Webhooks are at-least-once by default</p>
+<p>Most webhook systems are designed to retry deliveries on failure, and deliveries can duplicate. If your webhook handler is not idempotent, you’ll apply the same event twice:</p>
+<p>•  “subscription created” becomes two subscriptions</p>
+<p>•  “invoice paid” becomes two credit operations</p>
+<p>The lesson: delivery semantics are not truth semantics.</p>
+<p>Example 3: Queue redelivery + worker failover</p>
+<p>Queues frequently provide at-least-once delivery. That means duplicates are allowed. Workers crash mid-task. Another worker picks it up.</p>
+<p>If the job writes side effects without a commit gate, you’ll see:</p>
+<p>•  double emails</p>
+<p>•  duplicate exports</p>
+<p>•  repeated provisioning</p>
+<p>•  doubled ledger entries</p>
+<p>The lesson: “job completed” is not the same as “state is correct”.</p>
+<p>The more you scale, the more retries you have:</p>
+<p>•  because failure probability grows with the number of dependencies</p>
+<p>•  because partial failure becomes common</p>
+<p>•  because non-determinism increases</p>
+<p>So the uncomfortable truth is:</p>
+<p>The system will create parallel truth unless you prevent it.</p>
+<p>And you can’t prevent it with “good coding”.</p>
+<p>It requires architecture: separation of attempt vs commit.</p>
+<p>The fix is not “never retry”.</p>
+<p>The fix is:</p>
+<p>retries must not be allowed to directly commit truth</p>
+<p>.</p>
+<p>You need three primitives:</p>
+<p>Every operation that matters must have an ID that represents intent, not attempt:</p>
+<p>•   intent_id  survives retries</p>
+<p>•  every attempt references the same  intent_id</p>
+<p>This is the anchor for idempotency, deduplication, and reconciliation.</p>
+<p>Attempts can produce candidate outcomes.</p>
+<p>But only a commit mechanism can finalise the state transition.</p>
+<p>That commit gate can be:</p>
+<p>•  a DB constraint + transactional upsert</p>
+<p>•  a state machine transition table with uniqueness guarantees</p>
+<p>•  a ledger rule that refuses a second terminal state</p>
+<p>•  a reconciliation engine that enforces canonical merge rules</p>
+<p>The mechanism varies. The principle doesn’t.</p>
+<p>Even with commit gates, systems diverge.</p>
+<p>You need the ability to reconstruct causality:</p>
+<p>•  which attempt ran first</p>
+<p>•  which attempt wrote what</p>
+<p>•  which attempt was discarded</p>
+<p>•  which attempt was accepted</p>
+<p>•  why the commit gate chose one over another</p>
+<p>Without lineage, you don’t have observability — you have storytelling.</p>
+<p>Sovereign systems aren’t defined by “no failures”.</p>
+<p>They’re defined by:</p>
+<p>•  explicit failure classes</p>
+<p>•  recoverability guarantees</p>
+<p>•  deterministic divergence handling</p>
+<p>In practice, that means designing:</p>
+<p>•  “duplicate attempt detected” as a normal state, not an error</p>
+<p>•  “late callback” as a handled path with deterministic resolution</p>
+<p>•  “partial failure” as a recoverable condition with a replay route</p>
+<p>This framework doesn’t solve:</p>
+<p>•  business-level disagreements about what should be true</p>
+<p>•  upstream vendor inconsistency when they provide contradictory events</p>
+<p>•  human workflows that create non-deterministic inputs (“ops clicked twice”)</p>
+<p>What it does solve is narrower and more important:</p>
+<p>it prevents your own execution layer from inventing multiple truths for the same intent.</p>
+<p>•  <em>Level 0: Hope-based retries</em></p>
+<p>Retry until it works. Pray duplicates don’t happen.</p>
+<p>•  <em>Level 1: Idempotency by convention</em></p>
+<p>“We try not to double-apply.” Some dedupe logic scattered around.</p>
+<p>•  <em>Level 2: Intent IDs + commit gates</em></p>
+<p>Retries are safe because only one terminal state is allowed.</p>
+<p>•  <em>Level 3: Replay + deterministic reconciliation</em></p>
+<p>Divergence is expected and resolved in a predictable way.</p>
+<p>Most systems stall at Level 1 because it “works in demos”.</p>
+<p>Level 2 is where production trust begins.</p>
+<p>Learner/Researcher:</p>
+<p>Pick one failure class (e.g., duplicate webhook) and trace how it becomes double truth in your system. Write it down as a state machine.</p>
+<p>Builder/Operator:</p>
+<p>Add an  intent_id  to one critical workflow (payments, provisioning, emails). Enforce one terminal transition in the database.</p>
+<p>Founder/Lead:</p>
+<p>Stop asking “did it execute?” Start asking “did we prevent parallel truth?” Invest in commit gates and replay before scaling.</p>
+<p>This pattern is stable. Implementations vary.</p>
+<p>The hard part isn’t understanding it — it’s enforcing it with:</p>
+<p>•  schemas</p>
+<p>•  fixtures</p>
+<p>•  deterministic failure tests</p>
+<p>•  replay harnesses</p>
+<p>That’s the work.</p>
+<p>Retries are inevitable.</p>
+<p>Parallel truth is optional.</p>
+<p>If your system can’t decide “which attempt becomes real” deterministically, you’ll spend your life fixing “random bugs” that are actually architecture debt.</p>
+<p>#DistributedSystems</p>
+<p>#BackendEngineering</p>
+<p>#ReliabilityEngineering</p>
+<p>#SystemDesign</p>
+<p>#Idempotency</p>
+<p>#Infra</p>
+<p>#Zayvora</p>
+
+    </div>
+</body>
+</html>

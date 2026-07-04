@@ -1,0 +1,282 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TECH_STACKS.md</title>
+    
+    <!-- CSS Dependencies -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+    
+    <!-- Shared Styles (copied from index.html) -->
+    <style>
+        :root {
+            --bg-primary: #0a0a0a;
+            --bg-secondary: #121212;
+            --bg-tertiary: #1e1e1e;
+            --text-primary: #f3f4f6;
+            --text-secondary: #9ca3af;
+            --accent: #3b82f6;
+            --accent-hover: #60a5fa;
+            --border: #27272a;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Reader Header */
+        .reader-header {
+            position: sticky;
+            top: 0;
+            background: rgba(10, 10, 10, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            padding: 1rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid var(--border);
+            z-index: 100;
+        }
+
+        .back-btn {
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border);
+            color: var(--text-primary);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.2s ease;
+            text-decoration: none;
+        }
+
+        .back-btn:hover {
+            background: #2a2a2a;
+            transform: translateX(-2px);
+        }
+
+        /* Markdown Body */
+        .markdown-body {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 3rem 2rem 5rem 2rem;
+            font-size: 1.1rem;
+            color: #d1d5db;
+        }
+
+        .markdown-body h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            color: #ffffff;
+            line-height: 1.2;
+        }
+
+        .markdown-body h2 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-top: 3rem;
+            margin-bottom: 1rem;
+            color: #f3f4f6;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 0.5rem;
+        }
+
+        .markdown-body h3 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-top: 2rem;
+            margin-bottom: 0.75rem;
+            color: #e5e7eb;
+        }
+
+        .markdown-body p {
+            margin-bottom: 1.5rem;
+        }
+
+        .markdown-body ul, .markdown-body ol {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+        }
+
+        .markdown-body li {
+            margin-bottom: 0.5rem;
+        }
+
+        .markdown-body a {
+            color: var(--accent);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s;
+        }
+
+        .markdown-body a:hover {
+            border-bottom-color: var(--accent);
+        }
+
+        .markdown-body code {
+            font-family: 'JetBrains Mono', monospace;
+            background: var(--bg-tertiary);
+            padding: 0.2em 0.4em;
+            border-radius: 4px;
+            font-size: 0.9em;
+            color: #fca5a5;
+        }
+
+        .markdown-body pre {
+            background: #0d1117;
+            padding: 1.5rem;
+            border-radius: 12px;
+            overflow-x: auto;
+            margin-bottom: 1.5rem;
+            border: 1px solid var(--border);
+        }
+
+        .markdown-body pre code {
+            background: none;
+            padding: 0;
+            color: inherit;
+            font-size: 0.95em;
+        }
+
+        .markdown-body blockquote {
+            border-left: 4px solid var(--accent);
+            padding-left: 1rem;
+            margin-left: 0;
+            color: var(--text-secondary);
+            background: rgba(59, 130, 246, 0.05);
+            padding: 1rem;
+            border-radius: 0 8px 8px 0;
+            margin-bottom: 1.5rem;
+        }
+        
+        .markdown-body img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+        }
+        
+        .markdown-body hr {
+            border: 0;
+            height: 1px;
+            background: var(--border);
+            margin: 2rem 0;
+        }
+        
+        @media (max-width: 768px) {
+            .markdown-body {
+                padding: 2rem 1.5rem;
+            }
+            .markdown-body h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="reader-header">
+        <a href="../index.html" class="back-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+            Back to Hub
+        </a>
+        <div style="font-weight: 600; color: var(--text-secondary);">TECH_STACKS.md</div>
+    </div>
+    
+    <div class="markdown-body">
+        <h1>📚 Tech Stacks &amp; Terminology Guide</h1>
+<p>This guide maps all the technologies, programming languages, and technical terms used across the 115+ projects in the <code>daxini-bca-learning</code> repository. </p>
+<p>As a BCA student, you shouldn&#39;t just copy code—you should understand <strong>what</strong> these tools are and <strong>why</strong> we use them. Use this document as your learning dictionary.</p>
+<hr>
+<h2>🛠️ Core Technologies &amp; Languages</h2>
+<h3>1. Backend / Server</h3>
+<ul>
+<li><strong>Node.js</strong>: A runtime environment that allows you to run JavaScript on the server-side (not just in the browser). Used as the primary backend engine for our projects.</li>
+<li><strong>Express.js</strong>: A minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications. It handles routing and HTTP requests.</li>
+</ul>
+<h3>2. Frontend / Client</h3>
+<ul>
+<li><strong>HTML5 (HyperText Markup Language)</strong>: The standard markup language for documents designed to be displayed in a web browser. It provides the structure.</li>
+<li><strong>CSS3 (Cascading Style Sheets)</strong>: Used for styling and laying out web pages (colors, fonts, grids, flexbox).</li>
+<li><strong>JavaScript (ES6+)</strong>: The programming language that enables interactive web pages. Used heavily on both the client (DOM manipulation) and server (Node.js).</li>
+<li><strong>React</strong>: A JavaScript library for building user interfaces based on UI components. (Mentioned as an advanced frontend option in full-stack projects).</li>
+</ul>
+<h3>3. Databases</h3>
+<ul>
+<li><strong>SQLite</strong>: A C-language library that implements a small, fast, self-contained, high-reliability, full-featured, SQL database engine. Perfect for learning relational databases without complex setup.</li>
+<li><strong>PostgreSQL</strong>: A powerful, open-source object-relational database system. Often discussed as the production-ready upgrade to SQLite.</li>
+<li><strong>MongoDB</strong>: A source-available cross-platform document-oriented database program. Classified as a NoSQL database program, which uses JSON-like documents with optional schemas.</li>
+</ul>
+<hr>
+<h2>🔐 Security &amp; Authentication</h2>
+<ul>
+<li><strong>JWT (JSON Web Tokens)</strong>: An open standard (RFC 7519) that defines a compact and self-contained way for securely transmitting information between parties as a JSON object. Used for user login sessions.</li>
+<li><strong>bcrypt / bcryptjs</strong>: A password-hashing function. Used to securely store user passwords in the database so that even if the database is hacked, the passwords remain unreadable.</li>
+<li><strong>RBAC (Role-Based Access Control)</strong>: An approach to restricting system access to authorized users based on their role (e.g., Admin vs. Member in the Gym Management system).</li>
+<li><strong>Authorization vs. Authentication</strong>: <ul>
+<li><em>Authentication</em>: Proving who you are (logging in).</li>
+<li><em>Authorization</em>: Checking if you have permission to do something (admin checking attendance).</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2>🔌 Architecture &amp; API Terms</h2>
+<ul>
+<li><strong>API (Application Programming Interface)</strong>: A set of rules that allows different software entities to communicate with each other. </li>
+<li><strong>REST (Representational State Transfer)</strong>: An architectural style for designing networked applications. RESTful APIs use HTTP requests to GET, PUT, POST, and DELETE data.</li>
+<li><strong>Endpoint</strong>: A specific URL where an API can be accessed (e.g., <code>POST /api/shorten</code>).</li>
+<li><strong>MVC (Model-View-Controller)</strong>: A software design pattern that divides the related program logic into three interconnected elements to separate internal representations of information from the ways information is presented to and accepted from the user.</li>
+<li><strong>HTTP Status Codes</strong>:<ul>
+<li><code>200 OK</code>: Request succeeded.</li>
+<li><code>301 / 302 Redirect</code>: The URL has moved (used heavily in the URL shortener).</li>
+<li><code>400 Bad Request</code>: The server cannot process the request due to a client error (e.g., invalid URL format).</li>
+<li><code>401 Unauthorized</code>: Authentication is required and has failed or has not yet been provided.</li>
+<li><code>403 Forbidden</code>: The client does not have access rights to the content.</li>
+<li><code>404 Not Found</code>: The server can not find the requested resource.</li>
+<li><code>500 Internal Server Error</code>: The server encountered an unexpected condition.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2>🗄️ Database Concepts</h2>
+<ul>
+<li><strong>Relational Database</strong>: A database structured to recognize relations among stored items of information (tables with rows and columns).</li>
+<li><strong>Primary Key</strong>: A specific choice of a minimal set of attributes (columns) that uniquely specify a tuple (row) in a relation (table). E.g., <code>id</code>.</li>
+<li><strong>Foreign Key</strong>: A column or group of columns in a relational database table that provides a link between data in two tables. E.g., <code>member_id</code> linking to the <code>members</code> table.</li>
+<li><strong>UNIQUE Constraint</strong>: Ensures that all values in a column are different.</li>
+<li><strong>Database Transaction</strong>: A unit of work performed within a database management system against a database, treated in a coherent and reliable way independent of other transactions. Used to ensure data integrity (e.g., creating a User and Member record simultaneously).</li>
+<li><strong>Normalization</strong>: The process of structuring a database to reduce data redundancy and improve data integrity.</li>
+</ul>
+<hr>
+<h2>💻 General Engineering Terms</h2>
+<ul>
+<li><strong>Pseudocode</strong>: A plain language description of the steps in an algorithm or another system. Used in this repo to plan logic before writing actual code.</li>
+<li><strong>Base62 Encoding</strong>: A way to convert numbers into a short string using 62 characters (A-Z, a-z, 0-9). Often used in generating short URLs.</li>
+<li><strong>Local Storage / IndexedDB</strong>: Web storage mechanisms provided by browsers to store data locally on the user&#39;s computer (used in our Proof of Concept static builds).</li>
+<li><strong>Git / GitHub</strong>: Version control systems for tracking changes in computer files and coordinating work on those files among multiple people.</li>
+<li><strong>Open Source</strong>: Software for which the original source code is made freely available and may be redistributed and modified.</li>
+</ul>
+
+    </div>
+</body>
+</html>

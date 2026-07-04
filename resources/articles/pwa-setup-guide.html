@@ -1,0 +1,325 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pwa-setup-guide.md</title>
+    
+    <!-- CSS Dependencies -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+    
+    <!-- Shared Styles (copied from index.html) -->
+    <style>
+        :root {
+            --bg-primary: #0a0a0a;
+            --bg-secondary: #121212;
+            --bg-tertiary: #1e1e1e;
+            --text-primary: #f3f4f6;
+            --text-secondary: #9ca3af;
+            --accent: #3b82f6;
+            --accent-hover: #60a5fa;
+            --border: #27272a;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Reader Header */
+        .reader-header {
+            position: sticky;
+            top: 0;
+            background: rgba(10, 10, 10, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            padding: 1rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid var(--border);
+            z-index: 100;
+        }
+
+        .back-btn {
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border);
+            color: var(--text-primary);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.2s ease;
+            text-decoration: none;
+        }
+
+        .back-btn:hover {
+            background: #2a2a2a;
+            transform: translateX(-2px);
+        }
+
+        /* Markdown Body */
+        .markdown-body {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 3rem 2rem 5rem 2rem;
+            font-size: 1.1rem;
+            color: #d1d5db;
+        }
+
+        .markdown-body h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            color: #ffffff;
+            line-height: 1.2;
+        }
+
+        .markdown-body h2 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-top: 3rem;
+            margin-bottom: 1rem;
+            color: #f3f4f6;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 0.5rem;
+        }
+
+        .markdown-body h3 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-top: 2rem;
+            margin-bottom: 0.75rem;
+            color: #e5e7eb;
+        }
+
+        .markdown-body p {
+            margin-bottom: 1.5rem;
+        }
+
+        .markdown-body ul, .markdown-body ol {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+        }
+
+        .markdown-body li {
+            margin-bottom: 0.5rem;
+        }
+
+        .markdown-body a {
+            color: var(--accent);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s;
+        }
+
+        .markdown-body a:hover {
+            border-bottom-color: var(--accent);
+        }
+
+        .markdown-body code {
+            font-family: 'JetBrains Mono', monospace;
+            background: var(--bg-tertiary);
+            padding: 0.2em 0.4em;
+            border-radius: 4px;
+            font-size: 0.9em;
+            color: #fca5a5;
+        }
+
+        .markdown-body pre {
+            background: #0d1117;
+            padding: 1.5rem;
+            border-radius: 12px;
+            overflow-x: auto;
+            margin-bottom: 1.5rem;
+            border: 1px solid var(--border);
+        }
+
+        .markdown-body pre code {
+            background: none;
+            padding: 0;
+            color: inherit;
+            font-size: 0.95em;
+        }
+
+        .markdown-body blockquote {
+            border-left: 4px solid var(--accent);
+            padding-left: 1rem;
+            margin-left: 0;
+            color: var(--text-secondary);
+            background: rgba(59, 130, 246, 0.05);
+            padding: 1rem;
+            border-radius: 0 8px 8px 0;
+            margin-bottom: 1.5rem;
+        }
+        
+        .markdown-body img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+        }
+        
+        .markdown-body hr {
+            border: 0;
+            height: 1px;
+            background: var(--border);
+            margin: 2rem 0;
+        }
+        
+        @media (max-width: 768px) {
+            .markdown-body {
+                padding: 2rem 1.5rem;
+            }
+            .markdown-body h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="reader-header">
+        <a href="../../index.html" class="back-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+            Back to Hub
+        </a>
+        <div style="font-weight: 600; color: var(--text-secondary);">pwa-setup-guide.md</div>
+    </div>
+    
+    <div class="markdown-body">
+        <h1>Transforming Your Website into a Progressive Web App (PWA)</h1>
+<p>A Progressive Web App (PWA) is a standard website that feels and behaves like a native mobile app. When configured correctly, users can &quot;Install&quot; your website directly to their iOS or Android home screen, and it can even work offline.</p>
+<p>You do <strong>not</strong> need a framework like React or Next.js to build a PWA. You can turn any basic HTML/CSS/JS site into a PWA using three simple ingredients:</p>
+<ol>
+<li><strong>A Web App Manifest (<code>manifest.json</code>)</strong></li>
+<li><strong>A Service Worker (<code>sw.js</code>)</strong></li>
+<li><strong>HTML Meta Tags (for iOS compatibility)</strong></li>
+</ol>
+<p>Here is the exact step-by-step guide to adding PWA features to your project.</p>
+<hr>
+<h2>Step 1: Create the Web App Manifest</h2>
+<p>The manifest is a simple JSON file that tells the browser how your app should look when installed (its name, icon, and colors).</p>
+<p>Create a file named <code>manifest.json</code> in the root of your project:</p>
+<pre><code class="language-json">{
+  &quot;name&quot;: &quot;My Awesome App&quot;,
+  &quot;short_name&quot;: &quot;AwesomeApp&quot;,
+  &quot;description&quot;: &quot;An example of a great PWA.&quot;,
+  &quot;start_url&quot;: &quot;/index.html&quot;,
+  &quot;display&quot;: &quot;standalone&quot;,
+  &quot;background_color&quot;: &quot;#ffffff&quot;,
+  &quot;theme_color&quot;: &quot;#000000&quot;,
+  &quot;icons&quot;: [
+    {
+      &quot;src&quot;: &quot;icon-192.png&quot;,
+      &quot;sizes&quot;: &quot;192x192&quot;,
+      &quot;type&quot;: &quot;image/png&quot;
+    },
+    {
+      &quot;src&quot;: &quot;icon-512.png&quot;,
+      &quot;sizes&quot;: &quot;512x512&quot;,
+      &quot;type&quot;: &quot;image/png&quot;
+    }
+  ]
+}
+</code></pre>
+<p><em>Note: You must actually generate two square PNG icons (192x192 and 512x512) and place them in your root directory.</em></p>
+<hr>
+<h2>Step 2: Create the Service Worker</h2>
+<p>The Service Worker is a JavaScript file that runs in the background. It intercepts network requests and can cache your files so the app works even when the user has no internet connection.</p>
+<p>Create a file named <code>sw.js</code> in your root directory:</p>
+<pre><code class="language-javascript">const CACHE_NAME = &#39;my-pwa-cache-v1&#39;;
+const urlsToCache = [
+  &#39;/&#39;,
+  &#39;/index.html&#39;,
+  &#39;/style.css&#39;,
+  &#39;/app.js&#39;,
+  &#39;/icon-192.png&#39;,
+  &#39;/icon-512.png&#39;
+];
+
+// Install Event: Cache files
+self.addEventListener(&#39;install&#39;, event =&gt; {
+  event.waitUntil(
+    caches.open(CACHE_NAME)
+      .then(cache =&gt; {
+        console.log(&#39;Opened cache&#39;);
+        return cache.addAll(urlsToCache);
+      })
+  );
+});
+
+// Fetch Event: Serve from cache if offline
+self.addEventListener(&#39;fetch&#39;, event =&gt; {
+  event.respondWith(
+    caches.match(event.request)
+      .then(response =&gt; {
+        // Return cached version or fetch from network
+        return response || fetch(event.request);
+      })
+  );
+});
+</code></pre>
+<p><em>Note: Make sure to update the <code>urlsToCache</code> array with the actual files your project uses!</em></p>
+<hr>
+<h2>Step 3: Link Everything in your HTML</h2>
+<p>Now you must tell your <code>index.html</code> file about the manifest and the service worker.</p>
+<p>Add the following inside the <code>&lt;head&gt;</code> of your <code>index.html</code>:</p>
+<pre><code class="language-html">&lt;!-- Link to the Manifest --&gt;
+&lt;link rel=&quot;manifest&quot; href=&quot;/manifest.json&quot;&gt;
+
+&lt;!-- Set the Theme Color (matches the manifest) --&gt;
+&lt;meta name=&quot;theme-color&quot; content=&quot;#000000&quot;&gt;
+
+&lt;!-- Apple iOS Support (Safari requires specific tags for PWAs) --&gt;
+&lt;link rel=&quot;apple-touch-icon&quot; href=&quot;/icon-192.png&quot;&gt;
+&lt;meta name=&quot;apple-mobile-web-app-capable&quot; content=&quot;yes&quot;&gt;
+&lt;meta name=&quot;apple-mobile-web-app-status-bar-style&quot; content=&quot;black-translucent&quot;&gt;
+</code></pre>
+<p>Finally, register the service worker by adding this script at the very bottom of your <code>&lt;body&gt;</code>:</p>
+<pre><code class="language-html">&lt;script&gt;
+  if (&#39;serviceWorker&#39; in navigator) {
+    window.addEventListener(&#39;load&#39;, () =&gt; {
+      navigator.serviceWorker.register(&#39;/sw.js&#39;)
+        .then(registration =&gt; {
+          console.log(&#39;ServiceWorker registered successfully with scope: &#39;, registration.scope);
+        })
+        .catch(error =&gt; {
+          console.log(&#39;ServiceWorker registration failed: &#39;, error);
+        });
+    });
+  }
+&lt;/script&gt;
+</code></pre>
+<hr>
+<h2>Step 4: Test Your PWA</h2>
+<p>To test a PWA locally, you <strong>cannot</strong> just double-click the <code>index.html</code> file. Service Workers require a secure context (HTTPS) or <code>localhost</code>. </p>
+<ol>
+<li>Start a local server (e.g., using VS Code Live Server, or running <code>python -m http.server 8000</code> in the terminal).</li>
+<li>Open the site in Chrome.</li>
+<li>Open <strong>Chrome DevTools</strong> (<code>F12</code> or <code>Cmd+Option+I</code>) and go to the <strong>Application</strong> tab.</li>
+<li>Check the <strong>Manifest</strong> section to ensure no errors are reported.</li>
+<li>Check the <strong>Service Workers</strong> section to ensure your <code>sw.js</code> is active and running.</li>
+<li>Look at the right side of the Chrome URL bar. You should see a small icon that says <strong>&quot;Install My Awesome App&quot;</strong>!</li>
+</ol>
+<p>Deploy your code to Vercel, GitHub Pages, or Cloudflare, and users on mobile phones will be prompted to add your app to their home screens.</p>
+
+    </div>
+</body>
+</html>

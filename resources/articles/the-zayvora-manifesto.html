@@ -1,0 +1,296 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>the-zayvora-manifesto.md</title>
+    
+    <!-- CSS Dependencies -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+    
+    <!-- Shared Styles (copied from index.html) -->
+    <style>
+        :root {
+            --bg-primary: #0a0a0a;
+            --bg-secondary: #121212;
+            --bg-tertiary: #1e1e1e;
+            --text-primary: #f3f4f6;
+            --text-secondary: #9ca3af;
+            --accent: #3b82f6;
+            --accent-hover: #60a5fa;
+            --border: #27272a;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Reader Header */
+        .reader-header {
+            position: sticky;
+            top: 0;
+            background: rgba(10, 10, 10, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            padding: 1rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid var(--border);
+            z-index: 100;
+        }
+
+        .back-btn {
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border);
+            color: var(--text-primary);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.2s ease;
+            text-decoration: none;
+        }
+
+        .back-btn:hover {
+            background: #2a2a2a;
+            transform: translateX(-2px);
+        }
+
+        /* Markdown Body */
+        .markdown-body {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 3rem 2rem 5rem 2rem;
+            font-size: 1.1rem;
+            color: #d1d5db;
+        }
+
+        .markdown-body h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            color: #ffffff;
+            line-height: 1.2;
+        }
+
+        .markdown-body h2 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-top: 3rem;
+            margin-bottom: 1rem;
+            color: #f3f4f6;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 0.5rem;
+        }
+
+        .markdown-body h3 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-top: 2rem;
+            margin-bottom: 0.75rem;
+            color: #e5e7eb;
+        }
+
+        .markdown-body p {
+            margin-bottom: 1.5rem;
+        }
+
+        .markdown-body ul, .markdown-body ol {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+        }
+
+        .markdown-body li {
+            margin-bottom: 0.5rem;
+        }
+
+        .markdown-body a {
+            color: var(--accent);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s;
+        }
+
+        .markdown-body a:hover {
+            border-bottom-color: var(--accent);
+        }
+
+        .markdown-body code {
+            font-family: 'JetBrains Mono', monospace;
+            background: var(--bg-tertiary);
+            padding: 0.2em 0.4em;
+            border-radius: 4px;
+            font-size: 0.9em;
+            color: #fca5a5;
+        }
+
+        .markdown-body pre {
+            background: #0d1117;
+            padding: 1.5rem;
+            border-radius: 12px;
+            overflow-x: auto;
+            margin-bottom: 1.5rem;
+            border: 1px solid var(--border);
+        }
+
+        .markdown-body pre code {
+            background: none;
+            padding: 0;
+            color: inherit;
+            font-size: 0.95em;
+        }
+
+        .markdown-body blockquote {
+            border-left: 4px solid var(--accent);
+            padding-left: 1rem;
+            margin-left: 0;
+            color: var(--text-secondary);
+            background: rgba(59, 130, 246, 0.05);
+            padding: 1rem;
+            border-radius: 0 8px 8px 0;
+            margin-bottom: 1.5rem;
+        }
+        
+        .markdown-body img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+        }
+        
+        .markdown-body hr {
+            border: 0;
+            height: 1px;
+            background: var(--border);
+            margin: 2rem 0;
+        }
+        
+        @media (max-width: 768px) {
+            .markdown-body {
+                padding: 2rem 1.5rem;
+            }
+            .markdown-body h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="reader-header">
+        <a href="../../index.html" class="back-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+            Back to Hub
+        </a>
+        <div style="font-weight: 600; color: var(--text-secondary);">the-zayvora-manifesto.md</div>
+    </div>
+    
+    <div class="markdown-body">
+        <h1>The Zayvora Manifesto</h1>
+<p>The Zayvora</p>
+<p>Manifesto</p>
+<p>A Local-First Future for Developer Intelligence</p>
+<p>◆</p>
+<p>Engineering</p>
+<p>◆</p>
+<p>Systems</p>
+<p>By</p>
+<p>Dharam Daxini</p>
+<p>· April 10, 2026</p>
+<p>Read more at →</p>
+<p>◆ daxini.xyz</p>
+<p>Every application you used today—the messaging app, the payment system, the search engine—was built by developers making thousands of decisions.</p>
+<p>Operating systems. The internet. The cloud infrastructure holding it all together.</p>
+<p>Software built the modern world.</p>
+<p>But the tools developers use to</p>
+<p>think</p>
+<p>about that software are no longer theirs.</p>
+<p>Ten years ago, developers owned their tools.</p>
+<p>A compiler ran on your machine. Your debugger sat on your desk. Your documentation lived in your codebase. You understood what they did, and you could modify them if you needed to.</p>
+<p>Today, the most powerful reasoning tools run on servers you cannot see, trained on code you did not consent to share, locked behind subscriptions you cannot afford to lose.</p>
+<p>The more capable these tools become, the less transparency you have. The more valuable they prove, the more dependent you become.</p>
+<p>Your knowledge—encoded in thousands of commits, architectural decisions, design tradeoffs, bugs discovered and fixed—flows into proprietary models operated by companies whose incentives are not aligned with yours.</p>
+<p>This is not progress.</p>
+<p>Your repository already contains everything needed to understand your system.</p>
+<p>Git history is not version control. It is</p>
+<p>engineering memory</p>
+<p>.</p>
+<p>Every commit records:</p>
+<p>An architectural decision</p>
+<p>A tradeoff between competing goals</p>
+<p>A bug discovered and the reasoning behind the fix</p>
+<p>A lesson learned in code</p>
+<p>That memory is yours. It is specific to your problem domain, your constraints, your team&#39;s values.</p>
+<p>No LLM trained on the open internet knows your system the way your own codebase does.</p>
+<p>Zayvora exists to transform that memory into tools that help you reason about your own code.</p>
+<p>Not through closed APIs.</p>
+<p>Not through expensive subscriptions.</p>
+<p>Not through infrastructure you cannot control.</p>
+<p>But through local-first software that runs on your machine, using knowledge already present in your repository.</p>
+<p>Tools that are:</p>
+<p>Transparent</p>
+<p>: You understand how they work</p>
+<p>Local</p>
+<p>: They run where you decide, not on distant servers</p>
+<p>Composable</p>
+<p>: You can extend and modify them without asking permission</p>
+<p>Yours</p>
+<p>: No vendor lock-in, no data extraction, no surprise changes</p>
+<p>Start with your Git history.</p>
+<p>Extract the architectural decisions, design patterns, and lessons embedded in your commits. Transform those into embeddings. Run inference locally on your own hardware.</p>
+<p>Build reasoning tools that understand</p>
+<p>your</p>
+<p>codebase, not the industry&#39;s.</p>
+<p>Query your architecture. Debug faster by learning from past decisions. Generate code that respects your team&#39;s patterns. Reason about system design with your actual constraints in mind.</p>
+<p>All without uploading a single line of code to a third party.</p>
+<p>All without waiting for an API response.</p>
+<p>All without wondering what happens to your knowledge after you stop paying.</p>
+<p>This is an experiment in rebuilding developer tooling around ownership and transparency.</p>
+<p>Zayvora is a working prototype. The code is available. The architecture is documented. The decisions are forkable.</p>
+<p>If you believe developers should control their own intelligence:</p>
+<p>Explore the code.</p>
+<p>Understand how it works. Read the decisions we made and why.</p>
+<p>Fork the repository.</p>
+<p>Build your own version. Optimize it for your language, your domain, your team&#39;s needs.</p>
+<p>Extend it.</p>
+<p>Layer new reasoning on top. Integrate it with your build pipeline. Connect it to your actual development workflow.</p>
+<p>Share what you build.</p>
+<p>The future of developer tooling is not a closed product. It is a shared foundation that each team can adapt to their own reality.</p>
+<p>We are betting that developers would rather own their tools than rent them.</p>
+<p>That transparency and control matter more than convenience.</p>
+<p>That the most powerful insights come not from models trained on millions of codebases, but from deep understanding of</p>
+<p>your own</p>
+<p>system.</p>
+<p>That the future of developer intelligence is not a SaaS company selling access.</p>
+<p>It is distributed, local, and owned by the people who build with it.</p>
+<p>This is the beginning, not the end.</p>
+<p>Start by running Zayvora on your own repository. See what it discovers about your architecture. Notice what it gets wrong—those failures will teach you more than generic advice ever could.</p>
+<p>Build tools on top of it. Connect it to your team&#39;s workflows. Use it to onboard new developers faster. Embed it in your CI/CD pipeline.</p>
+<p>Share your version. Show other developers what becomes possible when reasoning tools are local, transparent, and truly yours.</p>
+<p>Because the future of developer tooling should not belong to a single company or a closed platform.</p>
+<p>It should belong to the developers who build the world.</p>
+<p>It starts with you.</p>
+<p>It starts with your code.</p>
+<p>It starts now.</p>
+
+    </div>
+</body>
+</html>

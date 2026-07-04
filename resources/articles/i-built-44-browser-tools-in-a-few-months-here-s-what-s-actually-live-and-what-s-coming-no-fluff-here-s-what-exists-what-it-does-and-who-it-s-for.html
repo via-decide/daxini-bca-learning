@@ -1,0 +1,249 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>i-built-44-browser-tools-in-a-few-months-here-s-what-s-actually-live-and-what-s-coming-no-fluff-here-s-what-exists-what-it-does-and-who-it-s-for.md</title>
+    
+    <!-- CSS Dependencies -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+    
+    <!-- Shared Styles (copied from index.html) -->
+    <style>
+        :root {
+            --bg-primary: #0a0a0a;
+            --bg-secondary: #121212;
+            --bg-tertiary: #1e1e1e;
+            --text-primary: #f3f4f6;
+            --text-secondary: #9ca3af;
+            --accent: #3b82f6;
+            --accent-hover: #60a5fa;
+            --border: #27272a;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Reader Header */
+        .reader-header {
+            position: sticky;
+            top: 0;
+            background: rgba(10, 10, 10, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            padding: 1rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid var(--border);
+            z-index: 100;
+        }
+
+        .back-btn {
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border);
+            color: var(--text-primary);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.2s ease;
+            text-decoration: none;
+        }
+
+        .back-btn:hover {
+            background: #2a2a2a;
+            transform: translateX(-2px);
+        }
+
+        /* Markdown Body */
+        .markdown-body {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 3rem 2rem 5rem 2rem;
+            font-size: 1.1rem;
+            color: #d1d5db;
+        }
+
+        .markdown-body h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            color: #ffffff;
+            line-height: 1.2;
+        }
+
+        .markdown-body h2 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-top: 3rem;
+            margin-bottom: 1rem;
+            color: #f3f4f6;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 0.5rem;
+        }
+
+        .markdown-body h3 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-top: 2rem;
+            margin-bottom: 0.75rem;
+            color: #e5e7eb;
+        }
+
+        .markdown-body p {
+            margin-bottom: 1.5rem;
+        }
+
+        .markdown-body ul, .markdown-body ol {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+        }
+
+        .markdown-body li {
+            margin-bottom: 0.5rem;
+        }
+
+        .markdown-body a {
+            color: var(--accent);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s;
+        }
+
+        .markdown-body a:hover {
+            border-bottom-color: var(--accent);
+        }
+
+        .markdown-body code {
+            font-family: 'JetBrains Mono', monospace;
+            background: var(--bg-tertiary);
+            padding: 0.2em 0.4em;
+            border-radius: 4px;
+            font-size: 0.9em;
+            color: #fca5a5;
+        }
+
+        .markdown-body pre {
+            background: #0d1117;
+            padding: 1.5rem;
+            border-radius: 12px;
+            overflow-x: auto;
+            margin-bottom: 1.5rem;
+            border: 1px solid var(--border);
+        }
+
+        .markdown-body pre code {
+            background: none;
+            padding: 0;
+            color: inherit;
+            font-size: 0.95em;
+        }
+
+        .markdown-body blockquote {
+            border-left: 4px solid var(--accent);
+            padding-left: 1rem;
+            margin-left: 0;
+            color: var(--text-secondary);
+            background: rgba(59, 130, 246, 0.05);
+            padding: 1rem;
+            border-radius: 0 8px 8px 0;
+            margin-bottom: 1.5rem;
+        }
+        
+        .markdown-body img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+        }
+        
+        .markdown-body hr {
+            border: 0;
+            height: 1px;
+            background: var(--border);
+            margin: 2rem 0;
+        }
+        
+        @media (max-width: 768px) {
+            .markdown-body {
+                padding: 2rem 1.5rem;
+            }
+            .markdown-body h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="reader-header">
+        <a href="../../index.html" class="back-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+            Back to Hub
+        </a>
+        <div style="font-weight: 600; color: var(--text-secondary);">i-built-44-browser-tools-in-a-few-months-here-s-what-s-actually-live-and-what-s-coming-no-fluff-here-s-what-exists-what-it-does-and-who-it-s-for.md</div>
+    </div>
+    
+    <div class="markdown-body">
+        <h1>I built 44 browser tools in a few months. Here&#39;s what&#39;s actually live and what&#39;s coming. No fluff. Here&#39;s what exists, what it does, and who it&#39;s for</h1>
+<p>I built 44 browser tools in a few months. Here&#39;s what&#39;s actually live and what&#39;s coming. No fluff. Here&#39;s what exists, what it does, and who it&#39;s</p>
+<p>for</p>
+<p>Everything runs at via-decide.github.io/decide.engine-tools — no login, no install, no account. Open it, use it.</p>
+<p>◆</p>
+<p>Engineering</p>
+<p>◆</p>
+<p>Systems</p>
+<p>By</p>
+<p>Dharam Daxini</p>
+<p>· March 14, 2026</p>
+<p>Read more at →</p>
+<p>◆ daxini.xyz</p>
+<p>Everything runs at</p>
+<p>via-decide.github.io/decide.engine-tools</p>
+<p>— no login, no install, no account. Open it, use it.</p>
+<p>PromptAlchemy turns a raw idea into a full prompt pack. Idea Remixer takes one concept and gives you six angles to test. Script Generator builds structured content scripts. Prompt Compare scores your prompts side by side so you stop guessing which one will work. If your job is making content, these will save you an hour a day.</p>
+<p>Spec Builder converts a vague feature idea into a proper technical spec. Code Generator scaffolds working code from a brief. Task Splitter breaks a large goal into ordered, dependency-mapped subtasks. Code Reviewer flags issues before you push. Repo Improvement Brief turns a gut feeling about what&#39;s wrong with a codebase into an actionable brief you can hand to an agent or a developer.</p>
+<p>Decision Brief Guide turns analysis into a one-page decision document. Founder Narrative Builder structures your origin story and positioning. Sales Dashboard gives you a clean snapshot view. Export Studio packages your outputs for handoff.</p>
+<p>Interview Prep. Student Research. Multi-Source Research Explained. These do exactly what the names say — structured, fast, no noise.</p>
+<p>This one is different from the rest. It&#39;s a full browser game running on Three.js — no download, no app store, just open the link.</p>
+<p>You start as a dormant seed. You grow by spending water and nutrients. Pests show up. Stress builds. Push too hard without resting and your crop burns. Hit the thresholds and your tree evolves — from Sprout to Sapling to Young Tree.</p>
+<p>Every action is tied to a real career metaphor. Water is consistency. Nutrients are learning. Pests are distractions. Credits are the career capital you&#39;ve built. The game doesn&#39;t tell you what to do — it shows you what happens when you do or don&#39;t.</p>
+<p>It runs at:</p>
+<p>via-decide.github.io/decide.engine-tools/tools/engine/growth-milestone-engine/index.html</p>
+<p>Five mini games are queued. All browser-native, all connected to the Orchard state engine:</p>
+<p>🐍 Snake — score feeds into your fruit production meter</p>
+<p>🃏 Memory Match — card flip game, 16 cards, best time saved</p>
+<p>⌨️ Typing Speed — WPM test with orchard-themed sentences</p>
+<p>🧩 Resource Puzzle — allocate water/nutrients across three tree slots, maximise yield</p>
+<p>📝 Quiz Engine — knowledge check that unlocks orchard progression</p>
+<p>Each one connects to the same localStorage state. Your snake high score is fruit. Your typing speed is water consistency. The metaphor holds across the whole system.</p>
+<p>Zero frameworks. Every single tool is three files: index.html, tool.js, config.json. They talk to each other through the browser&#39;s native CustomEvent API. State lives in localStorage under one key. No React, no bundler, no Node server.</p>
+<p>44 tools live. 28 game engine modules. 302 commits.</p>
+<p>The whole thing is open source:</p>
+<p>github.com/via-decide/decide.engine-tools</p>
+<p>If you&#39;re a creator, builder, or learner — try the tools. If you&#39;re a developer — fork it, break it, improve it.</p>
+<p>🌱</p>
+<p>via-decide.github.io/decide.engine-tools</p>
+
+    </div>
+</body>
+</html>
