@@ -1,103 +1,138 @@
-# Feedback Collection System API: Learn By Building
+# 📝 Feedback Collection System: Learn By Building
 
-**"Build an embeddable widget API that accepts feedback ratings, aggressively blocks spam using IP rate-limiting, and calculates real-time averages."**
+**"Build an API that allows a business to create multiple feedback forms (e.g. 'Website Redesign', 'Customer Support'), generate unique links for them, and securely collect and aggregate user responses."**
 
 ---
-
 
 ## 🎯 Learning Outcomes
 
 After completing this project, you will understand:
 
-✅ **Rate Limiting** - Restricting how many times a single user (IP address) can hit your API within a timeframe.
-✅ **Data Aggregation** - Calculating averages, counts, and percentiles directly using database queries (not in memory).
-✅ **CORS (Cross-Origin Resource Sharing)** - Allowing third-party websites to securely send POST requests to your API.
-✅ **Anonymization** - Hashing IP addresses so you can track users without violating privacy laws (GDPR).
+✅ **Relational Data (One-to-Many)** - Linking multiple `responses` to a single `form` using Foreign Keys.  
+✅ **SQL Aggregation** - Using `COUNT()`, `AVG()`, and `GROUP BY` to make the database do the heavy mathematical lifting.  
+✅ **Data Anonymization** - Hashing IP addresses to prevent double-voting without violating user privacy laws (GDPR).  
+✅ **Database Constraints** - Using SQL `CHECK` constraints to enforce data integrity (e.g., ensuring ratings are exactly 1-5) at the lowest level.
 
 ---
-
 
 ## 📋 Project Overview
 
 ### The Problem
-You build a little "Did you find this helpful? 👍 👎" widget and put it on a public blog. Because it has no login requirement, a single malicious user (or a bot) can click "Thumbs Down" 5,000 times a minute, ruining your data. You need a backend that silently discards spam, accepts valid votes, and provides the author with the total score.
+
+Polling systems are incredibly common (Twitter polls, YouTube surveys, NPS scores). The backend challenge is twofold: 
+1) **Write Heavy:** You might receive thousands of votes per second. The insertion logic must be fast and secure against spam.
+2) **Read Heavy (Analytics):** The admin dashboard needs to calculate statistics across millions of rows instantly without crashing the server.
+
+**Your job:** Build a highly optimized, relational database backend that handles both the firehose of incoming data and the complex math required for the dashboard.
 
 ### Who Uses It
+
 ```
-Blog Widget (Frontend, No Login):
-├─ User clicks: "5 Stars"
-└─ Sends POST /api/feedback { page: "/article-1", rating: 5 }
+The Business (Admin):
+├─ POSTs to /api/forms to create a poll
+└─ GETs /api/forms/:id/analytics to view the charts
 
-Backend API (You):
-├─ Checks if this IP has voted on this page recently
-├─ Saves the vote
-└─ Calculates the new average: "4.8 Stars"
-```
-
-### The Big Picture
-
-```text
-┌──────────────┐     ┌──────────────┐     ┌──────────────┐
-│  Public Blog │ ──> │ Your Backend │ ──> │ Redis / DB   │
-│  (No Login)  │     │ (Rate Limiter│     │ (IP Counters)│
-└──────────────┘     └──────┬───────┘     └──────────────┘
-                            │ (Allowed)
-                            V
-                     ┌──────────────┐
-                     │ Database     │
-                     │ (Feedback)   │
-                     └──────────────┘
+The Customer:
+├─ GETs /api/forms/:id to view the question
+└─ POSTs to /api/forms/:id/responses to submit a 5-star rating
 ```
 
 ---
 
+## 🧠 Implementation Strategy: Pseudocode
 
-## 🧠 Implementation: Pseudocode First
+### 1. Creating the Form (Admin)
 
-```text
-FUNCTION submit_feedback(request, response):
-    page = request.body.page_url
+```pseudocode
+POST /api/forms:
+  id = request.body.id // Allow them to choose a nice URL slug, e.g. "q3-survey"
+  title = request.body.title
+  
+  // Basic validation...
+  
+  try:
+    db.insert("forms", { id, title, is_active: true })
+    return 201 "Created"
+  catch (error):
+    // If ID already exists, SQLite will throw a UNIQUE constraint error
+    return 400 "That URL slug is already taken"
+```
+
+### 2. Handling the Submission (Public)
+
+```pseudocode
+POST /api/forms/:id/responses:
+  Step 1: Check Form Status
+    form = db.query("SELECT is_active FROM forms WHERE id = ?", request.params.id)
+    if !form: return 404 "Form not found"
+    if !form.is_active: return 403 "Form closed"
+    
+  Step 2: Validate Input
     rating = request.body.rating
+    if typeof rating != "number" || rating < 1 || rating > 5:
+      return 400 "Rating must be 1-5"
+      
+  Step 3: Spam Prevention (Hash the IP)
+    raw_ip = request.ip
+    salt = "my_secret_salt_123"
+    // Create a unique hash for THIS user on THIS specific form
+    voter_hash = sha256(raw_ip + request.params.id + salt)
     
-    // 1. Validation
-    IF rating < 1 OR rating > 5:
-        RETURN 400 "Invalid rating"
-        
-    // 2. Anonymize IP
-    raw_ip = request.headers["x-forwarded-for"] OR request.ip
-    user_hash = SHA256(raw_ip + ENV.SECRET_SALT)
-    
-    // 3. Rate Limiting Check
-    rate_key = "ratelimit:feedback:" + user_hash
-    current_requests = Redis.get(rate_key) OR 0
-    
-    IF current_requests >= 5:
-        RETURN 429 "Too Many Requests. Try again in an hour."
-        
-    // 4. Save and Increment Limit
-    Redis.increment(rate_key)
-    Redis.expire(rate_key, 3600) // Reset after 1 hour
-    
-    DB.insert("Feedback", {
-        page_url: page,
+  Step 4: Save to Database
+    try:
+      db.insert("responses", {
+        id: generateUUID(),
+        form_id: request.params.id,
         rating: rating,
-        user_hash: user_hash,
-        created_at: NOW()
-    })
-    
-    RETURN 201 "Feedback recorded"
+        comment: request.body.comment,
+        voter_hash: voter_hash
+      })
+      return 201 "Success"
+    catch (error):
+      // If our database has a UNIQUE INDEX on (form_id, voter_hash), 
+      // the DB will throw an error if they try to vote twice!
+      return 429 "You have already voted"
+```
+
+### 3. The Analytics Engine (Admin)
+
+```pseudocode
+GET /api/forms/:id/analytics:
+  
+  // Query 1: Get the basic stats (One row returned)
+  // AVG() and COUNT() are native SQL functions
+  stats = db.query(`
+    SELECT COUNT(id) as total, AVG(rating) as average 
+    FROM responses 
+    WHERE form_id = ?
+  `, id)
+  
+  // Query 2: Get the breakdown (Returns up to 5 rows)
+  // e.g. [{ rating: 5, count: 80 }, { rating: 4, count: 40 }]
+  breakdown = db.query(`
+    SELECT rating, COUNT(id) as count 
+    FROM responses 
+    WHERE form_id = ? 
+    GROUP BY rating
+  `, id)
+  
+  // Format the response for the frontend charts
+  return 200 {
+    total_responses: stats.total,
+    average_rating: stats.average,
+    rating_breakdown: formatBreakdownToJSON(breakdown)
+  }
 ```
 
 ---
-
 
 ## ✅ Before Submission
 
-- [ ] Does your API correctly read the `x-forwarded-for` header for IPs?
-- [ ] Are you hashing the IP address before saving it?
-- [ ] Does the API block a user after 5 submissions in an hour?
-- [ ] Is the average calculation done in the database (SQL), not in a loop in your code?
+- [ ] System supports multiple separate forms with unique IDs.
+- [ ] Users can submit a rating (1-5) and an optional comment.
+- [ ] Forms can be deactivated (closing them to new responses).
+- [ ] The API prevents the same IP address from voting twice on the same form.
+- [ ] The API calculates the average rating using SQL (`AVG`), not Javascript loops.
+- [ ] Code is on GitHub.
 
----
-
-**Build this and learn: Rate limiting algorithms, CORS security, proxy networks, and SQL aggregations.**
+**Success:** You have built a relational, data-aggregation backend!
