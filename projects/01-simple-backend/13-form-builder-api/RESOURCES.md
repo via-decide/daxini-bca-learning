@@ -1,13 +1,26 @@
-# Form Builder API: Learn By Building
+# 📝 Form Builder API (Typeform Clone): Learn By Building
 
-**"Build a dynamic API that allows users to define custom form fields (JSON schemas), and then strictly validates incoming submissions against those user-defined rules."**
+**"Build a dynamic form engine where users can define custom questions, share links, and collect structured responses."**
 
 ---
 
-
 ## 📚 Resources
 
-- **Data Modeling**: Read about the "Entity-Attribute-Value" (EAV) model vs JSONB storage.
-- **Libraries**: Look up JSON Schema validation libraries (like `Ajv` for Node.js or `Pydantic` for Python) to see how pros do it.
+**Data Modeling & Architecture:**
+- Entity-Attribute-Value (EAV) Model: https://en.wikipedia.org/wiki/Entity%E2%80%93attribute%E2%80%93value_model (Understand why building dynamic forms in SQL is challenging)
+- Storing JSON in PostgreSQL/SQLite: https://www.sqlite.org/json1.html
+- Cascade Deletes in SQL: https://www.sqlitetutorial.net/sqlite-foreign-key/ (Look at `ON DELETE CASCADE`)
+
+**Authentication & Security:**
+- JWT Basics: https://jwt.io/introduction
+- Rate Limiting (to prevent spam form submissions): https://blog.logrocket.com/rate-limiting-node-js/
+
+**Validation:**
+- Joi (Data Validation for Node.js): https://joi.dev/
+- Zod (TypeScript-first schema validation): https://zod.dev/
+
+**Real-World Inspiration:**
+- Typeform API: https://developer.typeform.com/
+- Google Forms documentation.
 
 ---

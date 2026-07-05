@@ -1,29 +1,64 @@
-# Email Scheduler API: Learn By Building
+# ✉️ Email Scheduler API: Learn By Building
 
-**"Build a background worker system that queues up emails to be sent at a specific time in the future, and gracefully handles retries if the email provider crashes."**
-
----
-
-
-## 🧪 Testing: How to Verify
-
-### Test 1: Future Scheduling
-- Schedule an email for 2 minutes from now.
-- Ensure your worker script doesn't pick it up immediately.
-- Wait 2 minutes. The worker should automatically pick it up and process it.
-
-### Test 2: Retry Logic Simulation
-- Temporarily change your API Key to a fake string (so SendGrid rejects the request).
-- Schedule an email.
-- Watch your worker's logs. It should try, fail, increase retries to 1, try again later, increase to 2, and eventually mark it as 'failed'.
+**"Build a background job system that accepts email content, schedules it for a specific time, and uses cron jobs or a worker queue to deliver it reliably."**
 
 ---
 
+## 🧪 Testing Scenarios
 
-## 🛠️ Debugging: When Things Break
+### Scenario 1: Schedule and Send (Happy Path)
 
-### Problem: Users receive the same email twice.
-**Root Cause:** The worker takes 5 seconds to send the email. But your loop runs every 2 seconds. The second loop starts, sees the email is still "pending", and sends it again!
-**Solution:** Ensure you immediately mark the job as 'processing' *before* making the HTTP call to the email provider, or use proper database-level row locking.
+```
+1. User logs in
+2. Schedules an email for "1 minute from now"
+3. Expected: API returns 201 Created. DB shows status='pending'
+4. Wait 1 minute.
+5. Expected: Background worker picks it up. DB shows status='processing'
+6. Background worker successfully sends it via SMTP (e.g. Mailtrap)
+7. Expected: DB shows status='sent' and sent_at timestamp is populated
+```
+
+### Scenario 2: Cancelling a Pending Email
+
+```
+1. User schedules an email for "Tomorrow at 9 AM"
+2. User calls PATCH /api/emails/:id/cancel
+3. Expected: API returns 200 OK. DB shows status='cancelled'
+4. Fast forward to tomorrow at 9 AM.
+5. Expected: Background worker ignores it because status != 'pending'
+6. Email is NOT sent.
+```
+
+### Scenario 3: Attempting to Cancel a Processing/Sent Email
+
+```
+1. User schedules an email for "Now"
+2. Background worker picks it up and marks it 'processing'
+3. User simultaneously calls PATCH /api/emails/:id/cancel
+4. Expected: API returns 403 "Cannot cancel an email that is already processing"
+5. Email continues to send and becomes 'sent'.
+```
+
+### Scenario 4: SMTP Server Failure (Retry Logic)
+
+```
+1. User schedules an email for "Now"
+2. Background worker picks it up, but the SMTP credentials are wrong (simulated error).
+3. Worker catches the error.
+4. Expected: DB shows status='failed', last_error='Auth failed', attempt_count=1
+5. Worker runs again 5 minutes later.
+6. Worker should NOT retry automatically unless you programmed exponential backoff (e.g., status='pending', attempt_count=1). 
+7. If basic implementation: it just stays 'failed' forever.
+```
+
+### Scenario 5: Double Worker Concurrency (Advanced)
+
+```
+1. Schedule an email for "Now"
+2. Start TWO background worker processes in your terminal at the exact same time.
+3. Expected: Only ONE worker successfully claims the email (status='processing').
+4. The other worker should find 0 pending emails.
+5. Verify: The email is only sent ONCE to the destination inbox.
+```
 
 ---

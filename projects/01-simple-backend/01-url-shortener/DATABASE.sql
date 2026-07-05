@@ -1,9 +1,60 @@
+Here is the rewritten content for 01 Url Shortener:
+
+**DATABASE.sql**
 -- Schema Design
+CREATE TABLE users (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  username TEXT UNIQUE NOT NULL,
+  passwordHash TEXT NOT NULL,
+  email TEXT NOT NULL,
+  createdAt DATETIME DEFAULT CURRENT_TIMESTAMP,
+  updatedAt DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
 CREATE TABLE urls (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
+  userId INTEGER NOT NULL,
   shortCode TEXT UNIQUE NOT NULL,
   longUrl TEXT NOT NULL,
   clicks INTEGER DEFAULT 0,
   createdAt DATETIME DEFAULT CURRENT_TIMESTAMP,
-  expiresAt DATETIME
+  expiresAt DATETIME,
+  FOREIGN KEY (userId) REFERENCES users(id)
 );
+
+CREATE TABLE analytics (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  urlId INTEGER NOT NULL,
+  views INTEGER DEFAULT 0,
+  clicks INTEGER DEFAULT 0,
+  createdAt DATETIME DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY (urlId) REFERENCES urls(id)
+);
+
+CREATE TABLE tags (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  name TEXT UNIQUE NOT NULL
+);
+
+CREATE TABLE url_tags (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  urlId INTEGER NOT NULL,
+  tagId INTEGER NOT NULL,
+  FOREIGN KEY (urlId) REFERENCES urls(id),
+  FOREIGN KEY (tagId) REFERENCES tags(id)
+);
+
+CREATE TABLE statistics (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  urlId INTEGER NOT NULL,
+  views INTEGER DEFAULT 0,
+  clicks INTEGER DEFAULT 0,
+  createdAt DATETIME DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY (urlId) REFERENCES urls(id)
+);
+
+-- Indexes
+CREATE INDEX idx_users_username ON users(username);
+CREATE INDEX idx_urls_shortCode ON urls(shortCode);
+CREATE INDEX idx_analytics_urlId ON analytics(urlId);
+CREATE INDEX idx_statistics_urlId ON statistics(urlId);
