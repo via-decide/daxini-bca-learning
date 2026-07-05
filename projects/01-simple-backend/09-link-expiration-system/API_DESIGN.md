@@ -1,39 +1,102 @@
-# Link Expiration System: Learn By Building
+# 🔗 Link Expiration System: API Design
 
-**"Build a secure file/resource sharing API that automatically deletes access after a specific time limit or view count is reached."**
+**"Build a secure link-sharing API that generates unique URLs that automatically expire after a certain number of clicks or a specific time limit."**
+
+---
+
+## 🔗 API Endpoints
+
+```
+POST   /api/links                → Create a new secure, expiring link
+GET    /s/:id                    → The public redirect endpoint
+GET    /api/links/:id/stats      → (Optional) View how many clicks a link has
+```
 
 ---
 
+## 📦 Request/Response Examples
 
-## 🔌 API Design: Plan Before Coding
+### 1. Create a Link (Click Limited)
 
-### Endpoint 1: Create Secret
-**POST `/api/secrets`**
-- **Body**:
+**Request:**
 ```json
+POST /api/links
 {
-  "message": "My bank password is 1234",
-  "max_views": 1,
-  "expires_in_hours": 1
-}
-```
-- **Response**: `201 Created`
-```json
-{
-  "id": "8f2c...",
-  "url": "http://localhost:3000/api/secrets/8f2c..."
+  "target_url": "https://drive.google.com/file/d/secret_document",
+  "max_clicks": 10
 }
 ```
 
-### Endpoint 2: Read Secret
-**GET `/api/secrets/:id`**
-- **Response (Valid)**: `200 OK`
+**Response (201):**
 ```json
-{ "message": "My bank password is 1234" }
+{
+  "message": "Link created successfully",
+  "link": {
+    "id": "j9F2kL",
+    "short_url": "http://localhost:3000/s/j9F2kL",
+    "target_url": "https://drive.google.com/...",
+    "max_clicks": 10,
+    "expires_at": null
+  }
+}
 ```
-- **Response (Expired/Invalid)**: `410 Gone`
+
+### 2. Create a Link (Time Limited)
+
+**Request:**
 ```json
-{ "error": "This secret has expired or reached its view limit." }
+POST /api/links
+{
+  "target_url": "https://zoom.us/j/123456789",
+  "expires_at": "2026-10-01T17:00:00Z"
+}
 ```
+
+**Response (201):**
+```json
+{
+  "message": "Link created successfully",
+  "link": {
+    "id": "m4V8pQ",
+    "short_url": "http://localhost:3000/s/m4V8pQ",
+    "target_url": "https://zoom.us/...",
+    "max_clicks": null,
+    "expires_at": "2026-10-01T17:00:00Z"
+  }
+}
+```
+
+### 3. The Redirect Request (What the browser does)
+
+**Request:**
+```http
+GET /s/m4V8pQ HTTP/1.1
+```
+
+**Response (302 Found):**
+```http
+HTTP/1.1 302 Found
+Location: https://zoom.us/j/123456789
+```
+*(The user never sees this JSON or text; their browser instantly loads the Zoom page).*
 
 ---
+
+## ⚠️ Error Responses
+
+If a user clicks an expired link, they should NOT get raw JSON. They should get a friendly HTML page, or an API error if it's an API request.
+
+**Request:**
+```http
+GET /s/m4V8pQ HTTP/1.1
+```
+
+**Response (410 Gone):**
+```http
+HTTP/1.1 410 Gone
+Content-Type: application/json
+
+{
+  "error": "This link has expired."
+}
+```

@@ -1,37 +1,109 @@
-# File Sharing API: Learn By Building
+# 📁 File Sharing API: Learn By Building
 
-**"Build a backend service that accepts file uploads via multipart form data, saves them to disk, and generates unique download links."**
+**"Build a secure backend service where users can upload any file, receive a download link, and protect the download with an optional password."**
 
 ---
-
 
 ## 🏗️ Architecture: Design Before Coding
 
-### Step 1: Understand the Data Separation
+### Step 1: Understand the Data (Design Yourself First)
 
-**Question: Why not save the PDF inside a SQL column (BLOB)?**
-- Databases are optimized for fast searching and joining text/numbers. Putting 50MB binary files inside SQL blows up the database size, slows down backups, and ruins query performance.
-- **Rule of Thumb:** Store files on disk (or S3). Store the *path* to the file in the database.
+**Question: Where should the actual files be saved?**
 
-### Step 2: Architecture Diagram
+Just like the Image Gallery project, saving a 50MB PDF directly into a SQL database is a terrible idea. Databases are meant for metadata. The actual binary files should be saved on the server's Hard Drive.
 
-**Upload Flow:**
-```text
-1. Client POSTs multipart/form-data to /api/upload
-2. API validates file size (< 5MB) and type (only Images/PDFs)
-3. API generates a UUID (e.g., "7f8b9")
-4. API saves file to disk at: `/uploads/7f8b9.pdf`
-5. API saves metadata to DB: `INSERT INTO files (id, original_name, path) VALUES ('7f8b9', 'report.pdf', '/uploads/7f8b9.pdf')`
-6. API returns `{ "download_url": "/api/download/7f8b9" }`
+**The Data Model:**
 ```
+Database Table: SharedFiles
+├─ id (UUID)
+├─ original_filename (e.g. "financial_report.pdf")
+├─ saved_filename (e.g. "1710523491-financial_report.pdf")
+├─ file_path (e.g. "/uploads/1710523491-financial_report.pdf")
+├─ mime_type (e.g. "application/pdf")
+├─ size_bytes (Integer)
+├─ password_hash (String - Nullable)
+└─ uploaded_at (Timestamp)
 
-**Download Flow:**
-```text
-1. Client GETs /api/download/7f8b9
-2. API finds record '7f8b9' in DB.
-3. API reads `path` (/uploads/7f8b9.pdf) and `original_name` (report.pdf).
-4. API sets header `Content-Disposition: attachment; filename="report.pdf"`
-5. API streams the file from disk to the client.
+Server Hard Drive:
+/uploads
+  ├─ 1710523491-financial_report.pdf
+  └─ 1710523500-party-video.mp4
 ```
 
 ---
+
+### Step 2: The Download Stream (Memory Management)
+
+**Question: If a user downloads a 1GB video, how does your server handle it?**
+
+**Bad Idea (Loading into memory):**
+```javascript
+app.get('/download/:id', (req, res) => {
+  // Reads the entire 1GB file into the server's RAM!
+  const fileBuffer = fs.readFileSync('/uploads/party-video.mp4'); 
+  res.send(fileBuffer);
+});
+```
+*Why it's bad:* If your Node.js server only has 512MB of RAM, trying to load a 1GB file into a variable will instantly crash the server with an "Out of Memory" (OOM) error. Even if you have 8GB of RAM, 10 users downloading the file at once will crash the server.
+
+**Good Idea (Streaming):**
+Instead of holding the whole file, you create a "pipe" between the hard drive and the network connection. Node.js reads a tiny chunk (e.g., 64KB), sends it to the user, clears that chunk from RAM, and reads the next chunk.
+
+```javascript
+app.get('/download/:id', (req, res) => {
+  // Tells the browser "Hey, I'm sending a file attachment, please download it"
+  res.setHeader('Content-Disposition', `attachment; filename="party-video.mp4"`);
+  
+  // Create a stream from the hard drive directly to the HTTP response
+  const stream = fs.createReadStream('/uploads/party-video.mp4');
+  stream.pipe(res);
+});
+```
+This uses almost 0MB of RAM, allowing thousands of concurrent downloads.
+
+---
+
+### Step 3: Password Protection
+
+If the user sets a password, we CANNOT save it in plain text. We must hash it using `bcrypt` (just like a user login). When someone tries to download the file, they send the password, and we use `bcrypt.compare()` to verify it before starting the download stream.
+
+---
+
+### Step 4: System Architecture
+
+```
+┌────────────────────────────────────────────┐
+│          Frontend (React/HTML/Mobile)      │
+│  ┌──────────────────────────────────────┐  │
+│  │ <input type="file" />                │  │
+│  │ Password Input (Optional)            │  │
+│  │ "Upload" Button                      │  │
+│  └──────────────────────────────────────┘  │
+└────────────────────────────────────────────┘
+              │
+        HTTP POST /api/files/upload
+        (Content-Type: multipart/form-data)
+              │
+              ▼
+┌────────────────────────────────────────────┐
+│       Backend (Node.js Express)            │
+│  ┌──────────────────────────────────────┐  │
+│  │ 1. Multer intercept & save to disk   │  │
+│  │ 2. Hash password (if provided)       │  │
+│  │ 3. Save metadata to DB               │  │
+│  │ 4. Return Download Link              │  │
+│  └──────────────────────────────────────┘  │
+└────────────────────────────────────────────┘
+              │
+        HTTP POST /api/files/:id/download
+        (Body: { password: "..." })
+              │
+              ▼
+┌────────────────────────────────────────────┐
+│        Download Handler                    │
+│  1. Check DB for file metadata             │
+│  2. Verify password (bcrypt)               │
+│  3. Set Content-Disposition Headers        │
+│  4. `fs.createReadStream().pipe(res)`      │
+└────────────────────────────────────────────┘
+```

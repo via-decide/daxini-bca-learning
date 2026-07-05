@@ -1,20 +1,60 @@
-# Link Expiration System: Learn By Building
+# 🔗 Link Expiration System: Learn By Building
 
-**"Build a secure file/resource sharing API that automatically deletes access after a specific time limit or view count is reached."**
+**"Build a secure link-sharing API that generates unique URLs that automatically expire after a certain number of clicks or a specific time limit."**
 
 ---
 
-
 ## ⚠️ Common Mistakes
 
-### ❌ Mistake 1: Race Conditions
-**What's wrong:** Two people click a 1-view link at the exact same millisecond. Both read `current_views (0) < max_views (1)`, both get the secret, and both update the view count. 
-**Why it's bad:** A single-view security link was viewed twice.
-**How to fix:** Use atomic database transactions or atomic increment commands (e.g., `UPDATE Secrets SET current_views = current_views + 1 WHERE current_views < max_views AND id = ?`).
+### ❌ Mistake 1: Read-Modify-Write Race Conditions
 
-### ❌ Mistake 2: Returning the Secret on Error
-**What's wrong:** Returning `{"error": "Expired", "message": "My bank..."}`.
-**Why it's bad:** You just leaked the secret even though it expired.
-**How to fix:** Ensure the message payload is completely omitted in error responses.
+**Wrong:**
+```javascript
+const link = db.query("SELECT * FROM links WHERE id = ?", id);
+if (link.current_clicks < link.max_clicks) {
+  // Update in memory
+  db.query("UPDATE links SET current_clicks = ? WHERE id = ?", [link.current_clicks + 1, id]);
+  res.redirect(link.target_url);
+}
+```
+*Why it's bad:* If a teacher shares a link in a Zoom chat of 100 students, and the max clicks is 5, they will all click it at the exact same time. The database reads `0` for all 100 students, and allows all 100 through. 
+
+**Right:**
+Use atomic database updates and check the result of the update.
+```javascript
+// Add 1 in the DB atomically, AND ensure we don't exceed the max
+const result = await db.query(
+  "UPDATE links SET current_clicks = current_clicks + 1 WHERE id = ? AND (max_clicks IS NULL OR current_clicks < max_clicks)", 
+  [id]
+);
+
+if (result.changes === 0) {
+  // No rows were updated. It means the link didn't exist OR it hit the max limit.
+  return res.status(410).json({ error: "Link expired or not found" });
+}
+
+// Now it's safe to redirect
+```
+
+### ❌ Mistake 2: Missing Protocol in the Target URL
+
+**Wrong:**
+```javascript
+res.redirect('www.google.com'); 
+```
+*Why it's bad:* Express will think `www.google.com` is a relative path on your server, and will redirect the user to `http://localhost:3000/s/www.google.com`.
+
+**Right:**
+Validate the incoming URLs to ensure they start with `http://` or `https://` before saving them to the database.
+
+### ❌ Mistake 3: Returning 404 instead of 410
+
+**Wrong:**
+If a link has expired, sending back a `404 Not Found`.
+
+*Why it's bad:* A 404 implies the link never existed or was a typo. A user will keep refreshing thinking the server is broken.
+
+**Right:**
+Use HTTP status codes correctly. `410 Gone` explicitly tells the browser (and the user) that the resource *used* to exist, but is now permanently gone.
 
 ---

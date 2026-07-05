@@ -1,33 +1,115 @@
-# Link Expiration System: Learn By Building
+# 🔗 Link Expiration System: Learn By Building
 
-**"Build a secure file/resource sharing API that automatically deletes access after a specific time limit or view count is reached."**
+**"Build a secure link-sharing API that generates unique URLs that automatically expire after a certain number of clicks or a specific time limit."**
 
 ---
-
 
 ## 🏗️ Architecture: Design Before Coding
 
-### Step 1: Understand the Data
+### Step 1: Understand the Data (Design Yourself First)
 
-**Question: How do we know if a link is expired?**
-- We need to store the `expires_at` timestamp.
-- We need to store the `max_views` (e.g., 1).
-- We need to store the `current_views`.
+**Question: What information must the system store?**
 
-### Step 2: Architecture Diagram
+Think about these scenarios:
+1. User wants to share a Google Drive link, but only wants it to work for the next 24 hours.
+2. User wants to share a link, but it should only work for the first 5 people who click it.
+3. The server generates a short URL: `your-api.com/s/xY9z`.
+4. Someone clicks the short URL. The server checks the limits.
+5. If limits are okay, redirect them. If not, show "Link Expired".
 
-```text
-1. Creator POSTs { secret_message: "Hello", max_views: 1, expires_in_hours: 24 }
-2. API generates a random UUID: 8f2c-49a3... and saves to DB.
-3. API returns the short link to Creator.
-4. Reader GETs /api/read/8f2c-49a3...
-5. API checks DB:
-   a. Is current_time > expires_at? -> Return 410 Gone
-   b. Is current_views >= max_views? -> Return 410 Gone
-6. IF valid -> Increment current_views by 1, Return secret_message.
+**What data do you need for each?**
+
+After thinking, here's the data model:
+
+```
+Links
+├─ id (String - short, unique hash like 'xY9z')
+├─ target_url (TEXT - Where the user actually wants to go)
+├─ max_clicks (Integer - Optional)
+├─ current_clicks (Integer - Defaults to 0)
+├─ expires_at (Timestamp - Optional)
+└─ created_at
 ```
 
-### Step 3: Background Cleanup (The Cron Job)
-If millions of links expire, they stay in your database forever, wasting space. You need a separate script that runs every night at 2:00 AM, finds all links where `expires_at < now()`, and permanently deletes them.
+---
+
+### Step 2: The Concurrency Problem (Race Conditions)
+
+**Question: How do you accurately count clicks if 100 people click the link at the exact same millisecond?**
+
+**Bad Idea:**
+```javascript
+// Step 1: Read current clicks
+const link = await db.query("SELECT current_clicks FROM links WHERE id = ?", id);
+
+// Step 2: Add 1 in memory
+const newClicks = link.current_clicks + 1;
+
+// Step 3: Save to DB
+await db.query("UPDATE links SET current_clicks = ? WHERE id = ?", [newClicks, id]);
+```
+*Why it's bad:* If 100 requests run Step 1 at the same time, they all read `current_clicks = 0`. They all calculate `0 + 1 = 1`. They all update the DB to `1`. You had 100 clicks, but the database says `1`.
+
+**Good Idea (Atomic Updates):**
+Make the database do the math. The database engine will process these one by one in a queue.
+
+```sql
+-- Step 1: Add 1 directly in the SQL engine
+UPDATE links SET current_clicks = current_clicks + 1 WHERE id = 'xY9z';
+```
 
 ---
+
+### Step 3: The Redirection Mechanism
+
+**Question: How does the server actually forward the user?**
+
+When a user clicks `your-api.com/s/xY9z`, they are sending a GET request to your server. 
+You must respond with an HTTP `302 Found` (or `301 Moved Permanently`) status code and a `Location` header pointing to the `target_url`.
+
+```javascript
+app.get('/s/:id', async (req, res) => {
+  // ... check logic ...
+  
+  // Instruct the browser to immediately redirect
+  res.redirect(302, link.target_url);
+});
+```
+
+---
+
+### Step 4: System Architecture
+
+```
+┌────────────────────────────────────────────┐
+│          Frontend (React/HTML/Mobile)      │
+│  ┌──────────────────────────────────────┐  │
+│  │ Target URL Input                     │  │
+│  │ "Expire after X clicks" Input        │  │
+│  │ "Expire on Date" Input               │  │
+│  └──────────────────────────────────────┘  │
+└────────────────────────────────────────────┘
+              │
+        HTTP POST /api/links
+        HTTP GET /s/:id (from end-users)
+              │
+              ▼
+┌────────────────────────────────────────────┐
+│       Backend (Node.js Express)            │
+│  ┌──────────────────────────────────────┐  │
+│  │ 1. Validate Input URLs (Prevent      │  │
+│  │    phishing/malware loops)           │  │
+│  │ 2. Generate Nanoid                   │  │
+│  │ 3. Handle /s/:id clicks:             │  │
+│  │    - Check `expires_at`              │  │
+│  │    - Check `current_clicks`          │  │
+│  │    - Increment `current_clicks`      │  │
+│  │    - Send 302 Redirect               │  │
+│  └──────────────────────────────────────┘  │
+└────────────────────────────────────────────┘
+              │
+┌────────────────────────────────────────────┐
+│        Database (SQLite/PostgreSQL)        │
+│  - Persistent storage for links            │
+└────────────────────────────────────────────┘
+```
