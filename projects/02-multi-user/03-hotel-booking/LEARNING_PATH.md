@@ -1,98 +1,155 @@
-# Hotel Booking System: Learn By Building
+# 🏨 Hotel Booking System: Learn By Building
 
-**"Build a reservation engine that handles date-range availability, dynamic pricing, and concurrent booking conflicts."**
+**"Build a reservation backend where Users can search for available rooms, Staff can manage bookings, and Administrators can manage inventory, featuring real-time availability checks to prevent double-booking."**
 
 ---
-
 
 ## 🎯 Learning Outcomes
 
 After completing this project, you will understand:
 
-✅ **Date Range Overlaps** - Writing complex SQL to find available resources between two dates.
-✅ **Inventory Management** - Ensuring you don't sell the same room twice (Race conditions).
-✅ **State Transitions** - Managing the lifecycle of a booking (Pending -> Confirmed -> Checked In -> Checked Out).
-✅ **Dynamic Pricing** - Calculating totals based on weekend vs weekday rates.
+✅ **Date Range Logic** - The universal SQL formula for detecting overlapping date intervals (`StartA < EndB AND EndA > StartB`).  
+✅ **Database Transactions** - How to wrap multiple SQL queries into an atomic `BEGIN...COMMIT` block to prevent Race Conditions.  
+✅ **Financial Data Handling** - Why `FLOAT` ruins currency calculations and how to use `DECIMAL` or integer cents instead.  
+✅ **Role-Based Workflows** - Managing state transitions (e.g., A Guest creates a `pending` booking, a Receptionist changes it to `checked_in`).
 
 ---
-
 
 ## 📋 Project Overview
 
 ### The Problem
-Booking a hotel isn't like buying a t-shirt. A t-shirt is either in stock or out of stock. A hotel room is in stock *for specific dates*. If User A books Room 101 from Monday to Wednesday, and User B tries to book it from Tuesday to Thursday, the system must detect the overlap and block User B. Furthermore, you must prevent the scenario where two users click "Book" at the exact same millisecond.
+
+Booking systems (Hotels, Flights, Movie Theaters) face one major engineering challenge: **Inventory Contention**. 
+Hundreds of users are looking at the exact same limited inventory at the exact same time. If your database logic is loose, two people will book the same seat. 
+
+Furthermore, searching for availability is a complex inverse query. You aren't searching for rooms; you are filtering out rooms that have overlapping reservations.
+
+**Your job:** Build an inventory management and booking engine that is mathematically immune to double-booking.
 
 ### Who Uses It
+
 ```
-Customer:
-├─ Searches for rooms available between Date X and Date Y.
-└─ Books a room and receives a confirmation.
+Guest:
+├─ Searches for dates -> Gets list of available rooms
+└─ POSTs a booking -> State is 'pending' or 'confirmed'
 
-Receptionist / Admin:
-├─ Checks in customers arriving today.
-├─ Overrides bookings or processes cancellations.
-└─ Adjusts room prices for peak seasons.
-```
+Receptionist:
+├─ Sees today's arrivals
+└─ PUTs booking status to 'checked_in'
 
----
-
-
-## 🧠 Implementation: Pseudocode First
-
-### 1. The Availability Query
-```text
-FUNCTION search_rooms(request, response):
-    req_start = request.query.start
-    req_end = request.query.end
-    
-    // Find rooms that do NOT have any overlapping bookings
-    sql = """
-        SELECT * FROM Rooms r
-        WHERE r.id NOT IN (
-            SELECT room_id FROM Bookings b
-            WHERE b.status = 'confirmed' 
-            AND b.check_in_date < ? 
-            AND b.check_out_date > ?
-        )
-    """
-    // Note: The parameters are req_end, req_start (due to overlap logic)
-    available_rooms = DB.execute(sql, [req_end, req_start])
-    
-    RETURN 200 available_rooms
-```
-
-### 2. The Safe Booking Transaction
-```text
-FUNCTION create_booking(request, response):
-    DB.start_transaction() // Lock to prevent race conditions
-    
-    // Re-verify availability inside the transaction!
-    overlap_count = DB.query("SELECT count(*) FROM Bookings WHERE room_id = ? AND status = 'confirmed' AND check_in_date < ? AND check_out_date > ?", [room_id, req_end, req_start])
-    
-    IF overlap_count > 0:
-        DB.rollback()
-        RETURN 409 "Room just got booked by someone else!"
-        
-    // Calculate Price
-    days = days_between(req_start, req_end)
-    price = room.base_price * days
-    
-    DB.insert("Bookings", { room_id, req_start, req_end, status: 'confirmed' })
-    DB.commit()
-    
-    RETURN 201 "Success"
+Admin:
+└─ POSTs new Rooms to the database
 ```
 
 ---
 
+## 🧠 Implementation Strategy: Pseudocode
+
+### 1. The Availability Engine (The hardest part)
+
+```pseudocode
+GET /api/rooms/available:
+  req_in = request.query.check_in
+  req_out = request.query.check_out
+  
+  // Validate dates
+  if (req_in >= req_out) return 400 "Check-out must be after check-in"
+  
+  // THE MAGIC QUERY:
+  // Give me all rooms EXCEPT the ones that are booked during this time
+  sql = `
+    SELECT * FROM rooms 
+    WHERE is_active = 1 
+    AND id NOT IN (
+      SELECT room_id FROM bookings 
+      WHERE check_in_date < ?   -- Note the crossover!
+      AND check_out_date > ? 
+      AND status NOT IN ('cancelled', 'checked_out')
+    )
+  `
+  
+  available_rooms = db.query(sql, [req_out, req_in])
+  
+  // Calculate estimated total price for the frontend
+  nights = calculateDaysBetween(req_in, req_out)
+  for room in available_rooms:
+    room.total_price_estimate = room.price_per_night * nights
+    
+  return 200 available_rooms
+```
+
+### 2. The Booking Engine (Transactions)
+
+```pseudocode
+POST /api/bookings:
+  middlewares: [authenticateUser, requireRole(['guest'])]
+  
+  req_in = request.body.check_in_date
+  req_out = request.body.check_out_date
+  room_id = request.body.room_id
+  
+  // Start an atomic database transaction
+  db.execute("BEGIN TRANSACTION")
+  
+  try:
+    // 1. Double check availability and lock the rows (SELECT ... FOR UPDATE if using Postgres/MySQL)
+    overlaps = db.query(`
+      SELECT id FROM bookings 
+      WHERE room_id = ? 
+      AND check_in_date < ? 
+      AND check_out_date > ?
+      AND status NOT IN ('cancelled')
+    `, [room_id, req_out, req_in])
+    
+    if overlaps.length > 0:
+      db.execute("ROLLBACK")
+      return 409 "Room is no longer available"
+      
+    // 2. Calculate price
+    room = db.query("SELECT price_per_night FROM rooms WHERE id = ?", room_id)
+    nights = calculateDaysBetween(req_in, req_out)
+    total = room.price_per_night * nights
+    
+    // 3. Insert Booking
+    booking_id = generateUUID()
+    db.query(`
+      INSERT INTO bookings (id, user_id, room_id, check_in_date, check_out_date, total_price)
+      VALUES (?, ?, ?, ?, ?, ?)
+    `, [booking_id, req.user.id, room_id, req_in, req_out, total])
+    
+    // 4. Commit the transaction
+    db.execute("COMMIT")
+    
+    return 201 "Booking successful"
+    
+  catch (error):
+    db.execute("ROLLBACK")
+    return 500 "Internal Server Error"
+```
+
+### 3. State Management (Staff)
+
+```pseudocode
+PUT /api/bookings/:id:
+  middlewares: [authenticateUser, requireRole(['receptionist', 'admin'])]
+  
+  new_status = request.body.status
+  
+  // Update the booking status
+  db.query("UPDATE bookings SET status = ? WHERE id = ?", [new_status, request.params.id])
+  
+  return 200 "Status updated"
+```
+
+---
 
 ## ✅ Before Submission
 
-- [ ] Does the system correctly handle same-day check-in/check-out?
-- [ ] Are prices calculated exclusively on the backend?
-- [ ] Do you use database transactions when creating a booking?
-- [ ] Is there a role system separating customers from hotel admins?
+- [ ] System supports Guests, Receptionists, and Admins via JWT Roles.
+- [ ] Availability Search correctly identifies overlapping date ranges.
+- [ ] Booking endpoint uses Database Transactions (or strict constraints) to prevent double-booking.
+- [ ] Currency is handled safely (using `DECIMAL` types, not Floats).
+- [ ] Receptionists can update the state of a booking (`pending` -> `checked_in`).
+- [ ] Code is on GitHub.
 
----
-
-**Build this and learn: Date interval math, transaction isolation, and inventory tracking.**
+**Success:** You have built an enterprise-grade reservation and inventory system!
