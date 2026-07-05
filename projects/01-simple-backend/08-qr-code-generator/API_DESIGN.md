@@ -1,19 +1,72 @@
-# QR Code Generator: Learn By Building
+# 📱 QR Code Generator API: API Design
 
-**"Build a stateless API that accepts a URL and generates a customized, downloadable QR Code image on the fly."**
+**"Build a stateless API that accepts a string (like a URL) and instantly generates and returns a downloadable QR code image."**
+
+---
+
+## 🔗 API Endpoints
+
+```
+GET    /api/qr/generate               → Generate and return a QR code image
+```
 
 ---
 
+## 📦 Request/Response Examples
 
-## 🔌 API Design: Plan Before Coding
+### 1. Generate a Basic QR Code
 
-### Endpoint 1: Generate QR Code
-**GET `/api/qr`**
-- **Query Params**:
-  - `data` (string, required): The URL or text to encode.
-  - `size` (integer, optional, default: 200): Width/height in pixels.
-  - `color` (string, optional, default: "000000"): Hex code for the QR code color.
-- **Purpose**: Generates the image.
-- **Response**: Binary PNG Data (`200 OK`)
+**Request:**
+```http
+GET /api/qr/generate?text=https://github.com HTTP/1.1
+```
+
+**Response (200):**
+```http
+HTTP/1.1 200 OK
+Content-Type: image/png
+Content-Disposition: inline; filename="qrcode.png"
+
+[...RAW BINARY PNG DATA...]
+```
+*(Notice this is NOT JSON!)*
+
+### 2. Generate a Customized QR Code (Advanced)
+
+*You can allow users to customize colors and size via query parameters.*
+
+**Request:**
+```http
+GET /api/qr/generate?text=Hello&size=500&fgColor=FF0000&bgColor=000000 HTTP/1.1
+```
+*(Generates a 500x500 red QR code on a black background)*
+
+**Response (200):**
+```http
+HTTP/1.1 200 OK
+Content-Type: image/png
+
+[...RAW BINARY PNG DATA...]
+```
 
 ---
+
+## ⚠️ Error Responses
+
+If there is an error, we *cannot* return an image. We must change the Content-Type back to JSON and return the error.
+
+**Request:**
+```http
+GET /api/qr/generate HTTP/1.1
+```
+*(Forgot to include the `text` parameter)*
+
+**Response (400):**
+```http
+HTTP/1.1 400 Bad Request
+Content-Type: application/json
+
+{
+  "error": "The 'text' query parameter is required."
+}
+```

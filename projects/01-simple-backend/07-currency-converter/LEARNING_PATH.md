@@ -1,113 +1,116 @@
-# Currency Converter API: Learn By Building
+# 💱 Currency Converter API: Learn By Building
 
-**"Build a fast API that converts between currencies by aggregating live exchange rates and handling precise math operations securely."**
+**"Build a fast, precise API that converts between global currencies by fetching and caching live exchange rates."**
 
 ---
-
 
 ## 🎯 Learning Outcomes
 
 After completing this project, you will understand:
 
-✅ **Third-Party API Integration** - Fetching live exchange rates from external services securely.
-✅ **Caching Mechanisms** - Caching daily/hourly exchange rates to prevent rate-limit exhaustion.
-✅ **Floating Point Math** - Handling currency math without losing precision (avoiding standard floating-point errors).
-✅ **Data Normalization** - Standardizing currency codes (ISO 4217) and handling edge cases like missing currencies.
-✅ **Graceful Fallbacks** - Using a secondary API or stale cache if the primary exchange rate service goes down.
+✅ **Financial Precision** - Why `0.1 + 0.2 != 0.3` in JavaScript and how to safely calculate currency.  
+✅ **Cross-Calculation Math** - Using a single base exchange rate sheet to calculate conversions between any two currencies.  
+✅ **API Rate Limiting & Caching** - Respecting the limits of 3rd party providers by locally storing their data for 1 hour.  
+✅ **JSON in SQL** - Storing complex JSON objects in a single text column.
 
 ---
-
 
 ## 📋 Project Overview
 
 ### The Problem
-Converting USD to EUR isn't as simple as multiplying by a static number. Exchange rates change constantly. However, if your frontend fetches rates directly from an API like ExchangeRate-API, you expose your API keys. Additionally, if you get 1,000 users converting currencies simultaneously, you'll burn through your API quota in minutes. You need a backend proxy that caches the rates and does the math for the user.
+
+If you are building an e-commerce site, you need to display prices in the user's local currency. You cannot query a 3rd party API on every single page load, and you absolutely cannot have floating-point errors (where $19.99 becomes $19.989999999). 
+
+**Your job:** Build the reliable conversion microservice that powers the storefront.
 
 ### Who Uses It
+
 ```
-E-Commerce Checkout (Frontend):
-├─ Requests: "Convert 50.00 USD to INR"
-└─ Receives: Clean JSON { "result": 4152.50, "rate": 83.05 }
-
-Backend Proxy (You):
-├─ Hides the exchange rate API key
-├─ Checks if USD-to-INR rate is in cache (less than 1 hour old)
-├─ Does the precise math
-└─ Returns the result instantly
-```
-
-### The Big Picture
-
-```text
-┌──────────────┐     ┌──────────────┐     ┌──────────────┐
-│  Web Client  │ ──> │ Your Backend │ ──> │ Redis/Memory │
-│  (Frontend)  │ <── │ (Calculator) │ <── │ (1 Hour TTL) │
-└──────────────┘     └──────┬───────┘     └──────────────┘
-                            │
-                            │ (Cache Miss)
-                            V
-                     ┌──────────────┐
-                     │ External     │
-                     │ Exchange API │
-                     └──────────────┘
+The Frontend:
+├─ Needs to display $100 as Euros.
+└─ Sends: GET /api/convert?from=USD&to=EUR&amount=100
 ```
 
 ---
 
+## 🧠 Implementation Strategy: Pseudocode
 
-## 🧠 Implementation: Pseudocode First
+### 1. The Cache & Fetch Logic
 
-```text
-FUNCTION convert_currency(request):
-    from_curr = uppercase(request.query.from)
-    to_curr = uppercase(request.query.to)
-    amount_raw = request.query.amount
+```pseudocode
+function getExchangeRates(base_currency):
+  // 1. Check local DB
+  cache = database.query("SELECT * FROM exchange_rates_cache WHERE base_currency = ?", base_currency)
+  
+  // 2. Is it fresh? (Less than 1 hour old)
+  if cache and (NOW() - cache.updated_at < 3600 seconds):
+    return JSON.parse(cache.rates_json)
     
-    // 1. Validation
-    IF not is_valid_number(amount_raw) or amount_raw <= 0:
-        RETURN 400 "Invalid amount"
-    IF not is_valid_currency_code(from_curr) or not is_valid_currency_code(to_curr):
-        RETURN 400 "Invalid currency code"
-        
-    cache_key = "rates:" + from_curr
+  // 3. Cache Miss / Stale Cache. Fetch from external API!
+  try:
+    response = http.get(`https://api.exchangerate-api.com/v4/latest/${base_currency}`)
+    rates = response.rates
     
-    // 2. Fetch Rates (Cache or API)
-    rates_data = Redis.get(cache_key)
-    IF rates_data is NULL:
-        api_key = ENV.EXCHANGE_API_KEY
-        response = HTTP.GET("https://api.exchangerate.host/latest?base=" + from_curr)
-        rates_data = response.rates
-        Redis.setex(cache_key, 3600, to_json(rates_data))
-        
-    // 3. Calculation
-    rate = rates_data[to_curr]
-    IF rate is NULL:
-        RETURN 400 "Target currency not supported"
-        
-    // Integer math to avoid precision issues
-    amount_cents = integer(amount_raw * 100)
-    converted_cents = integer(amount_cents * rate)
-    final_amount = converted_cents / 100
+    // 4. Save to DB (UPSERT)
+    database.execute(`
+      INSERT INTO exchange_rates_cache (base_currency, rates_json, updated_at)
+      VALUES (?, ?, CURRENT_TIMESTAMP)
+      ON CONFLICT(base_currency) DO UPDATE SET
+        rates_json = excluded.rates_json,
+        updated_at = CURRENT_TIMESTAMP
+    `, base_currency, JSON.stringify(rates))
     
-    RETURN {
-        from: from_curr,
-        to: to_curr,
-        amount: amount_raw,
-        converted_amount: final_amount,
-        exchange_rate: rate
+    return rates
+    
+  catch error:
+    // If the 3rd party is down, but we have STALE data, return the stale data!
+    if cache: return JSON.parse(cache.rates_json)
+    throw new Error("Currency API is down")
+```
+
+### 2. The Conversion Endpoint
+
+```pseudocode
+GET /api/convert:
+  Step 1: Validate
+    from = query.from
+    to = query.to
+    amount = parseFloat(query.amount)
+    
+    if isNaN(amount) or amount < 0: return 400 error
+    if length(from) != 3 or length(to) != 3: return 400 error
+    
+  Step 2: Get Rates (Always using USD as our base to save money)
+    rates = getExchangeRates("USD")
+    
+  Step 3: Perform Cross-Calculation
+    // E.g. User wants EUR -> GBP
+    // rates = { EUR: 0.85, GBP: 0.72 }
+    
+    if not rates[from] or not rates[to]:
+      return 400 "Invalid currency"
+      
+    // Math: Convert 'from' to USD, then USD to 'to'
+    amount_in_usd = new Decimal(amount).dividedBy(rates[from])
+    final_amount = amount_in_usd.times(rates[to])
+    
+  Step 4: Format and Return
+    // Round to 2 decimal places
+    return 200 {
+      query: { from, to, amount },
+      result: final_amount.toFixed(2)
     }
 ```
 
 ---
 
-
 ## ✅ Before Submission
 
-- [ ] Does the API correctly convert strings to uppercase?
-- [ ] Are you caching the rate list for at least 1 hour?
-- [ ] Are you using integer math (cents) to avoid floating point errors?
-- [ ] Does it return a 400 error for unknown currency codes?
+- [ ] Backend correctly validates that `amount` is a positive number.
+- [ ] Backend fetches data from a 3rd-party provider (like ExchangeRate-API or Frankfurter).
+- [ ] Backend CACHES the data for at least 1 hour (Subsequent requests are instant).
+- [ ] Backend uses a Decimal library (or integer math) to prevent floating-point errors.
+- [ ] Backend can convert between any two currencies using a single base cache (Cross-calculation).
+- [ ] Code is on GitHub.
 
----
-
-**Build this and learn: Safe financial math, third-party API proxying, and data normalization.**
+**Success:** A production-ready financial microservice!
