@@ -1,106 +1,124 @@
-# Password Strength Checker: Learn By Building
+# 🔐 Password Strength Checker: Learn By Building
 
-**"Build a security utility that evaluates password complexity, entropy, and checks against known data breaches."**
+**"Build a stateless API that analyzes a given password and returns a score, a list of vulnerabilities, and estimated time to crack."**
 
 ---
-
 
 ## 🎯 Learning Outcomes
 
 After completing this project, you will understand:
 
-✅ **Hashing Algorithms** - How SHA-1 and k-Anonymity are used to safely check passwords against breaches
-✅ **Information Entropy** - Calculating the true mathematical strength of a password beyond just "add a symbol"
-✅ **Regex (Regular Expressions)** - Writing robust patterns to validate character classes (uppercase, lowercase, numbers, symbols)
-✅ **Third-Party API Integration** - Querying the Have I Been Pwned API securely
-✅ **Stateless Architecture** - Building a pure utility API that doesn't need a database
+✅ **Cryptographic Hashing** - Using SHA-1 to securely hash data one-way.  
+✅ **k-Anonymity** - How to check data against a massive database (HIBP) without revealing the data itself.  
+✅ **Password Entropy** - Why "Tr0ub4dor&3" is weak and "correct horse battery staple" is strong.  
+✅ **Stateless APIs** - Building an API that doesn't rely on a database, scaling infinitely.  
+✅ **Privacy by Design** - Learning to explicitly NOT log or store sensitive data.
 
 ---
-
 
 ## 📋 Project Overview
 
 ### The Problem
-Users consistently choose terrible passwords like `Password123!`. Standard validation rules (must have 1 capital, 1 number) are no longer enough to stop modern password cracking tools. We need a system that checks for actual entropy, common dictionary words, and whether the password was already exposed in a massive data breach.
+
+Many websites force users to create passwords like "1 Capital, 1 Number, 1 Symbol". This results in everyone creating passwords like `Password123!`. These are mathematically weak because they are completely predictable. We need a modern checker that calculates the actual time a computer would take to guess it.
+
+**Your job:** Build the logic engine that evaluates true password strength.
 
 ### Who Uses It
+
 ```
-End User:
-├─ Types a potential password into the UI
-└─ Sees real-time feedback: "Weak: Too common" or "Strong: 85/100"
-
-Authentication System (Backend):
-├─ Calls this API during user registration
-└─ Rejects signups if the password score is below 50
-```
-
-### The Big Picture
-
-```text
-┌──────────────┐     ┌──────────────┐     ┌──────────────┐
-│  User Input  │ ──> │ Backend API  │ ──> │ Entropy Math │
-│ ("P@ssw0rd") │     │ (Controller) │     │ (zxcvbn lib) │
-└──────────────┘     └──────┬───────┘     └──────────────┘
-                            │
-                            V
-                     ┌──────────────┐
-                     │ Have I Been  │
-                     │ Pwned API    │
-                     └──────────────┘
+The Frontend UI:
+├─ User types "P" -> Gets score 0 (Weak)
+├─ User types "Pa" -> Gets score 0
+├─ User types "Password123" -> Gets score 1 (Warning: Dictionary word)
+└─ User types "MyDogAteMyHomework" -> Gets score 4 (Strong)
 ```
 
 ---
 
+## 🧠 Implementation Strategy: Pseudocode
 
-## 🧠 Implementation: Pseudocode First
+### 1. The Core API
 
-```text
-FUNCTION evaluate_password(raw_password):
-    // 1. Basic Checks
-    IF length(raw_password) < 8:
-        RETURN { score: 0, warning: "Too short" }
-        
-    // 2. Entropy Check (using a library like zxcvbn)
-    entropy_result = calculate_entropy(raw_password)
+```pseudocode
+POST /api/check-strength(password, user_inputs):
+  Step 1: Validate
+    if password is empty or length > 100:
+      return 400 Bad Request
+      
+  Step 2: Basic Metrics
+    metrics = {
+      length: password.length,
+      has_upper: containsUpperCase(password),
+      has_lower: containsLowerCase(password),
+      has_numbers: containsNumbers(password),
+      has_symbols: containsSymbols(password)
+    }
     
-    // 3. k-Anonymity Breach Check
-    full_hash = uppercase(sha1(raw_password))
-    prefix = substring(full_hash, 0, 5)
-    suffix = substring(full_hash, 5, end)
+  Step 3: Analyze Entropy (Using zxcvbn)
+    // Pass the password and any known data (like their email) so the 
+    // algorithm can penalize them if they use their name as the password.
+    analysis = zxcvbn(password, user_inputs)
     
-    // Call external API
-    hibp_data = HTTP.GET("https://api.pwnedpasswords.com/range/" + prefix)
+  Step 4: Check HaveIBeenPwned (k-Anonymity)
+    is_breached, breach_count = await checkHIBP(password)
     
-    // Check if our suffix is in the returned text
-    breach_count = 0
-    FOR EACH line IN hibp_data:
-        IF line starts with suffix:
-            breach_count = extract_count(line)
-            BREAK
-            
-    // 4. Calculate Final Score
-    final_score = entropy_result.score
-    IF breach_count > 0:
-        final_score = 0 // Automatically fail breached passwords
-        
-    RETURN {
-        score: final_score,
-        is_breached: breach_count > 0,
-        breach_count: breach_count,
-        time_to_crack: entropy_result.crack_times_display
+    // Penalize the score if it's breached, regardless of math strength!
+    if is_breached:
+      analysis.score = 0
+      analysis.feedback.warning = "This password has been leaked in a data breach!"
+      
+  Step 5: Return result
+    return {
+      score: analysis.score,
+      crack_time: analysis.crack_times_display.offline_fast_hashing_1e10_per_second,
+      feedback: analysis.feedback,
+      metrics: metrics,
+      is_breached: is_breached
     }
 ```
 
----
+### 2. The HIBP k-Anonymity Check
 
+```javascript
+async function checkHIBP(password) {
+  // 1. Hash with SHA-1
+  const hash = crypto.createHash('sha1').update(password).digest('hex').toUpperCase();
+  
+  // 2. Split into Prefix (5 chars) and Suffix (the rest)
+  const prefix = hash.slice(0, 5);
+  const suffix = hash.slice(5);
+  
+  // 3. Request the range
+  const response = await fetch(`https://api.pwnedpasswords.com/range/${prefix}`);
+  const text = await response.text();
+  
+  // 'text' looks like:
+  // 1E4C9B93F3F0682250B6CF8331B7EE68FD8:12345
+  // 1E4C9B93F3F0682250B6CF8331B7EE68FD9:1
+  
+  // 4. Check if our suffix is in the returned list
+  const lines = text.split('\n');
+  for (const line of lines) {
+    const [lineSuffix, count] = line.split(':');
+    if (lineSuffix === suffix) {
+      return { is_breached: true, breach_count: parseInt(count, 10) };
+    }
+  }
+  
+  return { is_breached: false, breach_count: 0 };
+}
+```
+
+---
 
 ## ✅ Before Submission
 
-- [ ] Does the API successfully prevent breached passwords from passing?
-- [ ] Is k-anonymity correctly implemented (only 5 chars sent)?
-- [ ] Are you certain no passwords are being saved to a database or logged to the console?
-- [ ] Does it correctly grade long passphrases as strong, even if they lack symbols?
+- [ ] API accepts a password and returns a score from 0-4.
+- [ ] Uses the `zxcvbn` algorithm (or similar) instead of just regular expressions.
+- [ ] Securely implements the HaveIBeenPwned API using k-Anonymity (only sends first 5 chars of hash).
+- [ ] The backend has ZERO database connections (Stateless).
+- [ ] No `console.log` statements output the raw password to the terminal.
+- [ ] Code is on GitHub.
 
----
-
-**Build this and learn: Cryptography basics, stateless architecture, and modern authentication security.**
+**Success:** A production-ready microservice that could be integrated into any signup form in the world to enforce better security.

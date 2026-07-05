@@ -1,18 +1,29 @@
-/*
-## 🗄️ Database: Design, Don't Code
+-- 🔐 Password Strength Checker: Database Schema
 
-### Schema Design (Think Before SQL)
+-- ============================================================================
+-- ⚠️ WARNING: DO NOT CREATE A DATABASE FOR THIS PROJECT ⚠️
+-- ============================================================================
 
-*No database required for this specific microservice!*
+-- This project is explicitly designed to be STATELESS.
+-- You should NEVER store user-submitted plaintext passwords in a database.
+-- Even for a testing/checking tool, storing this data creates a massive
+-- honeypot for hackers. If your database leaks, you are exposing passwords
+-- that users likely use on their real accounts (because people reuse passwords).
 
-### Design Questions
+-- There is no users table.
+-- There is no logs table.
+-- There is no passwords table.
 
-1. **Why is it dangerous to send the raw password to the HIBP API?**
-   If Have I Been Pwned is monitoring network traffic, or gets hacked, the attacker would see exactly what password your user is trying to set. 
+-- If you MUST log API usage for analytics (e.g. rate limiting), log ONLY:
+-- 1. IP Address (hashed)
+-- 2. Timestamp
+-- 3. The resulting SCORE (e.g., 0, 1, 2, 3, 4)
 
-2. **How does k-Anonymity solve this?**
-   You hash the password using SHA-1. You only send the *first 5 characters* of the hash to the API. The API returns thousands of passwords that happen to start with those 5 characters. Your server then checks the list locally to see if your full hash is on it. The external API never knows which of the thousands of passwords you were actually checking.
+CREATE TABLE IF NOT EXISTS api_analytics (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  hashed_ip TEXT NOT NULL,
+  result_score INTEGER NOT NULL,
+  checked_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);
 
----
-
-*/
+-- Note: DO NOT include the actual password string in the analytics table!

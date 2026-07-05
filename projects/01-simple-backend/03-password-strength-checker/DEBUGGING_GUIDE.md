@@ -1,27 +1,43 @@
-# Password Strength Checker: Learn By Building
+# 🔐 Password Strength Checker: Learn By Building
 
-**"Build a security utility that evaluates password complexity, entropy, and checks against known data breaches."**
-
----
-
-
-## 🧪 Testing: How to Verify
-
-### Test 1: Breach Detection
-- Submit `password123`.
-- The API should instantly return `is_breached: true` with a massive `breach_count`.
-
-### Test 2: High Entropy Detection
-- Submit a 30-character random string `xKw9$2mPq!8vLz@4fJc#7nRtbYh5`.
-- The API should return `is_breached: false` and a `score` of 100/100, with a `time_to_crack` in millions of years.
+**"Build a stateless API that analyzes a given password and returns a score, a list of vulnerabilities, and estimated time to crack."**
 
 ---
 
+## 🧪 Testing Scenarios
 
-## 🛠️ Debugging: When Things Break
+### Scenario 1: The "Complex" Weak Password
 
-### Problem: HIBP API returns 400 Bad Request
-**Root Cause:** You are sending the full SHA-1 hash instead of just the 5-character prefix. The k-Anonymity API strictly requires exactly 5 characters.
-**Solution:** Ensure you are correctly slicing the hash string before making the external HTTP request.
+```
+1. POST to /api/check-strength with `password = "Password123!"`
+2. Expected: `score` should be 0, 1, or 2 (Weak). 
+3. Expected: `metrics.has_uppercase` and `metrics.has_symbols` should be true.
+4. Verify: The feedback should warn that this is a common dictionary word combined with predictable numbers.
+```
+
+### Scenario 2: The "Simple" Strong Password (Passphrase)
+
+```
+1. POST to /api/check-strength with `password = "correct horse battery staple"`
+2. Expected: `score` should be 4 (Very Strong).
+3. Expected: `metrics.has_symbols` is false, `metrics.has_numbers` is false.
+4. Verify: It correctly identifies that length and randomness (entropy) beat special characters.
+```
+
+### Scenario 3: Checking Breaches (k-Anonymity)
+
+```
+1. POST to /api/check-strength with `password = "admin123"`
+2. Expected: `is_breached` is true. `breach_count` should be in the millions.
+3. Verify Network Tab: Ensure your backend is making an outbound request to `https://api.pwnedpasswords.com/range/{prefix}`, where `{prefix}` is the first 5 chars of the SHA-1 hash of "admin123".
+```
+
+### Scenario 4: User Information Leakage
+
+```
+1. POST to /api/check-strength with `password = "JohnDoe2026"` and `user_inputs = ["John", "Doe"]`
+2. Expected: `score` drops significantly because it detects the user's name inside the password.
+3. Verify: Feedback should mention "Avoid using names or emails in passwords".
+```
 
 ---
