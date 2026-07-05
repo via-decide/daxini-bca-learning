@@ -1,105 +1,120 @@
-# Code Snippet Storage API: Learn By Building
+# 💻 Code Snippet Storage API: Learn By Building
 
-**"Build a Pastebin-clone backend that allows developers to quickly save, format, and retrieve code snippets with syntax metadata."**
+**"Build a pastebin-like API where developers can upload text (code snippets), optionally set them to self-destruct after viewing, and retrieve them with a unique ID."**
 
 ---
-
 
 ## 🎯 Learning Outcomes
 
 After completing this project, you will understand:
 
-✅ **Text Blobs & Encodings** - Handling large, multi-line text payloads safely.
-✅ **Metadata Tagging** - Storing and retrieving categorizations (like programming language type) alongside text.
-✅ **Pagination** - Fetching a limited list of recent snippets instead of the entire database.
-✅ **Basic Rate Limiting** - Preventing automated spam from flooding your database with junk text.
-✅ **XSS Prevention (Concepts)** - Why you must never render user-provided code as raw HTML without sanitizing it.
+✅ **URL Security** - Why Auto-Incrementing IDs are dangerous for public links, and how to use cryptographically secure random IDs (`nanoid`).  
+✅ **Rate Limiting** - Protecting your server from spam and DDoS attacks using middleware.  
+✅ **Race Conditions** - Understanding concurrency issues in databases (The "Burn After Reading" problem).  
+✅ **Payload Limits** - Securing your server against memory-exhaustion attacks by limiting JSON body sizes.
 
 ---
-
 
 ## 📋 Project Overview
 
 ### The Problem
-Developers frequently need to share logs, configurations, or short code blocks with team members. Slack sometimes formats code terribly. They need a simple tool where they can paste text, assign a language (like Python or JSON), and instantly get a shareable URL.
+
+Developers often need to share code, logs, or error messages with colleagues. Copying 500 lines of code into Slack is messy. Pastebins solve this by giving you a short URL. However, sometimes that code contains secrets (API keys, passwords). You need a way to share it so that only the FIRST person who clicks the link can see it, and it is permanently wiped from the internet immediately after.
+
+**Your job:** Build a secure, rate-limited, self-destructing text API.
 
 ### Who Uses It
-```
-Developer (Frontend):
-├─ Pastes: "def hello(): print('world')"
-├─ Selects: Language = Python
-└─ Receives: "https://api.yourapp.com/snippets/5a9c2"
 
-Colleague (Frontend):
+```
+Developer A:
+├─ POSTs sensitive code with "burn_after_reading" = true
+└─ Gets link: /api/snippets/xY12z
+
+Developer B:
 ├─ Clicks link
-└─ Receives the exact code, properly formatted, without broken whitespace.
-```
+└─ Sees code. Code is instantly deleted from DB.
 
-### The Big Picture
-
-```text
-┌──────────────┐                 ┌──────────────┐
-│  Developer   │ ──(POST code)─> │ Your Backend │
-│  (Creator)   │                 │ (Storage API)│
-└──────────────┘                 └──────┬───────┘
-                                        │
-┌──────────────┐                        V
-│  Colleague   │ <──(GET code)── ┌──────────────┐
-│  (Viewer)    │                 │ Database     │
-└──────────────┘                 └──────────────┘
+Hacker C:
+├─ Finds the link in a chat log 5 minutes later
+└─ Clicks link -> Gets 404 Not Found.
 ```
 
 ---
 
+## 🧠 Implementation Strategy: Pseudocode
 
-## 🧠 Implementation: Pseudocode First
+### 1. The Rate Limiter & Body Parser
 
-```text
-FUNCTION create_snippet(request, response):
-    code = request.body.code
-    language = request.body.language OR "plain"
+```javascript
+// 1. Limit the body size so nobody can upload a 5GB text file
+app.use(express.json({ limit: '100kb' }));
+
+// 2. Add Rate Limiting
+const rateLimiter = createRateLimiter({
+  window: 1 minute,
+  max_requests: 10
+});
+```
+
+### 2. Creating a Snippet
+
+```pseudocode
+POST /api/snippets (middleware: rateLimiter):
+  Step 1: Validate
+    content = request.body.content
+    if !content: return 400 "Content required"
     
-    // 1. Validation
-    IF code is empty:
-        RETURN 400 "Code cannot be empty"
-    IF length(code) > 100000: // 100KB max
-        RETURN 400 "Payload too large"
-        
-    // 2. Generate Short ID
-    snippet_id = generate_random_string(5)
+  Step 2: Generate Secure ID
+    // Generate an 8-character random string (e.g., aBcD12xY)
+    short_id = generateNanoid(8)
     
-    // 3. Save to DB
-    DB.insert("Snippets", {
-        id: snippet_id,
-        language: lowercase(language),
-        code: code,
-        created_at: NOW()
+  Step 3: Insert to DB
+    database.insert("snippets", {
+      id: short_id,
+      content: content,
+      language: request.body.language || "plaintext",
+      is_burn: request.body.is_burn_after_reading || false
     })
     
-    RETURN 201 { id: snippet_id }
+  Step 4: Return URL
+    return 201 { url: `http://localhost:3000/api/snippets/${short_id}` }
+```
 
-FUNCTION get_recent(request, response):
-    limit_param = request.query.limit OR 10
+### 3. Fetching and Burning
+
+```pseudocode
+GET /api/snippets/:id:
+  Step 1: Start Database Transaction
+    // Transactions lock the row so two requests can't read it at the exact same time
+    db.beginTransaction()
     
-    // Safety cap
-    limit = min(integer(limit_param), 50) 
+  Step 2: Fetch
+    snippet = db.query("SELECT * FROM snippets WHERE id = ?", id)
     
-    // Fetch from DB (Exclude the actual 'code' column to keep response small)
-    results = DB.query("SELECT id, language, created_at FROM Snippets ORDER BY created_at DESC LIMIT ?", limit)
+    if !snippet: 
+      db.commit()
+      return 404 "Not found"
+      
+  Step 3: Burn Logic
+    if snippet.is_burn:
+      db.query("DELETE FROM snippets WHERE id = ?", id)
+      
+  Step 4: End Transaction
+    db.commit()
     
-    RETURN 200 results
+  Step 5: Return Content
+    return 200 snippet
 ```
 
 ---
-
 
 ## ✅ Before Submission
 
-- [ ] Does the API preserve exact formatting (newlines, tabs, quotes) in the code?
-- [ ] Is there a strict limit on the length of code you can upload?
-- [ ] Does the "Recent" endpoint properly limit the number of results returned?
-- [ ] Are you using parameterized database queries to prevent SQL injection?
+- [ ] Users can upload text and receive a unique short ID (not an integer!).
+- [ ] Users can fetch the text using the ID.
+- [ ] If `is_burn_after_reading` is true, the snippet is deleted from the database immediately upon the first fetch.
+- [ ] The API uses `express-rate-limit` (or similar) to prevent spam.
+- [ ] The API rejects payloads larger than 100KB.
+- [ ] Code is on GitHub.
 
----
-
-**Build this and learn: Handling large text payloads, pagination, and protecting against injection attacks.**
+**Success:** You have built a secure, anonymous sharing tool!

@@ -1,13 +1,18 @@
-# Code Snippet Storage API: Learn By Building
+# 💻 Code Snippet Storage API: Learn By Building
 
-**"Build a Pastebin-clone backend that allows developers to quickly save, format, and retrieve code snippets with syntax metadata."**
+**"Build a pastebin-like API where developers can upload text (code snippets), optionally set them to self-destruct after viewing, and retrieve them with a unique ID."**
 
 ---
 
-
 ## 📚 Resources
 
-- **Pagination**: "Offset vs Keyset pagination" (Research the difference).
-- **SQL Injection**: OWASP SQL Injection Prevention Cheat Sheet.
+**Core Libraries:**
+- `nanoid` (For generating short, secure IDs): https://github.com/ai/nanoid
+- `express-rate-limit` (For protecting your API): https://www.npmjs.com/package/express-rate-limit
+
+**Security & Concepts:**
+- Insecure Direct Object References (IDOR): https://portswigger.net/web-security/access-control/idor
+- Database Transactions & ACID properties: https://www.databricks.com/glossary/acid-transactions
+- Express Body Size Limits: https://expressjs.com/en/api.html#express.json
 
 ---

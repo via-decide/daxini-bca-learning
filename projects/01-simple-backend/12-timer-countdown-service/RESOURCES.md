@@ -1,13 +1,17 @@
-# Timer/Countdown Service API: Learn By Building
+# ⏱️ Timer & Countdown Service: Learn By Building
 
-**"Build a real-time countdown service that synchronizes thousands of clients to a single, server-authoritative timer."**
+**"Build an API that creates shareable countdown timers (e.g., 'Product Launch', 'New Year'), stores them persistently, and calculates the remaining time precisely whenever requested."**
 
 ---
 
-
 ## 📚 Resources
 
-- **Server-Sent Events**: MDN Web Docs: Server-sent events.
-- **Time Math**: Date and Time formatting in your chosen language.
+**Handling Time in JavaScript:**
+- MDN `Date` Object: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date
+- ISO 8601 Format Explained: https://en.wikipedia.org/wiki/ISO_8601
+- Why you shouldn't use `moment.js` anymore (and what to use instead, like `date-fns` or native JS): https://momentjs.com/docs/#/-project-status/
+
+**Database Time:**
+- Storing Dates in SQLite (SQLite doesn't have a DATETIME data type, it stores them as TEXT or REAL): https://www.sqlite.org/datatype3.html
 
 ---
