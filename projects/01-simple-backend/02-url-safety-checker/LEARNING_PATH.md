@@ -1,107 +1,143 @@
-# URL Safety Checker: Learn By Building
+# 🛡️ URL Safety Checker: Learn By Building
 
-**"Build a security tool that scans URLs for phishing, malware, and malicious redirects."**
+**"Build a security service that scans URLs against a database of known malicious domains to protect users from phishing and malware."**
 
 ---
-
 
 ## 🎯 Learning Outcomes
 
 After completing this project, you will understand:
 
-✅ **External API Integration** - How to securely call third-party APIs (like Google Safe Browsing)
-✅ **Caching Strategies** - How to avoid rate limits by caching frequent requests
-✅ **Regex & Data Validation** - How to ensure inputs are actually valid URLs
-✅ **Web Scraping Basics** - How to fetch meta-tags to preview a link before clicking
-✅ **Security Mindset** - Understanding homograph attacks and common phishing techniques
+✅ **Data Normalization** - Preparing messy user input (URLs) into a consistent format (normalized domains) for reliable database storage and matching.  
+✅ **URL Parsing** - Using native language features (like the `URL` class in Node/JS) instead of writing brittle regex.  
+✅ **Database Indexing** - Why strict string matching with `UNIQUE INDEX` is infinitely better than `LIKE` queries for security tools.  
+✅ **Fire-and-Forget Analytics** - Logging API usage without slowing down the core response time.  
+✅ **Role-Based Access** - Creating a service where admins have write access, but public users only have read access.  
+✅ **External API Integration (Optional)** - Making an outbound HTTP request to a third-party service (Google Safe Browsing) to augment your own local data.
 
 ---
-
 
 ## 📋 Project Overview
 
 ### The Problem
-People click suspicious links in emails and SMS messages every day. Attackers use URL shorteners, redirects, and typosquatting (like `g00gle.com`) to hide malicious destinations. Users need a safe way to "unfurl" and scan a link before they actually visit it.
+
+Phishing links are sent via SMS, email, and social media constantly. Security tools (like Discord's link warning or Chrome's red warning page) need a way to instantly check if a link is dangerous before the user clicks it.
+
+**Your job:** Build the backend scanning engine that powers these security warnings.
 
 ### Who Uses It
+
 ```
-End User:
-├─ Receives a suspicious SMS link
-├─ Pastes it into your web app
-└─ Sees a report: "Warning: Known Phishing Site"
+The Cybersecurity Admin:
+├─ Adds domains to the blocklist
+├─ Removes False Positives
+└─ Views analytics on what people are scanning
 
-System Admin:
-├─ Maintains the local blacklist of known bad domains
-└─ Monitors the rate limits of external scanning APIs
-```
-
-### The Big Picture
-
-```text
-┌──────────────┐     ┌──────────────┐     ┌──────────────┐
-│  User Input  │ ──> │ Backend API  │ ──> │ Local Cache  │
-│ (Suspicious  │     │ (Controller) │     │ (Redis/DB)   │
-│  Link)       │     └──────┬───────┘     └──────────────┘
-└──────────────┘            │
-                            │ (If not cached)
-                            V
-                     ┌──────────────┐
-                     │ Google Safe  │
-                     │ Browsing API │
-                     └──────────────┘
+The Public (Or a browser extension):
+├─ Submits a full URL string
+└─ Gets an instant YES/NO safe response
 ```
 
 ---
 
+## 🧠 Implementation Strategy: Pseudocode
 
-## 🧠 Implementation: Pseudocode First
+### 1. Normalize the Domain (The Helper Function)
 
-```text
-FUNCTION check_url_safety(target_url):
-    // 1. Basic Validation
-    IF NOT is_valid_url_format(target_url):
-        RETURN ERROR "Invalid URL format"
-        
-    // 2. Extract Domain & Check Local Blacklist
-    domain = extract_domain(target_url)
-    IF Database.exists("custom_blacklist", domain):
-        RETURN { safe: false, reason: "Local Blacklist" }
-        
-    // 3. Check Cache
-    url_hash = sha256(target_url)
-    cache_record = Database.query("scans_cache WHERE url_hash = ?", url_hash)
+```javascript
+function extractNormalizedDomain(rawUrl) {
+  // If the user forgot http://, add it so the URL parser works
+  let urlString = rawUrl;
+  if (!urlString.startsWith('http://') && !urlString.startsWith('https://')) {
+    urlString = 'http://' + urlString;
+  }
+  
+  try {
+    const parsed = new URL(urlString);
+    let hostname = parsed.hostname.toLowerCase();
     
-    IF cache_record AND cache_record.expires_at > NOW():
-        RETURN cache_record.result
-        
-    // 4. External API Call
-    api_response = GoogleSafeBrowsing.lookup(target_url)
+    // Strip "www." if it exists
+    if (hostname.startsWith('www.')) {
+      hostname = hostname.substring(4);
+    }
     
-    // 5. Parse and Cache Result
-    is_safe = (api_response.threats.length == 0)
+    return hostname;
+  } catch (error) {
+    throw new Error("Invalid URL provided");
+  }
+}
+```
+
+### 2. The Core Scan Endpoint
+
+```pseudocode
+POST /api/scan(url):
+  Step 1: Extract and Normalize
+    try:
+      domain = extractNormalizedDomain(url)
+    catch error:
+      return 400 "Invalid URL format"
+      
+  Step 2: Database Lookup (O(1) Indexed)
+    threat = database.query("SELECT * FROM blocked_domains WHERE domain = ?", domain)
     
-    Database.insert("scans_cache", {
-        url_hash: url_hash,
-        original_url: target_url,
-        is_safe: is_safe,
-        threat_type: api_response.threats,
-        scanned_at: NOW(),
-        expires_at: NOW() + 24_HOURS
+    is_safe = (threat == null)
+    
+  Step 3: Respond Instantly
+    response_payload = {
+      url: url,
+      domain: domain,
+      is_safe: is_safe,
+      threat_details: threat ? { type: threat.threat_type } : null
+    }
+    HTTP_Response(200, response_payload)
+    
+  Step 4: Background Logging (Fire and Forget)
+    database.insert("scan_logs", {
+      submitted_url: url,
+      extracted_domain: domain,
+      is_safe: is_safe,
+      matched_threat_type: threat ? threat.threat_type : null,
+      ip_address: request.ip
     })
+```
+
+### 3. Add to Blocklist (Admin Only)
+
+```pseudocode
+POST /api/admin/domains(domain, threat_type, notes):
+  Step 1: Authenticate
+    Verify JWT -> Get user_id
     
-    RETURN { safe: is_safe, threats: api_response.threats }
+  Step 2: Normalize Input
+    // Even admins make mistakes, normalize their input too!
+    clean_domain = extractNormalizedDomain(domain)
+    
+  Step 3: Save to Database
+    try:
+      database.insert("blocked_domains", {
+        domain: clean_domain,
+        threat_type,
+        notes,
+        added_by: user_id
+      })
+    catch constraint_error:
+      return 409 "Domain already blocked"
+      
+  Step 4: Return Success
+    return 201 "Added to blocklist"
 ```
 
 ---
-
 
 ## ✅ Before Submission
 
-- [ ] Does the app validate URL formatting?
-- [ ] Is the external API key hidden in a `.env` file?
-- [ ] Does caching work correctly?
-- [ ] Can it detect homograph attacks (e.g., using a Cyrillic 'a' in apple.com)?
+- [ ] API accepts a full URL and returns a safety boolean.
+- [ ] Backend correctly parses URLs and ignores paths (e.g., `/login`).
+- [ ] Backend normalizes domains by making them lowercase and stripping `www.`.
+- [ ] Attempting to add a duplicate domain to the blocklist fails gracefully (409 Conflict).
+- [ ] Analytics logs are saved to the database without slowing down the scan response.
+- [ ] Admin endpoints are protected by JWT authentication.
+- [ ] Code is on GitHub.
 
----
-
-**Build this and learn: Secure API consumption, intelligent caching, and defensive programming.**
+**Success:** A blazing-fast security microservice capable of processing thousands of link checks per second.

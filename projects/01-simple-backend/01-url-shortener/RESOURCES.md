@@ -1,30 +1,28 @@
 # 🔗 URL Shortener: Learn By Building
 
-**"Build a system that makes long URLs short. Understand every part."**
+**"Build a system that takes long, ugly URLs and turns them into short, shareable links, tracking how many times they are clicked."**
 
 ---
 
+## 📚 Resources
 
-## 📚 Resources: Learn From These
+**HTTP & Redirects:**
+- HTTP Redirect Status Codes (301 vs 302): https://developer.mozilla.org/en-US/docs/Web/HTTP/Redirections
+- Express.js `res.redirect()`: https://expressjs.com/en/api.html#res.redirect
 
-**Express.js:**
-- Official docs: https://expressjs.com
-- Request/response: https://expressjs.com/en/api/request.html
-- Routing: https://expressjs.com/en/guide/routing.html
+**Generating Unique IDs:**
+- Nanoid (A tiny, secure, URL-friendly unique string ID generator): https://github.com/ai/nanoid
+- Base62 Encoding Explained: https://en.wikipedia.org/wiki/Base62
 
-**SQLite:**
-- Official: https://www.sqlite.org
-- Node.js binding: https://www.npmjs.com/package/sqlite3
-- Tutorial: https://www.sqlitetutorial.net
+**URL Validation:**
+- The JavaScript `URL` constructor: https://developer.mozilla.org/en-US/docs/Web/API/URL
 
-**HTTP/Web:**
-- HTTP status codes: https://httpwg.org/specs/rfc7231.html
-- URL standard: https://url.spec.whatwg.org/
-- Redirects: https://developer.mozilla.org/en-US/docs/Web/HTTP/Redirects
+**Performance & Analytics:**
+- The Node.js Event Loop (Why fire-and-forget works): https://nodejs.org/en/docs/guides/event-loop-timers-and-nexttick/
+- Extracting IP address in Express: `req.ip` or `req.headers['x-forwarded-for']`
 
-**JavaScript:**
-- URL validation: https://developer.mozilla.org/en-US/docs/Web/API/URL
-- Fetch API: https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API
-- Async/await: https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous
+**Real-World Inspiration:**
+- Bitly API: https://dev.bitly.com/
+- System Design Interview: URL Shortener (Highly recommended read for scaling this to millions of users).
 
 ---

@@ -1,187 +1,51 @@
 # 🔗 URL Shortener: Learn By Building
 
-**"Build a system that makes long URLs short. Understand every part."**
+**"Build a system that takes long, ugly URLs and turns them into short, shareable links, tracking how many times they are clicked."**
 
 ---
 
+## 🧪 Testing Scenarios
 
-## 🧪 Testing: How to Verify It Works
+### Scenario 1: Creating a Link (Happy Path)
 
-### Test 1: Database Connection
-
-**Before everything else:**
 ```
-1. Start server: npm start
-2. Should print: "Database connected"
-3. If error: debug database setup
+1. User POSTs to /api/shorten with a valid URL
+2. Expected: API returns 201 Created and a short_code (e.g., 'Xy39pL')
+3. Verify: Database `urls` table has a new row
 ```
 
-### Test 2: Create Short URL (Happy Path)
+### Scenario 2: Testing the Redirect
 
-**Test this manually:**
-```bash
-curl -X POST http://localhost:3000/api/shorten \
-  -H "Content-Type: application/json" \
-  -d '{"longUrl": "https://wikipedia.org/wiki/AI"}'
-
-Expected response:
-{
-  "shortCode": "aBcDeF",
-  "shortUrl": "http://localhost:3000/aBcDeF",
-  "longUrl": "https://wikipedia.org/wiki/AI"
-}
+```
+1. Open browser and visit http://localhost:3000/Xy39pL
+2. Expected: Browser immediately redirects to the original URL
+3. Verify: Network tab shows HTTP 302 or 301 status code
 ```
 
-**Questions:**
-- Did it return a short code?
-- Is the short code 6 characters?
-- Can you access the database and find it?
+### Scenario 3: Missing or Invalid Short Code
 
-### Test 3: Create with Invalid URL (Error Path)
-
-**Test error handling:**
-```bash
-curl -X POST http://localhost:3000/api/shorten \
-  -H "Content-Type: application/json" \
-  -d '{"longUrl": "not a valid url"}'
-
-Expected: 400 error with message
+```
+1. Open browser and visit http://localhost:3000/DOESNOTEXIST
+2. Expected: API returns a 404 HTML page or JSON error "Link not found"
+3. Verify: It should not crash the server!
 ```
 
-### Test 4: Redirect (The Main Feature)
+### Scenario 4: Verifying Background Analytics
 
-**After creating a URL:**
-```bash
-curl -L http://localhost:3000/aBcDeF
-
-Should redirect to original URL
+```
+1. Have your database client open. Look at `click_analytics` row count.
+2. Click the short link in your browser.
+3. IMMEDIATELY check the database row count again.
+4. Expected: The row count increased by 1, AND `urls.clicks` increased by 1.
+5. If the redirect feels slow (e.g., 500ms delay before loading the page), your analytics insert is blocking the redirect response.
 ```
 
-**Without -L flag:**
-```bash
-curl http://localhost:3000/aBcDeF
+### Scenario 5: Validating Input
 
-Should return HTTP 302 with Location header
 ```
-
-### Test 5: Check Clicks Incremented
-
-**After visiting the short URL:**
-```bash
-curl http://localhost:3000/api/stats/aBcDeF
-
-Expected:
-{
-  "shortCode": "aBcDeF",
-  "clicks": 1,
-  ...
-}
-
-Visit again:
-{
-  "shortCode": "aBcDeF",
-  "clicks": 2,
-  ...
-}
-```
-
-### Test 6: Duplicate Custom Code
-
-**Test uniqueness constraint:**
-```bash
-# First request
-curl -X POST http://localhost:3000/api/shorten \
-  -d '{"longUrl": "...", "customCode": "mycode"}'
-
-Response: Success
-
-# Second request with same code
-curl -X POST http://localhost:3000/api/shorten \
-  -d '{"longUrl": "...", "customCode": "mycode"}'
-
-Expected: 400 error "Code already exists"
-```
-
----
-
-
-## 🐛 Debugging Guide: When Things Break
-
-### Problem: "Server won't start"
-
-**Debug steps:**
-1. Check console output: what's the error?
-2. Is port 3000 available? (Use different port)
-3. Is database file writable? (Check permissions)
-4. Are all imports correct? (npm install)
-
-```javascript
-// Add debugging
-console.log('Starting server...');
-console.log('Database:', db ? 'Connected' : 'Failed');
-app.listen(PORT, () => console.log('Ready'));
-```
-
-### Problem: "POST /api/shorten returns 404"
-
-**Root causes:**
-1. Server not running (npm start)
-2. Route path wrong (should be /api/shorten)
-3. Method wrong (should be POST, not GET)
-4. Middleware not set up (need body-parser)
-
-**Debug:**
-```javascript
-// Log all requests
-app.use((req, res, next) => {
-  console.log(`${req.method} ${req.path}`);
-  next();
-});
-
-// Log request body
-app.post('/api/shorten', (req, res) => {
-  console.log('Request body:', req.body);
-  // ...
-});
-```
-
-### Problem: "Can't redirect: findUrl returns undefined"
-
-**Root causes:**
-1. shortCode not in database
-2. Query is wrong
-3. Database doesn't have rows
-4. shortCode parameter not extracted
-
-**Debug:**
-```javascript
-app.get('/:shortCode', (req, res) => {
-  console.log('Looking for code:', req.params.shortCode);
-  const result = db.query('SELECT * FROM urls WHERE shortCode = ?', [req.params.shortCode]);
-  console.log('Found:', result);
-  // Then use result
-});
-```
-
-### Problem: "Clicks not incrementing"
-
-**Root causes:**
-1. Wrong column name (clicks vs click)
-2. Not committing transaction
-3. Query executed but not updated
-4. Wrong shortCode being updated
-
-**Debug:**
-```javascript
-// Check database directly
-// sqlite3 shortener.db
-// SELECT * FROM urls WHERE shortCode = 'test';
-// Should show clicks incrementing
-
-// Or in code:
-console.log('Before:', db.query(...));
-db.execute('UPDATE urls SET clicks = clicks + 1 WHERE...');
-console.log('After:', db.query(...));
+1. User POSTs to /api/shorten with `{"original_url": "not-a-url"}`
+2. Expected: API returns 400 Bad Request
+3. Verify: DB does not contain the bad URL.
 ```
 
 ---

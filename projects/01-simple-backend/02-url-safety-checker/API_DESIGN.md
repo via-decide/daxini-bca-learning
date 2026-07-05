@@ -1,177 +1,104 @@
-**URL Safety Checker: Learn By Building**
+# 🛡️ URL Safety Checker: API Design
 
-Build a security tool that scans URLs for phishing, malware, and malicious redirects.
+**"Build a security service that scans URLs against a database of known malicious domains to protect users from phishing and malware."**
 
-**API Design: Plan Before Coding**
+---
 
-### System Architecture Diagram
+## 🔗 API Endpoints
+
+### Authentication (Admin)
+
 ```
-  +---------------+
-  |  Web Interface  |
-  +---------------+
-           |
-           |  (HTTP)
-           v
-  +---------------+
-  |  URL Scanner    |
-  |  (Threat Analysis)|
-  +---------------+
-           |
-           |  (Database)
-           v
-  +---------------+
-  |  Blacklist     |
-  |  (Domain-based) |
-  +---------------+
+POST   /api/auth/login        → Login for admins to manage blocklist
 ```
 
-### Endpoint 1: Scan URL
+### Public Scanner
 
-**POST /api/scan**
-Purpose: Submit a URL for safety analysis.
+```
+POST   /api/scan                      → Submit a URL for a safety check
+```
 
-Request:
+### Threat Intelligence Management (Requires JWT, Admin Only)
+
+```
+GET    /api/admin/domains             → List all blocked domains (with pagination/search)
+POST   /api/admin/domains             → Add a new domain to the blocklist
+DELETE /api/admin/domains/:domain     → Remove a domain from the blocklist
+GET    /api/admin/scan-logs           → View recent scanning activity
+```
+
+---
+
+## 📦 Request/Response Examples
+
+### 1. Perform a Safety Scan (Public)
+
+**Request:**
 ```json
+POST /api/scan
 {
-    "url": "https://example.com",
-    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3"
+  "url": "https://www.free-iphone-scam-site.com/login-now"
 }
 ```
-Response (Safe):
+
+**Response (200) - Unsafe:**
 ```json
 {
-    "safe": true,
-    "cached": true,
-    "threats": [],
-    "analysis": {
-        "phishing": false,
-        "malware": false,
-        "redirect": false
-    }
+  "url": "https://www.free-iphone-scam-site.com/login-now",
+  "domain": "free-iphone-scam-site.com",
+  "is_safe": false,
+  "threat_details": {
+    "type": "phishing",
+    "description": "Reported as credential harvesting site."
+  }
 }
 ```
-Response (Unsafe):
+
+**Response (200) - Safe:**
 ```json
 {
-    "safe": false,
-    "cached": false,
-    "threats": ["MALWARE", "SOCIAL_ENGINEERING"],
-    "analysis": {
-        "phishing": true,
-        "malware": true,
-        "redirect": true
-    }
+  "url": "https://www.google.com/search?q=puppies",
+  "domain": "google.com",
+  "is_safe": true,
+  "threat_details": null
 }
 ```
-### Endpoint 2: Add to Blacklist (Admin)
 
-**POST /api/admin/blacklist**
-Purpose: Manually add a domain to the local blocklist.
+### 2. Add Domain to Blocklist (Admin)
 
-Request:
+**Request:**
+```json
+POST /api/admin/domains
+Authorization: Bearer <jwt_token>
+{
+  "domain": "bad-crypto-site.io",
+  "threat_type": "scam",
+  "notes": "Fake airdrop campaign"
+}
+```
+
+**Response (201):**
 ```json
 {
-    "domain": "badguy.com",
-    "reason": "Phishing",
-    "expiration": "2025-12-31T23:59:59Z"
+  "message": "Domain added to blocklist",
+  "data": {
+    "domain": "bad-crypto-site.io",
+    "threat_type": "scam"
+  }
 }
 ```
-Response:
-```http
-HTTP/1.1 201 Created
-Location: /api/admin/blacklist/badguy.com
-```
 
-### Endpoint 3: Get Blacklist (Admin)
+---
 
-**GET /api/admin/blacklist**
-Purpose: Retrieve the current blocklist.
+## ⚠️ Error Responses
 
-Response:
 ```json
-[
-    {
-        "domain": "badguy.com",
-        "reason": "Phishing",
-        "expiration": "2025-12-31T23:59:59Z"
-    },
-    ...
-]
+// 400 Bad Request
+{ "error": "Invalid URL provided. Must start with http:// or https://" }
+
+// 409 Conflict (Admin trying to add a domain that is already blocked)
+{ "error": "Domain 'bad-crypto-site.io' is already in the blocklist" }
+
+// 401 Unauthorized (Trying to access admin endpoints)
+{ "error": "Admin authentication required" }
 ```
-
-### Endpoint 4: Remove from Blacklist (Admin)
-
-**DELETE /api/admin/blacklist/badguy.com**
-Purpose: Manually remove a domain from the local blocklist.
-
-Response:
-```http
-HTTP/1.1 204 No Content
-```
-
-### Database Schema
-
-```
-CREATE TABLE urls (
-    id INTEGER PRIMARY KEY,
-    url TEXT NOT NULL,
-    scanned_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    safe BOOLEAN NOT NULL,
-    cached BOOLEAN NOT NULL,
-    threats TEXT[]
-);
-
-CREATE TABLE blacklist (
-    domain TEXT PRIMARY KEY,
-    reason TEXT NOT NULL,
-    expiration DATE NOT NULL
-);
-
-CREATE TABLE analysis (
-    id INTEGER PRIMARY KEY,
-    url_id INTEGER REFERENCES urls(id),
-    phishing BOOLEAN NOT NULL,
-    malware BOOLEAN NOT NULL,
-    redirect BOOLEAN NOT NULL,
-    scanned_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
-```
-
-### System Flow Diagram
-
-```
-  +---------------+
-  |  Web Interface  |
-  +---------------+
-           |
-           |  (HTTP)
-           v
-  +---------------+
-  |  URL Scanner    |
-  |  (Threat Analysis)|
-  +---------------+
-           |
-           |  (Database)
-           v
-  +---------------+
-  |  Blacklist     |
-  |  (Domain-based) |
-  +---------------+
-           |
-           |  (Cache)
-           v
-  +---------------+
-  |  Cache Manager |
-  +---------------+
-```
-
-### Edge Cases and Error Handling
-
-* Handle invalid URLs or malformed requests.
-* Implement rate limiting for the URL scanner to prevent abuse.
-* Log and track errors, exceptions, and performance metrics.
-* Provide detailed error messages for API clients.
-
-**Why**
-
-The URL Safety Checker is designed to provide a comprehensive security tool for scanning URLs. The system architecture diagram shows the high-level components and interactions between them. The endpoint descriptions outline the specific requests and responses for each API call. The database schema defines the relationships between the tables, and the system flow diagram illustrates the overall workflow.
