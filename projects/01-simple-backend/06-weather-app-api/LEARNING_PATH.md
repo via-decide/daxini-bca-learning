@@ -1,113 +1,104 @@
-# Weather App API: Learn By Building
+# ⛅ Weather App API: Learn By Building
 
-**"Build a proxy API that fetches live weather data, standardizes it, and caches the results to avoid external rate limits."**
+**"Build a proxy API that fetches real-time weather from a third-party service, caches the results to save money and improve speed, and returns a clean, customized JSON response to your frontend."**
 
 ---
-
 
 ## 🎯 Learning Outcomes
 
 After completing this project, you will understand:
 
-✅ **API Proxying** - Building a backend that securely talks to another backend (OpenWeatherMap)
-✅ **In-Memory Caching** - Using Redis (or local memory) to cache data that changes frequently but not every millisecond
-✅ **Data Transformation (Adapters)** - Taking a messy third-party JSON response and converting it into a clean, predictable format for your own frontend
-✅ **Secret Management** - Safely storing API keys in `.env` files so they don't leak to GitHub
-✅ **Error Handling** - Gracefully handling when the external weather service goes down
+✅ **The Proxy Pattern** - Creating a backend that sits between the client and a 3rd-party API to hide secrets and control traffic.  
+✅ **Data Transformation (Adapter Pattern)** - Taking a complex, messy external JSON payload and mapping it into a clean, minimal interface for your frontend.  
+✅ **Caching Mechanisms** - Storing data temporarily in a database (or memory) to dramatically reduce latency and API costs.  
+✅ **Environment Variables** - Using `.env` files to securely store API keys.  
+✅ **Outbound HTTP Requests** - Using libraries like `axios` or native `fetch` on the backend.
 
 ---
-
 
 ## 📋 Project Overview
 
 ### The Problem
-If you build a weather app and the frontend directly calls the OpenWeatherMap API, you expose your secret API key to the entire internet. Anyone can steal it and use up your quota. Furthermore, if 10,000 users open your app in London at the same time, you'll hit OpenWeatherMap 10,000 times and get blocked. You need a middleman (proxy) that hides the key and caches the data.
+
+Weather data updates relatively slowly (a few degrees per hour). If 1,000 users open your weather app in London within the same 5-minute window, it is highly inefficient and expensive to ask the weather provider for the temperature 1,000 times. You should ask them *once*, and serve the other 999 users from memory.
+
+**Your job:** Build a smart API proxy that handles the heavy lifting, caching, and secret management.
 
 ### Who Uses It
+
 ```
-Mobile App (Frontend):
-├─ Requests: "Get weather for London"
-└─ Receives: Clean JSON { temp: 22, condition: "Sunny" }
-
-Backend Proxy (You):
-├─ Hides the real API key
-├─ Checks if London's weather was fetched in the last 10 minutes
-└─ Fetches from OpenWeatherMap only if necessary
-```
-
-### The Big Picture
-
-```text
-┌──────────────┐     ┌──────────────┐     ┌──────────────┐
-│  Mobile App  │ ──> │ Your Backend │ ──> │ Redis Cache  │
-│  (Frontend)  │ <── │ (API Proxy)  │ <── │ (10 min TTL) │
-└──────────────┘     └──────┬───────┘     └──────────────┘
-                            │
-                            │ (Cache Miss)
-                            V
-                     ┌──────────────┐
-                     │ OpenWeather  │
-                     │ Map API      │
-                     └──────────────┘
+The Frontend UI:
+├─ Sends a simple request: "GET /api/weather/london"
+└─ Receives a simple response: "{ temp: 15.2, condition: 'Cloudy' }"
 ```
 
 ---
 
+## 🧠 Implementation Strategy: Pseudocode
 
-## 🧠 Implementation: Pseudocode First
+### 1. The Core Proxy Endpoint
 
-```text
-FUNCTION get_weather(request):
-    raw_city = request.query.city
+```pseudocode
+GET /api/weather/:city:
+  Step 1: Normalize City Name
+    city = request.params.city.toLowerCase()
     
-    // 1. Normalize Input
-    city = lowercase(trim(raw_city))
-    IF city is empty:
-        RETURN ERROR 400 "City is required"
-        
-    cache_key = "weather:" + city
+  Step 2: Check the Cache
+    cached_data = database.query("SELECT * FROM weather_cache WHERE city_name = ?", city)
     
-    // 2. Check Cache
-    cached_data = Redis.get(cache_key)
-    IF cached_data is NOT NULL:
-        result = parse_json(cached_data)
-        result.source = "cache"
-        RETURN result
-        
-    // 3. Cache Miss - Fetch from External API
-    api_key = ENVIRONMENT_VARIABLES.OPENWEATHER_KEY
-    url = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + api_key + "&units=metric"
+    // Check if it exists AND is less than 10 minutes old
+    if cached_data and (NOW() - cached_data.fetched_at < 10 minutes):
+      return 200 { 
+        ...cached_data, 
+        meta: { data_source: "cache" } 
+      }
+      
+  Step 3: Cache Miss! Fetch from 3rd Party
+    try:
+      raw_json = http.get("https://api.openweathermap.org/...", { apiKey: ENV.API_KEY })
+    catch error:
+      if error.status == 404: return 404 "City not found"
+      return 502 "Weather provider down"
+      
+  Step 4: Transform Data (Adapter)
+    clean_data = {
+      city_name: city,
+      temperature_c: convertKelvinToCelsius(raw_json.main.temp),
+      condition: raw_json.weather[0].main,
+      icon_code: raw_json.weather[0].icon,
+      humidity: raw_json.main.humidity,
+      wind_speed: raw_json.wind.speed
+    }
     
-    TRY:
-        response = HTTP.GET(url)
-        
-        // 4. Transform Data
-        clean_data = {
-            city: response.name,
-            temperature_c: response.main.temp,
-            condition: response.weather[0].main,
-            source: "api"
-        }
-        
-        // 5. Save to Cache (Expire in 600 seconds)
-        Redis.setex(cache_key, 600, to_json(clean_data))
-        
-        RETURN clean_data
-        
-    CATCH Error (e.g., 404 City Not Found):
-        RETURN ERROR 404 "City not found"
+  Step 5: Save to Cache
+    // We use UPSERT (Insert, or Replace if it already exists)
+    database.execute(`
+      INSERT INTO weather_cache (city_name, temperature_c, condition, icon_code, humidity, wind_speed, fetched_at)
+      VALUES (?, ?, ?, ?, ?, ?, CURRENT_TIMESTAMP)
+      ON CONFLICT(city_name) DO UPDATE SET
+        temperature_c = excluded.temperature_c,
+        condition = excluded.condition,
+        ...
+        fetched_at = CURRENT_TIMESTAMP
+    `, [clean_data...])
+    
+  Step 6: Return Fresh Data
+    return 200 {
+      ...clean_data,
+      meta: { data_source: "live_api" }
+    }
 ```
 
 ---
-
 
 ## ✅ Before Submission
 
-- [ ] Is your OpenWeather API key stored strictly in a `.env` file?
-- [ ] Does your cache successfully expire after 10 minutes?
-- [ ] Did you implement an adapter to clean up the JSON response?
-- [ ] Does the app handle invalid city names gracefully?
+- [ ] `.env` file contains your OpenWeatherMap API key. (DO NOT commit `.env` to GitHub!).
+- [ ] Backend receives a city name and successfully fetches data from OpenWeatherMap.
+- [ ] Backend transforms the data (e.g., converts Kelvin to Celsius, extracts only the necessary fields).
+- [ ] Backend saves the result to the cache.
+- [ ] Subsequent requests within 10 minutes serve the cached data (No outbound HTTP request is made).
+- [ ] The API does not crash if a user enters an invalid city name.
+- [ ] Code is on GitHub.
 
----
-
-**Build this and learn: The Proxy pattern, caching strategies, and secure credential management.**
+**Success:** You have implemented a production-grade Backend-For-Frontend (BFF) proxy with caching!
