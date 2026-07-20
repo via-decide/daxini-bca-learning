@@ -1,14 +1,15 @@
 {
-  "generatedAt": "2026-07-20T18:59:46.515Z",
+  "generatedAt": "2026-07-20T22:30:26.446Z",
   "totals": {
     "topics": 18,
-    "assets": 593,
-    "graphEdges": 3777
+    "assets": 628,
+    "graphEdges": 4057
   },
   "prerequisiteValidator": [],
   "deadLinkDetector": [],
   "duplicateTopicDetector": [],
   "duplicateAssetDetector": [
+    "readme.md",
     "api_design.md",
     "architecture.md",
     "common_mistakes.md",
@@ -16,8 +17,7 @@
     "debugging_guide.md",
     "learning_path.md",
     "resources.md",
-    "server.js",
-    "readme.md"
+    "server.js"
   ],
   "missingTopicDetector": [],
   "orphanTopics": [],
