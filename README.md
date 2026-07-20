@@ -13,6 +13,7 @@
 - 🏆 **[Student Leaderboard](./LEADERBOARD.md)** - See live projects built by the community.
 - 🎓 **[Academic Integrity](./philosophy/ACADEMIC_INTEGRITY.md)** - Guidelines for using this repo in college.
 - 🚀 **[What Next After Building?](./docs/03_WHAT_NEXT_AFTER_BUILDING.md)** - How to host your project and put it on your resume.
+- 🧩 **[Modern Software Engineering Knowledge Base](./learning-tracks/developer-ecosystem/README.md)** - Learn industry vocabulary, tools, workflows, cloud, AI engineering, DevOps, security, and production practices.
 
 ---
 
