@@ -1,0 +1,38 @@
+{
+  "1-version-control": {
+    "prerequisites": [],
+    "related": [
+      2,
+      6,
+      29,
+      30,
+      80
+    ]
+  },
+  "2-package-management": {
+    "prerequisites": [
+      1
+    ],
+    "related": [
+      1,
+      6,
+      17,
+      29,
+      30,
+      51
+    ]
+  },
+  "3-deployment-platforms": {
+    "prerequisites": [
+      1
+    ],
+    "related": [
+      4,
+      5,
+      6,
+      19,
+      20,
+      82
+    ]
+  }
+}

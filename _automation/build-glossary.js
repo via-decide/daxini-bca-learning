@@ -1,0 +1,1 @@
+const fs=require('fs'); const g=fs.readFileSync('docs/_shared/glossary.md','utf8'); const count=(g.match(/^term:/gm)||[]).length; if(count<40){console.error('Expected at least 40 terms, found '+count);process.exit(1)} console.log('Glossary contains '+count+' terms');

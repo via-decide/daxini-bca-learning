@@ -1,0 +1,1 @@
+const fs=require('fs'); const nav=['# Sidebar Navigation','','- Core Engineering','  - Version Control & Collaboration','  - Package Management','- Infrastructure','  - Deployment Platforms',''].join('\n'); fs.writeFileSync('docs/_shared/sidebar.md',nav); console.log('Generated docs/_shared/sidebar.md');

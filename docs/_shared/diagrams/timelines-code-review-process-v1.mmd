@@ -1,0 +1,8 @@
+sequenceDiagram
+  participant Dev
+  participant CI
+  participant Reviewer
+  Dev->>CI: Open pull request
+  CI-->>Dev: Status checks
+  Reviewer-->>Dev: Review feedback
+  Dev->>Reviewer: Updates
