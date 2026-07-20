@@ -7,7 +7,9 @@
     "doc": "docs"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "knowledge:generate": "node scripts/generate-knowledge-graph.js",
+    "knowledge:check": "node scripts/generate-knowledge-graph.js && node -e \"const r=require('./knowledge-engine-report.json'); if(r.prerequisiteValidator.length||r.orphanTopics.length){console.error(JSON.stringify(r,null,2)); process.exit(1)} console.log('Knowledge graph checks passed')\""
   },
   "repository": {
     "type": "git",

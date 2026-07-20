@@ -1,0 +1,32 @@
+{
+  "generatedAt": "2026-07-20T18:59:46.515Z",
+  "totals": {
+    "topics": 18,
+    "assets": 593,
+    "graphEdges": 3777
+  },
+  "prerequisiteValidator": [],
+  "deadLinkDetector": [],
+  "duplicateTopicDetector": [],
+  "duplicateAssetDetector": [
+    "api_design.md",
+    "architecture.md",
+    "common_mistakes.md",
+    "database.sql",
+    "debugging_guide.md",
+    "learning_path.md",
+    "resources.md",
+    "server.js",
+    "readme.md"
+  ],
+  "missingTopicDetector": [],
+  "orphanTopics": [],
+  "averageCompletenessScore": 100,
+  "successMetrics": {
+    "syllabusCoverageMode": "seeded-canonical-topics-plus-repository-asset-index",
+    "everyTopicLinkedToPrerequisites": true,
+    "zeroOrphanTopics": true,
+    "automaticLearningPathsGenerated": true,
+    "graphExportReadyForAiApplications": true
+  }
+}

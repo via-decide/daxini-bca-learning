@@ -619,3 +619,15 @@ When you use these guides:
 ---
 
 **Questions? Read the guides. Building teaches better than reading.**
+
+---
+
+## 🧩 Additional Learning Track: MERN Stack
+
+A complete MERN Stack learning track has been added as an optional curriculum students can study before or alongside project development. It preserves the Learning First method: architecture, flowcharts, API planning, database design, pseudocode, debugging, and interview readiness before implementation.
+
+- Start here: [`learning-tracks/mern/README.md`](./learning-tracks/mern/README.md)
+- Project mapping: [`learning-tracks/mern/project-mapping.md`](./learning-tracks/mern/project-mapping.md)
+- Roadmaps and cheatsheets: [`resources/mern-roadmap.md`](./resources/mern-roadmap.md), [`resources/backend-roadmap.md`](./resources/backend-roadmap.md), [`resources/frontend-roadmap.md`](./resources/frontend-roadmap.md)
+
+This is **not** a MERN application scaffold. It is a structured learning path that complements the existing BCA project guides.

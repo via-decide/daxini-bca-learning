@@ -1,0 +1,793 @@
+{
+  "generatedAt": "2026-07-20T18:59:46.515Z",
+  "nodes": [
+    {
+      "id": "BCA-PF-001",
+      "label": "Programming Fundamentals",
+      "group": "Programming Fundamentals",
+      "semester": 1,
+      "score": 100
+    },
+    {
+      "id": "BCA-DS-001",
+      "label": "Data Structures",
+      "group": "Data Structures",
+      "semester": 2,
+      "score": 100
+    },
+    {
+      "id": "BCA-DS-002",
+      "label": "Binary Trees",
+      "group": "Data Structures",
+      "semester": 2,
+      "score": 100
+    },
+    {
+      "id": "BCA-ALGO-001",
+      "label": "Algorithms",
+      "group": "Design and Analysis of Algorithms",
+      "semester": 3,
+      "score": 100
+    },
+    {
+      "id": "BCA-OS-001",
+      "label": "Operating Systems",
+      "group": "Operating Systems",
+      "semester": 3,
+      "score": 100
+    },
+    {
+      "id": "BCA-OS-002",
+      "label": "File Systems",
+      "group": "Operating Systems",
+      "semester": 3,
+      "score": 100
+    },
+    {
+      "id": "BCA-CN-001",
+      "label": "Computer Networks",
+      "group": "Computer Networks",
+      "semester": 4,
+      "score": 100
+    },
+    {
+      "id": "BCA-DB-001",
+      "label": "Database Management Systems",
+      "group": "DBMS",
+      "semester": 3,
+      "score": 100
+    },
+    {
+      "id": "BCA-DB-002",
+      "label": "Database Indexing",
+      "group": "DBMS",
+      "semester": 4,
+      "score": 100
+    },
+    {
+      "id": "BCA-WEB-001",
+      "label": "Web Fundamentals",
+      "group": "Web Technologies",
+      "semester": 2,
+      "score": 100
+    },
+    {
+      "id": "BCA-WEB-002",
+      "label": "REST APIs",
+      "group": "Web Technologies",
+      "semester": 4,
+      "score": 100
+    },
+    {
+      "id": "BCA-AUTH-001",
+      "label": "Authentication and Authorization",
+      "group": "Web Security",
+      "semester": 5,
+      "score": 100
+    },
+    {
+      "id": "BCA-SEC-001",
+      "label": "Application Security",
+      "group": "Cybersecurity",
+      "semester": 5,
+      "score": 100
+    },
+    {
+      "id": "BCA-REACT-001",
+      "label": "React Frontend Architecture",
+      "group": "Frontend Development",
+      "semester": 5,
+      "score": 100
+    },
+    {
+      "id": "BCA-CD-001",
+      "label": "Compiler Design",
+      "group": "Compiler Design",
+      "semester": 5,
+      "score": 100
+    },
+    {
+      "id": "BCA-AI-001",
+      "label": "AI Search",
+      "group": "Artificial Intelligence",
+      "semester": 6,
+      "score": 100
+    },
+    {
+      "id": "BCA-DSYS-001",
+      "label": "Distributed Systems",
+      "group": "Distributed Systems",
+      "semester": 6,
+      "score": 100
+    },
+    {
+      "id": "BCA-PROJ-001",
+      "label": "Full-Stack Project Architecture",
+      "group": "Project Development",
+      "semester": 6,
+      "score": 100
+    }
+  ],
+  "links": [
+    {
+      "source": "BCA-AI-001",
+      "target": "BCA-PROJ-001",
+      "type": "enables"
+    },
+    {
+      "source": "BCA-ALGO-001",
+      "target": "BCA-AI-001",
+      "type": "enables"
+    },
+    {
+      "source": "BCA-ALGO-001",
+      "target": "BCA-AI-001",
+      "type": "prerequisite"
+    },
+    {
+      "source": "BCA-ALGO-001",
+      "target": "BCA-AI-001",
+      "type": "required-by"
+    },
+    {
+      "source": "BCA-ALGO-001",
+      "target": "BCA-CD-001",
+      "type": "prerequisite"
+    },
+    {
+      "source": "BCA-ALGO-001",
+      "target": "BCA-CD-001",
+      "type": "required-by"
+    },
+    {
+      "source": "BCA-ALGO-001",
+      "target": "BCA-CN-001",
+      "type": "enables"
+    },
+    {
+      "source": "BCA-ALGO-001",
+      "target": "BCA-CN-001",
+      "type": "prerequisite"
+    },
+    {
+      "source": "BCA-ALGO-001",
+      "target": "BCA-CN-001",
+      "type": "required-by"
+    },
+    {
+      "source": "BCA-ALGO-001",
+      "target": "BCA-OS-001",
+      "type": "enables"
+    },
+    {
+      "source": "BCA-ALGO-001",
+      "target": "BCA-OS-001",
+      "type": "prerequisite"
+    },
+    {
+      "source": "BCA-ALGO-001",
+      "target": "BCA-OS-001",
+      "type": "required-by"
+    },
+    {
+      "source": "BCA-AUTH-001",
+      "target": "BCA-PROJ-001",
+      "type": "enables"
+    },
+    {
+      "source": "BCA-AUTH-001",
+      "target": "BCA-PROJ-001",
+      "type": "prerequisite"
+    },
+    {
+      "source": "BCA-AUTH-001",
+      "target": "BCA-PROJ-001",
+      "type": "required-by"
+    },
+    {
+      "source": "BCA-AUTH-001",
+      "target": "BCA-SEC-001",
+      "type": "enables"
+    },
+    {
+      "source": "BCA-AUTH-001",
+      "target": "BCA-SEC-001",
+      "type": "prerequisite"
+    },
+    {
+      "source": "BCA-AUTH-001",
+      "target": "BCA-SEC-001",
+      "type": "required-by"
+    },
+    {
+      "source": "BCA-CN-001",
+      "target": "BCA-AUTH-001",
+      "type": "prerequisite"
+    },
+    {
+      "source": "BCA-CN-001",
+      "target": "BCA-AUTH-001",
+      "type": "required-by"
+    },
+    {
+      "source": "BCA-CN-001",
+      "target": "BCA-DSYS-001",
+      "type": "enables"
+    },
+    {
+      "source": "BCA-CN-001",
+      "target": "BCA-DSYS-001",
+      "type": "prerequisite"
+    },
+    {
+      "source": "BCA-CN-001",
+      "target": "BCA-DSYS-001",
+      "type": "required-by"
+    },
+    {
+      "source": "BCA-CN-001",
+      "target": "BCA-WEB-002",
+      "type": "enables"
+    },
+    {
+      "source": "BCA-CN-001",
+      "target": "BCA-WEB-002",
+      "type": "prerequisite"
+    },
+    {
+      "source": "BCA-CN-001",
+      "target": "BCA-WEB-002",
+      "type": "required-by"
+    },
+    {
+      "source": "BCA-DB-001",
+      "target": "BCA-DB-002",
+      "type": "enables"
+    },
+    {
+      "source": "BCA-DB-001",
+      "target": "BCA-DB-002",
+      "type": "prerequisite"
+    },
+    {
+      "source": "BCA-DB-001",
+      "target": "BCA-DB-002",
+      "type": "required-by"
+    },
+    {
+      "source": "BCA-DB-001",
+      "target": "BCA-PROJ-001",
+      "type": "prerequisite"
+    },
+    {
+      "source": "BCA-DB-001",
+      "target": "BCA-PROJ-001",
+      "type": "required-by"
+    },
+    {
+      "source": "BCA-DB-001",
+      "target": "BCA-WEB-002",
+      "type": "enables"
+    },
+    {
+      "source": "BCA-DB-001",
+      "target": "BCA-WEB-002",
+      "type": "prerequisite"
+    },
+    {
+      "source": "BCA-DB-001",
+      "target": "BCA-WEB-002",
+      "type": "required-by"
+    },
+    {
+      "source": "BCA-DB-002",
+      "target": "BCA-DSYS-001",
+      "type": "enables"
+    },
+    {
+      "source": "BCA-DB-002",
+      "target": "BCA-DSYS-001",
+      "type": "prerequisite"
+    },
+    {
+      "source": "BCA-DB-002",
+      "target": "BCA-DSYS-001",
+      "type": "required-by"
+    },
+    {
+      "source": "BCA-DB-002",
+      "target": "BCA-WEB-002",
+      "type": "enables"
+    },
+    {
+      "source": "BCA-DS-001",
+      "target": "BCA-ALGO-001",
+      "type": "enables"
+    },
+    {
+      "source": "BCA-DS-001",
+      "target": "BCA-ALGO-001",
+      "type": "prerequisite"
+    },
+    {
+      "source": "BCA-DS-001",
+      "target": "BCA-ALGO-001",
+      "type": "required-by"
+    },
+    {
+      "source": "BCA-DS-001",
+      "target": "BCA-DB-002",
+      "type": "enables"
+    },
+    {
+      "source": "BCA-DS-001",
+      "target": "BCA-DS-002",
+      "type": "prerequisite"
+    },
+    {
+      "source": "BCA-DS-001",
+      "target": "BCA-DS-002",
+      "type": "required-by"
+    },
+    {
+      "source": "BCA-DS-001",
+      "target": "BCA-OS-001",
+      "type": "enables"
+    },
+    {
+      "source": "BCA-DS-001",
+      "target": "BCA-OS-001",
+      "type": "prerequisite"
+    },
+    {
+      "source": "BCA-DS-001",
+      "target": "BCA-OS-001",
+      "type": "required-by"
+    },
+    {
+      "source": "BCA-DS-002",
+      "target": "BCA-AI-001",
+      "type": "enables"
+    },
+    {
+      "source": "BCA-DS-002",
+      "target": "BCA-AI-001",
+      "type": "prerequisite"
+    },
+    {
+      "source": "BCA-DS-002",
+      "target": "BCA-AI-001",
+      "type": "required-by"
+    },
+    {
+      "source": "BCA-DS-002",
+      "target": "BCA-CD-001",
+      "type": "enables"
+    },
+    {
+      "source": "BCA-DS-002",
+      "target": "BCA-CD-001",
+      "type": "prerequisite"
+    },
+    {
+      "source": "BCA-DS-002",
+      "target": "BCA-CD-001",
+      "type": "required-by"
+    },
+    {
+      "source": "BCA-DS-002",
+      "target": "BCA-DB-002",
+      "type": "enables"
+    },
+    {
+      "source": "BCA-DS-002",
+      "target": "BCA-DB-002",
+      "type": "prerequisite"
+    },
+    {
+      "source": "BCA-DS-002",
+      "target": "BCA-DB-002",
+      "type": "required-by"
+    },
+    {
+      "source": "BCA-DS-002",
+      "target": "BCA-OS-002",
+      "type": "enables"
+    },
+    {
+      "source": "BCA-DS-002",
+      "target": "BCA-OS-002",
+      "type": "prerequisite"
+    },
+    {
+      "source": "BCA-DS-002",
+      "target": "BCA-OS-002",
+      "type": "required-by"
+    },
+    {
+      "source": "BCA-DSYS-001",
+      "target": "BCA-PROJ-001",
+      "type": "enables"
+    },
+    {
+      "source": "BCA-OS-001",
+      "target": "BCA-CN-001",
+      "type": "enables"
+    },
+    {
+      "source": "BCA-OS-001",
+      "target": "BCA-CN-001",
+      "type": "prerequisite"
+    },
+    {
+      "source": "BCA-OS-001",
+      "target": "BCA-CN-001",
+      "type": "required-by"
+    },
+    {
+      "source": "BCA-OS-001",
+      "target": "BCA-DSYS-001",
+      "type": "enables"
+    },
+    {
+      "source": "BCA-OS-001",
+      "target": "BCA-DSYS-001",
+      "type": "prerequisite"
+    },
+    {
+      "source": "BCA-OS-001",
+      "target": "BCA-DSYS-001",
+      "type": "required-by"
+    },
+    {
+      "source": "BCA-OS-001",
+      "target": "BCA-OS-002",
+      "type": "prerequisite"
+    },
+    {
+      "source": "BCA-OS-001",
+      "target": "BCA-OS-002",
+      "type": "required-by"
+    },
+    {
+      "source": "BCA-OS-002",
+      "target": "BCA-DB-002",
+      "type": "enables"
+    },
+    {
+      "source": "BCA-OS-002",
+      "target": "BCA-DSYS-001",
+      "type": "enables"
+    },
+    {
+      "source": "BCA-PF-001",
+      "target": "BCA-ALGO-001",
+      "type": "enables"
+    },
+    {
+      "source": "BCA-PF-001",
+      "target": "BCA-ALGO-001",
+      "type": "prerequisite"
+    },
+    {
+      "source": "BCA-PF-001",
+      "target": "BCA-ALGO-001",
+      "type": "required-by"
+    },
+    {
+      "source": "BCA-PF-001",
+      "target": "BCA-DB-001",
+      "type": "prerequisite"
+    },
+    {
+      "source": "BCA-PF-001",
+      "target": "BCA-DB-001",
+      "type": "required-by"
+    },
+    {
+      "source": "BCA-PF-001",
+      "target": "BCA-DS-001",
+      "type": "enables"
+    },
+    {
+      "source": "BCA-PF-001",
+      "target": "BCA-DS-001",
+      "type": "prerequisite"
+    },
+    {
+      "source": "BCA-PF-001",
+      "target": "BCA-DS-001",
+      "type": "required-by"
+    },
+    {
+      "source": "BCA-PF-001",
+      "target": "BCA-WEB-001",
+      "type": "prerequisite"
+    },
+    {
+      "source": "BCA-PF-001",
+      "target": "BCA-WEB-001",
+      "type": "required-by"
+    },
+    {
+      "source": "BCA-REACT-001",
+      "target": "BCA-PROJ-001",
+      "type": "enables"
+    },
+    {
+      "source": "BCA-REACT-001",
+      "target": "BCA-PROJ-001",
+      "type": "prerequisite"
+    },
+    {
+      "source": "BCA-REACT-001",
+      "target": "BCA-PROJ-001",
+      "type": "required-by"
+    },
+    {
+      "source": "BCA-SEC-001",
+      "target": "BCA-PROJ-001",
+      "type": "enables"
+    },
+    {
+      "source": "BCA-WEB-001",
+      "target": "BCA-REACT-001",
+      "type": "enables"
+    },
+    {
+      "source": "BCA-WEB-001",
+      "target": "BCA-REACT-001",
+      "type": "prerequisite"
+    },
+    {
+      "source": "BCA-WEB-001",
+      "target": "BCA-REACT-001",
+      "type": "required-by"
+    },
+    {
+      "source": "BCA-WEB-001",
+      "target": "BCA-WEB-002",
+      "type": "enables"
+    },
+    {
+      "source": "BCA-WEB-001",
+      "target": "BCA-WEB-002",
+      "type": "prerequisite"
+    },
+    {
+      "source": "BCA-WEB-001",
+      "target": "BCA-WEB-002",
+      "type": "required-by"
+    },
+    {
+      "source": "BCA-WEB-002",
+      "target": "BCA-AUTH-001",
+      "type": "enables"
+    },
+    {
+      "source": "BCA-WEB-002",
+      "target": "BCA-AUTH-001",
+      "type": "prerequisite"
+    },
+    {
+      "source": "BCA-WEB-002",
+      "target": "BCA-AUTH-001",
+      "type": "required-by"
+    },
+    {
+      "source": "BCA-WEB-002",
+      "target": "BCA-PROJ-001",
+      "type": "enables"
+    },
+    {
+      "source": "BCA-WEB-002",
+      "target": "BCA-PROJ-001",
+      "type": "prerequisite"
+    },
+    {
+      "source": "BCA-WEB-002",
+      "target": "BCA-PROJ-001",
+      "type": "required-by"
+    },
+    {
+      "source": "BCA-WEB-002",
+      "target": "BCA-REACT-001",
+      "type": "prerequisite"
+    },
+    {
+      "source": "BCA-WEB-002",
+      "target": "BCA-REACT-001",
+      "type": "required-by"
+    },
+    {
+      "source": "BCA-WEB-002",
+      "target": "BCA-SEC-001",
+      "type": "prerequisite"
+    },
+    {
+      "source": "BCA-WEB-002",
+      "target": "BCA-SEC-001",
+      "type": "required-by"
+    },
+    {
+      "source": "BCA-WEB-002",
+      "target": "CODE_OF_CONDUCT.md",
+      "type": "documented-in"
+    },
+    {
+      "source": "BCA-PROJ-001",
+      "target": "CONTRIBUTING.md",
+      "type": "documented-in"
+    },
+    {
+      "source": "BCA-REACT-001",
+      "target": "CONTRIBUTING.md",
+      "type": "documented-in"
+    },
+    {
+      "source": "BCA-ALGO-001",
+      "target": "CONTRIBUTING.md",
+      "type": "documented-in"
+    },
+    {
+      "source": "BCA-CD-001",
+      "target": "CONTRIBUTING.md",
+      "type": "documented-in"
+    },
+    {
+      "source": "BCA-CN-001",
+      "target": "CONTRIBUTING.md",
+      "type": "documented-in"
+    },
+    {
+      "source": "BCA-DB-001",
+      "target": "CONTRIBUTING.md",
+      "type": "documented-in"
+    },
+    {
+      "source": "BCA-DS-002",
+      "target": "CONTRIBUTING.md",
+      "type": "documented-in"
+    },
+    {
+      "source": "BCA-DSYS-001",
+      "target": "CONTRIBUTING.md",
+      "type": "documented-in"
+    },
+    {
+      "source": "BCA-PROJ-001",
+      "target": "LEADERBOARD.md",
+      "type": "documented-in"
+    },
+    {
+      "source": "BCA-WEB-002",
+      "target": "LEADERBOARD.md",
+      "type": "documented-in"
+    },
+    {
+      "source": "BCA-CN-001",
+      "target": "LEADERBOARD.md",
+      "type": "documented-in"
+    },
+    {
+      "source": "BCA-DB-001",
+      "target": "LEADERBOARD.md",
+      "type": "documented-in"
+    },
+    {
+      "source": "BCA-DB-002",
+      "target": "LEADERBOARD.md",
+      "type": "documented-in"
+    },
+    {
+      "source": "BCA-OS-002",
+      "target": "LEADERBOARD.md",
+      "type": "documented-in"
+    },
+    {
+      "source": "BCA-REACT-001",
+      "target": "LEADERBOARD.md",
+      "type": "documented-in"
+    },
+    {
+      "source": "BCA-AUTH-001",
+      "target": "PROGRESS.md",
+      "type": "documented-in"
+    },
+    {
+      "source": "BCA-DB-001",
+      "target": "PROGRESS.md",
+      "type": "documented-in"
+    },
+    {
+      "source": "BCA-OS-002",
+      "target": "PROGRESS.md",
+      "type": "documented-in"
+    },
+    {
+      "source": "BCA-PROJ-001",
+      "target": "PROGRESS.md",
+      "type": "documented-in"
+    },
+    {
+      "source": "BCA-ALGO-001",
+      "target": "PROGRESS.md",
+      "type": "documented-in"
+    },
+    {
+      "source": "BCA-DS-001",
+      "target": "PROGRESS.md",
+      "type": "documented-in"
+    },
+    {
+      "source": "BCA-REACT-001",
+      "target": "PROGRESS.md",
+      "type": "documented-in"
+    },
+    {
+      "source": "BCA-WEB-002",
+      "target": "PROGRESS.md",
+      "type": "documented-in"
+    },
+    {
+      "source": "BCA-PROJ-001",
+      "target": "README.md",
+      "type": "documented-in"
+    },
+    {
+      "source": "BCA-REACT-001",
+      "target": "README.md",
+      "type": "documented-in"
+    },
+    {
+      "source": "BCA-ALGO-001",
+      "target": "README.md",
+      "type": "documented-in"
+    },
+    {
+      "source": "BCA-SEC-001",
+      "target": "README.md",
+      "type": "documented-in"
+    },
+    {
+      "source": "BCA-WEB-002",
+      "target": "README.md",
+      "type": "documented-in"
+    },
+    {
+      "source": "BCA-DB-001",
+      "target": "README.md",
+      "type": "documented-in"
+    },
+    {
+      "source": "BCA-AUTH-001",
+      "target": "README.md",
+      "type": "documented-in"
+    },
+    {
+      "source": "BCA-DS-002",
+      "target": "README.md",
+      "type": "documented-in"
+    }
+  ]
+}
