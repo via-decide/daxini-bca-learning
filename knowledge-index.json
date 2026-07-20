@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-20T18:59:46.515Z",
+  "generatedAt": "2026-07-20T22:30:26.446Z",
   "supportedSources": [
     "Markdown",
     "PDFs",
@@ -41,7 +41,7 @@
       "type": "markdown note",
       "extension": ".md",
       "sizeBytes": 891,
-      "modifiedTime": "2026-07-20T18:47:40.081Z",
+      "modifiedTime": "2026-07-20T18:51:40.646Z",
       "relatedTopics": [
         "BCA-DB-001",
         "BCA-PROJ-001",
@@ -56,7 +56,7 @@
       "type": "markdown note",
       "extension": ".md",
       "sizeBytes": 723,
-      "modifiedTime": "2026-07-20T18:47:40.081Z",
+      "modifiedTime": "2026-07-20T18:51:40.646Z",
       "relatedTopics": [
         "BCA-WEB-002"
       ]
@@ -66,7 +66,7 @@
       "type": "markdown note",
       "extension": ".md",
       "sizeBytes": 1266,
-      "modifiedTime": "2026-07-20T18:47:40.081Z",
+      "modifiedTime": "2026-07-20T18:51:40.646Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-REACT-001",
@@ -83,7 +83,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 4693,
-      "modifiedTime": "2026-07-20T18:47:40.081Z",
+      "modifiedTime": "2026-07-20T18:51:40.650Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-OS-002",
@@ -100,7 +100,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 2779,
-      "modifiedTime": "2026-07-20T18:47:40.081Z",
+      "modifiedTime": "2026-07-20T18:51:40.650Z",
       "relatedTopics": [
         "BCA-WEB-002",
         "BCA-CN-001",
@@ -117,7 +117,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 3206,
-      "modifiedTime": "2026-07-20T18:47:40.081Z",
+      "modifiedTime": "2026-07-20T18:51:40.650Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-AUTH-001",
@@ -134,7 +134,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 4554,
-      "modifiedTime": "2026-07-20T18:47:40.081Z",
+      "modifiedTime": "2026-07-20T18:51:40.650Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-WEB-001",
@@ -151,7 +151,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 4470,
-      "modifiedTime": "2026-07-20T18:47:40.081Z",
+      "modifiedTime": "2026-07-20T18:51:40.650Z",
       "relatedTopics": [
         "BCA-AUTH-001",
         "BCA-PROJ-001",
@@ -168,7 +168,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 3952,
-      "modifiedTime": "2026-07-20T18:47:40.081Z",
+      "modifiedTime": "2026-07-20T18:51:40.650Z",
       "relatedTopics": [
         "BCA-OS-002",
         "BCA-PROJ-001",
@@ -185,7 +185,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 4686,
-      "modifiedTime": "2026-07-20T18:47:40.081Z",
+      "modifiedTime": "2026-07-20T18:51:40.650Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-REACT-001",
@@ -202,7 +202,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 25951,
-      "modifiedTime": "2026-07-20T18:47:40.081Z",
+      "modifiedTime": "2026-07-20T18:51:40.650Z",
       "relatedTopics": [
         "BCA-AUTH-001",
         "BCA-PROJ-001",
@@ -219,7 +219,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 5380,
-      "modifiedTime": "2026-07-20T18:47:40.081Z",
+      "modifiedTime": "2026-07-20T18:51:40.650Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-WEB-001",
@@ -236,7 +236,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 4361,
-      "modifiedTime": "2026-07-20T18:47:40.081Z",
+      "modifiedTime": "2026-07-20T18:51:40.650Z",
       "relatedTopics": [
         "BCA-DSYS-001",
         "BCA-OS-001",
@@ -253,7 +253,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 3962,
-      "modifiedTime": "2026-07-20T18:47:40.081Z",
+      "modifiedTime": "2026-07-20T18:51:40.650Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-WEB-002",
@@ -270,7 +270,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 0,
-      "modifiedTime": "2026-07-20T18:47:40.081Z",
+      "modifiedTime": "2026-07-20T18:51:40.650Z",
       "relatedTopics": []
     },
     {
@@ -278,7 +278,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 0,
-      "modifiedTime": "2026-07-20T18:47:40.081Z",
+      "modifiedTime": "2026-07-20T18:51:40.650Z",
       "relatedTopics": []
     },
     {
@@ -286,7 +286,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 0,
-      "modifiedTime": "2026-07-20T18:47:40.081Z",
+      "modifiedTime": "2026-07-20T18:51:40.650Z",
       "relatedTopics": [
         "BCA-DB-001"
       ]
@@ -296,7 +296,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 0,
-      "modifiedTime": "2026-07-20T18:47:40.081Z",
+      "modifiedTime": "2026-07-20T18:51:40.650Z",
       "relatedTopics": []
     },
     {
@@ -304,7 +304,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 0,
-      "modifiedTime": "2026-07-20T18:47:40.081Z",
+      "modifiedTime": "2026-07-20T18:51:40.650Z",
       "relatedTopics": []
     },
     {
@@ -312,7 +312,7 @@
       "type": "markdown note",
       "extension": ".md",
       "sizeBytes": 3565,
-      "modifiedTime": "2026-07-20T18:47:40.081Z",
+      "modifiedTime": "2026-07-20T18:51:40.650Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-WEB-002",
@@ -324,11 +324,606 @@
       ]
     },
     {
+      "path": "learning-tracks/developer-ecosystem/glossary.md",
+      "type": "markdown note",
+      "extension": ".md",
+      "sizeBytes": 1869050,
+      "modifiedTime": "2026-07-20T22:30:20.418Z",
+      "relatedTopics": [
+        "BCA-PROJ-001",
+        "BCA-AUTH-001",
+        "BCA-WEB-002",
+        "BCA-REACT-001",
+        "BCA-DB-001",
+        "BCA-OS-001",
+        "BCA-ALGO-001",
+        "BCA-CN-001"
+      ]
+    },
+    {
+      "path": "learning-tracks/developer-ecosystem/modules/01-version-control-collaboration.md",
+      "type": "lab manual/practical",
+      "extension": ".md",
+      "sizeBytes": 4996,
+      "modifiedTime": "2026-07-20T22:30:20.398Z",
+      "relatedTopics": [
+        "BCA-PROJ-001",
+        "BCA-ALGO-001",
+        "BCA-OS-001",
+        "BCA-AUTH-001",
+        "BCA-DSYS-001",
+        "BCA-REACT-001",
+        "BCA-CN-001",
+        "BCA-DB-001"
+      ]
+    },
+    {
+      "path": "learning-tracks/developer-ecosystem/modules/02-package-management.md",
+      "type": "markdown note",
+      "extension": ".md",
+      "sizeBytes": 4262,
+      "modifiedTime": "2026-07-20T22:30:20.398Z",
+      "relatedTopics": [
+        "BCA-DS-002",
+        "BCA-OS-001",
+        "BCA-PROJ-001",
+        "BCA-ALGO-001",
+        "BCA-AUTH-001",
+        "BCA-DB-001",
+        "BCA-DS-001",
+        "BCA-DSYS-001"
+      ]
+    },
+    {
+      "path": "learning-tracks/developer-ecosystem/modules/03-deployment-platforms.md",
+      "type": "markdown note",
+      "extension": ".md",
+      "sizeBytes": 4378,
+      "modifiedTime": "2026-07-20T22:30:20.398Z",
+      "relatedTopics": [
+        "BCA-OS-001",
+        "BCA-PROJ-001",
+        "BCA-REACT-001",
+        "BCA-ALGO-001",
+        "BCA-AUTH-001",
+        "BCA-DSYS-001",
+        "BCA-DB-001",
+        "BCA-DS-001"
+      ]
+    },
+    {
+      "path": "learning-tracks/developer-ecosystem/modules/04-cloud-computing.md",
+      "type": "markdown note",
+      "extension": ".md",
+      "sizeBytes": 4266,
+      "modifiedTime": "2026-07-20T22:30:20.398Z",
+      "relatedTopics": [
+        "BCA-OS-001",
+        "BCA-PROJ-001",
+        "BCA-ALGO-001",
+        "BCA-AUTH-001",
+        "BCA-DB-001",
+        "BCA-DSYS-001",
+        "BCA-DS-001",
+        "BCA-DS-002"
+      ]
+    },
+    {
+      "path": "learning-tracks/developer-ecosystem/modules/05-containers.md",
+      "type": "markdown note",
+      "extension": ".md",
+      "sizeBytes": 4294,
+      "modifiedTime": "2026-07-20T22:30:20.398Z",
+      "relatedTopics": [
+        "BCA-OS-001",
+        "BCA-PROJ-001",
+        "BCA-AUTH-001",
+        "BCA-DSYS-001",
+        "BCA-ALGO-001",
+        "BCA-DB-001",
+        "BCA-DS-001",
+        "BCA-DS-002"
+      ]
+    },
+    {
+      "path": "learning-tracks/developer-ecosystem/modules/06-ci-cd.md",
+      "type": "markdown note",
+      "extension": ".md",
+      "sizeBytes": 4148,
+      "modifiedTime": "2026-07-20T22:30:20.398Z",
+      "relatedTopics": [
+        "BCA-PROJ-001",
+        "BCA-OS-001",
+        "BCA-ALGO-001",
+        "BCA-AUTH-001",
+        "BCA-DSYS-001",
+        "BCA-DB-001",
+        "BCA-DS-001",
+        "BCA-DS-002"
+      ]
+    },
+    {
+      "path": "learning-tracks/developer-ecosystem/modules/07-web-infrastructure.md",
+      "type": "markdown note",
+      "extension": ".md",
+      "sizeBytes": 4203,
+      "modifiedTime": "2026-07-20T22:30:20.402Z",
+      "relatedTopics": [
+        "BCA-AUTH-001",
+        "BCA-OS-001",
+        "BCA-PROJ-001",
+        "BCA-ALGO-001",
+        "BCA-CN-001",
+        "BCA-DSYS-001",
+        "BCA-WEB-002",
+        "BCA-DB-001"
+      ]
+    },
+    {
+      "path": "learning-tracks/developer-ecosystem/modules/08-authentication-identity.md",
+      "type": "markdown note",
+      "extension": ".md",
+      "sizeBytes": 4190,
+      "modifiedTime": "2026-07-20T22:30:20.402Z",
+      "relatedTopics": [
+        "BCA-AUTH-001",
+        "BCA-PROJ-001",
+        "BCA-OS-001",
+        "BCA-ALGO-001",
+        "BCA-DSYS-001",
+        "BCA-WEB-002",
+        "BCA-DB-001",
+        "BCA-DS-001"
+      ]
+    },
+    {
+      "path": "learning-tracks/developer-ecosystem/modules/09-apis.md",
+      "type": "markdown note",
+      "extension": ".md",
+      "sizeBytes": 4174,
+      "modifiedTime": "2026-07-20T22:30:20.402Z",
+      "relatedTopics": [
+        "BCA-WEB-002",
+        "BCA-PROJ-001",
+        "BCA-AUTH-001",
+        "BCA-OS-001",
+        "BCA-ALGO-001",
+        "BCA-DSYS-001",
+        "BCA-DB-001",
+        "BCA-DS-001"
+      ]
+    },
+    {
+      "path": "learning-tracks/developer-ecosystem/modules/10-backend-systems.md",
+      "type": "markdown note",
+      "extension": ".md",
+      "sizeBytes": 4134,
+      "modifiedTime": "2026-07-20T22:30:20.402Z",
+      "relatedTopics": [
+        "BCA-DSYS-001",
+        "BCA-OS-001",
+        "BCA-PROJ-001",
+        "BCA-ALGO-001",
+        "BCA-AUTH-001",
+        "BCA-CN-001",
+        "BCA-DS-001",
+        "BCA-WEB-002"
+      ]
+    },
+    {
+      "path": "learning-tracks/developer-ecosystem/modules/11-databases-storage.md",
+      "type": "markdown note",
+      "extension": ".md",
+      "sizeBytes": 4278,
+      "modifiedTime": "2026-07-20T22:30:20.402Z",
+      "relatedTopics": [
+        "BCA-PROJ-001",
+        "BCA-DB-001",
+        "BCA-OS-001",
+        "BCA-ALGO-001",
+        "BCA-AUTH-001",
+        "BCA-DSYS-001",
+        "BCA-DS-001",
+        "BCA-DS-002"
+      ]
+    },
+    {
+      "path": "learning-tracks/developer-ecosystem/modules/12-search-systems.md",
+      "type": "markdown note",
+      "extension": ".md",
+      "sizeBytes": 4078,
+      "modifiedTime": "2026-07-20T22:30:20.402Z",
+      "relatedTopics": [
+        "BCA-PROJ-001",
+        "BCA-ALGO-001",
+        "BCA-OS-001",
+        "BCA-AUTH-001",
+        "BCA-DS-001",
+        "BCA-DS-002",
+        "BCA-DSYS-001",
+        "BCA-DB-001"
+      ]
+    },
+    {
+      "path": "learning-tracks/developer-ecosystem/modules/13-analytics-product-intelligence.md",
+      "type": "markdown note",
+      "extension": ".md",
+      "sizeBytes": 4673,
+      "modifiedTime": "2026-07-20T22:30:20.402Z",
+      "relatedTopics": [
+        "BCA-PROJ-001",
+        "BCA-OS-001",
+        "BCA-ALGO-001",
+        "BCA-AUTH-001",
+        "BCA-DSYS-001",
+        "BCA-DB-001",
+        "BCA-DS-001",
+        "BCA-DS-002"
+      ]
+    },
+    {
+      "path": "learning-tracks/developer-ecosystem/modules/14-performance-engineering.md",
+      "type": "markdown note",
+      "extension": ".md",
+      "sizeBytes": 4150,
+      "modifiedTime": "2026-07-20T22:30:20.402Z",
+      "relatedTopics": [
+        "BCA-ALGO-001",
+        "BCA-AUTH-001",
+        "BCA-OS-001",
+        "BCA-PROJ-001",
+        "BCA-DSYS-001",
+        "BCA-REACT-001",
+        "BCA-WEB-001",
+        "BCA-WEB-002"
+      ]
+    },
+    {
+      "path": "learning-tracks/developer-ecosystem/modules/15-ai-engineering.md",
+      "type": "markdown note",
+      "extension": ".md",
+      "sizeBytes": 4832,
+      "modifiedTime": "2026-07-20T22:30:20.402Z",
+      "relatedTopics": [
+        "BCA-OS-001",
+        "BCA-PROJ-001",
+        "BCA-AUTH-001",
+        "BCA-WEB-002",
+        "BCA-ALGO-001",
+        "BCA-DSYS-001",
+        "BCA-DB-001",
+        "BCA-DS-001"
+      ]
+    },
+    {
+      "path": "learning-tracks/developer-ecosystem/modules/16-frontend-engineering.md",
+      "type": "markdown note",
+      "extension": ".md",
+      "sizeBytes": 4637,
+      "modifiedTime": "2026-07-20T22:30:20.402Z",
+      "relatedTopics": [
+        "BCA-REACT-001",
+        "BCA-OS-001",
+        "BCA-PROJ-001",
+        "BCA-ALGO-001",
+        "BCA-AUTH-001",
+        "BCA-DS-001",
+        "BCA-DS-002",
+        "BCA-DSYS-001"
+      ]
+    },
+    {
+      "path": "learning-tracks/developer-ecosystem/modules/17-backend-frameworks.md",
+      "type": "markdown note",
+      "extension": ".md",
+      "sizeBytes": 4019,
+      "modifiedTime": "2026-07-20T22:30:20.402Z",
+      "relatedTopics": [
+        "BCA-OS-001",
+        "BCA-PROJ-001",
+        "BCA-ALGO-001",
+        "BCA-AUTH-001",
+        "BCA-DSYS-001",
+        "BCA-WEB-002",
+        "BCA-CN-001",
+        "BCA-DB-001"
+      ]
+    },
+    {
+      "path": "learning-tracks/developer-ecosystem/modules/18-build-tools.md",
+      "type": "markdown note",
+      "extension": ".md",
+      "sizeBytes": 3986,
+      "modifiedTime": "2026-07-20T22:30:20.402Z",
+      "relatedTopics": [
+        "BCA-AUTH-001",
+        "BCA-OS-001",
+        "BCA-PROJ-001",
+        "BCA-ALGO-001",
+        "BCA-DSYS-001",
+        "BCA-WEB-002",
+        "BCA-DB-001",
+        "BCA-DS-001"
+      ]
+    },
+    {
+      "path": "learning-tracks/developer-ecosystem/modules/19-devops-infrastructure.md",
+      "type": "markdown note",
+      "extension": ".md",
+      "sizeBytes": 4134,
+      "modifiedTime": "2026-07-20T22:30:20.402Z",
+      "relatedTopics": [
+        "BCA-OS-001",
+        "BCA-PROJ-001",
+        "BCA-ALGO-001",
+        "BCA-AUTH-001",
+        "BCA-DB-001",
+        "BCA-DSYS-001",
+        "BCA-REACT-001",
+        "BCA-DS-001"
+      ]
+    },
+    {
+      "path": "learning-tracks/developer-ecosystem/modules/20-monitoring-observability.md",
+      "type": "markdown note",
+      "extension": ".md",
+      "sizeBytes": 4228,
+      "modifiedTime": "2026-07-20T22:30:20.402Z",
+      "relatedTopics": [
+        "BCA-OS-001",
+        "BCA-PROJ-001",
+        "BCA-ALGO-001",
+        "BCA-AUTH-001",
+        "BCA-DSYS-001",
+        "BCA-DB-001",
+        "BCA-DS-001",
+        "BCA-DS-002"
+      ]
+    },
+    {
+      "path": "learning-tracks/developer-ecosystem/modules/21-security.md",
+      "type": "markdown note",
+      "extension": ".md",
+      "sizeBytes": 4426,
+      "modifiedTime": "2026-07-20T22:30:20.402Z",
+      "relatedTopics": [
+        "BCA-OS-001",
+        "BCA-PROJ-001",
+        "BCA-ALGO-001",
+        "BCA-AUTH-001",
+        "BCA-DB-001",
+        "BCA-DSYS-001",
+        "BCA-DS-001",
+        "BCA-DS-002"
+      ]
+    },
+    {
+      "path": "learning-tracks/developer-ecosystem/modules/22-networking.md",
+      "type": "markdown note",
+      "extension": ".md",
+      "sizeBytes": 4111,
+      "modifiedTime": "2026-07-20T22:30:20.402Z",
+      "relatedTopics": [
+        "BCA-OS-001",
+        "BCA-PROJ-001",
+        "BCA-ALGO-001",
+        "BCA-AUTH-001",
+        "BCA-DSYS-001",
+        "BCA-CN-001",
+        "BCA-DB-001",
+        "BCA-DS-001"
+      ]
+    },
+    {
+      "path": "learning-tracks/developer-ecosystem/modules/23-messaging-systems.md",
+      "type": "markdown note",
+      "extension": ".md",
+      "sizeBytes": 3896,
+      "modifiedTime": "2026-07-20T22:30:20.402Z",
+      "relatedTopics": [
+        "BCA-OS-001",
+        "BCA-PROJ-001",
+        "BCA-ALGO-001",
+        "BCA-AUTH-001",
+        "BCA-DSYS-001",
+        "BCA-DB-001",
+        "BCA-DS-001",
+        "BCA-DS-002"
+      ]
+    },
+    {
+      "path": "learning-tracks/developer-ecosystem/modules/24-payments.md",
+      "type": "markdown note",
+      "extension": ".md",
+      "sizeBytes": 3890,
+      "modifiedTime": "2026-07-20T22:30:20.406Z",
+      "relatedTopics": [
+        "BCA-AUTH-001",
+        "BCA-OS-001",
+        "BCA-PROJ-001",
+        "BCA-ALGO-001",
+        "BCA-DSYS-001",
+        "BCA-WEB-002",
+        "BCA-DB-001",
+        "BCA-DS-001"
+      ]
+    },
+    {
+      "path": "learning-tracks/developer-ecosystem/modules/25-mobile-engineering.md",
+      "type": "markdown note",
+      "extension": ".md",
+      "sizeBytes": 3916,
+      "modifiedTime": "2026-07-20T22:30:20.406Z",
+      "relatedTopics": [
+        "BCA-OS-001",
+        "BCA-PROJ-001",
+        "BCA-ALGO-001",
+        "BCA-AUTH-001",
+        "BCA-DSYS-001",
+        "BCA-REACT-001",
+        "BCA-DB-001",
+        "BCA-DS-001"
+      ]
+    },
+    {
+      "path": "learning-tracks/developer-ecosystem/modules/26-design-systems.md",
+      "type": "markdown note",
+      "extension": ".md",
+      "sizeBytes": 3990,
+      "modifiedTime": "2026-07-20T22:30:20.406Z",
+      "relatedTopics": [
+        "BCA-AUTH-001",
+        "BCA-OS-001",
+        "BCA-PROJ-001",
+        "BCA-ALGO-001",
+        "BCA-DSYS-001",
+        "BCA-DB-001",
+        "BCA-DS-001",
+        "BCA-DS-002"
+      ]
+    },
+    {
+      "path": "learning-tracks/developer-ecosystem/modules/27-seo.md",
+      "type": "markdown note",
+      "extension": ".md",
+      "sizeBytes": 3981,
+      "modifiedTime": "2026-07-20T22:30:20.406Z",
+      "relatedTopics": [
+        "BCA-PROJ-001",
+        "BCA-OS-001",
+        "BCA-ALGO-001",
+        "BCA-AUTH-001",
+        "BCA-DSYS-001",
+        "BCA-DB-001",
+        "BCA-DS-001",
+        "BCA-DS-002"
+      ]
+    },
+    {
+      "path": "learning-tracks/developer-ecosystem/modules/28-testing.md",
+      "type": "markdown note",
+      "extension": ".md",
+      "sizeBytes": 4048,
+      "modifiedTime": "2026-07-20T22:30:20.406Z",
+      "relatedTopics": [
+        "BCA-PROJ-001",
+        "BCA-OS-001",
+        "BCA-ALGO-001",
+        "BCA-AUTH-001",
+        "BCA-DSYS-001",
+        "BCA-DB-001",
+        "BCA-DS-001",
+        "BCA-DS-002"
+      ]
+    },
+    {
+      "path": "learning-tracks/developer-ecosystem/modules/29-documentation.md",
+      "type": "markdown note",
+      "extension": ".md",
+      "sizeBytes": 3958,
+      "modifiedTime": "2026-07-20T22:30:20.406Z",
+      "relatedTopics": [
+        "BCA-PROJ-001",
+        "BCA-OS-001",
+        "BCA-ALGO-001",
+        "BCA-AUTH-001",
+        "BCA-DSYS-001",
+        "BCA-WEB-002",
+        "BCA-DB-001",
+        "BCA-DS-001"
+      ]
+    },
+    {
+      "path": "learning-tracks/developer-ecosystem/modules/30-developer-productivity.md",
+      "type": "markdown note",
+      "extension": ".md",
+      "sizeBytes": 4476,
+      "modifiedTime": "2026-07-20T22:30:20.406Z",
+      "relatedTopics": [
+        "BCA-OS-001",
+        "BCA-PROJ-001",
+        "BCA-ALGO-001",
+        "BCA-AUTH-001",
+        "BCA-DSYS-001",
+        "BCA-DB-001",
+        "BCA-DS-001",
+        "BCA-DS-002"
+      ]
+    },
+    {
+      "path": "learning-tracks/developer-ecosystem/modules/31-software-architecture.md",
+      "type": "markdown note",
+      "extension": ".md",
+      "sizeBytes": 4298,
+      "modifiedTime": "2026-07-20T22:30:20.406Z",
+      "relatedTopics": [
+        "BCA-OS-001",
+        "BCA-PROJ-001",
+        "BCA-ALGO-001",
+        "BCA-AUTH-001",
+        "BCA-DSYS-001",
+        "BCA-DB-001",
+        "BCA-DS-001",
+        "BCA-DS-002"
+      ]
+    },
+    {
+      "path": "learning-tracks/developer-ecosystem/modules/32-engineering-workflow.md",
+      "type": "markdown note",
+      "extension": ".md",
+      "sizeBytes": 4228,
+      "modifiedTime": "2026-07-20T22:30:20.406Z",
+      "relatedTopics": [
+        "BCA-PROJ-001",
+        "BCA-OS-001",
+        "BCA-ALGO-001",
+        "BCA-AUTH-001",
+        "BCA-DSYS-001",
+        "BCA-DB-001",
+        "BCA-DS-001",
+        "BCA-DS-002"
+      ]
+    },
+    {
+      "path": "learning-tracks/developer-ecosystem/modules/33-production-readiness.md",
+      "type": "markdown note",
+      "extension": ".md",
+      "sizeBytes": 4296,
+      "modifiedTime": "2026-07-20T22:30:20.406Z",
+      "relatedTopics": [
+        "BCA-PROJ-001",
+        "BCA-OS-001",
+        "BCA-ALGO-001",
+        "BCA-AUTH-001",
+        "BCA-DSYS-001",
+        "BCA-REACT-001",
+        "BCA-DB-001",
+        "BCA-DS-001"
+      ]
+    },
+    {
+      "path": "learning-tracks/developer-ecosystem/README.md",
+      "type": "markdown note",
+      "extension": ".md",
+      "sizeBytes": 4962,
+      "modifiedTime": "2026-07-20T22:30:20.418Z",
+      "relatedTopics": [
+        "BCA-PROJ-001",
+        "BCA-AUTH-001",
+        "BCA-REACT-001",
+        "BCA-WEB-002",
+        "BCA-DB-001",
+        "BCA-CN-001",
+        "BCA-SEC-001",
+        "BCA-ALGO-001"
+      ]
+    },
+    {
       "path": "learning-tracks/mern/module-01-html-css-js.md",
       "type": "markdown note",
       "extension": ".md",
       "sizeBytes": 5111,
-      "modifiedTime": "2026-07-20T18:49:03.577Z",
+      "modifiedTime": "2026-07-20T22:28:47.802Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-REACT-001",
@@ -345,7 +940,7 @@
       "type": "markdown note",
       "extension": ".md",
       "sizeBytes": 5089,
-      "modifiedTime": "2026-07-20T18:49:03.577Z",
+      "modifiedTime": "2026-07-20T22:28:47.802Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-REACT-001",
@@ -362,7 +957,7 @@
       "type": "markdown note",
       "extension": ".md",
       "sizeBytes": 5100,
-      "modifiedTime": "2026-07-20T18:49:03.577Z",
+      "modifiedTime": "2026-07-20T22:28:47.802Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-REACT-001",
@@ -379,7 +974,7 @@
       "type": "markdown note",
       "extension": ".md",
       "sizeBytes": 5106,
-      "modifiedTime": "2026-07-20T18:49:03.581Z",
+      "modifiedTime": "2026-07-20T22:28:47.806Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-REACT-001",
@@ -396,7 +991,7 @@
       "type": "markdown note",
       "extension": ".md",
       "sizeBytes": 5085,
-      "modifiedTime": "2026-07-20T18:49:03.581Z",
+      "modifiedTime": "2026-07-20T22:28:47.806Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-REACT-001",
@@ -413,7 +1008,7 @@
       "type": "markdown note",
       "extension": ".md",
       "sizeBytes": 5103,
-      "modifiedTime": "2026-07-20T18:49:03.581Z",
+      "modifiedTime": "2026-07-20T22:28:47.806Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-REACT-001",
@@ -430,7 +1025,7 @@
       "type": "markdown note",
       "extension": ".md",
       "sizeBytes": 5090,
-      "modifiedTime": "2026-07-20T18:49:03.581Z",
+      "modifiedTime": "2026-07-20T22:28:47.806Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-REACT-001",
@@ -447,7 +1042,7 @@
       "type": "markdown note",
       "extension": ".md",
       "sizeBytes": 5100,
-      "modifiedTime": "2026-07-20T18:49:03.581Z",
+      "modifiedTime": "2026-07-20T22:28:47.806Z",
       "relatedTopics": [
         "BCA-AUTH-001",
         "BCA-PROJ-001",
@@ -464,7 +1059,7 @@
       "type": "markdown note",
       "extension": ".md",
       "sizeBytes": 5080,
-      "modifiedTime": "2026-07-20T18:49:03.581Z",
+      "modifiedTime": "2026-07-20T22:28:47.806Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-REACT-001",
@@ -481,7 +1076,7 @@
       "type": "markdown note",
       "extension": ".md",
       "sizeBytes": 5092,
-      "modifiedTime": "2026-07-20T18:49:03.581Z",
+      "modifiedTime": "2026-07-20T22:28:47.806Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-REACT-001",
@@ -498,7 +1093,7 @@
       "type": "markdown note",
       "extension": ".md",
       "sizeBytes": 5094,
-      "modifiedTime": "2026-07-20T18:49:03.581Z",
+      "modifiedTime": "2026-07-20T22:28:47.806Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-REACT-001",
@@ -515,7 +1110,7 @@
       "type": "markdown note",
       "extension": ".md",
       "sizeBytes": 5109,
-      "modifiedTime": "2026-07-20T18:49:03.581Z",
+      "modifiedTime": "2026-07-20T22:28:47.806Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-REACT-001",
@@ -532,7 +1127,7 @@
       "type": "markdown note",
       "extension": ".md",
       "sizeBytes": 5111,
-      "modifiedTime": "2026-07-20T18:49:03.581Z",
+      "modifiedTime": "2026-07-20T22:28:47.806Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-REACT-001",
@@ -549,7 +1144,7 @@
       "type": "markdown note",
       "extension": ".md",
       "sizeBytes": 5094,
-      "modifiedTime": "2026-07-20T18:49:03.581Z",
+      "modifiedTime": "2026-07-20T22:28:47.806Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-REACT-001",
@@ -566,7 +1161,7 @@
       "type": "markdown note",
       "extension": ".md",
       "sizeBytes": 5115,
-      "modifiedTime": "2026-07-20T18:49:03.581Z",
+      "modifiedTime": "2026-07-20T22:28:47.806Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-REACT-001",
@@ -583,7 +1178,7 @@
       "type": "markdown note",
       "extension": ".md",
       "sizeBytes": 25905,
-      "modifiedTime": "2026-07-20T18:49:27.097Z",
+      "modifiedTime": "2026-07-20T22:28:47.806Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-AUTH-001",
@@ -600,7 +1195,7 @@
       "type": "markdown note",
       "extension": ".md",
       "sizeBytes": 4471,
-      "modifiedTime": "2026-07-20T18:49:03.581Z",
+      "modifiedTime": "2026-07-20T22:28:47.802Z",
       "relatedTopics": [
         "BCA-AUTH-001",
         "BCA-PROJ-001",
@@ -617,7 +1212,7 @@
       "type": "markdown note",
       "extension": ".md",
       "sizeBytes": 14561,
-      "modifiedTime": "2026-07-20T18:47:40.081Z",
+      "modifiedTime": "2026-07-20T18:51:40.650Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-AUTH-001",
@@ -634,7 +1229,7 @@
       "type": "markdown note",
       "extension": ".md",
       "sizeBytes": 14561,
-      "modifiedTime": "2026-07-20T18:47:40.085Z",
+      "modifiedTime": "2026-07-20T18:51:40.650Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-AUTH-001",
@@ -651,7 +1246,7 @@
       "type": "markdown note",
       "extension": ".md",
       "sizeBytes": 3991,
-      "modifiedTime": "2026-07-20T18:47:40.081Z",
+      "modifiedTime": "2026-07-20T18:51:40.650Z",
       "relatedTopics": [
         "BCA-AUTH-001",
         "BCA-DB-001",
@@ -668,7 +1263,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 2663,
-      "modifiedTime": "2026-07-20T18:47:40.085Z",
+      "modifiedTime": "2026-07-20T18:51:40.650Z",
       "relatedTopics": [
         "BCA-AUTH-001",
         "BCA-WEB-002",
@@ -685,7 +1280,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 6884,
-      "modifiedTime": "2026-07-20T18:47:40.085Z",
+      "modifiedTime": "2026-07-20T18:51:40.650Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-DB-002",
@@ -702,7 +1297,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 3250,
-      "modifiedTime": "2026-07-20T18:47:40.085Z",
+      "modifiedTime": "2026-07-20T18:51:40.650Z",
       "relatedTopics": [
         "BCA-WEB-002",
         "BCA-DB-001",
@@ -719,7 +1314,7 @@
       "type": "code example",
       "extension": ".sql",
       "sizeBytes": 1916,
-      "modifiedTime": "2026-07-20T18:47:40.085Z",
+      "modifiedTime": "2026-07-20T18:51:40.650Z",
       "relatedTopics": [
         "BCA-DB-002",
         "BCA-PROJ-001",
@@ -735,7 +1330,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 1511,
-      "modifiedTime": "2026-07-20T18:47:40.085Z",
+      "modifiedTime": "2026-07-20T18:51:40.650Z",
       "relatedTopics": [
         "BCA-CN-001",
         "BCA-PROJ-001",
@@ -752,7 +1347,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 3908,
-      "modifiedTime": "2026-07-20T18:47:40.085Z",
+      "modifiedTime": "2026-07-20T18:51:40.650Z",
       "relatedTopics": [
         "BCA-DB-002",
         "BCA-WEB-002",
@@ -769,7 +1364,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 1114,
-      "modifiedTime": "2026-07-20T18:47:40.085Z",
+      "modifiedTime": "2026-07-20T18:51:40.650Z",
       "relatedTopics": [
         "BCA-WEB-002",
         "BCA-WEB-001",
@@ -785,7 +1380,7 @@
       "type": "code example",
       "extension": ".js",
       "sizeBytes": 283,
-      "modifiedTime": "2026-07-20T18:47:40.085Z",
+      "modifiedTime": "2026-07-20T18:51:40.650Z",
       "relatedTopics": [
         "BCA-CN-001"
       ]
@@ -795,7 +1390,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 2193,
-      "modifiedTime": "2026-07-20T18:47:40.085Z",
+      "modifiedTime": "2026-07-20T18:51:40.650Z",
       "relatedTopics": [
         "BCA-AUTH-001",
         "BCA-SEC-001",
@@ -812,7 +1407,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 6666,
-      "modifiedTime": "2026-07-20T18:47:40.085Z",
+      "modifiedTime": "2026-07-20T18:51:40.650Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-DB-002",
@@ -829,7 +1424,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 3055,
-      "modifiedTime": "2026-07-20T18:47:40.085Z",
+      "modifiedTime": "2026-07-20T18:51:40.650Z",
       "relatedTopics": [
         "BCA-DB-002",
         "BCA-PROJ-001",
@@ -846,7 +1441,7 @@
       "type": "code example",
       "extension": ".sql",
       "sizeBytes": 1828,
-      "modifiedTime": "2026-07-20T18:47:40.085Z",
+      "modifiedTime": "2026-07-20T18:51:40.650Z",
       "relatedTopics": [
         "BCA-DB-002",
         "BCA-PROJ-001",
@@ -863,7 +1458,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 1668,
-      "modifiedTime": "2026-07-20T18:47:40.085Z",
+      "modifiedTime": "2026-07-20T18:51:40.650Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-SEC-001",
@@ -879,7 +1474,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 4535,
-      "modifiedTime": "2026-07-20T18:47:40.085Z",
+      "modifiedTime": "2026-07-20T18:51:40.650Z",
       "relatedTopics": [
         "BCA-AUTH-001",
         "BCA-PROJ-001",
@@ -896,7 +1491,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 837,
-      "modifiedTime": "2026-07-20T18:47:40.085Z",
+      "modifiedTime": "2026-07-20T18:51:40.650Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-DB-002",
@@ -913,7 +1508,7 @@
       "type": "code example",
       "extension": ".js",
       "sizeBytes": 283,
-      "modifiedTime": "2026-07-20T18:47:40.085Z",
+      "modifiedTime": "2026-07-20T18:51:40.650Z",
       "relatedTopics": [
         "BCA-CN-001"
       ]
@@ -923,7 +1518,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 2083,
-      "modifiedTime": "2026-07-20T18:47:40.085Z",
+      "modifiedTime": "2026-07-20T18:51:40.650Z",
       "relatedTopics": [
         "BCA-WEB-002",
         "BCA-SEC-001",
@@ -940,7 +1535,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 4867,
-      "modifiedTime": "2026-07-20T18:47:40.085Z",
+      "modifiedTime": "2026-07-20T18:51:40.650Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-ALGO-001",
@@ -957,7 +1552,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 2579,
-      "modifiedTime": "2026-07-20T18:47:40.085Z",
+      "modifiedTime": "2026-07-20T18:51:40.654Z",
       "relatedTopics": [
         "BCA-CN-001",
         "BCA-DS-001",
@@ -974,7 +1569,7 @@
       "type": "code example",
       "extension": ".sql",
       "sizeBytes": 1168,
-      "modifiedTime": "2026-07-20T18:47:40.085Z",
+      "modifiedTime": "2026-07-20T18:51:40.654Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-DB-001",
@@ -988,7 +1583,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 1671,
-      "modifiedTime": "2026-07-20T18:47:40.085Z",
+      "modifiedTime": "2026-07-20T18:51:40.654Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-CN-001",
@@ -1005,7 +1600,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 4255,
-      "modifiedTime": "2026-07-20T18:47:40.085Z",
+      "modifiedTime": "2026-07-20T18:51:40.654Z",
       "relatedTopics": [
         "BCA-WEB-002",
         "BCA-ALGO-001",
@@ -1022,7 +1617,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 892,
-      "modifiedTime": "2026-07-20T18:47:40.085Z",
+      "modifiedTime": "2026-07-20T18:51:40.654Z",
       "relatedTopics": [
         "BCA-DS-001",
         "BCA-ALGO-001",
@@ -1037,7 +1632,7 @@
       "type": "code example",
       "extension": ".js",
       "sizeBytes": 283,
-      "modifiedTime": "2026-07-20T18:47:40.085Z",
+      "modifiedTime": "2026-07-20T18:51:40.654Z",
       "relatedTopics": [
         "BCA-CN-001"
       ]
@@ -1047,7 +1642,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 2708,
-      "modifiedTime": "2026-07-20T18:47:40.085Z",
+      "modifiedTime": "2026-07-20T18:51:40.654Z",
       "relatedTopics": [
         "BCA-AUTH-001",
         "BCA-WEB-002",
@@ -1064,7 +1659,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 5449,
-      "modifiedTime": "2026-07-20T18:47:40.085Z",
+      "modifiedTime": "2026-07-20T18:51:40.654Z",
       "relatedTopics": [
         "BCA-AUTH-001",
         "BCA-WEB-002",
@@ -1081,7 +1676,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 2812,
-      "modifiedTime": "2026-07-20T18:47:40.085Z",
+      "modifiedTime": "2026-07-20T18:51:40.654Z",
       "relatedTopics": [
         "BCA-AUTH-001",
         "BCA-CN-001",
@@ -1098,7 +1693,7 @@
       "type": "code example",
       "extension": ".sql",
       "sizeBytes": 1332,
-      "modifiedTime": "2026-07-20T18:47:40.085Z",
+      "modifiedTime": "2026-07-20T18:51:40.654Z",
       "relatedTopics": [
         "BCA-DB-002",
         "BCA-PROJ-001",
@@ -1115,7 +1710,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 1498,
-      "modifiedTime": "2026-07-20T18:47:40.085Z",
+      "modifiedTime": "2026-07-20T18:51:40.654Z",
       "relatedTopics": [
         "BCA-AUTH-001",
         "BCA-PROJ-001",
@@ -1131,7 +1726,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 4279,
-      "modifiedTime": "2026-07-20T18:47:40.085Z",
+      "modifiedTime": "2026-07-20T18:51:40.654Z",
       "relatedTopics": [
         "BCA-AUTH-001",
         "BCA-WEB-002",
@@ -1148,7 +1743,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 891,
-      "modifiedTime": "2026-07-20T18:47:40.085Z",
+      "modifiedTime": "2026-07-20T18:51:40.654Z",
       "relatedTopics": [
         "BCA-AUTH-001",
         "BCA-WEB-002",
@@ -1165,7 +1760,7 @@
       "type": "code example",
       "extension": ".js",
       "sizeBytes": 283,
-      "modifiedTime": "2026-07-20T18:47:40.085Z",
+      "modifiedTime": "2026-07-20T18:51:40.654Z",
       "relatedTopics": [
         "BCA-CN-001",
         "BCA-PROJ-001",
@@ -1177,7 +1772,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 2919,
-      "modifiedTime": "2026-07-20T18:47:40.085Z",
+      "modifiedTime": "2026-07-20T18:51:40.654Z",
       "relatedTopics": [
         "BCA-AUTH-001",
         "BCA-WEB-002",
@@ -1194,7 +1789,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 5641,
-      "modifiedTime": "2026-07-20T18:47:40.085Z",
+      "modifiedTime": "2026-07-20T18:51:40.654Z",
       "relatedTopics": [
         "BCA-DS-001",
         "BCA-PROJ-001",
@@ -1211,7 +1806,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 2759,
-      "modifiedTime": "2026-07-20T18:47:40.085Z",
+      "modifiedTime": "2026-07-20T18:51:40.654Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-DS-001",
@@ -1228,7 +1823,7 @@
       "type": "code example",
       "extension": ".sql",
       "sizeBytes": 1813,
-      "modifiedTime": "2026-07-20T18:47:40.085Z",
+      "modifiedTime": "2026-07-20T18:51:40.654Z",
       "relatedTopics": [
         "BCA-DB-002",
         "BCA-PROJ-001",
@@ -1245,7 +1840,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 1694,
-      "modifiedTime": "2026-07-20T18:47:40.085Z",
+      "modifiedTime": "2026-07-20T18:51:40.654Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-SEC-001",
@@ -1262,7 +1857,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 4345,
-      "modifiedTime": "2026-07-20T18:47:40.085Z",
+      "modifiedTime": "2026-07-20T18:51:40.654Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-ALGO-001",
@@ -1279,7 +1874,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 976,
-      "modifiedTime": "2026-07-20T18:47:40.085Z",
+      "modifiedTime": "2026-07-20T18:51:40.654Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-DB-001",
@@ -1296,7 +1891,7 @@
       "type": "code example",
       "extension": ".js",
       "sizeBytes": 283,
-      "modifiedTime": "2026-07-20T18:47:40.085Z",
+      "modifiedTime": "2026-07-20T18:51:40.654Z",
       "relatedTopics": [
         "BCA-CN-001",
         "BCA-PROJ-001",
@@ -1308,7 +1903,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 2340,
-      "modifiedTime": "2026-07-20T18:47:40.085Z",
+      "modifiedTime": "2026-07-20T18:51:40.654Z",
       "relatedTopics": [
         "BCA-WEB-002",
         "BCA-CN-001",
@@ -1323,7 +1918,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 5644,
-      "modifiedTime": "2026-07-20T18:47:40.085Z",
+      "modifiedTime": "2026-07-20T18:51:40.654Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-CN-001",
@@ -1340,7 +1935,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 2601,
-      "modifiedTime": "2026-07-20T18:47:40.085Z",
+      "modifiedTime": "2026-07-20T18:51:40.654Z",
       "relatedTopics": [
         "BCA-WEB-002",
         "BCA-CN-001",
@@ -1356,7 +1951,7 @@
       "type": "code example",
       "extension": ".sql",
       "sizeBytes": 1100,
-      "modifiedTime": "2026-07-20T18:47:40.085Z",
+      "modifiedTime": "2026-07-20T18:51:40.654Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-WEB-002",
@@ -1371,7 +1966,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 1629,
-      "modifiedTime": "2026-07-20T18:47:40.085Z",
+      "modifiedTime": "2026-07-20T18:51:40.654Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-CN-001",
@@ -1387,7 +1982,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 3960,
-      "modifiedTime": "2026-07-20T18:47:40.085Z",
+      "modifiedTime": "2026-07-20T18:51:40.654Z",
       "relatedTopics": [
         "BCA-CN-001",
         "BCA-WEB-002",
@@ -1404,7 +1999,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 958,
-      "modifiedTime": "2026-07-20T18:47:40.085Z",
+      "modifiedTime": "2026-07-20T18:51:40.654Z",
       "relatedTopics": [
         "BCA-CN-001",
         "BCA-PROJ-001",
@@ -1420,7 +2015,7 @@
       "type": "code example",
       "extension": ".js",
       "sizeBytes": 283,
-      "modifiedTime": "2026-07-20T18:47:40.085Z",
+      "modifiedTime": "2026-07-20T18:51:40.654Z",
       "relatedTopics": [
         "BCA-CN-001",
         "BCA-PROJ-001",
@@ -1432,7 +2027,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 1364,
-      "modifiedTime": "2026-07-20T18:47:40.085Z",
+      "modifiedTime": "2026-07-20T18:51:40.654Z",
       "relatedTopics": [
         "BCA-WEB-002",
         "BCA-CN-001",
@@ -1446,7 +2041,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 5119,
-      "modifiedTime": "2026-07-20T18:47:40.085Z",
+      "modifiedTime": "2026-07-20T18:51:40.654Z",
       "relatedTopics": [
         "BCA-REACT-001",
         "BCA-WEB-002",
@@ -1463,7 +2058,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 2003,
-      "modifiedTime": "2026-07-20T18:47:40.085Z",
+      "modifiedTime": "2026-07-20T18:51:40.654Z",
       "relatedTopics": [
         "BCA-WEB-002",
         "BCA-CN-001",
@@ -1479,7 +2074,7 @@
       "type": "code example",
       "extension": ".sql",
       "sizeBytes": 873,
-      "modifiedTime": "2026-07-20T18:47:40.085Z",
+      "modifiedTime": "2026-07-20T18:51:40.654Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-DB-001",
@@ -1492,7 +2087,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 1536,
-      "modifiedTime": "2026-07-20T18:47:40.085Z",
+      "modifiedTime": "2026-07-20T18:51:40.654Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-WEB-002",
@@ -1508,7 +2103,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 3850,
-      "modifiedTime": "2026-07-20T18:47:40.085Z",
+      "modifiedTime": "2026-07-20T18:51:40.654Z",
       "relatedTopics": [
         "BCA-WEB-002",
         "BCA-CN-001",
@@ -1525,7 +2120,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 853,
-      "modifiedTime": "2026-07-20T18:47:40.085Z",
+      "modifiedTime": "2026-07-20T18:51:40.654Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-WEB-002",
@@ -1537,7 +2132,7 @@
       "type": "code example",
       "extension": ".js",
       "sizeBytes": 283,
-      "modifiedTime": "2026-07-20T18:47:40.085Z",
+      "modifiedTime": "2026-07-20T18:51:40.654Z",
       "relatedTopics": [
         "BCA-CN-001"
       ]
@@ -1547,7 +2142,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 1407,
-      "modifiedTime": "2026-07-20T18:47:40.085Z",
+      "modifiedTime": "2026-07-20T18:51:40.654Z",
       "relatedTopics": [
         "BCA-WEB-002",
         "BCA-SEC-001",
@@ -1562,7 +2157,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 3608,
-      "modifiedTime": "2026-07-20T18:47:40.085Z",
+      "modifiedTime": "2026-07-20T18:51:40.654Z",
       "relatedTopics": [
         "BCA-REACT-001",
         "BCA-WEB-002",
@@ -1579,7 +2174,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 2080,
-      "modifiedTime": "2026-07-20T18:47:40.085Z",
+      "modifiedTime": "2026-07-20T18:51:40.654Z",
       "relatedTopics": [
         "BCA-WEB-002",
         "BCA-CN-001",
@@ -1595,7 +2190,7 @@
       "type": "code example",
       "extension": ".sql",
       "sizeBytes": 502,
-      "modifiedTime": "2026-07-20T18:47:40.085Z",
+      "modifiedTime": "2026-07-20T18:51:40.654Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-CN-001",
@@ -1611,7 +2206,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 1605,
-      "modifiedTime": "2026-07-20T18:47:40.085Z",
+      "modifiedTime": "2026-07-20T18:51:40.654Z",
       "relatedTopics": [
         "BCA-WEB-002",
         "BCA-CN-001",
@@ -1626,7 +2221,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 3193,
-      "modifiedTime": "2026-07-20T18:47:40.085Z",
+      "modifiedTime": "2026-07-20T18:51:40.654Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-WEB-002",
@@ -1643,7 +2238,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 666,
-      "modifiedTime": "2026-07-20T18:47:40.085Z",
+      "modifiedTime": "2026-07-20T18:51:40.654Z",
       "relatedTopics": [
         "BCA-WEB-002",
         "BCA-ALGO-001",
@@ -1659,7 +2254,7 @@
       "type": "code example",
       "extension": ".js",
       "sizeBytes": 283,
-      "modifiedTime": "2026-07-20T18:47:40.089Z",
+      "modifiedTime": "2026-07-20T18:51:40.654Z",
       "relatedTopics": [
         "BCA-CN-001",
         "BCA-WEB-002"
@@ -1670,7 +2265,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 1998,
-      "modifiedTime": "2026-07-20T18:47:40.089Z",
+      "modifiedTime": "2026-07-20T18:51:40.654Z",
       "relatedTopics": [
         "BCA-SEC-001",
         "BCA-WEB-002",
@@ -1683,7 +2278,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 4947,
-      "modifiedTime": "2026-07-20T18:47:40.089Z",
+      "modifiedTime": "2026-07-20T18:51:40.654Z",
       "relatedTopics": [
         "BCA-REACT-001",
         "BCA-WEB-002",
@@ -1700,7 +2295,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 2156,
-      "modifiedTime": "2026-07-20T18:47:40.089Z",
+      "modifiedTime": "2026-07-20T18:51:40.654Z",
       "relatedTopics": [
         "BCA-WEB-002",
         "BCA-CN-001",
@@ -1714,7 +2309,7 @@
       "type": "code example",
       "extension": ".sql",
       "sizeBytes": 496,
-      "modifiedTime": "2026-07-20T18:47:40.089Z",
+      "modifiedTime": "2026-07-20T18:51:40.654Z",
       "relatedTopics": [
         "BCA-DB-002",
         "BCA-PROJ-001",
@@ -1728,7 +2323,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 1903,
-      "modifiedTime": "2026-07-20T18:47:40.089Z",
+      "modifiedTime": "2026-07-20T18:51:40.654Z",
       "relatedTopics": [
         "BCA-WEB-002",
         "BCA-CN-001",
@@ -1743,7 +2338,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 3702,
-      "modifiedTime": "2026-07-20T18:47:40.089Z",
+      "modifiedTime": "2026-07-20T18:51:40.654Z",
       "relatedTopics": [
         "BCA-WEB-002",
         "BCA-CN-001",
@@ -1760,7 +2355,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 747,
-      "modifiedTime": "2026-07-20T18:47:40.089Z",
+      "modifiedTime": "2026-07-20T18:51:40.654Z",
       "relatedTopics": [
         "BCA-WEB-002",
         "BCA-PROJ-001",
@@ -1777,7 +2372,7 @@
       "type": "code example",
       "extension": ".js",
       "sizeBytes": 283,
-      "modifiedTime": "2026-07-20T18:47:40.089Z",
+      "modifiedTime": "2026-07-20T18:51:40.654Z",
       "relatedTopics": [
         "BCA-CN-001"
       ]
@@ -1787,7 +2382,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 2181,
-      "modifiedTime": "2026-07-20T18:47:40.089Z",
+      "modifiedTime": "2026-07-20T18:51:40.654Z",
       "relatedTopics": [
         "BCA-WEB-002",
         "BCA-CN-001",
@@ -1804,7 +2399,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 4997,
-      "modifiedTime": "2026-07-20T18:47:40.089Z",
+      "modifiedTime": "2026-07-20T18:51:40.654Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-CN-001",
@@ -1821,7 +2416,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 2493,
-      "modifiedTime": "2026-07-20T18:47:40.089Z",
+      "modifiedTime": "2026-07-20T18:51:40.654Z",
       "relatedTopics": [
         "BCA-WEB-002",
         "BCA-PROJ-001",
@@ -1838,7 +2433,7 @@
       "type": "code example",
       "extension": ".sql",
       "sizeBytes": 638,
-      "modifiedTime": "2026-07-20T18:47:40.089Z",
+      "modifiedTime": "2026-07-20T18:51:40.654Z",
       "relatedTopics": [
         "BCA-CN-001",
         "BCA-DB-001",
@@ -1852,7 +2447,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 1550,
-      "modifiedTime": "2026-07-20T18:47:40.089Z",
+      "modifiedTime": "2026-07-20T18:51:40.654Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-CN-001",
@@ -1869,7 +2464,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 3829,
-      "modifiedTime": "2026-07-20T18:47:40.089Z",
+      "modifiedTime": "2026-07-20T18:51:40.654Z",
       "relatedTopics": [
         "BCA-REACT-001",
         "BCA-WEB-002",
@@ -1886,7 +2481,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 836,
-      "modifiedTime": "2026-07-20T18:47:40.089Z",
+      "modifiedTime": "2026-07-20T18:51:40.654Z",
       "relatedTopics": [
         "BCA-DS-001",
         "BCA-PROJ-001",
@@ -1903,7 +2498,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 2591,
-      "modifiedTime": "2026-07-20T18:47:40.089Z",
+      "modifiedTime": "2026-07-20T18:51:40.654Z",
       "relatedTopics": [
         "BCA-WEB-002",
         "BCA-AUTH-001",
@@ -1920,7 +2515,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 5141,
-      "modifiedTime": "2026-07-20T18:47:40.089Z",
+      "modifiedTime": "2026-07-20T18:51:40.654Z",
       "relatedTopics": [
         "BCA-OS-002",
         "BCA-PROJ-001",
@@ -1937,7 +2532,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 2064,
-      "modifiedTime": "2026-07-20T18:47:40.089Z",
+      "modifiedTime": "2026-07-20T18:51:40.654Z",
       "relatedTopics": [
         "BCA-CN-001",
         "BCA-OS-002",
@@ -1954,7 +2549,7 @@
       "type": "code example",
       "extension": ".sql",
       "sizeBytes": 772,
-      "modifiedTime": "2026-07-20T18:47:40.089Z",
+      "modifiedTime": "2026-07-20T18:51:40.654Z",
       "relatedTopics": [
         "BCA-DB-002",
         "BCA-PROJ-001",
@@ -1969,7 +2564,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 2147,
-      "modifiedTime": "2026-07-20T18:47:40.089Z",
+      "modifiedTime": "2026-07-20T18:51:40.654Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-AUTH-001",
@@ -1986,7 +2581,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 4386,
-      "modifiedTime": "2026-07-20T18:47:40.089Z",
+      "modifiedTime": "2026-07-20T18:51:40.654Z",
       "relatedTopics": [
         "BCA-WEB-002",
         "BCA-AUTH-001",
@@ -2003,7 +2598,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 899,
-      "modifiedTime": "2026-07-20T18:47:40.089Z",
+      "modifiedTime": "2026-07-20T18:51:40.654Z",
       "relatedTopics": [
         "BCA-AUTH-001",
         "BCA-OS-002",
@@ -2019,7 +2614,7 @@
       "type": "code example",
       "extension": ".js",
       "sizeBytes": 283,
-      "modifiedTime": "2026-07-20T18:47:40.089Z",
+      "modifiedTime": "2026-07-20T18:51:40.654Z",
       "relatedTopics": [
         "BCA-CN-001",
         "BCA-PROJ-001",
@@ -2031,7 +2626,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 2412,
-      "modifiedTime": "2026-07-20T18:47:40.089Z",
+      "modifiedTime": "2026-07-20T18:51:40.654Z",
       "relatedTopics": [
         "BCA-WEB-002",
         "BCA-ALGO-001",
@@ -2048,7 +2643,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 4686,
-      "modifiedTime": "2026-07-20T18:47:40.089Z",
+      "modifiedTime": "2026-07-20T18:51:40.654Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-WEB-002",
@@ -2065,7 +2660,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 2697,
-      "modifiedTime": "2026-07-20T18:47:40.089Z",
+      "modifiedTime": "2026-07-20T18:51:40.654Z",
       "relatedTopics": [
         "BCA-CN-001",
         "BCA-OS-002",
@@ -2082,7 +2677,7 @@
       "type": "code example",
       "extension": ".sql",
       "sizeBytes": 787,
-      "modifiedTime": "2026-07-20T18:47:40.089Z",
+      "modifiedTime": "2026-07-20T18:51:40.654Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-DB-001",
@@ -2096,7 +2691,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 1917,
-      "modifiedTime": "2026-07-20T18:47:40.089Z",
+      "modifiedTime": "2026-07-20T18:51:40.658Z",
       "relatedTopics": [
         "BCA-CN-001",
         "BCA-PROJ-001",
@@ -2113,7 +2708,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 4515,
-      "modifiedTime": "2026-07-20T18:47:40.089Z",
+      "modifiedTime": "2026-07-20T18:51:40.658Z",
       "relatedTopics": [
         "BCA-AUTH-001",
         "BCA-CN-001",
@@ -2130,7 +2725,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 931,
-      "modifiedTime": "2026-07-20T18:47:40.089Z",
+      "modifiedTime": "2026-07-20T18:51:40.658Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-OS-002",
@@ -2147,7 +2742,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 1919,
-      "modifiedTime": "2026-07-20T18:47:40.089Z",
+      "modifiedTime": "2026-07-20T18:51:40.658Z",
       "relatedTopics": [
         "BCA-WEB-002",
         "BCA-CN-001",
@@ -2164,7 +2759,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 5019,
-      "modifiedTime": "2026-07-20T18:47:40.089Z",
+      "modifiedTime": "2026-07-20T18:51:40.658Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-WEB-001",
@@ -2181,7 +2776,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 2544,
-      "modifiedTime": "2026-07-20T18:47:40.089Z",
+      "modifiedTime": "2026-07-20T18:51:40.658Z",
       "relatedTopics": [
         "BCA-CN-001",
         "BCA-DB-001",
@@ -2197,7 +2792,7 @@
       "type": "code example",
       "extension": ".sql",
       "sizeBytes": 660,
-      "modifiedTime": "2026-07-20T18:47:40.089Z",
+      "modifiedTime": "2026-07-20T18:51:40.658Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-DB-002",
@@ -2211,7 +2806,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 1540,
-      "modifiedTime": "2026-07-20T18:47:40.089Z",
+      "modifiedTime": "2026-07-20T18:51:40.658Z",
       "relatedTopics": [
         "BCA-WEB-002",
         "BCA-PROJ-001",
@@ -2226,7 +2821,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 3648,
-      "modifiedTime": "2026-07-20T18:47:40.089Z",
+      "modifiedTime": "2026-07-20T18:51:40.658Z",
       "relatedTopics": [
         "BCA-AUTH-001",
         "BCA-CN-001",
@@ -2243,7 +2838,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 746,
-      "modifiedTime": "2026-07-20T18:47:40.089Z",
+      "modifiedTime": "2026-07-20T18:51:40.658Z",
       "relatedTopics": [
         "BCA-WEB-002",
         "BCA-AUTH-001",
@@ -2260,7 +2855,7 @@
       "type": "code example",
       "extension": ".js",
       "sizeBytes": 283,
-      "modifiedTime": "2026-07-20T18:47:40.089Z",
+      "modifiedTime": "2026-07-20T18:51:40.658Z",
       "relatedTopics": [
         "BCA-CN-001",
         "BCA-WEB-002"
@@ -2271,7 +2866,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 1869,
-      "modifiedTime": "2026-07-20T18:47:40.089Z",
+      "modifiedTime": "2026-07-20T18:51:40.658Z",
       "relatedTopics": [
         "BCA-WEB-002",
         "BCA-CN-001",
@@ -2285,7 +2880,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 5371,
-      "modifiedTime": "2026-07-20T18:47:40.089Z",
+      "modifiedTime": "2026-07-20T18:51:40.658Z",
       "relatedTopics": [
         "BCA-CN-001",
         "BCA-PROJ-001",
@@ -2302,7 +2897,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 1936,
-      "modifiedTime": "2026-07-20T18:47:40.089Z",
+      "modifiedTime": "2026-07-20T18:51:40.658Z",
       "relatedTopics": [
         "BCA-WEB-002",
         "BCA-CN-001",
@@ -2318,7 +2913,7 @@
       "type": "code example",
       "extension": ".sql",
       "sizeBytes": 438,
-      "modifiedTime": "2026-07-20T18:47:40.089Z",
+      "modifiedTime": "2026-07-20T18:51:40.658Z",
       "relatedTopics": [
         "BCA-DB-002",
         "BCA-PROJ-001",
@@ -2330,7 +2925,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 1566,
-      "modifiedTime": "2026-07-20T18:47:40.089Z",
+      "modifiedTime": "2026-07-20T18:51:40.658Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-CN-001",
@@ -2345,7 +2940,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 3744,
-      "modifiedTime": "2026-07-20T18:47:40.089Z",
+      "modifiedTime": "2026-07-20T18:51:40.658Z",
       "relatedTopics": [
         "BCA-CN-001",
         "BCA-REACT-001",
@@ -2362,7 +2957,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 786,
-      "modifiedTime": "2026-07-20T18:47:40.089Z",
+      "modifiedTime": "2026-07-20T18:51:40.658Z",
       "relatedTopics": [
         "BCA-WEB-002",
         "BCA-WEB-001",
@@ -2377,7 +2972,7 @@
       "type": "code example",
       "extension": ".js",
       "sizeBytes": 283,
-      "modifiedTime": "2026-07-20T18:47:40.089Z",
+      "modifiedTime": "2026-07-20T18:51:40.658Z",
       "relatedTopics": [
         "BCA-CN-001"
       ]
@@ -2387,7 +2982,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 3265,
-      "modifiedTime": "2026-07-20T18:47:40.089Z",
+      "modifiedTime": "2026-07-20T18:51:40.658Z",
       "relatedTopics": [
         "BCA-AUTH-001",
         "BCA-WEB-002",
@@ -2404,7 +2999,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 6446,
-      "modifiedTime": "2026-07-20T18:47:40.089Z",
+      "modifiedTime": "2026-07-20T18:51:40.658Z",
       "relatedTopics": [
         "BCA-AUTH-001",
         "BCA-PROJ-001",
@@ -2421,7 +3016,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 3556,
-      "modifiedTime": "2026-07-20T18:47:40.089Z",
+      "modifiedTime": "2026-07-20T18:51:40.658Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-DB-001",
@@ -2438,7 +3033,7 @@
       "type": "code example",
       "extension": ".sql",
       "sizeBytes": 2144,
-      "modifiedTime": "2026-07-20T18:47:40.089Z",
+      "modifiedTime": "2026-07-20T18:51:40.658Z",
       "relatedTopics": [
         "BCA-DB-002",
         "BCA-PROJ-001",
@@ -2455,7 +3050,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 2316,
-      "modifiedTime": "2026-07-20T18:47:40.089Z",
+      "modifiedTime": "2026-07-20T18:51:40.658Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-WEB-002",
@@ -2472,7 +3067,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 5332,
-      "modifiedTime": "2026-07-20T18:47:40.089Z",
+      "modifiedTime": "2026-07-20T18:51:40.658Z",
       "relatedTopics": [
         "BCA-AUTH-001",
         "BCA-WEB-002",
@@ -2489,7 +3084,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 1015,
-      "modifiedTime": "2026-07-20T18:47:40.089Z",
+      "modifiedTime": "2026-07-20T18:51:40.658Z",
       "relatedTopics": [
         "BCA-AUTH-001",
         "BCA-SEC-001",
@@ -2506,7 +3101,7 @@
       "type": "code example",
       "extension": ".js",
       "sizeBytes": 283,
-      "modifiedTime": "2026-07-20T18:47:40.089Z",
+      "modifiedTime": "2026-07-20T18:51:40.658Z",
       "relatedTopics": [
         "BCA-CN-001",
         "BCA-PROJ-001",
@@ -2518,7 +3113,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 2555,
-      "modifiedTime": "2026-07-20T18:47:40.089Z",
+      "modifiedTime": "2026-07-20T18:51:40.658Z",
       "relatedTopics": [
         "BCA-WEB-002",
         "BCA-SEC-001",
@@ -2535,7 +3130,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 5055,
-      "modifiedTime": "2026-07-20T18:47:40.089Z",
+      "modifiedTime": "2026-07-20T18:51:40.658Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-REACT-001",
@@ -2552,7 +3147,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 2201,
-      "modifiedTime": "2026-07-20T18:47:40.089Z",
+      "modifiedTime": "2026-07-20T18:51:40.658Z",
       "relatedTopics": [
         "BCA-DB-002",
         "BCA-PROJ-001",
@@ -2569,7 +3164,7 @@
       "type": "code example",
       "extension": ".sql",
       "sizeBytes": 1227,
-      "modifiedTime": "2026-07-20T18:47:40.089Z",
+      "modifiedTime": "2026-07-20T18:51:40.658Z",
       "relatedTopics": [
         "BCA-DB-002",
         "BCA-PROJ-001",
@@ -2586,7 +3181,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 1706,
-      "modifiedTime": "2026-07-20T18:47:40.089Z",
+      "modifiedTime": "2026-07-20T18:51:40.658Z",
       "relatedTopics": [
         "BCA-WEB-002",
         "BCA-CN-001",
@@ -2603,7 +3198,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 4612,
-      "modifiedTime": "2026-07-20T18:47:40.089Z",
+      "modifiedTime": "2026-07-20T18:51:40.658Z",
       "relatedTopics": [
         "BCA-WEB-002",
         "BCA-PF-001",
@@ -2620,7 +3215,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 878,
-      "modifiedTime": "2026-07-20T18:47:40.089Z",
+      "modifiedTime": "2026-07-20T18:51:40.658Z",
       "relatedTopics": [
         "BCA-AUTH-001",
         "BCA-CN-001",
@@ -2637,7 +3232,7 @@
       "type": "code example",
       "extension": ".js",
       "sizeBytes": 283,
-      "modifiedTime": "2026-07-20T18:47:40.089Z",
+      "modifiedTime": "2026-07-20T18:51:40.658Z",
       "relatedTopics": [
         "BCA-CN-001"
       ]
@@ -2647,7 +3242,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 2373,
-      "modifiedTime": "2026-07-20T18:47:40.089Z",
+      "modifiedTime": "2026-07-20T18:51:40.658Z",
       "relatedTopics": [
         "BCA-AUTH-001",
         "BCA-WEB-002",
@@ -2664,7 +3259,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 7410,
-      "modifiedTime": "2026-07-20T18:47:40.089Z",
+      "modifiedTime": "2026-07-20T18:51:40.658Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-REACT-001",
@@ -2681,7 +3276,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 3606,
-      "modifiedTime": "2026-07-20T18:47:40.089Z",
+      "modifiedTime": "2026-07-20T18:51:40.658Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-REACT-001",
@@ -2698,7 +3293,7 @@
       "type": "code example",
       "extension": ".sql",
       "sizeBytes": 1620,
-      "modifiedTime": "2026-07-20T18:47:40.089Z",
+      "modifiedTime": "2026-07-20T18:51:40.658Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-DB-002",
@@ -2715,7 +3310,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 2240,
-      "modifiedTime": "2026-07-20T18:47:40.093Z",
+      "modifiedTime": "2026-07-20T18:51:40.658Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-PF-001",
@@ -2731,7 +3326,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 5102,
-      "modifiedTime": "2026-07-20T18:47:40.093Z",
+      "modifiedTime": "2026-07-20T18:51:40.658Z",
       "relatedTopics": [
         "BCA-AUTH-001",
         "BCA-WEB-002",
@@ -2748,7 +3343,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 1221,
-      "modifiedTime": "2026-07-20T18:47:40.093Z",
+      "modifiedTime": "2026-07-20T18:51:40.658Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-WEB-001",
@@ -2764,7 +3359,7 @@
       "type": "code example",
       "extension": ".js",
       "sizeBytes": 283,
-      "modifiedTime": "2026-07-20T18:47:40.093Z",
+      "modifiedTime": "2026-07-20T18:51:40.658Z",
       "relatedTopics": [
         "BCA-CN-001"
       ]
@@ -2774,7 +3369,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 157,
-      "modifiedTime": "2026-07-20T18:47:40.093Z",
+      "modifiedTime": "2026-07-20T18:51:40.658Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-DB-001",
@@ -2788,7 +3383,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 6311,
-      "modifiedTime": "2026-07-20T18:47:40.093Z",
+      "modifiedTime": "2026-07-20T18:51:40.658Z",
       "relatedTopics": [
         "BCA-AUTH-001",
         "BCA-PROJ-001",
@@ -2805,7 +3400,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 1964,
-      "modifiedTime": "2026-07-20T18:47:40.093Z",
+      "modifiedTime": "2026-07-20T18:51:40.658Z",
       "relatedTopics": [
         "BCA-AUTH-001",
         "BCA-PROJ-001",
@@ -2822,7 +3417,7 @@
       "type": "code example",
       "extension": ".sql",
       "sizeBytes": 988,
-      "modifiedTime": "2026-07-20T18:47:40.093Z",
+      "modifiedTime": "2026-07-20T18:51:40.658Z",
       "relatedTopics": [
         "BCA-DB-001",
         "BCA-PROJ-001",
@@ -2837,7 +3432,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 1197,
-      "modifiedTime": "2026-07-20T18:47:40.093Z",
+      "modifiedTime": "2026-07-20T18:51:40.658Z",
       "relatedTopics": [
         "BCA-AUTH-001",
         "BCA-PROJ-001",
@@ -2851,7 +3446,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 4894,
-      "modifiedTime": "2026-07-20T18:47:40.093Z",
+      "modifiedTime": "2026-07-20T18:51:40.658Z",
       "relatedTopics": [
         "BCA-AUTH-001",
         "BCA-PROJ-001",
@@ -2868,7 +3463,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 806,
-      "modifiedTime": "2026-07-20T18:47:40.093Z",
+      "modifiedTime": "2026-07-20T18:51:40.658Z",
       "relatedTopics": [
         "BCA-AUTH-001",
         "BCA-DB-001",
@@ -2885,7 +3480,7 @@
       "type": "code example",
       "extension": ".js",
       "sizeBytes": 283,
-      "modifiedTime": "2026-07-20T18:47:40.093Z",
+      "modifiedTime": "2026-07-20T18:51:40.658Z",
       "relatedTopics": []
     },
     {
@@ -2893,7 +3488,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 3096,
-      "modifiedTime": "2026-07-20T18:47:40.093Z",
+      "modifiedTime": "2026-07-20T18:51:40.658Z",
       "relatedTopics": [
         "BCA-AUTH-001",
         "BCA-WEB-002",
@@ -2910,7 +3505,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 5113,
-      "modifiedTime": "2026-07-20T18:47:40.093Z",
+      "modifiedTime": "2026-07-20T18:51:40.658Z",
       "relatedTopics": [
         "BCA-AUTH-001",
         "BCA-PROJ-001",
@@ -2927,7 +3522,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 2537,
-      "modifiedTime": "2026-07-20T18:47:40.093Z",
+      "modifiedTime": "2026-07-20T18:51:40.658Z",
       "relatedTopics": [
         "BCA-AUTH-001",
         "BCA-PROJ-001",
@@ -2944,7 +3539,7 @@
       "type": "code example",
       "extension": ".sql",
       "sizeBytes": 1394,
-      "modifiedTime": "2026-07-20T18:47:40.093Z",
+      "modifiedTime": "2026-07-20T18:51:40.658Z",
       "relatedTopics": [
         "BCA-DB-002",
         "BCA-PROJ-001",
@@ -2959,7 +3554,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 1843,
-      "modifiedTime": "2026-07-20T18:47:40.093Z",
+      "modifiedTime": "2026-07-20T18:51:40.658Z",
       "relatedTopics": [
         "BCA-AUTH-001",
         "BCA-CN-001",
@@ -2975,7 +3570,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 4831,
-      "modifiedTime": "2026-07-20T18:47:40.093Z",
+      "modifiedTime": "2026-07-20T18:51:40.658Z",
       "relatedTopics": [
         "BCA-AUTH-001",
         "BCA-PROJ-001",
@@ -2992,7 +3587,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 876,
-      "modifiedTime": "2026-07-20T18:47:40.093Z",
+      "modifiedTime": "2026-07-20T18:51:40.658Z",
       "relatedTopics": [
         "BCA-AUTH-001",
         "BCA-DB-001",
@@ -3008,7 +3603,7 @@
       "type": "code example",
       "extension": ".js",
       "sizeBytes": 283,
-      "modifiedTime": "2026-07-20T18:47:40.093Z",
+      "modifiedTime": "2026-07-20T18:51:40.658Z",
       "relatedTopics": []
     },
     {
@@ -3016,7 +3611,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 2908,
-      "modifiedTime": "2026-07-20T18:47:40.093Z",
+      "modifiedTime": "2026-07-20T18:51:40.658Z",
       "relatedTopics": [
         "BCA-AUTH-001",
         "BCA-WEB-002",
@@ -3031,7 +3626,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 5029,
-      "modifiedTime": "2026-07-20T18:47:40.093Z",
+      "modifiedTime": "2026-07-20T18:51:40.658Z",
       "relatedTopics": [
         "BCA-AUTH-001",
         "BCA-PROJ-001",
@@ -3048,7 +3643,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 2226,
-      "modifiedTime": "2026-07-20T18:47:40.093Z",
+      "modifiedTime": "2026-07-20T18:51:40.658Z",
       "relatedTopics": [
         "BCA-CN-001",
         "BCA-DB-001",
@@ -3065,7 +3660,7 @@
       "type": "code example",
       "extension": ".sql",
       "sizeBytes": 1623,
-      "modifiedTime": "2026-07-20T18:47:40.093Z",
+      "modifiedTime": "2026-07-20T18:51:40.658Z",
       "relatedTopics": [
         "BCA-DB-002",
         "BCA-PROJ-001",
@@ -3080,7 +3675,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 2058,
-      "modifiedTime": "2026-07-20T18:47:40.093Z",
+      "modifiedTime": "2026-07-20T18:51:40.662Z",
       "relatedTopics": [
         "BCA-CN-001",
         "BCA-PROJ-001",
@@ -3097,7 +3692,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 5048,
-      "modifiedTime": "2026-07-20T18:47:40.093Z",
+      "modifiedTime": "2026-07-20T18:51:40.662Z",
       "relatedTopics": [
         "BCA-WEB-002",
         "BCA-AUTH-001",
@@ -3114,7 +3709,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 949,
-      "modifiedTime": "2026-07-20T18:47:40.093Z",
+      "modifiedTime": "2026-07-20T18:51:40.662Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-DB-001",
@@ -3131,7 +3726,7 @@
       "type": "code example",
       "extension": ".js",
       "sizeBytes": 283,
-      "modifiedTime": "2026-07-20T18:47:40.093Z",
+      "modifiedTime": "2026-07-20T18:51:40.662Z",
       "relatedTopics": []
     },
     {
@@ -3139,7 +3734,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 2969,
-      "modifiedTime": "2026-07-20T18:47:40.093Z",
+      "modifiedTime": "2026-07-20T18:51:40.662Z",
       "relatedTopics": [
         "BCA-AUTH-001",
         "BCA-WEB-002",
@@ -3156,7 +3751,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 7531,
-      "modifiedTime": "2026-07-20T18:47:40.093Z",
+      "modifiedTime": "2026-07-20T18:51:40.662Z",
       "relatedTopics": [
         "BCA-DB-001",
         "BCA-WEB-002",
@@ -3173,7 +3768,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 3342,
-      "modifiedTime": "2026-07-20T18:47:40.093Z",
+      "modifiedTime": "2026-07-20T18:51:40.662Z",
       "relatedTopics": [
         "BCA-DB-001",
         "BCA-WEB-001",
@@ -3190,7 +3785,7 @@
       "type": "code example",
       "extension": ".sql",
       "sizeBytes": 3014,
-      "modifiedTime": "2026-07-20T18:47:40.093Z",
+      "modifiedTime": "2026-07-20T18:51:40.662Z",
       "relatedTopics": [
         "BCA-DB-002",
         "BCA-PROJ-001",
@@ -3207,7 +3802,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 2103,
-      "modifiedTime": "2026-07-20T18:47:40.093Z",
+      "modifiedTime": "2026-07-20T18:51:40.662Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-WEB-002",
@@ -3224,7 +3819,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 5584,
-      "modifiedTime": "2026-07-20T18:47:40.093Z",
+      "modifiedTime": "2026-07-20T18:51:40.662Z",
       "relatedTopics": [
         "BCA-AUTH-001",
         "BCA-WEB-002",
@@ -3241,7 +3836,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 1072,
-      "modifiedTime": "2026-07-20T18:47:40.093Z",
+      "modifiedTime": "2026-07-20T18:51:40.662Z",
       "relatedTopics": [
         "BCA-DB-001",
         "BCA-PROJ-001",
@@ -3257,7 +3852,7 @@
       "type": "code example",
       "extension": ".js",
       "sizeBytes": 283,
-      "modifiedTime": "2026-07-20T18:47:40.093Z",
+      "modifiedTime": "2026-07-20T18:51:40.662Z",
       "relatedTopics": []
     },
     {
@@ -3265,7 +3860,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 4042,
-      "modifiedTime": "2026-07-20T18:47:40.093Z",
+      "modifiedTime": "2026-07-20T18:51:40.662Z",
       "relatedTopics": [
         "BCA-AUTH-001",
         "BCA-WEB-002",
@@ -3281,7 +3876,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 8949,
-      "modifiedTime": "2026-07-20T18:47:40.093Z",
+      "modifiedTime": "2026-07-20T18:51:40.662Z",
       "relatedTopics": [
         "BCA-AUTH-001",
         "BCA-DB-001",
@@ -3298,7 +3893,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 4146,
-      "modifiedTime": "2026-07-20T18:47:40.093Z",
+      "modifiedTime": "2026-07-20T18:51:40.662Z",
       "relatedTopics": [
         "BCA-WEB-002",
         "BCA-AUTH-001",
@@ -3315,7 +3910,7 @@
       "type": "code example",
       "extension": ".sql",
       "sizeBytes": 3406,
-      "modifiedTime": "2026-07-20T18:47:40.093Z",
+      "modifiedTime": "2026-07-20T18:51:40.662Z",
       "relatedTopics": [
         "BCA-DB-002",
         "BCA-DB-001",
@@ -3332,7 +3927,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 2635,
-      "modifiedTime": "2026-07-20T18:47:40.093Z",
+      "modifiedTime": "2026-07-20T18:51:40.662Z",
       "relatedTopics": [
         "BCA-AUTH-001",
         "BCA-PROJ-001",
@@ -3347,7 +3942,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 7045,
-      "modifiedTime": "2026-07-20T18:47:40.093Z",
+      "modifiedTime": "2026-07-20T18:51:40.662Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-AUTH-001",
@@ -3364,7 +3959,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 1351,
-      "modifiedTime": "2026-07-20T18:47:40.093Z",
+      "modifiedTime": "2026-07-20T18:51:40.662Z",
       "relatedTopics": [
         "BCA-AUTH-001",
         "BCA-DB-001",
@@ -3381,7 +3976,7 @@
       "type": "code example",
       "extension": ".js",
       "sizeBytes": 283,
-      "modifiedTime": "2026-07-20T18:47:40.093Z",
+      "modifiedTime": "2026-07-20T18:51:40.662Z",
       "relatedTopics": []
     },
     {
@@ -3389,7 +3984,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 2848,
-      "modifiedTime": "2026-07-20T18:47:40.093Z",
+      "modifiedTime": "2026-07-20T18:51:40.662Z",
       "relatedTopics": [
         "BCA-AUTH-001",
         "BCA-WEB-002",
@@ -3406,7 +4001,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 4872,
-      "modifiedTime": "2026-07-20T18:47:40.093Z",
+      "modifiedTime": "2026-07-20T18:51:40.662Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-REACT-001",
@@ -3423,7 +4018,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 2446,
-      "modifiedTime": "2026-07-20T18:47:40.093Z",
+      "modifiedTime": "2026-07-20T18:51:40.662Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-DB-001",
@@ -3440,7 +4035,7 @@
       "type": "code example",
       "extension": ".sql",
       "sizeBytes": 1936,
-      "modifiedTime": "2026-07-20T18:47:40.093Z",
+      "modifiedTime": "2026-07-20T18:51:40.662Z",
       "relatedTopics": [
         "BCA-DB-002",
         "BCA-PROJ-001",
@@ -3456,7 +4051,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 1944,
-      "modifiedTime": "2026-07-20T18:47:40.093Z",
+      "modifiedTime": "2026-07-20T18:51:40.662Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-REACT-001",
@@ -3473,7 +4068,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 4944,
-      "modifiedTime": "2026-07-20T18:47:40.093Z",
+      "modifiedTime": "2026-07-20T18:51:40.662Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-REACT-001",
@@ -3490,7 +4085,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 800,
-      "modifiedTime": "2026-07-20T18:47:40.093Z",
+      "modifiedTime": "2026-07-20T18:51:40.662Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-DB-001",
@@ -3507,7 +4102,7 @@
       "type": "code example",
       "extension": ".js",
       "sizeBytes": 283,
-      "modifiedTime": "2026-07-20T18:47:40.093Z",
+      "modifiedTime": "2026-07-20T18:51:40.662Z",
       "relatedTopics": []
     },
     {
@@ -3515,7 +4110,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 2903,
-      "modifiedTime": "2026-07-20T18:47:40.093Z",
+      "modifiedTime": "2026-07-20T18:51:40.662Z",
       "relatedTopics": [
         "BCA-AUTH-001",
         "BCA-CN-001",
@@ -3531,7 +4126,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 5006,
-      "modifiedTime": "2026-07-20T18:47:40.093Z",
+      "modifiedTime": "2026-07-20T18:51:40.662Z",
       "relatedTopics": [
         "BCA-AUTH-001",
         "BCA-REACT-001",
@@ -3548,7 +4143,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 2211,
-      "modifiedTime": "2026-07-20T18:47:40.093Z",
+      "modifiedTime": "2026-07-20T18:51:40.662Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-DB-001",
@@ -3562,7 +4157,7 @@
       "type": "code example",
       "extension": ".sql",
       "sizeBytes": 1787,
-      "modifiedTime": "2026-07-20T18:47:40.093Z",
+      "modifiedTime": "2026-07-20T18:51:40.662Z",
       "relatedTopics": [
         "BCA-DB-002",
         "BCA-PROJ-001",
@@ -3576,7 +4171,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 1807,
-      "modifiedTime": "2026-07-20T18:47:40.093Z",
+      "modifiedTime": "2026-07-20T18:51:40.662Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-AUTH-001",
@@ -3588,7 +4183,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 4663,
-      "modifiedTime": "2026-07-20T18:47:40.093Z",
+      "modifiedTime": "2026-07-20T18:51:40.662Z",
       "relatedTopics": [
         "BCA-REACT-001",
         "BCA-PROJ-001",
@@ -3605,7 +4200,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 903,
-      "modifiedTime": "2026-07-20T18:47:40.093Z",
+      "modifiedTime": "2026-07-20T18:51:40.662Z",
       "relatedTopics": [
         "BCA-DB-001",
         "BCA-PROJ-001",
@@ -3618,7 +4213,7 @@
       "type": "code example",
       "extension": ".js",
       "sizeBytes": 283,
-      "modifiedTime": "2026-07-20T18:47:40.093Z",
+      "modifiedTime": "2026-07-20T18:51:40.662Z",
       "relatedTopics": []
     },
     {
@@ -3626,7 +4221,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 2563,
-      "modifiedTime": "2026-07-20T18:47:40.093Z",
+      "modifiedTime": "2026-07-20T18:51:40.662Z",
       "relatedTopics": [
         "BCA-AUTH-001",
         "BCA-WEB-002",
@@ -3643,7 +4238,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 4491,
-      "modifiedTime": "2026-07-20T18:47:40.093Z",
+      "modifiedTime": "2026-07-20T18:51:40.662Z",
       "relatedTopics": [
         "BCA-AUTH-001",
         "BCA-PROJ-001",
@@ -3660,7 +4255,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 2318,
-      "modifiedTime": "2026-07-20T18:47:40.093Z",
+      "modifiedTime": "2026-07-20T18:51:40.662Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-AUTH-001",
@@ -3677,7 +4272,7 @@
       "type": "code example",
       "extension": ".sql",
       "sizeBytes": 1371,
-      "modifiedTime": "2026-07-20T18:47:40.093Z",
+      "modifiedTime": "2026-07-20T18:51:40.662Z",
       "relatedTopics": [
         "BCA-DB-002",
         "BCA-PROJ-001",
@@ -3692,7 +4287,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 1747,
-      "modifiedTime": "2026-07-20T18:47:40.093Z",
+      "modifiedTime": "2026-07-20T18:51:40.662Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-DS-001",
@@ -3709,7 +4304,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 4741,
-      "modifiedTime": "2026-07-20T18:47:40.093Z",
+      "modifiedTime": "2026-07-20T18:51:40.662Z",
       "relatedTopics": [
         "BCA-AUTH-001",
         "BCA-WEB-002",
@@ -3726,7 +4321,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 873,
-      "modifiedTime": "2026-07-20T18:47:40.093Z",
+      "modifiedTime": "2026-07-20T18:51:40.662Z",
       "relatedTopics": [
         "BCA-DB-001",
         "BCA-PROJ-001",
@@ -3740,7 +4335,7 @@
       "type": "code example",
       "extension": ".js",
       "sizeBytes": 283,
-      "modifiedTime": "2026-07-20T18:47:40.097Z",
+      "modifiedTime": "2026-07-20T18:51:40.662Z",
       "relatedTopics": []
     },
     {
@@ -3748,7 +4343,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 2696,
-      "modifiedTime": "2026-07-20T18:47:40.097Z",
+      "modifiedTime": "2026-07-20T18:51:40.662Z",
       "relatedTopics": [
         "BCA-AUTH-001",
         "BCA-WEB-002",
@@ -3765,7 +4360,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 5338,
-      "modifiedTime": "2026-07-20T18:47:40.097Z",
+      "modifiedTime": "2026-07-20T18:51:40.662Z",
       "relatedTopics": [
         "BCA-DB-001",
         "BCA-PROJ-001",
@@ -3782,7 +4377,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 2544,
-      "modifiedTime": "2026-07-20T18:47:40.097Z",
+      "modifiedTime": "2026-07-20T18:51:40.662Z",
       "relatedTopics": [
         "BCA-DB-001",
         "BCA-PROJ-001",
@@ -3797,7 +4392,7 @@
       "type": "code example",
       "extension": ".sql",
       "sizeBytes": 1862,
-      "modifiedTime": "2026-07-20T18:47:40.097Z",
+      "modifiedTime": "2026-07-20T18:51:40.662Z",
       "relatedTopics": [
         "BCA-DB-002",
         "BCA-PROJ-001",
@@ -3813,7 +4408,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 2042,
-      "modifiedTime": "2026-07-20T18:47:40.097Z",
+      "modifiedTime": "2026-07-20T18:51:40.662Z",
       "relatedTopics": [
         "BCA-DB-001",
         "BCA-PROJ-001",
@@ -3829,7 +4424,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 5195,
-      "modifiedTime": "2026-07-20T18:47:40.097Z",
+      "modifiedTime": "2026-07-20T18:51:40.662Z",
       "relatedTopics": [
         "BCA-DB-001",
         "BCA-PROJ-001",
@@ -3846,7 +4441,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 939,
-      "modifiedTime": "2026-07-20T18:47:40.097Z",
+      "modifiedTime": "2026-07-20T18:51:40.662Z",
       "relatedTopics": [
         "BCA-DB-001",
         "BCA-PROJ-001",
@@ -3859,7 +4454,7 @@
       "type": "code example",
       "extension": ".js",
       "sizeBytes": 283,
-      "modifiedTime": "2026-07-20T18:47:40.097Z",
+      "modifiedTime": "2026-07-20T18:51:40.662Z",
       "relatedTopics": []
     },
     {
@@ -3867,7 +4462,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 2828,
-      "modifiedTime": "2026-07-20T18:47:40.097Z",
+      "modifiedTime": "2026-07-20T18:51:40.662Z",
       "relatedTopics": [
         "BCA-AUTH-001",
         "BCA-WEB-002",
@@ -3883,7 +4478,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 4872,
-      "modifiedTime": "2026-07-20T18:47:40.097Z",
+      "modifiedTime": "2026-07-20T18:51:40.662Z",
       "relatedTopics": [
         "BCA-CN-001",
         "BCA-PROJ-001",
@@ -3900,7 +4495,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 2085,
-      "modifiedTime": "2026-07-20T18:47:40.097Z",
+      "modifiedTime": "2026-07-20T18:51:40.662Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-AUTH-001",
@@ -3917,7 +4512,7 @@
       "type": "code example",
       "extension": ".sql",
       "sizeBytes": 1538,
-      "modifiedTime": "2026-07-20T18:47:40.097Z",
+      "modifiedTime": "2026-07-20T18:51:40.662Z",
       "relatedTopics": [
         "BCA-DB-002",
         "BCA-PROJ-001",
@@ -3931,7 +4526,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 1891,
-      "modifiedTime": "2026-07-20T18:47:40.097Z",
+      "modifiedTime": "2026-07-20T18:51:40.662Z",
       "relatedTopics": [
         "BCA-CN-001",
         "BCA-PROJ-001",
@@ -3945,7 +4540,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 5311,
-      "modifiedTime": "2026-07-20T18:47:40.097Z",
+      "modifiedTime": "2026-07-20T18:51:40.662Z",
       "relatedTopics": [
         "BCA-AUTH-001",
         "BCA-WEB-002",
@@ -3962,7 +4557,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 749,
-      "modifiedTime": "2026-07-20T18:47:40.097Z",
+      "modifiedTime": "2026-07-20T18:51:40.662Z",
       "relatedTopics": [
         "BCA-AUTH-001",
         "BCA-CN-001",
@@ -3978,7 +4573,7 @@
       "type": "code example",
       "extension": ".js",
       "sizeBytes": 283,
-      "modifiedTime": "2026-07-20T18:47:40.097Z",
+      "modifiedTime": "2026-07-20T18:51:40.662Z",
       "relatedTopics": []
     },
     {
@@ -3986,7 +4581,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 2583,
-      "modifiedTime": "2026-07-20T18:47:40.097Z",
+      "modifiedTime": "2026-07-20T18:51:40.662Z",
       "relatedTopics": [
         "BCA-WEB-002",
         "BCA-AUTH-001",
@@ -4001,7 +4596,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 4878,
-      "modifiedTime": "2026-07-20T18:47:40.097Z",
+      "modifiedTime": "2026-07-20T18:51:40.662Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-WEB-002",
@@ -4018,7 +4613,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 1903,
-      "modifiedTime": "2026-07-20T18:47:40.097Z",
+      "modifiedTime": "2026-07-20T18:51:40.662Z",
       "relatedTopics": [
         "BCA-DS-001",
         "BCA-PROJ-001",
@@ -4035,7 +4630,7 @@
       "type": "code example",
       "extension": ".sql",
       "sizeBytes": 1969,
-      "modifiedTime": "2026-07-20T18:47:40.097Z",
+      "modifiedTime": "2026-07-20T18:51:40.662Z",
       "relatedTopics": [
         "BCA-DB-002",
         "BCA-PROJ-001",
@@ -4050,7 +4645,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 1571,
-      "modifiedTime": "2026-07-20T18:47:40.097Z",
+      "modifiedTime": "2026-07-20T18:51:40.662Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-CN-001",
@@ -4063,7 +4658,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 4884,
-      "modifiedTime": "2026-07-20T18:47:40.097Z",
+      "modifiedTime": "2026-07-20T18:51:40.662Z",
       "relatedTopics": [
         "BCA-ALGO-001",
         "BCA-AUTH-001",
@@ -4080,7 +4675,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 681,
-      "modifiedTime": "2026-07-20T18:47:40.097Z",
+      "modifiedTime": "2026-07-20T18:51:40.662Z",
       "relatedTopics": [
         "BCA-DB-001",
         "BCA-PROJ-001",
@@ -4092,7 +4687,7 @@
       "type": "code example",
       "extension": ".js",
       "sizeBytes": 283,
-      "modifiedTime": "2026-07-20T18:47:40.097Z",
+      "modifiedTime": "2026-07-20T18:51:40.662Z",
       "relatedTopics": []
     },
     {
@@ -4100,7 +4695,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 2670,
-      "modifiedTime": "2026-07-20T18:47:40.097Z",
+      "modifiedTime": "2026-07-20T18:51:40.662Z",
       "relatedTopics": [
         "BCA-AUTH-001",
         "BCA-ALGO-001",
@@ -4115,7 +4710,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 4541,
-      "modifiedTime": "2026-07-20T18:47:40.097Z",
+      "modifiedTime": "2026-07-20T18:51:40.662Z",
       "relatedTopics": [
         "BCA-AUTH-001",
         "BCA-PROJ-001",
@@ -4132,7 +4727,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 1891,
-      "modifiedTime": "2026-07-20T18:47:40.097Z",
+      "modifiedTime": "2026-07-20T18:51:40.662Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-DB-001",
@@ -4147,7 +4742,7 @@
       "type": "code example",
       "extension": ".sql",
       "sizeBytes": 1521,
-      "modifiedTime": "2026-07-20T18:47:40.097Z",
+      "modifiedTime": "2026-07-20T18:51:40.662Z",
       "relatedTopics": [
         "BCA-DB-002",
         "BCA-PROJ-001",
@@ -4162,7 +4757,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 1897,
-      "modifiedTime": "2026-07-20T18:47:40.097Z",
+      "modifiedTime": "2026-07-20T18:51:40.666Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-DB-001",
@@ -4175,7 +4770,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 5357,
-      "modifiedTime": "2026-07-20T18:47:40.097Z",
+      "modifiedTime": "2026-07-20T18:51:40.666Z",
       "relatedTopics": [
         "BCA-AUTH-001",
         "BCA-REACT-001",
@@ -4192,7 +4787,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 888,
-      "modifiedTime": "2026-07-20T18:47:40.097Z",
+      "modifiedTime": "2026-07-20T18:51:40.666Z",
       "relatedTopics": [
         "BCA-DB-001",
         "BCA-PROJ-001"
@@ -4203,7 +4798,7 @@
       "type": "code example",
       "extension": ".js",
       "sizeBytes": 283,
-      "modifiedTime": "2026-07-20T18:47:40.097Z",
+      "modifiedTime": "2026-07-20T18:51:40.666Z",
       "relatedTopics": []
     },
     {
@@ -4211,7 +4806,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 2841,
-      "modifiedTime": "2026-07-20T18:47:40.097Z",
+      "modifiedTime": "2026-07-20T18:51:40.666Z",
       "relatedTopics": [
         "BCA-WEB-002",
         "BCA-AUTH-001",
@@ -4226,7 +4821,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 4657,
-      "modifiedTime": "2026-07-20T18:47:40.097Z",
+      "modifiedTime": "2026-07-20T18:51:40.666Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-WEB-002",
@@ -4243,7 +4838,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 1850,
-      "modifiedTime": "2026-07-20T18:47:40.097Z",
+      "modifiedTime": "2026-07-20T18:51:40.666Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-DB-001",
@@ -4259,7 +4854,7 @@
       "type": "code example",
       "extension": ".sql",
       "sizeBytes": 2052,
-      "modifiedTime": "2026-07-20T18:47:40.097Z",
+      "modifiedTime": "2026-07-20T18:51:40.666Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-DB-002",
@@ -4274,7 +4869,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 1414,
-      "modifiedTime": "2026-07-20T18:47:40.097Z",
+      "modifiedTime": "2026-07-20T18:51:40.666Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-WEB-002",
@@ -4287,7 +4882,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 5452,
-      "modifiedTime": "2026-07-20T18:47:40.097Z",
+      "modifiedTime": "2026-07-20T18:51:40.666Z",
       "relatedTopics": [
         "BCA-WEB-002",
         "BCA-AUTH-001",
@@ -4304,7 +4899,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 797,
-      "modifiedTime": "2026-07-20T18:47:40.097Z",
+      "modifiedTime": "2026-07-20T18:51:40.666Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-DS-001",
@@ -4320,7 +4915,7 @@
       "type": "code example",
       "extension": ".js",
       "sizeBytes": 283,
-      "modifiedTime": "2026-07-20T18:47:40.097Z",
+      "modifiedTime": "2026-07-20T18:51:40.666Z",
       "relatedTopics": []
     },
     {
@@ -4328,7 +4923,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 2601,
-      "modifiedTime": "2026-07-20T18:47:40.097Z",
+      "modifiedTime": "2026-07-20T18:51:40.666Z",
       "relatedTopics": [
         "BCA-WEB-002",
         "BCA-AUTH-001",
@@ -4343,7 +4938,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 4585,
-      "modifiedTime": "2026-07-20T18:47:40.097Z",
+      "modifiedTime": "2026-07-20T18:51:40.666Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-REACT-001",
@@ -4360,7 +4955,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 2046,
-      "modifiedTime": "2026-07-20T18:47:40.097Z",
+      "modifiedTime": "2026-07-20T18:51:40.666Z",
       "relatedTopics": [
         "BCA-DB-001",
         "BCA-PROJ-001",
@@ -4377,7 +4972,7 @@
       "type": "code example",
       "extension": ".sql",
       "sizeBytes": 2071,
-      "modifiedTime": "2026-07-20T18:47:40.097Z",
+      "modifiedTime": "2026-07-20T18:51:40.666Z",
       "relatedTopics": [
         "BCA-DB-002",
         "BCA-PROJ-001",
@@ -4392,7 +4987,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 2142,
-      "modifiedTime": "2026-07-20T18:47:40.097Z",
+      "modifiedTime": "2026-07-20T18:51:40.666Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-WEB-002",
@@ -4406,7 +5001,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 5495,
-      "modifiedTime": "2026-07-20T18:47:40.097Z",
+      "modifiedTime": "2026-07-20T18:51:40.666Z",
       "relatedTopics": [
         "BCA-DB-001",
         "BCA-PROJ-001",
@@ -4423,7 +5018,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 850,
-      "modifiedTime": "2026-07-20T18:47:40.097Z",
+      "modifiedTime": "2026-07-20T18:51:40.666Z",
       "relatedTopics": [
         "BCA-DB-001",
         "BCA-PROJ-001",
@@ -4435,7 +5030,7 @@
       "type": "code example",
       "extension": ".js",
       "sizeBytes": 283,
-      "modifiedTime": "2026-07-20T18:47:40.097Z",
+      "modifiedTime": "2026-07-20T18:51:40.666Z",
       "relatedTopics": []
     },
     {
@@ -4443,7 +5038,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 2996,
-      "modifiedTime": "2026-07-20T18:47:40.097Z",
+      "modifiedTime": "2026-07-20T18:51:40.666Z",
       "relatedTopics": [
         "BCA-AUTH-001",
         "BCA-WEB-002",
@@ -4459,7 +5054,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 4839,
-      "modifiedTime": "2026-07-20T18:47:40.097Z",
+      "modifiedTime": "2026-07-20T18:51:40.666Z",
       "relatedTopics": [
         "BCA-REACT-001",
         "BCA-PROJ-001",
@@ -4476,7 +5071,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 2445,
-      "modifiedTime": "2026-07-20T18:47:40.097Z",
+      "modifiedTime": "2026-07-20T18:51:40.666Z",
       "relatedTopics": [
         "BCA-DB-001",
         "BCA-WEB-002",
@@ -4492,7 +5087,7 @@
       "type": "code example",
       "extension": ".sql",
       "sizeBytes": 2062,
-      "modifiedTime": "2026-07-20T18:47:40.097Z",
+      "modifiedTime": "2026-07-20T18:51:40.666Z",
       "relatedTopics": [
         "BCA-DB-002",
         "BCA-PROJ-001",
@@ -4507,7 +5102,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 1956,
-      "modifiedTime": "2026-07-20T18:47:40.097Z",
+      "modifiedTime": "2026-07-20T18:51:40.666Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-AUTH-001",
@@ -4524,7 +5119,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 4905,
-      "modifiedTime": "2026-07-20T18:47:40.097Z",
+      "modifiedTime": "2026-07-20T18:51:40.666Z",
       "relatedTopics": [
         "BCA-AUTH-001",
         "BCA-WEB-002",
@@ -4541,7 +5136,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 737,
-      "modifiedTime": "2026-07-20T18:47:40.097Z",
+      "modifiedTime": "2026-07-20T18:51:40.666Z",
       "relatedTopics": [
         "BCA-DB-001",
         "BCA-PROJ-001",
@@ -4556,7 +5151,7 @@
       "type": "code example",
       "extension": ".js",
       "sizeBytes": 283,
-      "modifiedTime": "2026-07-20T18:47:40.097Z",
+      "modifiedTime": "2026-07-20T18:51:40.666Z",
       "relatedTopics": []
     },
     {
@@ -4564,7 +5159,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 2675,
-      "modifiedTime": "2026-07-20T18:47:40.097Z",
+      "modifiedTime": "2026-07-20T18:51:40.666Z",
       "relatedTopics": [
         "BCA-AUTH-001",
         "BCA-WEB-002",
@@ -4580,7 +5175,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 4622,
-      "modifiedTime": "2026-07-20T18:47:40.097Z",
+      "modifiedTime": "2026-07-20T18:51:40.666Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-AUTH-001",
@@ -4597,7 +5192,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 2305,
-      "modifiedTime": "2026-07-20T18:47:40.097Z",
+      "modifiedTime": "2026-07-20T18:51:40.666Z",
       "relatedTopics": [
         "BCA-CN-001",
         "BCA-PROJ-001",
@@ -4614,7 +5209,7 @@
       "type": "code example",
       "extension": ".sql",
       "sizeBytes": 1763,
-      "modifiedTime": "2026-07-20T18:47:40.097Z",
+      "modifiedTime": "2026-07-20T18:51:40.666Z",
       "relatedTopics": [
         "BCA-DB-002",
         "BCA-PROJ-001",
@@ -4628,7 +5223,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 1603,
-      "modifiedTime": "2026-07-20T18:47:40.097Z",
+      "modifiedTime": "2026-07-20T18:51:40.666Z",
       "relatedTopics": [
         "BCA-AUTH-001",
         "BCA-CN-001",
@@ -4645,7 +5240,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 4882,
-      "modifiedTime": "2026-07-20T18:47:40.097Z",
+      "modifiedTime": "2026-07-20T18:51:40.666Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-AUTH-001",
@@ -4662,7 +5257,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 869,
-      "modifiedTime": "2026-07-20T18:47:40.097Z",
+      "modifiedTime": "2026-07-20T18:51:40.666Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-DB-001",
@@ -4677,7 +5272,7 @@
       "type": "code example",
       "extension": ".js",
       "sizeBytes": 283,
-      "modifiedTime": "2026-07-20T18:47:40.097Z",
+      "modifiedTime": "2026-07-20T18:51:40.666Z",
       "relatedTopics": []
     },
     {
@@ -4685,7 +5280,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 2825,
-      "modifiedTime": "2026-07-20T18:47:40.097Z",
+      "modifiedTime": "2026-07-20T18:51:40.666Z",
       "relatedTopics": [
         "BCA-AUTH-001",
         "BCA-WEB-002",
@@ -4702,7 +5297,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 5103,
-      "modifiedTime": "2026-07-20T18:47:40.101Z",
+      "modifiedTime": "2026-07-20T18:51:40.666Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-REACT-001",
@@ -4719,7 +5314,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 2228,
-      "modifiedTime": "2026-07-20T18:47:40.101Z",
+      "modifiedTime": "2026-07-20T18:51:40.666Z",
       "relatedTopics": [
         "BCA-DB-001",
         "BCA-PROJ-001",
@@ -4736,7 +5331,7 @@
       "type": "code example",
       "extension": ".sql",
       "sizeBytes": 1858,
-      "modifiedTime": "2026-07-20T18:47:40.101Z",
+      "modifiedTime": "2026-07-20T18:51:40.666Z",
       "relatedTopics": [
         "BCA-DB-002",
         "BCA-PROJ-001",
@@ -4753,7 +5348,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 1768,
-      "modifiedTime": "2026-07-20T18:47:40.101Z",
+      "modifiedTime": "2026-07-20T18:51:40.666Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-ALGO-001",
@@ -4766,7 +5361,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 4689,
-      "modifiedTime": "2026-07-20T18:47:40.101Z",
+      "modifiedTime": "2026-07-20T18:51:40.666Z",
       "relatedTopics": [
         "BCA-AUTH-001",
         "BCA-PROJ-001",
@@ -4783,7 +5378,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 708,
-      "modifiedTime": "2026-07-20T18:47:40.101Z",
+      "modifiedTime": "2026-07-20T18:51:40.666Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-DB-001",
@@ -4800,7 +5395,7 @@
       "type": "code example",
       "extension": ".js",
       "sizeBytes": 283,
-      "modifiedTime": "2026-07-20T18:47:40.101Z",
+      "modifiedTime": "2026-07-20T18:51:40.666Z",
       "relatedTopics": []
     },
     {
@@ -4808,7 +5403,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 2537,
-      "modifiedTime": "2026-07-20T18:47:40.101Z",
+      "modifiedTime": "2026-07-20T18:51:40.666Z",
       "relatedTopics": [
         "BCA-AUTH-001",
         "BCA-PROJ-001",
@@ -4825,7 +5420,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 4852,
-      "modifiedTime": "2026-07-20T18:47:40.101Z",
+      "modifiedTime": "2026-07-20T18:51:40.666Z",
       "relatedTopics": [
         "BCA-REACT-001",
         "BCA-PROJ-001",
@@ -4842,7 +5437,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 2294,
-      "modifiedTime": "2026-07-20T18:47:40.101Z",
+      "modifiedTime": "2026-07-20T18:51:40.666Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-DS-001",
@@ -4855,7 +5450,7 @@
       "type": "code example",
       "extension": ".sql",
       "sizeBytes": 2437,
-      "modifiedTime": "2026-07-20T18:47:40.101Z",
+      "modifiedTime": "2026-07-20T18:51:40.666Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-DB-002",
@@ -4872,7 +5467,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 1849,
-      "modifiedTime": "2026-07-20T18:47:40.101Z",
+      "modifiedTime": "2026-07-20T18:51:40.666Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-WEB-002",
@@ -4885,7 +5480,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 5123,
-      "modifiedTime": "2026-07-20T18:47:40.101Z",
+      "modifiedTime": "2026-07-20T18:51:40.666Z",
       "relatedTopics": [
         "BCA-WEB-002",
         "BCA-AUTH-001",
@@ -4902,7 +5497,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 806,
-      "modifiedTime": "2026-07-20T18:47:40.101Z",
+      "modifiedTime": "2026-07-20T18:51:40.666Z",
       "relatedTopics": [
         "BCA-DB-001",
         "BCA-PROJ-001",
@@ -4916,7 +5511,7 @@
       "type": "code example",
       "extension": ".js",
       "sizeBytes": 283,
-      "modifiedTime": "2026-07-20T18:47:40.101Z",
+      "modifiedTime": "2026-07-20T18:51:40.666Z",
       "relatedTopics": []
     },
     {
@@ -4924,7 +5519,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 2622,
-      "modifiedTime": "2026-07-20T18:47:40.101Z",
+      "modifiedTime": "2026-07-20T18:51:40.666Z",
       "relatedTopics": [
         "BCA-WEB-002",
         "BCA-AUTH-001",
@@ -4941,7 +5536,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 4877,
-      "modifiedTime": "2026-07-20T18:47:40.101Z",
+      "modifiedTime": "2026-07-20T18:51:40.666Z",
       "relatedTopics": [
         "BCA-DB-001",
         "BCA-PROJ-001",
@@ -4958,7 +5553,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 2383,
-      "modifiedTime": "2026-07-20T18:47:40.101Z",
+      "modifiedTime": "2026-07-20T18:51:40.666Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-DB-001",
@@ -4975,7 +5570,7 @@
       "type": "code example",
       "extension": ".sql",
       "sizeBytes": 2009,
-      "modifiedTime": "2026-07-20T18:47:40.101Z",
+      "modifiedTime": "2026-07-20T18:51:40.666Z",
       "relatedTopics": [
         "BCA-DB-001",
         "BCA-DB-002",
@@ -4990,7 +5585,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 2047,
-      "modifiedTime": "2026-07-20T18:47:40.101Z",
+      "modifiedTime": "2026-07-20T18:51:40.666Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-WEB-002",
@@ -5005,7 +5600,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 5179,
-      "modifiedTime": "2026-07-20T18:47:40.101Z",
+      "modifiedTime": "2026-07-20T18:51:40.666Z",
       "relatedTopics": [
         "BCA-WEB-002",
         "BCA-AUTH-001",
@@ -5022,7 +5617,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 797,
-      "modifiedTime": "2026-07-20T18:47:40.101Z",
+      "modifiedTime": "2026-07-20T18:51:40.666Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-DB-001",
@@ -5036,7 +5631,7 @@
       "type": "code example",
       "extension": ".js",
       "sizeBytes": 283,
-      "modifiedTime": "2026-07-20T18:47:40.101Z",
+      "modifiedTime": "2026-07-20T18:51:40.666Z",
       "relatedTopics": []
     },
     {
@@ -5044,7 +5639,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 2759,
-      "modifiedTime": "2026-07-20T18:47:40.101Z",
+      "modifiedTime": "2026-07-20T18:51:40.666Z",
       "relatedTopics": [
         "BCA-WEB-002",
         "BCA-AUTH-001",
@@ -5060,7 +5655,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 4371,
-      "modifiedTime": "2026-07-20T18:47:40.101Z",
+      "modifiedTime": "2026-07-20T18:51:40.666Z",
       "relatedTopics": [
         "BCA-REACT-001",
         "BCA-PROJ-001",
@@ -5077,7 +5672,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 2061,
-      "modifiedTime": "2026-07-20T18:47:40.101Z",
+      "modifiedTime": "2026-07-20T18:51:40.666Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-CN-001",
@@ -5094,7 +5689,7 @@
       "type": "code example",
       "extension": ".sql",
       "sizeBytes": 1581,
-      "modifiedTime": "2026-07-20T18:47:40.101Z",
+      "modifiedTime": "2026-07-20T18:51:40.666Z",
       "relatedTopics": [
         "BCA-DB-002",
         "BCA-PROJ-001",
@@ -5107,7 +5702,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 1617,
-      "modifiedTime": "2026-07-20T18:47:40.101Z",
+      "modifiedTime": "2026-07-20T18:51:40.666Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-WEB-002",
@@ -5121,7 +5716,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 4636,
-      "modifiedTime": "2026-07-20T18:47:40.101Z",
+      "modifiedTime": "2026-07-20T18:51:40.666Z",
       "relatedTopics": [
         "BCA-WEB-002",
         "BCA-CN-001",
@@ -5138,7 +5733,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 850,
-      "modifiedTime": "2026-07-20T18:47:40.101Z",
+      "modifiedTime": "2026-07-20T18:51:40.666Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-AUTH-001",
@@ -5153,7 +5748,7 @@
       "type": "code example",
       "extension": ".js",
       "sizeBytes": 283,
-      "modifiedTime": "2026-07-20T18:47:40.101Z",
+      "modifiedTime": "2026-07-20T18:51:40.666Z",
       "relatedTopics": []
     },
     {
@@ -5161,7 +5756,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 2931,
-      "modifiedTime": "2026-07-20T18:47:40.101Z",
+      "modifiedTime": "2026-07-20T18:51:40.670Z",
       "relatedTopics": [
         "BCA-AUTH-001",
         "BCA-WEB-002",
@@ -5178,7 +5773,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 5119,
-      "modifiedTime": "2026-07-20T18:47:40.101Z",
+      "modifiedTime": "2026-07-20T18:51:40.670Z",
       "relatedTopics": [
         "BCA-REACT-001",
         "BCA-PROJ-001",
@@ -5195,7 +5790,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 2256,
-      "modifiedTime": "2026-07-20T18:47:40.101Z",
+      "modifiedTime": "2026-07-20T18:51:40.670Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-DB-001",
@@ -5212,7 +5807,7 @@
       "type": "code example",
       "extension": ".sql",
       "sizeBytes": 1668,
-      "modifiedTime": "2026-07-20T18:47:40.101Z",
+      "modifiedTime": "2026-07-20T18:51:40.670Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-DB-002",
@@ -5227,7 +5822,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 2009,
-      "modifiedTime": "2026-07-20T18:47:40.101Z",
+      "modifiedTime": "2026-07-20T18:51:40.670Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-CN-001",
@@ -5244,7 +5839,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 4712,
-      "modifiedTime": "2026-07-20T18:47:40.101Z",
+      "modifiedTime": "2026-07-20T18:51:40.670Z",
       "relatedTopics": [
         "BCA-AUTH-001",
         "BCA-PROJ-001",
@@ -5261,7 +5856,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 714,
-      "modifiedTime": "2026-07-20T18:47:40.101Z",
+      "modifiedTime": "2026-07-20T18:51:40.670Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-DB-001",
@@ -5274,7 +5869,7 @@
       "type": "code example",
       "extension": ".js",
       "sizeBytes": 283,
-      "modifiedTime": "2026-07-20T18:47:40.101Z",
+      "modifiedTime": "2026-07-20T18:51:40.670Z",
       "relatedTopics": []
     },
     {
@@ -5282,7 +5877,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 2420,
-      "modifiedTime": "2026-07-20T18:47:40.101Z",
+      "modifiedTime": "2026-07-20T18:51:40.670Z",
       "relatedTopics": [
         "BCA-ALGO-001",
         "BCA-AUTH-001",
@@ -5299,7 +5894,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 4671,
-      "modifiedTime": "2026-07-20T18:47:40.101Z",
+      "modifiedTime": "2026-07-20T18:51:40.670Z",
       "relatedTopics": [
         "BCA-AUTH-001",
         "BCA-REACT-001",
@@ -5316,7 +5911,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 1940,
-      "modifiedTime": "2026-07-20T18:47:40.101Z",
+      "modifiedTime": "2026-07-20T18:51:40.670Z",
       "relatedTopics": [
         "BCA-CN-001",
         "BCA-DB-001",
@@ -5333,7 +5928,7 @@
       "type": "code example",
       "extension": ".sql",
       "sizeBytes": 2112,
-      "modifiedTime": "2026-07-20T18:47:40.101Z",
+      "modifiedTime": "2026-07-20T18:51:40.670Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-DB-002",
@@ -5350,7 +5945,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 1672,
-      "modifiedTime": "2026-07-20T18:47:40.101Z",
+      "modifiedTime": "2026-07-20T18:51:40.670Z",
       "relatedTopics": [
         "BCA-DS-001",
         "BCA-PROJ-001",
@@ -5367,7 +5962,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 5034,
-      "modifiedTime": "2026-07-20T18:47:40.101Z",
+      "modifiedTime": "2026-07-20T18:51:40.670Z",
       "relatedTopics": [
         "BCA-WEB-002",
         "BCA-AUTH-001",
@@ -5384,7 +5979,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 649,
-      "modifiedTime": "2026-07-20T18:47:40.101Z",
+      "modifiedTime": "2026-07-20T18:51:40.670Z",
       "relatedTopics": [
         "BCA-AUTH-001",
         "BCA-DB-001",
@@ -5401,7 +5996,7 @@
       "type": "code example",
       "extension": ".js",
       "sizeBytes": 283,
-      "modifiedTime": "2026-07-20T18:47:40.101Z",
+      "modifiedTime": "2026-07-20T18:51:40.670Z",
       "relatedTopics": []
     },
     {
@@ -5409,7 +6004,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 2840,
-      "modifiedTime": "2026-07-20T18:47:40.101Z",
+      "modifiedTime": "2026-07-20T18:51:40.670Z",
       "relatedTopics": [
         "BCA-WEB-002",
         "BCA-AUTH-001",
@@ -5425,7 +6020,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 4987,
-      "modifiedTime": "2026-07-20T18:47:40.101Z",
+      "modifiedTime": "2026-07-20T18:51:40.670Z",
       "relatedTopics": [
         "BCA-AUTH-001",
         "BCA-REACT-001",
@@ -5442,7 +6037,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 2149,
-      "modifiedTime": "2026-07-20T18:47:40.101Z",
+      "modifiedTime": "2026-07-20T18:51:40.670Z",
       "relatedTopics": [
         "BCA-WEB-002",
         "BCA-AUTH-001",
@@ -5456,7 +6051,7 @@
       "type": "code example",
       "extension": ".sql",
       "sizeBytes": 1898,
-      "modifiedTime": "2026-07-20T18:47:40.101Z",
+      "modifiedTime": "2026-07-20T18:51:40.670Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-DB-002",
@@ -5472,7 +6067,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 1798,
-      "modifiedTime": "2026-07-20T18:47:40.101Z",
+      "modifiedTime": "2026-07-20T18:51:40.670Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-WEB-002",
@@ -5487,7 +6082,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 4552,
-      "modifiedTime": "2026-07-20T18:47:40.101Z",
+      "modifiedTime": "2026-07-20T18:51:40.670Z",
       "relatedTopics": [
         "BCA-WEB-002",
         "BCA-AUTH-001",
@@ -5504,7 +6099,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 686,
-      "modifiedTime": "2026-07-20T18:47:40.101Z",
+      "modifiedTime": "2026-07-20T18:51:40.670Z",
       "relatedTopics": [
         "BCA-DB-001",
         "BCA-WEB-002",
@@ -5520,7 +6115,7 @@
       "type": "code example",
       "extension": ".js",
       "sizeBytes": 283,
-      "modifiedTime": "2026-07-20T18:47:40.101Z",
+      "modifiedTime": "2026-07-20T18:51:40.670Z",
       "relatedTopics": []
     },
     {
@@ -5528,7 +6123,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 2472,
-      "modifiedTime": "2026-07-20T18:47:40.101Z",
+      "modifiedTime": "2026-07-20T18:51:40.670Z",
       "relatedTopics": [
         "BCA-AUTH-001",
         "BCA-PROJ-001",
@@ -5545,7 +6140,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 4952,
-      "modifiedTime": "2026-07-20T18:47:40.101Z",
+      "modifiedTime": "2026-07-20T18:51:40.670Z",
       "relatedTopics": [
         "BCA-REACT-001",
         "BCA-PROJ-001",
@@ -5562,7 +6157,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 1961,
-      "modifiedTime": "2026-07-20T18:47:40.101Z",
+      "modifiedTime": "2026-07-20T18:51:40.670Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-WEB-002",
@@ -5579,7 +6174,7 @@
       "type": "code example",
       "extension": ".sql",
       "sizeBytes": 1990,
-      "modifiedTime": "2026-07-20T18:47:40.101Z",
+      "modifiedTime": "2026-07-20T18:51:40.670Z",
       "relatedTopics": [
         "BCA-DB-002",
         "BCA-PROJ-001",
@@ -5595,7 +6190,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 1768,
-      "modifiedTime": "2026-07-20T18:47:40.101Z",
+      "modifiedTime": "2026-07-20T18:51:40.670Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-WEB-002",
@@ -5612,7 +6207,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 4159,
-      "modifiedTime": "2026-07-20T18:47:40.101Z",
+      "modifiedTime": "2026-07-20T18:51:40.670Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-WEB-002",
@@ -5629,7 +6224,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 834,
-      "modifiedTime": "2026-07-20T18:47:40.101Z",
+      "modifiedTime": "2026-07-20T18:51:40.670Z",
       "relatedTopics": [
         "BCA-WEB-001",
         "BCA-WEB-002",
@@ -5644,7 +6239,7 @@
       "type": "code example",
       "extension": ".js",
       "sizeBytes": 283,
-      "modifiedTime": "2026-07-20T18:47:40.101Z",
+      "modifiedTime": "2026-07-20T18:51:40.670Z",
       "relatedTopics": []
     },
     {
@@ -5652,7 +6247,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 2769,
-      "modifiedTime": "2026-07-20T18:47:40.101Z",
+      "modifiedTime": "2026-07-20T18:51:40.670Z",
       "relatedTopics": [
         "BCA-WEB-002",
         "BCA-AUTH-001",
@@ -5667,7 +6262,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 4585,
-      "modifiedTime": "2026-07-20T18:47:40.101Z",
+      "modifiedTime": "2026-07-20T18:51:40.670Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-REACT-001",
@@ -5684,7 +6279,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 1903,
-      "modifiedTime": "2026-07-20T18:47:40.101Z",
+      "modifiedTime": "2026-07-20T18:51:40.670Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-AUTH-001",
@@ -5701,7 +6296,7 @@
       "type": "code example",
       "extension": ".sql",
       "sizeBytes": 1814,
-      "modifiedTime": "2026-07-20T18:47:40.101Z",
+      "modifiedTime": "2026-07-20T18:51:40.670Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-DB-002",
@@ -5716,7 +6311,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 1911,
-      "modifiedTime": "2026-07-20T18:47:40.101Z",
+      "modifiedTime": "2026-07-20T18:51:40.670Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-AUTH-001",
@@ -5732,7 +6327,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 5884,
-      "modifiedTime": "2026-07-20T18:47:40.101Z",
+      "modifiedTime": "2026-07-20T18:51:40.670Z",
       "relatedTopics": [
         "BCA-AUTH-001",
         "BCA-WEB-002",
@@ -5749,7 +6344,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 624,
-      "modifiedTime": "2026-07-20T18:47:40.105Z",
+      "modifiedTime": "2026-07-20T18:51:40.670Z",
       "relatedTopics": [
         "BCA-DB-001",
         "BCA-PROJ-001",
@@ -5761,7 +6356,7 @@
       "type": "code example",
       "extension": ".js",
       "sizeBytes": 283,
-      "modifiedTime": "2026-07-20T18:47:40.105Z",
+      "modifiedTime": "2026-07-20T18:51:40.670Z",
       "relatedTopics": []
     },
     {
@@ -5769,7 +6364,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 531,
-      "modifiedTime": "2026-07-20T18:47:40.105Z",
+      "modifiedTime": "2026-07-20T18:51:40.670Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-CN-001",
@@ -5786,7 +6381,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 747,
-      "modifiedTime": "2026-07-20T18:47:40.105Z",
+      "modifiedTime": "2026-07-20T18:51:40.670Z",
       "relatedTopics": [
         "BCA-CN-001",
         "BCA-PROJ-001",
@@ -5802,7 +6397,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 481,
-      "modifiedTime": "2026-07-20T18:47:40.105Z",
+      "modifiedTime": "2026-07-20T18:51:40.670Z",
       "relatedTopics": [
         "BCA-DB-001",
         "BCA-DS-001",
@@ -5815,7 +6410,7 @@
       "type": "code example",
       "extension": ".sql",
       "sizeBytes": 439,
-      "modifiedTime": "2026-07-20T18:47:40.105Z",
+      "modifiedTime": "2026-07-20T18:51:40.670Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-DB-001",
@@ -5827,7 +6422,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 360,
-      "modifiedTime": "2026-07-20T18:47:40.105Z",
+      "modifiedTime": "2026-07-20T18:51:40.670Z",
       "relatedTopics": [
         "BCA-AUTH-001",
         "BCA-CN-001"
@@ -5838,7 +6433,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 465,
-      "modifiedTime": "2026-07-20T18:47:40.105Z",
+      "modifiedTime": "2026-07-20T18:51:40.670Z",
       "relatedTopics": [
         "BCA-DSYS-001",
         "BCA-ALGO-001",
@@ -5853,7 +6448,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 89,
-      "modifiedTime": "2026-07-20T18:47:40.105Z",
+      "modifiedTime": "2026-07-20T18:51:40.670Z",
       "relatedTopics": []
     },
     {
@@ -5861,7 +6456,7 @@
       "type": "code example",
       "extension": ".js",
       "sizeBytes": 692,
-      "modifiedTime": "2026-07-20T18:47:40.105Z",
+      "modifiedTime": "2026-07-20T18:51:40.670Z",
       "relatedTopics": [
         "BCA-WEB-002",
         "BCA-CN-001",
@@ -5874,7 +6469,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 407,
-      "modifiedTime": "2026-07-20T18:47:40.105Z",
+      "modifiedTime": "2026-07-20T18:51:40.670Z",
       "relatedTopics": [
         "BCA-CN-001",
         "BCA-ALGO-001",
@@ -5888,7 +6483,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 735,
-      "modifiedTime": "2026-07-20T18:47:40.105Z",
+      "modifiedTime": "2026-07-20T18:51:40.670Z",
       "relatedTopics": [
         "BCA-CN-001",
         "BCA-PROJ-001",
@@ -5905,7 +6500,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 483,
-      "modifiedTime": "2026-07-20T18:47:40.105Z",
+      "modifiedTime": "2026-07-20T18:51:40.670Z",
       "relatedTopics": [
         "BCA-CN-001",
         "BCA-AUTH-001",
@@ -5918,7 +6513,7 @@
       "type": "code example",
       "extension": ".sql",
       "sizeBytes": 300,
-      "modifiedTime": "2026-07-20T18:47:40.105Z",
+      "modifiedTime": "2026-07-20T18:51:40.670Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-DB-001",
@@ -5930,7 +6525,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 367,
-      "modifiedTime": "2026-07-20T18:47:40.105Z",
+      "modifiedTime": "2026-07-20T18:51:40.670Z",
       "relatedTopics": [
         "BCA-WEB-002",
         "BCA-AUTH-001",
@@ -5944,7 +6539,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 451,
-      "modifiedTime": "2026-07-20T18:47:40.105Z",
+      "modifiedTime": "2026-07-20T18:51:40.670Z",
       "relatedTopics": [
         "BCA-CN-001",
         "BCA-ALGO-001",
@@ -5959,7 +6554,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 117,
-      "modifiedTime": "2026-07-20T18:47:40.105Z",
+      "modifiedTime": "2026-07-20T18:51:40.670Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-ALGO-001",
@@ -5974,7 +6569,7 @@
       "type": "code example",
       "extension": ".js",
       "sizeBytes": 692,
-      "modifiedTime": "2026-07-20T18:47:40.105Z",
+      "modifiedTime": "2026-07-20T18:51:40.670Z",
       "relatedTopics": [
         "BCA-WEB-002",
         "BCA-CN-001",
@@ -5987,7 +6582,7 @@
       "type": "lab manual/practical",
       "extension": ".md",
       "sizeBytes": 520,
-      "modifiedTime": "2026-07-20T18:47:40.105Z",
+      "modifiedTime": "2026-07-20T18:51:40.670Z",
       "relatedTopics": [
         "BCA-DB-001",
         "BCA-PROJ-001",
@@ -6003,7 +6598,7 @@
       "type": "lab manual/practical",
       "extension": ".md",
       "sizeBytes": 718,
-      "modifiedTime": "2026-07-20T18:47:40.105Z",
+      "modifiedTime": "2026-07-20T18:51:40.670Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-REACT-001",
@@ -6016,7 +6611,7 @@
       "type": "lab manual/practical",
       "extension": ".md",
       "sizeBytes": 472,
-      "modifiedTime": "2026-07-20T18:47:40.105Z",
+      "modifiedTime": "2026-07-20T18:51:40.670Z",
       "relatedTopics": [
         "BCA-DB-001",
         "BCA-PROJ-001",
@@ -6029,7 +6624,7 @@
       "type": "lab manual/practical",
       "extension": ".sql",
       "sizeBytes": 375,
-      "modifiedTime": "2026-07-20T18:47:40.105Z",
+      "modifiedTime": "2026-07-20T18:51:40.670Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-DB-001",
@@ -6041,7 +6636,7 @@
       "type": "lab manual/practical",
       "extension": ".md",
       "sizeBytes": 366,
-      "modifiedTime": "2026-07-20T18:47:40.105Z",
+      "modifiedTime": "2026-07-20T18:51:40.670Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-DB-001"
@@ -6052,7 +6647,7 @@
       "type": "lab manual/practical",
       "extension": ".md",
       "sizeBytes": 503,
-      "modifiedTime": "2026-07-20T18:47:40.105Z",
+      "modifiedTime": "2026-07-20T18:51:40.670Z",
       "relatedTopics": [
         "BCA-ALGO-001",
         "BCA-REACT-001"
@@ -6063,7 +6658,7 @@
       "type": "lab manual/practical",
       "extension": ".md",
       "sizeBytes": 94,
-      "modifiedTime": "2026-07-20T18:47:40.105Z",
+      "modifiedTime": "2026-07-20T18:51:40.670Z",
       "relatedTopics": []
     },
     {
@@ -6071,7 +6666,7 @@
       "type": "lab manual/practical",
       "extension": ".js",
       "sizeBytes": 692,
-      "modifiedTime": "2026-07-20T18:47:40.105Z",
+      "modifiedTime": "2026-07-20T18:51:40.670Z",
       "relatedTopics": [
         "BCA-WEB-002",
         "BCA-CN-001",
@@ -6084,7 +6679,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 475,
-      "modifiedTime": "2026-07-20T18:47:40.105Z",
+      "modifiedTime": "2026-07-20T18:51:40.670Z",
       "relatedTopics": [
         "BCA-CN-001",
         "BCA-DS-002",
@@ -6101,7 +6696,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 586,
-      "modifiedTime": "2026-07-20T18:47:40.105Z",
+      "modifiedTime": "2026-07-20T18:51:40.670Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-ALGO-001",
@@ -6115,7 +6710,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 453,
-      "modifiedTime": "2026-07-20T18:47:40.105Z",
+      "modifiedTime": "2026-07-20T18:51:40.670Z",
       "relatedTopics": [
         "BCA-AUTH-001",
         "BCA-WEB-001",
@@ -6127,7 +6722,7 @@
       "type": "code example",
       "extension": ".sql",
       "sizeBytes": 338,
-      "modifiedTime": "2026-07-20T18:47:40.105Z",
+      "modifiedTime": "2026-07-20T18:51:40.670Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-DB-001",
@@ -6139,7 +6734,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 278,
-      "modifiedTime": "2026-07-20T18:47:40.105Z",
+      "modifiedTime": "2026-07-20T18:51:40.670Z",
       "relatedTopics": [
         "BCA-AUTH-001"
       ]
@@ -6149,7 +6744,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 484,
-      "modifiedTime": "2026-07-20T18:47:40.105Z",
+      "modifiedTime": "2026-07-20T18:51:40.670Z",
       "relatedTopics": [
         "BCA-ALGO-001",
         "BCA-CN-001",
@@ -6166,7 +6761,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 101,
-      "modifiedTime": "2026-07-20T18:47:40.105Z",
+      "modifiedTime": "2026-07-20T18:51:40.670Z",
       "relatedTopics": []
     },
     {
@@ -6174,7 +6769,7 @@
       "type": "code example",
       "extension": ".js",
       "sizeBytes": 692,
-      "modifiedTime": "2026-07-20T18:47:40.105Z",
+      "modifiedTime": "2026-07-20T18:51:40.670Z",
       "relatedTopics": [
         "BCA-WEB-002",
         "BCA-CN-001",
@@ -6187,7 +6782,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 462,
-      "modifiedTime": "2026-07-20T18:47:40.105Z",
+      "modifiedTime": "2026-07-20T18:51:40.670Z",
       "relatedTopics": [
         "BCA-CN-001",
         "BCA-ALGO-001",
@@ -6201,7 +6796,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 676,
-      "modifiedTime": "2026-07-20T18:47:40.105Z",
+      "modifiedTime": "2026-07-20T18:51:40.670Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-ALGO-001",
@@ -6216,7 +6811,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 515,
-      "modifiedTime": "2026-07-20T18:47:40.105Z",
+      "modifiedTime": "2026-07-20T18:51:40.670Z",
       "relatedTopics": [
         "BCA-AUTH-001"
       ]
@@ -6226,7 +6821,7 @@
       "type": "code example",
       "extension": ".sql",
       "sizeBytes": 195,
-      "modifiedTime": "2026-07-20T18:47:40.105Z",
+      "modifiedTime": "2026-07-20T18:51:40.670Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-DB-001",
@@ -6238,7 +6833,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 336,
-      "modifiedTime": "2026-07-20T18:47:40.105Z",
+      "modifiedTime": "2026-07-20T18:51:40.670Z",
       "relatedTopics": [
         "BCA-AUTH-001",
         "BCA-PROJ-001"
@@ -6249,7 +6844,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 496,
-      "modifiedTime": "2026-07-20T18:47:40.105Z",
+      "modifiedTime": "2026-07-20T18:51:40.670Z",
       "relatedTopics": [
         "BCA-WEB-002",
         "BCA-ALGO-001",
@@ -6263,7 +6858,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 95,
-      "modifiedTime": "2026-07-20T18:47:40.105Z",
+      "modifiedTime": "2026-07-20T18:51:40.670Z",
       "relatedTopics": []
     },
     {
@@ -6271,7 +6866,7 @@
       "type": "code example",
       "extension": ".js",
       "sizeBytes": 692,
-      "modifiedTime": "2026-07-20T18:47:40.105Z",
+      "modifiedTime": "2026-07-20T18:51:40.670Z",
       "relatedTopics": [
         "BCA-WEB-002",
         "BCA-CN-001",
@@ -6284,7 +6879,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 1327,
-      "modifiedTime": "2026-07-20T18:47:40.105Z",
+      "modifiedTime": "2026-07-20T18:51:40.674Z",
       "relatedTopics": [
         "BCA-WEB-002",
         "BCA-ALGO-001",
@@ -6297,7 +6892,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 6379,
-      "modifiedTime": "2026-07-20T18:47:40.105Z",
+      "modifiedTime": "2026-07-20T18:51:40.674Z",
       "relatedTopics": [
         "BCA-REACT-001",
         "BCA-PROJ-001",
@@ -6314,7 +6909,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 1725,
-      "modifiedTime": "2026-07-20T18:47:40.105Z",
+      "modifiedTime": "2026-07-20T18:51:40.674Z",
       "relatedTopics": [
         "BCA-ALGO-001",
         "BCA-AUTH-001",
@@ -6328,7 +6923,7 @@
       "type": "code example",
       "extension": ".sql",
       "sizeBytes": 810,
-      "modifiedTime": "2026-07-20T18:47:40.105Z",
+      "modifiedTime": "2026-07-20T18:51:40.674Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-DB-001",
@@ -6340,7 +6935,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 2617,
-      "modifiedTime": "2026-07-20T18:47:40.105Z",
+      "modifiedTime": "2026-07-20T18:51:40.674Z",
       "relatedTopics": [
         "BCA-PF-001",
         "BCA-DS-001",
@@ -6354,7 +6949,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 8256,
-      "modifiedTime": "2026-07-20T18:47:40.105Z",
+      "modifiedTime": "2026-07-20T18:51:40.674Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-WEB-002",
@@ -6371,7 +6966,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 819,
-      "modifiedTime": "2026-07-20T18:47:40.105Z",
+      "modifiedTime": "2026-07-20T18:51:40.674Z",
       "relatedTopics": [
         "BCA-OS-001",
         "BCA-PROJ-001",
@@ -6383,7 +6978,7 @@
       "type": "code example",
       "extension": ".js",
       "sizeBytes": 283,
-      "modifiedTime": "2026-07-20T18:47:40.105Z",
+      "modifiedTime": "2026-07-20T18:51:40.674Z",
       "relatedTopics": []
     },
     {
@@ -6391,7 +6986,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 194,
-      "modifiedTime": "2026-07-20T18:47:40.105Z",
+      "modifiedTime": "2026-07-20T18:51:40.674Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-ALGO-001",
@@ -6404,7 +6999,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 6884,
-      "modifiedTime": "2026-07-20T18:47:40.105Z",
+      "modifiedTime": "2026-07-20T18:51:40.674Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-REACT-001",
@@ -6421,7 +7016,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 1462,
-      "modifiedTime": "2026-07-20T18:47:40.105Z",
+      "modifiedTime": "2026-07-20T18:51:40.674Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-DB-001",
@@ -6434,7 +7029,7 @@
       "type": "code example",
       "extension": ".sql",
       "sizeBytes": 3028,
-      "modifiedTime": "2026-07-20T18:47:40.105Z",
+      "modifiedTime": "2026-07-20T18:51:40.674Z",
       "relatedTopics": [
         "BCA-DB-001",
         "BCA-DS-002",
@@ -6451,7 +7046,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 856,
-      "modifiedTime": "2026-07-20T18:47:40.105Z",
+      "modifiedTime": "2026-07-20T18:51:40.674Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-AUTH-001",
@@ -6468,7 +7063,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 9181,
-      "modifiedTime": "2026-07-20T18:47:40.105Z",
+      "modifiedTime": "2026-07-20T18:51:40.674Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-DS-001",
@@ -6485,7 +7080,7 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 194,
-      "modifiedTime": "2026-07-20T18:47:40.105Z",
+      "modifiedTime": "2026-07-20T18:51:40.674Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-DB-001",
@@ -6497,7 +7092,7 @@
       "type": "code example",
       "extension": ".js",
       "sizeBytes": 283,
-      "modifiedTime": "2026-07-20T18:47:40.105Z",
+      "modifiedTime": "2026-07-20T18:51:40.674Z",
       "relatedTopics": [
         "BCA-DB-001",
         "BCA-DS-001",
@@ -6509,15 +7104,15 @@
       "type": "project guide",
       "extension": ".md",
       "sizeBytes": 0,
-      "modifiedTime": "2026-07-20T18:47:40.105Z",
+      "modifiedTime": "2026-07-20T18:51:40.674Z",
       "relatedTopics": []
     },
     {
       "path": "README.md",
       "type": "markdown note",
       "extension": ".md",
-      "sizeBytes": 15279,
-      "modifiedTime": "2026-07-20T18:49:33.341Z",
+      "sizeBytes": 15498,
+      "modifiedTime": "2026-07-20T22:30:21.130Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-REACT-001",
@@ -6534,7 +7129,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 15609,
-      "modifiedTime": "2026-07-20T18:47:40.105Z",
+      "modifiedTime": "2026-07-20T18:51:40.674Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-REACT-001",
@@ -6551,7 +7146,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 338,
-      "modifiedTime": "2026-07-20T18:47:40.109Z",
+      "modifiedTime": "2026-07-20T18:51:40.674Z",
       "relatedTopics": [
         "BCA-ALGO-001"
       ]
@@ -6561,7 +7156,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 2867,
-      "modifiedTime": "2026-07-20T18:47:40.109Z",
+      "modifiedTime": "2026-07-20T18:51:40.674Z",
       "relatedTopics": [
         "BCA-ALGO-001",
         "BCA-AUTH-001",
@@ -6573,7 +7168,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 6985,
-      "modifiedTime": "2026-07-20T18:47:40.109Z",
+      "modifiedTime": "2026-07-20T18:51:40.674Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-OS-001",
@@ -6590,7 +7185,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 7935,
-      "modifiedTime": "2026-07-20T18:47:40.109Z",
+      "modifiedTime": "2026-07-20T18:51:40.674Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-ALGO-001",
@@ -6607,7 +7202,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 9219,
-      "modifiedTime": "2026-07-20T18:47:40.109Z",
+      "modifiedTime": "2026-07-20T18:51:40.674Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-DB-001",
@@ -6624,7 +7219,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 15144,
-      "modifiedTime": "2026-07-20T18:47:40.109Z",
+      "modifiedTime": "2026-07-20T18:51:40.674Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-OS-001",
@@ -6641,7 +7236,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 5530,
-      "modifiedTime": "2026-07-20T18:47:40.109Z",
+      "modifiedTime": "2026-07-20T18:51:40.674Z",
       "relatedTopics": [
         "BCA-OS-001",
         "BCA-ALGO-001",
@@ -6658,7 +7253,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 5786,
-      "modifiedTime": "2026-07-20T18:47:40.109Z",
+      "modifiedTime": "2026-07-20T18:51:40.674Z",
       "relatedTopics": [
         "BCA-DS-002",
         "BCA-REACT-001",
@@ -6675,7 +7270,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 13553,
-      "modifiedTime": "2026-07-20T18:47:40.109Z",
+      "modifiedTime": "2026-07-20T18:51:40.674Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-WEB-002",
@@ -6692,7 +7287,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 8157,
-      "modifiedTime": "2026-07-20T18:47:40.109Z",
+      "modifiedTime": "2026-07-20T18:51:40.678Z",
       "relatedTopics": [
         "BCA-ALGO-001",
         "BCA-AUTH-001",
@@ -6709,7 +7304,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 2376,
-      "modifiedTime": "2026-07-20T18:47:40.109Z",
+      "modifiedTime": "2026-07-20T18:51:40.678Z",
       "relatedTopics": [
         "BCA-ALGO-001",
         "BCA-AUTH-001",
@@ -6726,7 +7321,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 3126,
-      "modifiedTime": "2026-07-20T18:47:40.109Z",
+      "modifiedTime": "2026-07-20T18:51:40.678Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-AUTH-001",
@@ -6741,7 +7336,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 2839,
-      "modifiedTime": "2026-07-20T18:47:40.109Z",
+      "modifiedTime": "2026-07-20T18:51:40.678Z",
       "relatedTopics": [
         "BCA-OS-001",
         "BCA-PROJ-001",
@@ -6756,7 +7351,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 5358,
-      "modifiedTime": "2026-07-20T18:47:40.109Z",
+      "modifiedTime": "2026-07-20T18:51:40.678Z",
       "relatedTopics": [
         "BCA-OS-001",
         "BCA-ALGO-001",
@@ -6773,7 +7368,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 2391,
-      "modifiedTime": "2026-07-20T18:47:40.109Z",
+      "modifiedTime": "2026-07-20T18:51:40.678Z",
       "relatedTopics": [
         "BCA-ALGO-001",
         "BCA-AUTH-001",
@@ -6790,7 +7385,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 9230,
-      "modifiedTime": "2026-07-20T18:47:40.109Z",
+      "modifiedTime": "2026-07-20T18:51:40.678Z",
       "relatedTopics": [
         "BCA-AUTH-001",
         "BCA-PF-001",
@@ -6807,7 +7402,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 2935,
-      "modifiedTime": "2026-07-20T18:47:40.109Z",
+      "modifiedTime": "2026-07-20T18:51:40.678Z",
       "relatedTopics": [
         "BCA-OS-001",
         "BCA-REACT-001",
@@ -6823,7 +7418,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 3435,
-      "modifiedTime": "2026-07-20T18:47:40.109Z",
+      "modifiedTime": "2026-07-20T18:51:40.678Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-REACT-001",
@@ -6840,7 +7435,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 3838,
-      "modifiedTime": "2026-07-20T18:47:40.113Z",
+      "modifiedTime": "2026-07-20T18:51:40.678Z",
       "relatedTopics": [
         "BCA-OS-001",
         "BCA-OS-002",
@@ -6857,7 +7452,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 8460,
-      "modifiedTime": "2026-07-20T18:47:40.113Z",
+      "modifiedTime": "2026-07-20T18:51:40.678Z",
       "relatedTopics": [
         "BCA-DB-001",
         "BCA-ALGO-001",
@@ -6874,7 +7469,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 11336,
-      "modifiedTime": "2026-07-20T18:47:40.113Z",
+      "modifiedTime": "2026-07-20T18:51:40.678Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-AUTH-001",
@@ -6891,7 +7486,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 9995,
-      "modifiedTime": "2026-07-20T18:47:40.113Z",
+      "modifiedTime": "2026-07-20T18:51:40.678Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-WEB-002",
@@ -6908,7 +7503,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 2573,
-      "modifiedTime": "2026-07-20T18:47:40.113Z",
+      "modifiedTime": "2026-07-20T18:51:40.678Z",
       "relatedTopics": [
         "BCA-DS-001",
         "BCA-OS-001",
@@ -6925,7 +7520,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 9213,
-      "modifiedTime": "2026-07-20T18:47:40.113Z",
+      "modifiedTime": "2026-07-20T18:51:40.678Z",
       "relatedTopics": [
         "BCA-AUTH-001",
         "BCA-PF-001",
@@ -6942,7 +7537,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 6258,
-      "modifiedTime": "2026-07-20T18:47:40.113Z",
+      "modifiedTime": "2026-07-20T18:51:40.678Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-REACT-001",
@@ -6959,7 +7554,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 7239,
-      "modifiedTime": "2026-07-20T18:47:40.113Z",
+      "modifiedTime": "2026-07-20T18:51:40.678Z",
       "relatedTopics": [
         "BCA-WEB-002",
         "BCA-PROJ-001",
@@ -6976,7 +7571,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 6836,
-      "modifiedTime": "2026-07-20T18:47:40.113Z",
+      "modifiedTime": "2026-07-20T18:51:40.678Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-REACT-001",
@@ -6993,7 +7588,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 7449,
-      "modifiedTime": "2026-07-20T18:47:40.113Z",
+      "modifiedTime": "2026-07-20T18:51:40.682Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-OS-002",
@@ -7010,7 +7605,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 2754,
-      "modifiedTime": "2026-07-20T18:47:40.113Z",
+      "modifiedTime": "2026-07-20T18:51:40.682Z",
       "relatedTopics": [
         "BCA-DSYS-001",
         "BCA-PF-001",
@@ -7027,7 +7622,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 2373,
-      "modifiedTime": "2026-07-20T18:47:40.113Z",
+      "modifiedTime": "2026-07-20T18:51:40.682Z",
       "relatedTopics": [
         "BCA-OS-001",
         "BCA-REACT-001",
@@ -7042,7 +7637,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 4477,
-      "modifiedTime": "2026-07-20T18:47:40.113Z",
+      "modifiedTime": "2026-07-20T18:51:40.682Z",
       "relatedTopics": [
         "BCA-AUTH-001",
         "BCA-PROJ-001",
@@ -7059,7 +7654,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 3362,
-      "modifiedTime": "2026-07-20T18:47:40.113Z",
+      "modifiedTime": "2026-07-20T18:51:40.682Z",
       "relatedTopics": [
         "BCA-ALGO-001",
         "BCA-PROJ-001",
@@ -7076,7 +7671,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 3402,
-      "modifiedTime": "2026-07-20T18:47:40.113Z",
+      "modifiedTime": "2026-07-20T18:51:40.682Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-REACT-001",
@@ -7093,7 +7688,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 3609,
-      "modifiedTime": "2026-07-20T18:47:40.113Z",
+      "modifiedTime": "2026-07-20T18:51:40.682Z",
       "relatedTopics": [
         "BCA-DS-001",
         "BCA-DS-002",
@@ -7110,7 +7705,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 6557,
-      "modifiedTime": "2026-07-20T18:47:40.113Z",
+      "modifiedTime": "2026-07-20T18:51:40.682Z",
       "relatedTopics": [
         "BCA-WEB-001",
         "BCA-PROJ-001",
@@ -7127,7 +7722,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 8601,
-      "modifiedTime": "2026-07-20T18:47:40.117Z",
+      "modifiedTime": "2026-07-20T18:51:40.682Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-OS-001",
@@ -7144,7 +7739,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 3175,
-      "modifiedTime": "2026-07-20T18:47:40.117Z",
+      "modifiedTime": "2026-07-20T18:51:40.682Z",
       "relatedTopics": [
         "BCA-DS-001",
         "BCA-OS-002",
@@ -7161,7 +7756,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 20912,
-      "modifiedTime": "2026-07-20T18:47:40.117Z",
+      "modifiedTime": "2026-07-20T18:51:40.682Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-OS-001",
@@ -7178,7 +7773,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 6786,
-      "modifiedTime": "2026-07-20T18:47:40.117Z",
+      "modifiedTime": "2026-07-20T18:51:40.682Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-REACT-001",
@@ -7195,7 +7790,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 3645,
-      "modifiedTime": "2026-07-20T18:47:40.117Z",
+      "modifiedTime": "2026-07-20T18:51:40.682Z",
       "relatedTopics": [
         "BCA-OS-001",
         "BCA-OS-002",
@@ -7211,7 +7806,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 10432,
-      "modifiedTime": "2026-07-20T18:47:40.117Z",
+      "modifiedTime": "2026-07-20T18:51:40.682Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-OS-001",
@@ -7228,7 +7823,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 8797,
-      "modifiedTime": "2026-07-20T18:47:40.117Z",
+      "modifiedTime": "2026-07-20T18:51:40.682Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-AUTH-001",
@@ -7245,7 +7840,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 3294,
-      "modifiedTime": "2026-07-20T18:47:40.117Z",
+      "modifiedTime": "2026-07-20T18:51:40.682Z",
       "relatedTopics": [
         "BCA-CN-001",
         "BCA-PROJ-001",
@@ -7262,7 +7857,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 6627,
-      "modifiedTime": "2026-07-20T18:47:40.117Z",
+      "modifiedTime": "2026-07-20T18:51:40.682Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-DS-002",
@@ -7279,7 +7874,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 3632,
-      "modifiedTime": "2026-07-20T18:47:40.117Z",
+      "modifiedTime": "2026-07-20T18:51:40.682Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-AUTH-001",
@@ -7296,7 +7891,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 2135,
-      "modifiedTime": "2026-07-20T18:47:40.117Z",
+      "modifiedTime": "2026-07-20T18:51:40.686Z",
       "relatedTopics": [
         "BCA-REACT-001",
         "BCA-OS-001",
@@ -7313,7 +7908,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 10838,
-      "modifiedTime": "2026-07-20T18:47:40.117Z",
+      "modifiedTime": "2026-07-20T18:51:40.686Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-WEB-002",
@@ -7330,7 +7925,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 3824,
-      "modifiedTime": "2026-07-20T18:47:40.117Z",
+      "modifiedTime": "2026-07-20T18:51:40.686Z",
       "relatedTopics": [
         "BCA-OS-001",
         "BCA-OS-002",
@@ -7347,7 +7942,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 6981,
-      "modifiedTime": "2026-07-20T18:47:40.117Z",
+      "modifiedTime": "2026-07-20T18:51:40.686Z",
       "relatedTopics": [
         "BCA-ALGO-001",
         "BCA-REACT-001",
@@ -7364,7 +7959,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 3409,
-      "modifiedTime": "2026-07-20T18:47:40.117Z",
+      "modifiedTime": "2026-07-20T18:51:40.686Z",
       "relatedTopics": [
         "BCA-OS-001",
         "BCA-PROJ-001",
@@ -7380,7 +7975,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 5032,
-      "modifiedTime": "2026-07-20T18:47:40.117Z",
+      "modifiedTime": "2026-07-20T18:51:40.686Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-CN-001",
@@ -7397,7 +7992,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 4945,
-      "modifiedTime": "2026-07-20T18:47:40.117Z",
+      "modifiedTime": "2026-07-20T18:51:40.686Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-REACT-001",
@@ -7413,7 +8008,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 1173,
-      "modifiedTime": "2026-07-20T18:47:40.117Z",
+      "modifiedTime": "2026-07-20T18:51:40.686Z",
       "relatedTopics": []
     },
     {
@@ -7421,7 +8016,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 8110,
-      "modifiedTime": "2026-07-20T18:47:40.121Z",
+      "modifiedTime": "2026-07-20T18:51:40.686Z",
       "relatedTopics": [
         "BCA-REACT-001",
         "BCA-PROJ-001",
@@ -7438,7 +8033,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 4513,
-      "modifiedTime": "2026-07-20T18:47:40.121Z",
+      "modifiedTime": "2026-07-20T18:51:40.686Z",
       "relatedTopics": [
         "BCA-WEB-001",
         "BCA-WEB-002",
@@ -7455,7 +8050,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 7464,
-      "modifiedTime": "2026-07-20T18:47:40.121Z",
+      "modifiedTime": "2026-07-20T18:51:40.686Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-WEB-002",
@@ -7472,7 +8067,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 3465,
-      "modifiedTime": "2026-07-20T18:47:40.121Z",
+      "modifiedTime": "2026-07-20T18:51:40.686Z",
       "relatedTopics": [
         "BCA-OS-001",
         "BCA-PROJ-001",
@@ -7489,7 +8084,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 1781,
-      "modifiedTime": "2026-07-20T18:47:40.121Z",
+      "modifiedTime": "2026-07-20T18:51:40.686Z",
       "relatedTopics": [
         "BCA-OS-001",
         "BCA-PROJ-001",
@@ -7506,7 +8101,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 1304,
-      "modifiedTime": "2026-07-20T18:47:40.121Z",
+      "modifiedTime": "2026-07-20T18:51:40.686Z",
       "relatedTopics": [
         "BCA-DB-001",
         "BCA-DS-001",
@@ -7523,7 +8118,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 1426,
-      "modifiedTime": "2026-07-20T18:47:40.121Z",
+      "modifiedTime": "2026-07-20T18:51:40.686Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-DS-001",
@@ -7540,7 +8135,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 1330,
-      "modifiedTime": "2026-07-20T18:47:40.121Z",
+      "modifiedTime": "2026-07-20T18:51:40.686Z",
       "relatedTopics": [
         "BCA-PF-001",
         "BCA-DS-001"
@@ -7551,7 +8146,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 1301,
-      "modifiedTime": "2026-07-20T18:47:40.121Z",
+      "modifiedTime": "2026-07-20T18:51:40.686Z",
       "relatedTopics": [
         "BCA-PF-001",
         "BCA-ALGO-001",
@@ -7566,7 +8161,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 1166,
-      "modifiedTime": "2026-07-20T18:47:40.121Z",
+      "modifiedTime": "2026-07-20T18:51:40.686Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-OS-001",
@@ -7582,7 +8177,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 1081,
-      "modifiedTime": "2026-07-20T18:47:40.121Z",
+      "modifiedTime": "2026-07-20T18:51:40.686Z",
       "relatedTopics": [
         "BCA-AUTH-001",
         "BCA-DS-001",
@@ -7596,7 +8191,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 1239,
-      "modifiedTime": "2026-07-20T18:47:40.121Z",
+      "modifiedTime": "2026-07-20T18:51:40.686Z",
       "relatedTopics": [
         "BCA-AUTH-001"
       ]
@@ -7606,7 +8201,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 961,
-      "modifiedTime": "2026-07-20T18:47:40.121Z",
+      "modifiedTime": "2026-07-20T18:51:40.686Z",
       "relatedTopics": [
         "BCA-CN-001",
         "BCA-PROJ-001"
@@ -7617,7 +8212,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 879,
-      "modifiedTime": "2026-07-20T18:47:40.121Z",
+      "modifiedTime": "2026-07-20T18:51:40.686Z",
       "relatedTopics": [
         "BCA-CN-001",
         "BCA-OS-001",
@@ -7630,7 +8225,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 1169,
-      "modifiedTime": "2026-07-20T18:47:40.121Z",
+      "modifiedTime": "2026-07-20T18:51:40.686Z",
       "relatedTopics": [
         "BCA-ALGO-001",
         "BCA-AUTH-001",
@@ -7646,7 +8241,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 1157,
-      "modifiedTime": "2026-07-20T18:47:40.121Z",
+      "modifiedTime": "2026-07-20T18:51:40.686Z",
       "relatedTopics": [
         "BCA-DB-001",
         "BCA-DS-001",
@@ -7660,7 +8255,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 1120,
-      "modifiedTime": "2026-07-20T18:47:40.121Z",
+      "modifiedTime": "2026-07-20T18:51:40.686Z",
       "relatedTopics": [
         "BCA-DB-001",
         "BCA-OS-001",
@@ -7676,7 +8271,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 1104,
-      "modifiedTime": "2026-07-20T18:47:40.121Z",
+      "modifiedTime": "2026-07-20T18:51:40.686Z",
       "relatedTopics": [
         "BCA-WEB-001",
         "BCA-AUTH-001",
@@ -7692,7 +8287,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 1136,
-      "modifiedTime": "2026-07-20T18:47:40.121Z",
+      "modifiedTime": "2026-07-20T18:51:40.686Z",
       "relatedTopics": [
         "BCA-AUTH-001",
         "BCA-DB-001",
@@ -7705,7 +8300,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 1080,
-      "modifiedTime": "2026-07-20T18:47:40.121Z",
+      "modifiedTime": "2026-07-20T18:51:40.690Z",
       "relatedTopics": [
         "BCA-AUTH-001",
         "BCA-DS-001",
@@ -7722,7 +8317,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 1100,
-      "modifiedTime": "2026-07-20T18:47:40.121Z",
+      "modifiedTime": "2026-07-20T18:51:40.690Z",
       "relatedTopics": [
         "BCA-CN-001",
         "BCA-PF-001",
@@ -7736,7 +8331,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 1078,
-      "modifiedTime": "2026-07-20T18:47:40.121Z",
+      "modifiedTime": "2026-07-20T18:51:40.690Z",
       "relatedTopics": [
         "BCA-DB-001",
         "BCA-OS-002",
@@ -7753,7 +8348,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 1013,
-      "modifiedTime": "2026-07-20T18:47:40.121Z",
+      "modifiedTime": "2026-07-20T18:51:40.690Z",
       "relatedTopics": [
         "BCA-OS-001",
         "BCA-OS-002",
@@ -7765,7 +8360,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 1104,
-      "modifiedTime": "2026-07-20T18:47:40.121Z",
+      "modifiedTime": "2026-07-20T18:51:40.690Z",
       "relatedTopics": [
         "BCA-DS-001",
         "BCA-PROJ-001",
@@ -7777,7 +8372,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 1058,
-      "modifiedTime": "2026-07-20T18:47:40.121Z",
+      "modifiedTime": "2026-07-20T18:51:40.690Z",
       "relatedTopics": [
         "BCA-AUTH-001",
         "BCA-DSYS-001",
@@ -7790,7 +8385,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 1100,
-      "modifiedTime": "2026-07-20T18:47:40.121Z",
+      "modifiedTime": "2026-07-20T18:51:40.690Z",
       "relatedTopics": [
         "BCA-DB-001",
         "BCA-PF-001",
@@ -7805,7 +8400,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 1024,
-      "modifiedTime": "2026-07-20T18:47:40.121Z",
+      "modifiedTime": "2026-07-20T18:51:40.690Z",
       "relatedTopics": [
         "BCA-CN-001",
         "BCA-PF-001",
@@ -7817,7 +8412,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 1094,
-      "modifiedTime": "2026-07-20T18:47:40.121Z",
+      "modifiedTime": "2026-07-20T18:51:40.690Z",
       "relatedTopics": [
         "BCA-OS-002",
         "BCA-OS-001",
@@ -7834,7 +8429,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 1048,
-      "modifiedTime": "2026-07-20T18:47:40.121Z",
+      "modifiedTime": "2026-07-20T18:51:40.690Z",
       "relatedTopics": [
         "BCA-OS-001",
         "BCA-OS-002",
@@ -7850,7 +8445,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 1033,
-      "modifiedTime": "2026-07-20T18:47:40.121Z",
+      "modifiedTime": "2026-07-20T18:51:40.690Z",
       "relatedTopics": [
         "BCA-DS-001",
         "BCA-ALGO-001",
@@ -7866,7 +8461,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 1054,
-      "modifiedTime": "2026-07-20T18:47:40.121Z",
+      "modifiedTime": "2026-07-20T18:51:40.690Z",
       "relatedTopics": [
         "BCA-PF-001",
         "BCA-AUTH-001",
@@ -7879,7 +8474,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 1103,
-      "modifiedTime": "2026-07-20T18:47:40.121Z",
+      "modifiedTime": "2026-07-20T18:51:40.690Z",
       "relatedTopics": [
         "BCA-AUTH-001",
         "BCA-CN-001",
@@ -7891,7 +8486,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 829,
-      "modifiedTime": "2026-07-20T18:47:40.121Z",
+      "modifiedTime": "2026-07-20T18:51:40.690Z",
       "relatedTopics": [
         "BCA-OS-001"
       ]
@@ -7901,7 +8496,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 1080,
-      "modifiedTime": "2026-07-20T18:47:40.121Z",
+      "modifiedTime": "2026-07-20T18:51:40.690Z",
       "relatedTopics": [
         "BCA-ALGO-001",
         "BCA-OS-001",
@@ -7913,7 +8508,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 1067,
-      "modifiedTime": "2026-07-20T18:47:40.121Z",
+      "modifiedTime": "2026-07-20T18:51:40.690Z",
       "relatedTopics": [
         "BCA-CN-001",
         "BCA-DB-001",
@@ -7927,7 +8522,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 1071,
-      "modifiedTime": "2026-07-20T18:47:40.121Z",
+      "modifiedTime": "2026-07-20T18:51:40.690Z",
       "relatedTopics": [
         "BCA-DB-001",
         "BCA-OS-002",
@@ -7939,7 +8534,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 1084,
-      "modifiedTime": "2026-07-20T18:47:40.121Z",
+      "modifiedTime": "2026-07-20T18:51:40.690Z",
       "relatedTopics": [
         "BCA-AUTH-001",
         "BCA-CN-001",
@@ -7952,7 +8547,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 1071,
-      "modifiedTime": "2026-07-20T18:47:40.121Z",
+      "modifiedTime": "2026-07-20T18:51:40.690Z",
       "relatedTopics": [
         "BCA-DB-001",
         "BCA-DS-001",
@@ -7968,7 +8563,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 1014,
-      "modifiedTime": "2026-07-20T18:47:40.121Z",
+      "modifiedTime": "2026-07-20T18:51:40.690Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-PF-001",
@@ -7985,7 +8580,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 1061,
-      "modifiedTime": "2026-07-20T18:47:40.121Z",
+      "modifiedTime": "2026-07-20T18:51:40.690Z",
       "relatedTopics": [
         "BCA-DB-001",
         "BCA-DB-002",
@@ -8000,7 +8595,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 1035,
-      "modifiedTime": "2026-07-20T18:47:40.125Z",
+      "modifiedTime": "2026-07-20T18:51:40.690Z",
       "relatedTopics": [
         "BCA-AUTH-001",
         "BCA-CN-001",
@@ -8015,7 +8610,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 829,
-      "modifiedTime": "2026-07-20T18:47:40.125Z",
+      "modifiedTime": "2026-07-20T18:51:40.690Z",
       "relatedTopics": [
         "BCA-DB-001",
         "BCA-DS-001",
@@ -8028,7 +8623,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 1062,
-      "modifiedTime": "2026-07-20T18:47:40.125Z",
+      "modifiedTime": "2026-07-20T18:51:40.690Z",
       "relatedTopics": [
         "BCA-OS-001",
         "BCA-ALGO-001",
@@ -8040,7 +8635,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 1103,
-      "modifiedTime": "2026-07-20T18:47:40.125Z",
+      "modifiedTime": "2026-07-20T18:51:40.690Z",
       "relatedTopics": [
         "BCA-REACT-001",
         "BCA-WEB-001",
@@ -8057,7 +8652,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 1097,
-      "modifiedTime": "2026-07-20T18:47:40.125Z",
+      "modifiedTime": "2026-07-20T18:51:40.690Z",
       "relatedTopics": [
         "BCA-ALGO-001",
         "BCA-DB-001",
@@ -8071,7 +8666,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 1081,
-      "modifiedTime": "2026-07-20T18:47:40.125Z",
+      "modifiedTime": "2026-07-20T18:51:40.690Z",
       "relatedTopics": [
         "BCA-ALGO-001"
       ]
@@ -8081,7 +8676,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 1026,
-      "modifiedTime": "2026-07-20T18:47:40.125Z",
+      "modifiedTime": "2026-07-20T18:51:40.690Z",
       "relatedTopics": [
         "BCA-OS-002",
         "BCA-CN-001",
@@ -8095,7 +8690,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 1038,
-      "modifiedTime": "2026-07-20T18:47:40.125Z",
+      "modifiedTime": "2026-07-20T18:51:40.690Z",
       "relatedTopics": [
         "BCA-AUTH-001",
         "BCA-PROJ-001",
@@ -8112,7 +8707,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 1019,
-      "modifiedTime": "2026-07-20T18:47:40.125Z",
+      "modifiedTime": "2026-07-20T18:51:40.690Z",
       "relatedTopics": [
         "BCA-OS-002",
         "BCA-CN-001",
@@ -8129,7 +8724,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 1042,
-      "modifiedTime": "2026-07-20T18:47:40.125Z",
+      "modifiedTime": "2026-07-20T18:51:40.690Z",
       "relatedTopics": [
         "BCA-DB-001",
         "BCA-DB-002",
@@ -8143,7 +8738,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 1005,
-      "modifiedTime": "2026-07-20T18:47:40.125Z",
+      "modifiedTime": "2026-07-20T18:51:40.690Z",
       "relatedTopics": [
         "BCA-DS-001",
         "BCA-DB-001",
@@ -8157,7 +8752,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 1039,
-      "modifiedTime": "2026-07-20T18:47:40.125Z",
+      "modifiedTime": "2026-07-20T18:51:40.690Z",
       "relatedTopics": [
         "BCA-DB-001",
         "BCA-PF-001",
@@ -8173,7 +8768,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 1075,
-      "modifiedTime": "2026-07-20T18:47:40.125Z",
+      "modifiedTime": "2026-07-20T18:51:40.690Z",
       "relatedTopics": [
         "BCA-DB-001",
         "BCA-OS-001",
@@ -8190,7 +8785,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 1088,
-      "modifiedTime": "2026-07-20T18:47:40.125Z",
+      "modifiedTime": "2026-07-20T18:51:40.690Z",
       "relatedTopics": [
         "BCA-OS-002",
         "BCA-PROJ-001"
@@ -8201,7 +8796,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 5195,
-      "modifiedTime": "2026-07-20T18:47:40.125Z",
+      "modifiedTime": "2026-07-20T18:51:40.690Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-DS-001",
@@ -8218,7 +8813,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 4520,
-      "modifiedTime": "2026-07-20T18:47:40.125Z",
+      "modifiedTime": "2026-07-20T18:51:40.690Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-AUTH-001",
@@ -8235,7 +8830,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 6080,
-      "modifiedTime": "2026-07-20T18:47:40.125Z",
+      "modifiedTime": "2026-07-20T18:51:40.690Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-OS-001",
@@ -8252,7 +8847,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 7721,
-      "modifiedTime": "2026-07-20T18:47:40.125Z",
+      "modifiedTime": "2026-07-20T18:51:40.690Z",
       "relatedTopics": [
         "BCA-OS-002",
         "BCA-PROJ-001",
@@ -8269,7 +8864,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 6351,
-      "modifiedTime": "2026-07-20T18:47:40.125Z",
+      "modifiedTime": "2026-07-20T18:51:40.694Z",
       "relatedTopics": [
         "BCA-DS-002",
         "BCA-OS-001",
@@ -8286,7 +8881,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 2845,
-      "modifiedTime": "2026-07-20T18:47:40.125Z",
+      "modifiedTime": "2026-07-20T18:51:40.694Z",
       "relatedTopics": [
         "BCA-REACT-001",
         "BCA-AUTH-001",
@@ -8302,7 +8897,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 9411,
-      "modifiedTime": "2026-07-20T18:47:40.125Z",
+      "modifiedTime": "2026-07-20T18:51:40.694Z",
       "relatedTopics": [
         "BCA-OS-001",
         "BCA-PROJ-001",
@@ -8319,7 +8914,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 9576,
-      "modifiedTime": "2026-07-20T18:47:40.125Z",
+      "modifiedTime": "2026-07-20T18:51:40.694Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-OS-001",
@@ -8336,7 +8931,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 4047,
-      "modifiedTime": "2026-07-20T18:47:40.125Z",
+      "modifiedTime": "2026-07-20T18:51:40.694Z",
       "relatedTopics": [
         "BCA-OS-001",
         "BCA-PROJ-001",
@@ -8353,7 +8948,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 11880,
-      "modifiedTime": "2026-07-20T18:47:40.125Z",
+      "modifiedTime": "2026-07-20T18:51:40.694Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-ALGO-001",
@@ -8370,7 +8965,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 1810,
-      "modifiedTime": "2026-07-20T18:47:40.125Z",
+      "modifiedTime": "2026-07-20T18:51:40.694Z",
       "relatedTopics": [
         "BCA-OS-001",
         "BCA-ALGO-001",
@@ -8387,7 +8982,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 2377,
-      "modifiedTime": "2026-07-20T18:47:40.125Z",
+      "modifiedTime": "2026-07-20T18:51:40.694Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-OS-001",
@@ -8404,7 +8999,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 4937,
-      "modifiedTime": "2026-07-20T18:47:40.125Z",
+      "modifiedTime": "2026-07-20T18:51:40.694Z",
       "relatedTopics": [
         "BCA-DSYS-001",
         "BCA-OS-001",
@@ -8421,7 +9016,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 4239,
-      "modifiedTime": "2026-07-20T18:47:40.125Z",
+      "modifiedTime": "2026-07-20T18:51:40.694Z",
       "relatedTopics": [
         "BCA-WEB-001",
         "BCA-PROJ-001",
@@ -8438,7 +9033,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 9118,
-      "modifiedTime": "2026-07-20T18:47:40.129Z",
+      "modifiedTime": "2026-07-20T18:51:40.694Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-DS-001",
@@ -8455,7 +9050,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 8729,
-      "modifiedTime": "2026-07-20T18:47:40.129Z",
+      "modifiedTime": "2026-07-20T18:51:40.694Z",
       "relatedTopics": [
         "BCA-CN-001",
         "BCA-DSYS-001",
@@ -8472,7 +9067,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 8446,
-      "modifiedTime": "2026-07-20T18:47:40.129Z",
+      "modifiedTime": "2026-07-20T18:51:40.694Z",
       "relatedTopics": [
         "BCA-DB-001",
         "BCA-ALGO-001",
@@ -8489,7 +9084,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 13877,
-      "modifiedTime": "2026-07-20T18:47:40.129Z",
+      "modifiedTime": "2026-07-20T18:51:40.694Z",
       "relatedTopics": [
         "BCA-OS-002",
         "BCA-PROJ-001",
@@ -8506,7 +9101,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 9173,
-      "modifiedTime": "2026-07-20T18:47:40.129Z",
+      "modifiedTime": "2026-07-20T18:51:40.694Z",
       "relatedTopics": [
         "BCA-OS-001",
         "BCA-PROJ-001",
@@ -8523,7 +9118,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 7512,
-      "modifiedTime": "2026-07-20T18:47:40.129Z",
+      "modifiedTime": "2026-07-20T18:51:40.694Z",
       "relatedTopics": [
         "BCA-AUTH-001",
         "BCA-PROJ-001",
@@ -8540,7 +9135,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 5517,
-      "modifiedTime": "2026-07-20T18:47:40.129Z",
+      "modifiedTime": "2026-07-20T18:51:40.694Z",
       "relatedTopics": [
         "BCA-OS-002",
         "BCA-PF-001",
@@ -8557,7 +9152,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 6497,
-      "modifiedTime": "2026-07-20T18:47:40.129Z",
+      "modifiedTime": "2026-07-20T18:51:40.694Z",
       "relatedTopics": [
         "BCA-DS-002",
         "BCA-PROJ-001",
@@ -8574,7 +9169,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 19281,
-      "modifiedTime": "2026-07-20T18:47:40.129Z",
+      "modifiedTime": "2026-07-20T18:51:40.694Z",
       "relatedTopics": [
         "BCA-AUTH-001",
         "BCA-PROJ-001",
@@ -8591,7 +9186,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 14548,
-      "modifiedTime": "2026-07-20T18:47:40.129Z",
+      "modifiedTime": "2026-07-20T18:51:40.698Z",
       "relatedTopics": [
         "BCA-AUTH-001",
         "BCA-PROJ-001",
@@ -8608,7 +9203,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 7113,
-      "modifiedTime": "2026-07-20T18:47:40.129Z",
+      "modifiedTime": "2026-07-20T18:51:40.698Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-REACT-001",
@@ -8625,7 +9220,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 1665,
-      "modifiedTime": "2026-07-20T18:49:27.097Z",
+      "modifiedTime": "2026-07-20T22:28:47.806Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-WEB-002",
@@ -8642,7 +9237,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 1663,
-      "modifiedTime": "2026-07-20T18:49:27.097Z",
+      "modifiedTime": "2026-07-20T22:28:47.806Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-WEB-002",
@@ -8659,7 +9254,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 0,
-      "modifiedTime": "2026-07-20T18:47:40.105Z",
+      "modifiedTime": "2026-07-20T18:51:40.674Z",
       "relatedTopics": []
     },
     {
@@ -8667,7 +9262,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 0,
-      "modifiedTime": "2026-07-20T18:47:40.129Z",
+      "modifiedTime": "2026-07-20T18:51:40.698Z",
       "relatedTopics": []
     },
     {
@@ -8675,7 +9270,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 1666,
-      "modifiedTime": "2026-07-20T18:49:27.097Z",
+      "modifiedTime": "2026-07-20T22:28:47.806Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-WEB-002",
@@ -8692,7 +9287,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 1664,
-      "modifiedTime": "2026-07-20T18:49:27.097Z",
+      "modifiedTime": "2026-07-20T22:28:47.806Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-WEB-002",
@@ -8709,7 +9304,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 0,
-      "modifiedTime": "2026-07-20T18:47:40.129Z",
+      "modifiedTime": "2026-07-20T18:51:40.698Z",
       "relatedTopics": []
     },
     {
@@ -8717,7 +9312,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 1657,
-      "modifiedTime": "2026-07-20T18:49:27.097Z",
+      "modifiedTime": "2026-07-20T22:28:47.806Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-AUTH-001",
@@ -8734,7 +9329,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 3031,
-      "modifiedTime": "2026-07-20T18:59:15.913Z",
+      "modifiedTime": "2026-07-20T22:28:47.806Z",
       "relatedTopics": [
         "BCA-DS-002",
         "BCA-OS-002",
@@ -8751,7 +9346,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 4679,
-      "modifiedTime": "2026-07-20T18:47:40.105Z",
+      "modifiedTime": "2026-07-20T18:51:40.674Z",
       "relatedTopics": [
         "BCA-PF-001",
         "BCA-WEB-001",
@@ -8768,7 +9363,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 0,
-      "modifiedTime": "2026-07-20T18:47:40.105Z",
+      "modifiedTime": "2026-07-20T18:51:40.674Z",
       "relatedTopics": []
     },
     {
@@ -8776,7 +9371,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 0,
-      "modifiedTime": "2026-07-20T18:47:40.129Z",
+      "modifiedTime": "2026-07-20T18:51:40.698Z",
       "relatedTopics": []
     },
     {
@@ -8784,7 +9379,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 1660,
-      "modifiedTime": "2026-07-20T18:49:27.097Z",
+      "modifiedTime": "2026-07-20T22:28:47.806Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-WEB-002",
@@ -8801,7 +9396,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 1666,
-      "modifiedTime": "2026-07-20T18:49:27.097Z",
+      "modifiedTime": "2026-07-20T22:28:47.806Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-WEB-002",
@@ -8818,7 +9413,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 1664,
-      "modifiedTime": "2026-07-20T18:49:27.097Z",
+      "modifiedTime": "2026-07-20T22:28:47.806Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-WEB-002",
@@ -8835,7 +9430,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 0,
-      "modifiedTime": "2026-07-20T18:47:40.129Z",
+      "modifiedTime": "2026-07-20T18:51:40.698Z",
       "relatedTopics": []
     },
     {
@@ -8843,7 +9438,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 1663,
-      "modifiedTime": "2026-07-20T18:49:27.097Z",
+      "modifiedTime": "2026-07-20T22:28:47.806Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-WEB-002",
@@ -8860,7 +9455,7 @@
       "type": "external/reference note",
       "extension": ".md",
       "sizeBytes": 5730,
-      "modifiedTime": "2026-07-20T18:47:40.105Z",
+      "modifiedTime": "2026-07-20T18:51:40.674Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-AUTH-001",
@@ -8877,7 +9472,7 @@
       "type": "code example",
       "extension": ".js",
       "sizeBytes": 8646,
-      "modifiedTime": "2026-07-20T18:47:40.129Z",
+      "modifiedTime": "2026-07-20T18:51:40.698Z",
       "relatedTopics": [
         "BCA-WEB-001",
         "BCA-WEB-002",
@@ -8894,7 +9489,7 @@
       "type": "code example",
       "extension": ".py",
       "sizeBytes": 4931,
-      "modifiedTime": "2026-07-20T18:47:40.129Z",
+      "modifiedTime": "2026-07-20T18:51:40.698Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-DB-001",
@@ -8911,7 +9506,7 @@
       "type": "code example",
       "extension": ".py",
       "sizeBytes": 4524,
-      "modifiedTime": "2026-07-20T18:47:40.129Z",
+      "modifiedTime": "2026-07-20T18:51:40.698Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-DB-001",
@@ -8928,7 +9523,7 @@
       "type": "code example",
       "extension": ".py",
       "sizeBytes": 2385,
-      "modifiedTime": "2026-07-20T18:47:40.129Z",
+      "modifiedTime": "2026-07-20T18:51:40.698Z",
       "relatedTopics": [
         "BCA-ALGO-001",
         "BCA-OS-002",
@@ -8941,7 +9536,7 @@
       "type": "code example",
       "extension": ".js",
       "sizeBytes": 11268,
-      "modifiedTime": "2026-07-20T18:59:45.717Z",
+      "modifiedTime": "2026-07-20T22:28:47.810Z",
       "relatedTopics": [
         "BCA-DS-001",
         "BCA-ALGO-001",
@@ -8958,7 +9553,7 @@
       "type": "code example",
       "extension": ".py",
       "sizeBytes": 4220,
-      "modifiedTime": "2026-07-20T18:47:40.129Z",
+      "modifiedTime": "2026-07-20T18:51:40.698Z",
       "relatedTopics": [
         "BCA-PROJ-001",
         "BCA-OS-001",
@@ -8975,7 +9570,7 @@
       "type": "code example",
       "extension": ".sql",
       "sizeBytes": 0,
-      "modifiedTime": "2026-07-20T18:47:40.129Z",
+      "modifiedTime": "2026-07-20T18:51:40.698Z",
       "relatedTopics": [
         "BCA-DB-001",
         "BCA-PROJ-001"
@@ -8986,7 +9581,7 @@
       "type": "markdown note",
       "extension": ".md",
       "sizeBytes": 0,
-      "modifiedTime": "2026-07-20T18:47:40.129Z",
+      "modifiedTime": "2026-07-20T18:51:40.698Z",
       "relatedTopics": []
     },
     {
@@ -8994,7 +9589,7 @@
       "type": "code example",
       "extension": ".js",
       "sizeBytes": 0,
-      "modifiedTime": "2026-07-20T18:47:40.129Z",
+      "modifiedTime": "2026-07-20T18:51:40.698Z",
       "relatedTopics": []
     },
     {
@@ -9002,7 +9597,7 @@
       "type": "code example",
       "extension": ".jsx",
       "sizeBytes": 0,
-      "modifiedTime": "2026-07-20T18:47:40.129Z",
+      "modifiedTime": "2026-07-20T18:51:40.698Z",
       "relatedTopics": []
     }
   ],
