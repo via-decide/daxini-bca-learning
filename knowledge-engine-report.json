@@ -1,15 +1,17 @@
 {
-  "generatedAt": "2026-07-20T22:30:26.446Z",
+  "generatedAt": "2026-07-21T01:37:31.378Z",
   "totals": {
     "topics": 18,
-    "assets": 628,
-    "graphEdges": 4057
+    "assets": 878,
+    "graphEdges": 5562
   },
   "prerequisiteValidator": [],
   "deadLinkDetector": [],
   "duplicateTopicDetector": [],
   "duplicateAssetDetector": [
     "readme.md",
+    "index.md",
+    "glossary.md",
     "api_design.md",
     "architecture.md",
     "common_mistakes.md",
