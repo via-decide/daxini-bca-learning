@@ -1,0 +1,35 @@
+# Sidebar Navigation
+
+- 02-core-engineering
+  - [1. Version Control & Collaboration](02-core-engineering/01-version-control/)
+  - [2. Package Management](02-core-engineering/02-package-management/)
+  - [6. CI/CD](02-core-engineering/06-cicd/)
+  - [9. APIs](02-core-engineering/09-apis/)
+  - [10. Backend Systems](02-core-engineering/10-backend-systems/)
+  - [17. Backend Frameworks](02-core-engineering/17-backend-frameworks/)
+  - [18. Build Tools](02-core-engineering/18-build-tools/)
+  - [24. Payments](02-core-engineering/24-payments/)
+- 04-infrastructure
+  - [3. Deployment Platforms](04-infrastructure/03-deployment-platforms/)
+  - [5. Containers](04-infrastructure/05-containers/)
+  - [7. Web Infrastructure](04-infrastructure/07-web-infrastructure/)
+  - [19. DevOps & Infrastructure](04-infrastructure/19-devops-infrastructure/)
+  - [20. Monitoring & Observability](04-infrastructure/20-monitoring-observability/)
+- 05-distributed-systems
+  - [11. Databases & Storage](05-distributed-systems/11-databases-storage/)
+  - [12. Search Systems](05-distributed-systems/12-search-systems/)
+  - [23. Messaging Systems](05-distributed-systems/23-messaging-systems/)
+- 06-data-intelligence
+  - [13. Analytics & Product Intelligence](06-data-intelligence/13-analytics-product-intelligence/)
+  - [14. Performance Engineering](06-data-intelligence/14-performance-engineering/)
+  - [15. AI Engineering](06-data-intelligence/15-ai-engineering/)
+- 07-frontend-web
+  - [16. Frontend Engineering](07-frontend-web/16-frontend-engineering/)
+  - [25. Mobile Engineering](07-frontend-web/25-mobile-engineering/)
+  - [26. Design Systems](07-frontend-web/26-design-systems/)
+  - [27. SEO](07-frontend-web/27-seo/)
+- 08-security-compliance
+  - [8. Authentication & Identity](08-security-compliance/08-authentication-identity/)
+  - [21. Security](08-security-compliance/21-security/)
+- 09-specialized-domains
+  - [22. Networking](09-specialized-domains/22-networking/)

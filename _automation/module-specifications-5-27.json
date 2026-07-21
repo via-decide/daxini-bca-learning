@@ -1,0 +1,1731 @@
+{
+  "modules": [
+    {
+      "id": 5,
+      "name": "Containers",
+      "category": "04-infrastructure",
+      "folder": "docs/04-infrastructure/05-containers",
+      "prerequisites": [
+        1,
+        2
+      ],
+      "depends_on": [],
+      "prerequisite_for": [
+        3,
+        6,
+        19,
+        20,
+        40,
+        82
+      ],
+      "difficulty": "Intermediate",
+      "estimated_hours": 12,
+      "files": [
+        "index.md",
+        "container-fundamentals.md",
+        "docker-essentials.md",
+        "dockerfile-optimization.md",
+        "container-networking.md",
+        "container-orchestration-intro.md",
+        "container-security.md"
+      ],
+      "glossary_terms": 24,
+      "diagrams_required": 9,
+      "code_examples": 20,
+      "sections": [
+        {
+          "title": "Container Fundamentals",
+          "concepts": [
+            "Container",
+            "Image",
+            "Layer",
+            "Registry",
+            "Namespace",
+            "Cgroup"
+          ],
+          "examples": 3,
+          "diagrams": 2
+        },
+        {
+          "title": "Docker Essentials",
+          "concepts": [
+            "Docker",
+            "Docker daemon",
+            "Container lifecycle",
+            "Port mapping"
+          ],
+          "examples": 4,
+          "diagrams": 2
+        },
+        {
+          "title": "Dockerfile & Image Building",
+          "concepts": [
+            "Dockerfile",
+            "Image layers",
+            "Build optimization",
+            "Multi-stage builds"
+          ],
+          "examples": 5,
+          "diagrams": 1
+        },
+        {
+          "title": "Container Networking",
+          "concepts": [
+            "Bridge network",
+            "Host network",
+            "Overlay network",
+            "DNS"
+          ],
+          "examples": 3,
+          "diagrams": 2
+        },
+        {
+          "title": "Container Orchestration Intro",
+          "concepts": [
+            "Orchestration",
+            "Kubernetes intro",
+            "Docker Swarm"
+          ],
+          "examples": 2,
+          "diagrams": 1
+        },
+        {
+          "title": "Container Security",
+          "concepts": [
+            "Image scanning",
+            "Registry security",
+            "Runtime security"
+          ],
+          "examples": 3,
+          "diagrams": 1
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "CI/CD",
+      "category": "02-core-engineering",
+      "folder": "docs/02-core-engineering/06-cicd",
+      "prerequisites": [
+        1,
+        2
+      ],
+      "depends_on": [],
+      "prerequisite_for": [
+        3,
+        19,
+        20,
+        29,
+        30
+      ],
+      "difficulty": "Intermediate",
+      "estimated_hours": 14,
+      "files": [
+        "index.md",
+        "cicd-fundamentals.md",
+        "github-actions.md",
+        "gitlab-ci.md",
+        "jenkins.md",
+        "pipeline-design.md",
+        "testing-automation.md",
+        "deployment-automation.md"
+      ],
+      "glossary_terms": 28,
+      "diagrams_required": 10,
+      "code_examples": 22,
+      "sections": [
+        {
+          "title": "CI/CD Fundamentals",
+          "concepts": [
+            "Continuous Integration",
+            "Continuous Deployment",
+            "Pipeline",
+            "Workflow",
+            "Artifacts"
+          ],
+          "examples": 3,
+          "diagrams": 2
+        },
+        {
+          "title": "GitHub Actions",
+          "concepts": [
+            "Actions",
+            "Workflows",
+            "Jobs",
+            "Steps",
+            "Secrets"
+          ],
+          "examples": 4,
+          "diagrams": 2
+        },
+        {
+          "title": "Other CI/CD Platforms",
+          "concepts": [
+            "GitLab CI",
+            "Jenkins",
+            "CircleCI",
+            "Travis CI"
+          ],
+          "examples": 4,
+          "diagrams": 1
+        },
+        {
+          "title": "Pipeline Design",
+          "concepts": [
+            "Stages",
+            "Parallel execution",
+            "Conditional logic",
+            "Caching"
+          ],
+          "examples": 3,
+          "diagrams": 2
+        },
+        {
+          "title": "Testing in CI/CD",
+          "concepts": [
+            "Unit tests",
+            "Integration tests",
+            "E2E tests",
+            "Coverage"
+          ],
+          "examples": 3,
+          "diagrams": 1
+        },
+        {
+          "title": "Deployment Automation",
+          "concepts": [
+            "Automated deployments",
+            "Environment promotion",
+            "Release automation"
+          ],
+          "examples": 3,
+          "diagrams": 1
+        },
+        {
+          "title": "Monitoring CI/CD Health",
+          "concepts": [
+            "Pipeline metrics",
+            "Failure analysis",
+            "Build performance"
+          ],
+          "examples": 2,
+          "diagrams": 1
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Web Infrastructure",
+      "category": "04-infrastructure",
+      "folder": "docs/04-infrastructure/07-web-infrastructure",
+      "prerequisites": [
+        4
+      ],
+      "depends_on": [
+        9
+      ],
+      "prerequisite_for": [
+        16,
+        20,
+        53,
+        87
+      ],
+      "difficulty": "Advanced",
+      "estimated_hours": 16,
+      "files": [
+        "index.md",
+        "http-protocol.md",
+        "load-balancing.md",
+        "cdn-content-delivery.md",
+        "caching-strategies.md",
+        "web-servers.md",
+        "reverse-proxies.md",
+        "ssl-tls.md"
+      ],
+      "glossary_terms": 25,
+      "diagrams_required": 9,
+      "code_examples": 20,
+      "sections": [
+        {
+          "title": "HTTP Protocol Deep Dive",
+          "concepts": [
+            "HTTP/1.1",
+            "HTTP/2",
+            "HTTP/3",
+            "Headers",
+            "Status codes"
+          ],
+          "examples": 4,
+          "diagrams": 2
+        },
+        {
+          "title": "Load Balancing",
+          "concepts": [
+            "Load balancer",
+            "Algorithms",
+            "Session persistence",
+            "Health checks"
+          ],
+          "examples": 4,
+          "diagrams": 2
+        },
+        {
+          "title": "CDN & Content Delivery",
+          "concepts": [
+            "CDN",
+            "Edge servers",
+            "Cache invalidation",
+            "Geographic routing"
+          ],
+          "examples": 3,
+          "diagrams": 2
+        },
+        {
+          "title": "Caching Strategies",
+          "concepts": [
+            "HTTP caching",
+            "Cache headers",
+            "Varnish",
+            "Cache busting"
+          ],
+          "examples": 3,
+          "diagrams": 1
+        },
+        {
+          "title": "Web Servers",
+          "concepts": [
+            "Nginx",
+            "Apache",
+            "Configuration",
+            "Performance tuning"
+          ],
+          "examples": 4,
+          "diagrams": 1
+        },
+        {
+          "title": "Reverse Proxies & API Gateways",
+          "concepts": [
+            "Reverse proxy",
+            "API Gateway",
+            "Routing",
+            "Authentication"
+          ],
+          "examples": 2,
+          "diagrams": 1
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Authentication & Identity",
+      "category": "08-security-compliance",
+      "folder": "docs/08-security-compliance/08-authentication-identity",
+      "prerequisites": [
+        9
+      ],
+      "depends_on": [],
+      "prerequisite_for": [
+        21,
+        46,
+        47,
+        118
+      ],
+      "difficulty": "Intermediate",
+      "estimated_hours": 12,
+      "files": [
+        "index.md",
+        "auth-fundamentals.md",
+        "oauth-oidc.md",
+        "jwt-tokens.md",
+        "mfa-security.md",
+        "session-management.md",
+        "identity-providers.md"
+      ],
+      "glossary_terms": 23,
+      "diagrams_required": 8,
+      "code_examples": 18,
+      "sections": [
+        {
+          "title": "Authentication Fundamentals",
+          "concepts": [
+            "Authentication",
+            "Authorization",
+            "Session",
+            "Credential"
+          ],
+          "examples": 3,
+          "diagrams": 2
+        },
+        {
+          "title": "OAuth 2.0 & OpenID Connect",
+          "concepts": [
+            "OAuth 2.0",
+            "OpenID Connect",
+            "Authorization flows",
+            "Scope"
+          ],
+          "examples": 4,
+          "diagrams": 2
+        },
+        {
+          "title": "JWT & Token-based Auth",
+          "concepts": [
+            "JWT",
+            "Token claims",
+            "Expiration",
+            "Signing"
+          ],
+          "examples": 4,
+          "diagrams": 1
+        },
+        {
+          "title": "Multi-Factor Authentication",
+          "concepts": [
+            "MFA",
+            "TOTP",
+            "SMS",
+            "Biometric"
+          ],
+          "examples": 3,
+          "diagrams": 1
+        },
+        {
+          "title": "Session Management",
+          "concepts": [
+            "Session",
+            "Cookies",
+            "Token refresh",
+            "Logout"
+          ],
+          "examples": 2,
+          "diagrams": 1
+        },
+        {
+          "title": "Identity Providers & Directory Services",
+          "concepts": [
+            "IdP",
+            "LDAP",
+            "Active Directory",
+            "Single Sign-On"
+          ],
+          "examples": 2,
+          "diagrams": 1
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "name": "APIs",
+      "category": "02-core-engineering",
+      "folder": "docs/02-core-engineering/09-apis",
+      "prerequisites": [
+        1,
+        10
+      ],
+      "depends_on": [],
+      "prerequisite_for": [
+        7,
+        8,
+        16,
+        51,
+        112
+      ],
+      "difficulty": "Intermediate",
+      "estimated_hours": 14,
+      "files": [
+        "index.md",
+        "api-fundamentals.md",
+        "rest-apis.md",
+        "graphql.md",
+        "grpc.md",
+        "api-design.md",
+        "api-documentation.md",
+        "api-versioning.md",
+        "rate-limiting.md"
+      ],
+      "glossary_terms": 27,
+      "diagrams_required": 10,
+      "code_examples": 24,
+      "sections": [
+        {
+          "title": "API Fundamentals",
+          "concepts": [
+            "API",
+            "Endpoint",
+            "Request/Response",
+            "Status codes"
+          ],
+          "examples": 3,
+          "diagrams": 2
+        },
+        {
+          "title": "REST API Design",
+          "concepts": [
+            "REST",
+            "Resources",
+            "HTTP methods",
+            "Hypermedia"
+          ],
+          "examples": 5,
+          "diagrams": 2
+        },
+        {
+          "title": "GraphQL",
+          "concepts": [
+            "GraphQL",
+            "Queries",
+            "Mutations",
+            "Subscriptions"
+          ],
+          "examples": 4,
+          "diagrams": 1
+        },
+        {
+          "title": "gRPC & Protobuf",
+          "concepts": [
+            "gRPC",
+            "Protocol Buffers",
+            "Streaming"
+          ],
+          "examples": 3,
+          "diagrams": 1
+        },
+        {
+          "title": "API Design Best Practices",
+          "concepts": [
+            "Consistency",
+            "Error handling",
+            "Pagination",
+            "Filtering"
+          ],
+          "examples": 3,
+          "diagrams": 1
+        },
+        {
+          "title": "API Documentation",
+          "concepts": [
+            "OpenAPI/Swagger",
+            "API documentation tools",
+            "Interactive docs"
+          ],
+          "examples": 2,
+          "diagrams": 1
+        },
+        {
+          "title": "Versioning & Compatibility",
+          "concepts": [
+            "API versioning strategies",
+            "Backward compatibility"
+          ],
+          "examples": 2,
+          "diagrams": 1
+        },
+        {
+          "title": "Rate Limiting & Throttling",
+          "concepts": [
+            "Rate limiting",
+            "Quota management",
+            "Throttling strategies"
+          ],
+          "examples": 2,
+          "diagrams": 1
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Backend Systems",
+      "category": "02-core-engineering",
+      "folder": "docs/02-core-engineering/10-backend-systems",
+      "prerequisites": [
+        1,
+        2,
+        31
+      ],
+      "depends_on": [],
+      "prerequisite_for": [
+        9,
+        11,
+        17,
+        40
+      ],
+      "difficulty": "Intermediate",
+      "estimated_hours": 16,
+      "files": [
+        "index.md",
+        "backend-fundamentals.md",
+        "server-architecture.md",
+        "request-response-cycle.md",
+        "middleware.md",
+        "error-handling.md",
+        "logging-debugging.md",
+        "performance-optimization.md"
+      ],
+      "glossary_terms": 22,
+      "diagrams_required": 8,
+      "code_examples": 18,
+      "sections": [
+        {
+          "title": "Backend Fundamentals",
+          "concepts": [
+            "Server",
+            "Application server",
+            "Process",
+            "Threading"
+          ],
+          "examples": 3,
+          "diagrams": 2
+        },
+        {
+          "title": "Server Architecture Patterns",
+          "concepts": [
+            "Monolithic",
+            "Microservices",
+            "Serverless",
+            "Event-driven"
+          ],
+          "examples": 4,
+          "diagrams": 2
+        },
+        {
+          "title": "Request-Response Cycle",
+          "concepts": [
+            "Request handling",
+            "Routing",
+            "Controller",
+            "Response"
+          ],
+          "examples": 3,
+          "diagrams": 1
+        },
+        {
+          "title": "Middleware & Filters",
+          "concepts": [
+            "Middleware",
+            "Authentication middleware",
+            "Logging middleware"
+          ],
+          "examples": 3,
+          "diagrams": 1
+        },
+        {
+          "title": "Error Handling & Recovery",
+          "concepts": [
+            "Exception handling",
+            "Error codes",
+            "Recovery strategies"
+          ],
+          "examples": 3,
+          "diagrams": 1
+        },
+        {
+          "title": "Logging & Debugging",
+          "concepts": [
+            "Logging",
+            "Log levels",
+            "Structured logging",
+            "Debugging"
+          ],
+          "examples": 2,
+          "diagrams": 1
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "name": "Databases & Storage",
+      "category": "05-distributed-systems",
+      "folder": "docs/05-distributed-systems/11-databases-storage",
+      "prerequisites": [
+        10,
+        31
+      ],
+      "depends_on": [],
+      "prerequisite_for": [
+        12,
+        15,
+        40,
+        43,
+        44
+      ],
+      "difficulty": "Advanced",
+      "estimated_hours": 18,
+      "files": [
+        "index.md",
+        "databases-storage-section-1.md",
+        "databases-storage-section-2.md",
+        "databases-storage-section-3.md"
+      ],
+      "glossary_terms": 12,
+      "diagrams_required": 3,
+      "code_examples": 7,
+      "sections": [
+        {
+          "title": "Databases & Storage Section 1",
+          "concepts": [
+            "Database",
+            "DBMS",
+            "SQL",
+            "Joins"
+          ],
+          "examples": 3,
+          "diagrams": 1
+        },
+        {
+          "title": "Databases & Storage Section 2",
+          "concepts": [
+            "NoSQL",
+            "Index types",
+            "Query plans",
+            "ACID properties"
+          ],
+          "examples": 2,
+          "diagrams": 1
+        },
+        {
+          "title": "Databases & Storage Section 3",
+          "concepts": [
+            "Replication",
+            "Sharding",
+            "Backup strategies",
+            "Normalization"
+          ],
+          "examples": 2,
+          "diagrams": 1
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "name": "Search Systems",
+      "category": "05-distributed-systems",
+      "folder": "docs/05-distributed-systems/12-search-systems",
+      "prerequisites": [
+        11
+      ],
+      "depends_on": [],
+      "prerequisite_for": [
+        43,
+        70,
+        110
+      ],
+      "difficulty": "Advanced",
+      "estimated_hours": 14,
+      "files": [
+        "index.md",
+        "search-systems-section-1.md",
+        "search-systems-section-2.md",
+        "search-systems-section-3.md"
+      ],
+      "glossary_terms": 12,
+      "diagrams_required": 3,
+      "code_examples": 7,
+      "sections": [
+        {
+          "title": "Search Systems Section 1",
+          "concepts": [
+            "Search engine",
+            "Index",
+            "Query",
+            "Ranking"
+          ],
+          "examples": 3,
+          "diagrams": 1
+        },
+        {
+          "title": "Search Systems Section 2",
+          "concepts": [
+            "Inverted index",
+            "Tokenization",
+            "Stemming",
+            "Elasticsearch"
+          ],
+          "examples": 2,
+          "diagrams": 1
+        },
+        {
+          "title": "Search Systems Section 3",
+          "concepts": [
+            "Solr",
+            "BM25",
+            "Faceted search",
+            "Autocomplete"
+          ],
+          "examples": 2,
+          "diagrams": 1
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "name": "Analytics & Product Intelligence",
+      "category": "06-data-intelligence",
+      "folder": "docs/06-data-intelligence/13-analytics-product-intelligence",
+      "prerequisites": [
+        11,
+        20
+      ],
+      "depends_on": [],
+      "prerequisite_for": [
+        14,
+        15,
+        43,
+        115
+      ],
+      "difficulty": "Intermediate",
+      "estimated_hours": 12,
+      "files": [
+        "index.md",
+        "analytics-product-intelligence-section-1.md",
+        "analytics-product-intelligence-section-2.md",
+        "analytics-product-intelligence-section-3.md"
+      ],
+      "glossary_terms": 12,
+      "diagrams_required": 3,
+      "code_examples": 7,
+      "sections": [
+        {
+          "title": "Analytics & Product Intelligence Section 1",
+          "concepts": [
+            "Analytics",
+            "Metrics",
+            "KPI",
+            "Funnel analysis"
+          ],
+          "examples": 3,
+          "diagrams": 1
+        },
+        {
+          "title": "Analytics & Product Intelligence Section 2",
+          "concepts": [
+            "Event",
+            "Event schema",
+            "Dashboard",
+            "Visualization"
+          ],
+          "examples": 2,
+          "diagrams": 1
+        },
+        {
+          "title": "Analytics & Product Intelligence Section 3",
+          "concepts": [
+            "Cohort analysis",
+            "Retention",
+            "A/B test",
+            "Statistical significance"
+          ],
+          "examples": 2,
+          "diagrams": 1
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "name": "Performance Engineering",
+      "category": "06-data-intelligence",
+      "folder": "docs/06-data-intelligence/14-performance-engineering",
+      "prerequisites": [
+        10,
+        11,
+        20
+      ],
+      "depends_on": [],
+      "prerequisite_for": [
+        40,
+        54,
+        55,
+        92
+      ],
+      "difficulty": "Advanced",
+      "estimated_hours": 16,
+      "files": [
+        "index.md",
+        "performance-engineering-section-1.md",
+        "performance-engineering-section-2.md",
+        "performance-engineering-section-3.md"
+      ],
+      "glossary_terms": 12,
+      "diagrams_required": 3,
+      "code_examples": 7,
+      "sections": [
+        {
+          "title": "Performance Engineering Section 1",
+          "concepts": [
+            "Performance metrics",
+            "Latency",
+            "Throughput",
+            "P99 latency"
+          ],
+          "examples": 3,
+          "diagrams": 1
+        },
+        {
+          "title": "Performance Engineering Section 2",
+          "concepts": [
+            "CPU profiling",
+            "Memory profiling",
+            "Flame graphs",
+            "Parallelization"
+          ],
+          "examples": 2,
+          "diagrams": 1
+        },
+        {
+          "title": "Performance Engineering Section 3",
+          "concepts": [
+            "Memory leaks",
+            "Garbage collection",
+            "Load testing",
+            "Performance budget"
+          ],
+          "examples": 2,
+          "diagrams": 1
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "name": "AI Engineering",
+      "category": "06-data-intelligence",
+      "folder": "docs/06-data-intelligence/15-ai-engineering",
+      "prerequisites": [
+        43,
+        65,
+        83
+      ],
+      "depends_on": [],
+      "prerequisite_for": [
+        68,
+        69,
+        102,
+        113
+      ],
+      "difficulty": "Advanced",
+      "estimated_hours": 18,
+      "files": [
+        "index.md",
+        "ai-engineering-section-1.md",
+        "ai-engineering-section-2.md",
+        "ai-engineering-section-3.md",
+        "ai-engineering-section-4.md"
+      ],
+      "glossary_terms": 13,
+      "diagrams_required": 4,
+      "code_examples": 9,
+      "sections": [
+        {
+          "title": "AI Engineering Section 1",
+          "concepts": [
+            "AI",
+            "Machine Learning",
+            "Deep Learning",
+            "NLP"
+          ],
+          "examples": 3,
+          "diagrams": 1
+        },
+        {
+          "title": "AI Engineering Section 2",
+          "concepts": [
+            "Data collection",
+            "Preprocessing",
+            "Training",
+            "Inference"
+          ],
+          "examples": 2,
+          "diagrams": 1
+        },
+        {
+          "title": "AI Engineering Section 3",
+          "concepts": [
+            "Feature extraction",
+            "Supervised learning",
+            "Cross-validation",
+            "Bias"
+          ],
+          "examples": 2,
+          "diagrams": 1
+        },
+        {
+          "title": "AI Engineering Section 4",
+          "concepts": [
+            "Fairness"
+          ],
+          "examples": 2,
+          "diagrams": 1
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "name": "Frontend Engineering",
+      "category": "07-frontend-web",
+      "folder": "docs/07-frontend-web/16-frontend-engineering",
+      "prerequisites": [
+        9,
+        17
+      ],
+      "depends_on": [],
+      "prerequisite_for": [
+        26,
+        27,
+        48,
+        49,
+        52,
+        53,
+        54
+      ],
+      "difficulty": "Intermediate",
+      "estimated_hours": 16,
+      "files": [
+        "index.md",
+        "frontend-engineering-section-1.md",
+        "frontend-engineering-section-2.md",
+        "frontend-engineering-section-3.md",
+        "frontend-engineering-section-4.md"
+      ],
+      "glossary_terms": 13,
+      "diagrams_required": 4,
+      "code_examples": 9,
+      "sections": [
+        {
+          "title": "Frontend Engineering Section 1",
+          "concepts": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "Browser"
+          ],
+          "examples": 3,
+          "diagrams": 1
+        },
+        {
+          "title": "Frontend Engineering Section 2",
+          "concepts": [
+            "Semantic HTML",
+            "Flexbox",
+            "Grid",
+            "DOM tree"
+          ],
+          "examples": 2,
+          "diagrams": 1
+        },
+        {
+          "title": "Frontend Engineering Section 3",
+          "concepts": [
+            "Event listeners",
+            "Component state",
+            "React",
+            "Vue"
+          ],
+          "examples": 2,
+          "diagrams": 1
+        },
+        {
+          "title": "Frontend Engineering Section 4",
+          "concepts": [
+            "Responsive Design"
+          ],
+          "examples": 2,
+          "diagrams": 1
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "name": "Backend Frameworks",
+      "category": "02-core-engineering",
+      "folder": "docs/02-core-engineering/17-backend-frameworks",
+      "prerequisites": [
+        2,
+        10
+      ],
+      "depends_on": [],
+      "prerequisite_for": [
+        9,
+        31,
+        51
+      ],
+      "difficulty": "Intermediate",
+      "estimated_hours": 14,
+      "files": [
+        "index.md",
+        "backend-frameworks-section-1.md",
+        "backend-frameworks-section-2.md",
+        "backend-frameworks-section-3.md"
+      ],
+      "glossary_terms": 12,
+      "diagrams_required": 3,
+      "code_examples": 7,
+      "sections": [
+        {
+          "title": "Backend Frameworks Section 1",
+          "concepts": [
+            "Framework",
+            "Routing",
+            "Middleware",
+            "Request handling"
+          ],
+          "examples": 3,
+          "diagrams": 1
+        },
+        {
+          "title": "Backend Frameworks Section 2",
+          "concepts": [
+            "Express",
+            "Fastify",
+            "Django",
+            "Flask"
+          ],
+          "examples": 2,
+          "diagrams": 1
+        },
+        {
+          "title": "Backend Frameworks Section 3",
+          "concepts": [
+            "FastAPI",
+            "Spring Boot",
+            "Gin",
+            "Actix"
+          ],
+          "examples": 2,
+          "diagrams": 1
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "name": "Build Tools",
+      "category": "02-core-engineering",
+      "folder": "docs/02-core-engineering/18-build-tools",
+      "prerequisites": [
+        2,
+        6
+      ],
+      "depends_on": [],
+      "prerequisite_for": [
+        29,
+        30,
+        38
+      ],
+      "difficulty": "Intermediate",
+      "estimated_hours": 12,
+      "files": [
+        "index.md",
+        "build-tools-section-1.md",
+        "build-tools-section-2.md",
+        "build-tools-section-3.md"
+      ],
+      "glossary_terms": 11,
+      "diagrams_required": 3,
+      "code_examples": 7,
+      "sections": [
+        {
+          "title": "Build Tools Section 1",
+          "concepts": [
+            "Build process",
+            "Bundling",
+            "Transpilation",
+            "Optimization"
+          ],
+          "examples": 3,
+          "diagrams": 1
+        },
+        {
+          "title": "Build Tools Section 2",
+          "concepts": [
+            "Webpack",
+            "Vite",
+            "Parcel",
+            "esbuild"
+          ],
+          "examples": 2,
+          "diagrams": 1
+        },
+        {
+          "title": "Build Tools Section 3",
+          "concepts": [
+            "Maven",
+            "Gradle",
+            "Incremental builds"
+          ],
+          "examples": 2,
+          "diagrams": 1
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "name": "DevOps & Infrastructure",
+      "category": "04-infrastructure",
+      "folder": "docs/04-infrastructure/19-devops-infrastructure",
+      "prerequisites": [
+        3,
+        5,
+        6
+      ],
+      "depends_on": [],
+      "prerequisite_for": [
+        20,
+        46,
+        81,
+        82
+      ],
+      "difficulty": "Advanced",
+      "estimated_hours": 18,
+      "files": [
+        "index.md",
+        "devops-infrastructure-section-1.md",
+        "devops-infrastructure-section-2.md",
+        "devops-infrastructure-section-3.md"
+      ],
+      "glossary_terms": 11,
+      "diagrams_required": 3,
+      "code_examples": 7,
+      "sections": [
+        {
+          "title": "DevOps & Infrastructure Section 1",
+          "concepts": [
+            "DevOps",
+            "Infrastructure automation",
+            "Deployment automation",
+            "IaC"
+          ],
+          "examples": 3,
+          "diagrams": 1
+        },
+        {
+          "title": "DevOps & Infrastructure Section 2",
+          "concepts": [
+            "Declarative",
+            "Terraform",
+            "HCL",
+            "State management"
+          ],
+          "examples": 2,
+          "diagrams": 1
+        },
+        {
+          "title": "DevOps & Infrastructure Section 3",
+          "concepts": [
+            "Ansible",
+            "Idempotence",
+            "Provisioning"
+          ],
+          "examples": 2,
+          "diagrams": 1
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "name": "Monitoring & Observability",
+      "category": "04-infrastructure",
+      "folder": "docs/04-infrastructure/20-monitoring-observability",
+      "prerequisites": [
+        6,
+        10,
+        13
+      ],
+      "depends_on": [],
+      "prerequisite_for": [
+        19,
+        81
+      ],
+      "difficulty": "Advanced",
+      "estimated_hours": 14,
+      "files": [
+        "index.md",
+        "monitoring-observability-section-1.md",
+        "monitoring-observability-section-2.md",
+        "monitoring-observability-section-3.md"
+      ],
+      "glossary_terms": 12,
+      "diagrams_required": 3,
+      "code_examples": 7,
+      "sections": [
+        {
+          "title": "Monitoring & Observability Section 1",
+          "concepts": [
+            "Observability",
+            "Metrics",
+            "Logs",
+            "Traces"
+          ],
+          "examples": 3,
+          "diagrams": 1
+        },
+        {
+          "title": "Monitoring & Observability Section 2",
+          "concepts": [
+            "Prometheus",
+            "Grafana",
+            "Time-series",
+            "Cardinality"
+          ],
+          "examples": 2,
+          "diagrams": 1
+        },
+        {
+          "title": "Monitoring & Observability Section 3",
+          "concepts": [
+            "Log aggregation",
+            "Structured logging",
+            "Spans",
+            "Alerts"
+          ],
+          "examples": 2,
+          "diagrams": 1
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "name": "Security",
+      "category": "08-security-compliance",
+      "folder": "docs/08-security-compliance/21-security",
+      "prerequisites": [
+        8
+      ],
+      "depends_on": [],
+      "prerequisite_for": [
+        46,
+        47,
+        78,
+        118
+      ],
+      "difficulty": "Advanced",
+      "estimated_hours": 16,
+      "files": [
+        "index.md",
+        "security-section-1.md",
+        "security-section-2.md",
+        "security-section-3.md",
+        "security-section-4.md"
+      ],
+      "glossary_terms": 14,
+      "diagrams_required": 4,
+      "code_examples": 9,
+      "sections": [
+        {
+          "title": "Security Section 1",
+          "concepts": [
+            "Confidentiality",
+            "Integrity",
+            "Availability",
+            "Threat models"
+          ],
+          "examples": 3,
+          "diagrams": 1
+        },
+        {
+          "title": "Security Section 2",
+          "concepts": [
+            "Encryption",
+            "Hashing",
+            "Digital signatures",
+            "Key management"
+          ],
+          "examples": 2,
+          "diagrams": 1
+        },
+        {
+          "title": "Security Section 3",
+          "concepts": [
+            "Firewalls",
+            "OWASP Top 10",
+            "SQL injection",
+            "XSS"
+          ],
+          "examples": 2,
+          "diagrams": 1
+        },
+        {
+          "title": "Security Section 4",
+          "concepts": [
+            "GDPR",
+            "SOC 2"
+          ],
+          "examples": 2,
+          "diagrams": 1
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "name": "Networking",
+      "category": "09-specialized-domains",
+      "folder": "docs/09-specialized-domains/22-networking",
+      "prerequisites": [
+        7
+      ],
+      "depends_on": [],
+      "prerequisite_for": [
+        35,
+        40,
+        51,
+        58,
+        75
+      ],
+      "difficulty": "Advanced",
+      "estimated_hours": 16,
+      "files": [
+        "index.md",
+        "networking-section-1.md",
+        "networking-section-2.md",
+        "networking-section-3.md",
+        "networking-section-4.md"
+      ],
+      "glossary_terms": 14,
+      "diagrams_required": 4,
+      "code_examples": 9,
+      "sections": [
+        {
+          "title": "Networking Section 1",
+          "concepts": [
+            "Network",
+            "Protocol",
+            "Packet",
+            "OSI model"
+          ],
+          "examples": 3,
+          "diagrams": 1
+        },
+        {
+          "title": "Networking Section 2",
+          "concepts": [
+            "Physical layer",
+            "Data link",
+            "IPv4",
+            "IPv6"
+          ],
+          "examples": 2,
+          "diagrams": 1
+        },
+        {
+          "title": "Networking Section 3",
+          "concepts": [
+            "TCP",
+            "UDP",
+            "ICMP",
+            "DNS"
+          ],
+          "examples": 2,
+          "diagrams": 1
+        },
+        {
+          "title": "Networking Section 4",
+          "concepts": [
+            "BGP",
+            "CIDR"
+          ],
+          "examples": 2,
+          "diagrams": 1
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "name": "Messaging Systems",
+      "category": "05-distributed-systems",
+      "folder": "docs/05-distributed-systems/23-messaging-systems",
+      "prerequisites": [
+        10,
+        40
+      ],
+      "depends_on": [],
+      "prerequisite_for": [
+        44,
+        45,
+        56,
+        84
+      ],
+      "difficulty": "Advanced",
+      "estimated_hours": 14,
+      "files": [
+        "index.md",
+        "messaging-systems-section-1.md",
+        "messaging-systems-section-2.md",
+        "messaging-systems-section-3.md"
+      ],
+      "glossary_terms": 12,
+      "diagrams_required": 3,
+      "code_examples": 7,
+      "sections": [
+        {
+          "title": "Messaging Systems Section 1",
+          "concepts": [
+            "Message queue",
+            "Publisher",
+            "Subscriber",
+            "Async communication"
+          ],
+          "examples": 3,
+          "diagrams": 1
+        },
+        {
+          "title": "Messaging Systems Section 2",
+          "concepts": [
+            "RabbitMQ",
+            "SQS",
+            "Task queues",
+            "Kafka"
+          ],
+          "examples": 2,
+          "diagrams": 1
+        },
+        {
+          "title": "Messaging Systems Section 3",
+          "concepts": [
+            "Partitioning",
+            "Consumer groups",
+            "Publish/Subscribe",
+            "Idempotence"
+          ],
+          "examples": 2,
+          "diagrams": 1
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "name": "Payments",
+      "category": "02-core-engineering",
+      "folder": "docs/02-core-engineering/24-payments",
+      "prerequisites": [
+        9,
+        21
+      ],
+      "depends_on": [],
+      "prerequisite_for": [
+        85,
+        115
+      ],
+      "difficulty": "Intermediate",
+      "estimated_hours": 12,
+      "files": [
+        "index.md",
+        "payments-section-1.md",
+        "payments-section-2.md",
+        "payments-section-3.md"
+      ],
+      "glossary_terms": 11,
+      "diagrams_required": 3,
+      "code_examples": 7,
+      "sections": [
+        {
+          "title": "Payments Section 1",
+          "concepts": [
+            "Payment",
+            "Settlement",
+            "PCI compliance",
+            "Stripe"
+          ],
+          "examples": 3,
+          "diagrams": 1
+        },
+        {
+          "title": "Payments Section 2",
+          "concepts": [
+            "PayPal",
+            "Square",
+            "Card payments",
+            "Tokenization"
+          ],
+          "examples": 2,
+          "diagrams": 1
+        },
+        {
+          "title": "Payments Section 3",
+          "concepts": [
+            "3D Secure",
+            "Webhooks",
+            "Transaction reconciliation"
+          ],
+          "examples": 2,
+          "diagrams": 1
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "name": "Mobile Engineering",
+      "category": "07-frontend-web",
+      "folder": "docs/07-frontend-web/25-mobile-engineering",
+      "prerequisites": [
+        2,
+        16
+      ],
+      "depends_on": [],
+      "prerequisite_for": [
+        26,
+        27,
+        53,
+        88
+      ],
+      "difficulty": "Intermediate",
+      "estimated_hours": 16,
+      "files": [
+        "index.md",
+        "mobile-engineering-section-1.md",
+        "mobile-engineering-section-2.md",
+        "mobile-engineering-section-3.md"
+      ],
+      "glossary_terms": 12,
+      "diagrams_required": 3,
+      "code_examples": 7,
+      "sections": [
+        {
+          "title": "Mobile Engineering Section 1",
+          "concepts": [
+            "iOS",
+            "Android",
+            "Native",
+            "Cross-platform"
+          ],
+          "examples": 3,
+          "diagrams": 1
+        },
+        {
+          "title": "Mobile Engineering Section 2",
+          "concepts": [
+            "Swift",
+            "Kotlin",
+            "Platform APIs",
+            "React Native"
+          ],
+          "examples": 2,
+          "diagrams": 1
+        },
+        {
+          "title": "Mobile Engineering Section 3",
+          "concepts": [
+            "Flutter",
+            "Touch interfaces",
+            "Battery optimization",
+            "App stores"
+          ],
+          "examples": 2,
+          "diagrams": 1
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "name": "Design Systems",
+      "category": "07-frontend-web",
+      "folder": "docs/07-frontend-web/26-design-systems",
+      "prerequisites": [
+        16
+      ],
+      "depends_on": [],
+      "prerequisite_for": [
+        114,
+        115
+      ],
+      "difficulty": "Intermediate",
+      "estimated_hours": 12,
+      "files": [
+        "index.md",
+        "design-systems-section-1.md",
+        "design-systems-section-2.md",
+        "design-systems-section-3.md"
+      ],
+      "glossary_terms": 11,
+      "diagrams_required": 3,
+      "code_examples": 7,
+      "sections": [
+        {
+          "title": "Design Systems Section 1",
+          "concepts": [
+            "Design system",
+            "Pattern library",
+            "Brand consistency",
+            "Components"
+          ],
+          "examples": 3,
+          "diagrams": 1
+        },
+        {
+          "title": "Design Systems Section 2",
+          "concepts": [
+            "Props",
+            "Variants",
+            "States",
+            "Design tokens"
+          ],
+          "examples": 2,
+          "diagrams": 1
+        },
+        {
+          "title": "Design Systems Section 3",
+          "concepts": [
+            "Typography",
+            "WCAG",
+            "Storybook"
+          ],
+          "examples": 2,
+          "diagrams": 1
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "name": "SEO",
+      "category": "07-frontend-web",
+      "folder": "docs/07-frontend-web/27-seo",
+      "prerequisites": [
+        16
+      ],
+      "depends_on": [],
+      "prerequisite_for": [
+        115
+      ],
+      "difficulty": "Intermediate",
+      "estimated_hours": 10,
+      "files": [
+        "index.md",
+        "seo-section-1.md",
+        "seo-section-2.md",
+        "seo-section-3.md"
+      ],
+      "glossary_terms": 11,
+      "diagrams_required": 3,
+      "code_examples": 7,
+      "sections": [
+        {
+          "title": "SEO Section 1",
+          "concepts": [
+            "Search engine",
+            "SERP",
+            "Keywords",
+            "Crawlability"
+          ],
+          "examples": 3,
+          "diagrams": 1
+        },
+        {
+          "title": "SEO Section 2",
+          "concepts": [
+            "Indexing",
+            "Structured data",
+            "Schema",
+            "Title tags"
+          ],
+          "examples": 2,
+          "diagrams": 1
+        },
+        {
+          "title": "SEO Section 3",
+          "concepts": [
+            "Meta descriptions",
+            "Backlinks",
+            "Google Search Console"
+          ],
+          "examples": 2,
+          "diagrams": 1
+        }
+      ]
+    }
+  ]
+}
