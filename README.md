@@ -12,8 +12,9 @@
 - 🏗️ **[Project Directory](./resources/ALL_PROJECTS_INDEX.md)** - Browse all 115+ projects sorted by difficulty.
 - 🏆 **[Student Leaderboard](./LEADERBOARD.md)** - See live projects built by the community.
 - 🎓 **[Academic Integrity](./philosophy/ACADEMIC_INTEGRITY.md)** - Guidelines for using this repo in college.
-- 🚀 **[What Next After Building?](./docs/03_WHAT_NEXT_AFTER_BUILDING.md)** - How to host your project and put it on your resume.
+- 🚀 **[What Next After Building?](./guides/03_WHAT_NEXT_AFTER_BUILDING.md)** - How to host your project and put it on your resume.
 - 🧩 **[Modern Software Engineering Knowledge Base](./learning-tracks/developer-ecosystem/README.md)** - Learn industry vocabulary, tools, workflows, cloud, AI engineering, DevOps, security, and production practices.
+- 🗺️ **[Repository Knowledge Map and Markdown Audit](./resources/REPOSITORY_KNOWLEDGE_MAP.md)** - Trace every Markdown file to a competency and learning claim.
 
 ---
 
@@ -180,7 +181,9 @@ Result: Student understands system
 
 ## 📊 Learning Outcomes
 
-After completing projects from this repository, students will:
+These outcomes are intentionally tied to repository documents, not promises made in isolation. Use the [Repository Knowledge Map and Markdown Audit](./resources/REPOSITORY_KNOWLEDGE_MAP.md) to trace each claim to the Markdown files that teach it.
+
+After completing the relevant learning paths and building projects from their specifications, students will be able to:
 
 **Technical Skills:**
 ✅ Understand system architecture  
@@ -199,8 +202,10 @@ After completing projects from this repository, students will:
 ✅ Communicate technical concepts  
 ✅ Build portfolio projects  
 ✅ Prepare for interviews  
-✅ Think like developers  
-✅ Contribute to real projects  
+✅ Think like developers instead of tutorial followers  
+✅ Contribute to real projects
+
+**Scope note:** this repository supports beginner-to-intermediate professional software engineering practice for BCA project work. It teaches architecture, implementation planning, testing, debugging, deployment, operations, scaling vocabulary, product context, and engineering judgment through documentation and project specifications. It does not claim that reading alone replaces building, reviewing, deploying, and maintaining real software.  
 
 ---
 
